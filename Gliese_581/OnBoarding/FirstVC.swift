@@ -1,0 +1,46 @@
+//
+//  FirstVC.swift
+//  Gliese_581
+//
+//  Created by Павел Кузин on 22.11.2020.
+//
+
+import UIKit
+
+class FirstVC: BaseVC {
+    
+    let label = UILabel()
+
+    var nextButton = UIButton()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        label.setTitleLabel(on: view)
+        label.text = "Красивый текст"
+        nextButton.setNextButton(on: view)
+        nextButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+
+    }
+    
+    @objc
+    private func goToDateOfBirthVC() {
+        let vc = DateOfBirsthVC()
+        guard let navigationController = navigationController else { return }
+        navigationController.pushViewController(vc, animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+//Gradient backGround color
+extension UIView {
+    
+    func setGradientBackground(colorOne: UIColor, colorTwo: UIColor) {
+        let gradientLayer        = CAGradientLayer()
+        gradientLayer.frame      = bounds
+        gradientLayer.locations  = [0.0, 1.0]
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
+        gradientLayer.endPoint   = CGPoint(x: 0.5, y: 0.0)
+        gradientLayer.colors     = [colorOne.cgColor, colorTwo.cgColor]
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
+}
