@@ -35,8 +35,6 @@
 		990CA537256AE971004A8105 /* RelationShipsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990CA536256AE971004A8105 /* RelationShipsVC.swift */; };
 		990CA53A256AE9A7004A8105 /* HandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990CA539256AE9A7004A8105 /* HandVC.swift */; };
 		990CA53D256AEB41004A8105 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990CA53C256AEB41004A8105 /* DatePicker.swift */; };
-		99C26989256C4B1A003A31C0 /* DateOfBirsth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C26987256C4B1A003A31C0 /* DateOfBirsth.swift */; };
-		99C2698A256C4B1A003A31C0 /* DateOfBirsth.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99C26988256C4B1A003A31C0 /* DateOfBirsth.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,8 +68,6 @@
 		990CA536256AE971004A8105 /* RelationShipsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationShipsVC.swift; sourceTree = "<group>"; };
 		990CA539256AE9A7004A8105 /* HandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandVC.swift; sourceTree = "<group>"; };
 		990CA53C256AEB41004A8105 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
-		99C26987256C4B1A003A31C0 /* DateOfBirsth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirsth.swift; sourceTree = "<group>"; };
-		99C26988256C4B1A003A31C0 /* DateOfBirsth.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateOfBirsth.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +158,6 @@
 				990CA533256AE943004A8105 /* NameVC.swift */,
 				990CA536256AE971004A8105 /* RelationShipsVC.swift */,
 				990CA539256AE9A7004A8105 /* HandVC.swift */,
-				99C26987256C4B1A003A31C0 /* DateOfBirsth.swift */,
-				99C26988256C4B1A003A31C0 /* DateOfBirsth.xib */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -252,7 +246,6 @@
 				990CA511256AC592004A8105 /* SF-Pro-Text-Semibold.otf in Resources */,
 				990CA514256AC592004A8105 /* SF-Pro-Display-Medium.otf in Resources */,
 				990CA50E256AC592004A8105 /* SF-Pro-Text-Medium.otf in Resources */,
-				99C2698A256C4B1A003A31C0 /* DateOfBirsth.xib in Resources */,
 				990CA4E9256AC238004A8105 /* Assets.xcassets in Resources */,
 				990CA513256AC592004A8105 /* SF-Pro-Display-Regular.otf in Resources */,
 				990CA510256AC592004A8105 /* SF-Pro-Text-Regular.otf in Resources */,
@@ -278,7 +271,6 @@
 				990CA527256AE6E9004A8105 /* BaseVC.swift in Sources */,
 				990CA537256AE971004A8105 /* RelationShipsVC.swift in Sources */,
 				990CA524256AE656004A8105 /* DateOfBirsthVC.swift in Sources */,
-				99C26989256C4B1A003A31C0 /* DateOfBirsth.swift in Sources */,
 				990CA53A256AE9A7004A8105 /* HandVC.swift in Sources */,
 				990CA521256AE4AB004A8105 /* TitleLabel.swift in Sources */,
 				990CA531256AE913004A8105 /* GenderVC.swift in Sources */,

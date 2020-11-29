@@ -28,6 +28,12 @@ class TimeOfBirsthVC: BaseVC {
         datePickere.setDate(Date(timeIntervalSince1970: 908608500), animated: true)
     }
     
+    override func viewDidDisappear(_ animated: Bool)    {
+        super.viewWillDisappear(animated)
+        guard let navigationController = navigationController else { return }
+        navigationController.viewControllers.removeAll(where: { self === $0 })
+    }
+    
     @objc
     private func goToDateOfBirthVC() {
         let vc = CityOfBirsthVC()

@@ -29,6 +29,7 @@ class BaseNC: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .automatic
         self.view.backgroundColor = .background
@@ -38,7 +39,7 @@ class BaseNC: UINavigationController {
             let appereance = UINavigationBarAppearance()
             appereance.backgroundColor = .background
             appereance.shadowColor = .clear
-            appereance.setBackIndicatorImage(#imageLiteral(resourceName: "back"), transitionMaskImage: #imageLiteral(resourceName: "back"))
+//            appereance.setBackIndicatorImage(nil, transitionMaskImage: nil)
 
             appereance.largeTitleTextAttributes = largeTitle as [NSAttributedString.Key : Any]
             appereance.titleTextAttributes = defaultTitle
@@ -46,9 +47,19 @@ class BaseNC: UINavigationController {
             self.navigationBar.compactAppearance = appereance
             self.navigationBar.scrollEdgeAppearance = self.navigationBar.standardAppearance
         self.navigationBar.barTintColor = .background
-        self.navigationBar.tintColor = UIColor.main
+        self.navigationBar.tintColor = UIColor.clear
         self.navigationItem.backButtonTitle = ""
+//        setInvisible()
+//        setTransparent()
     }
     
+    func setInvisible() {
+        //Navigation Bar scould be invisible
+        guard let navigationController = navigationController else { return }
+        navigationController.navigationBar.barTintColor  = .clear
+        navigationController.navigationBar.isTranslucent = true
+        navigationController.navigationBar.shadowImage   = UIImage()
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    }
 }
 

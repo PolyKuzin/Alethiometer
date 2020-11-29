@@ -34,6 +34,12 @@ class DateOfBirsthVC: BaseVC {
 
     }
     
+    override func viewDidDisappear(_ animated: Bool)    {
+        super.viewWillDisappear(animated)
+        guard let navigationController = navigationController else { return }
+        navigationController.viewControllers.removeAll(where: { self === $0 })
+    }
+    
     @objc
     private func goToDateOfBirthVC() {
         let vc = TimeOfBirsthVC()
