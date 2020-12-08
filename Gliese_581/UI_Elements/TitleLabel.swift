@@ -10,7 +10,7 @@ import UIKit
 extension UILabel {
     
     func setTitleLabel(on view: UIView) {
-        textColor = UIColor(red: 0.426, green: 0.69, blue: 1, alpha: 1)
+        textColor = UIColor.main
         font = UIFont(name: "SFProDisplay-Semibold", size: 24)
         textAlignment = .center
         

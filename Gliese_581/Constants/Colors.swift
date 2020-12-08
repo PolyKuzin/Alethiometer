@@ -24,4 +24,16 @@ extension UIColor {
     public class var main: UIColor {
         return UIColor(named: "Main") ?? UIColor.cyan
     }
+    
+    public class var grey: UIColor {
+        return UIColor(named: "Grey") ?? UIColor.gray
+    }
+    
+    public class var clearButtonText: UIColor {
+        return UIColor(named: "ClearButtonText") ?? UIColor.gray
+    }
+    
+    public class var darkBackground: UIColor {
+        return UIColor(named: "DarkBackground") ?? UIColor.gray
+    }
 }

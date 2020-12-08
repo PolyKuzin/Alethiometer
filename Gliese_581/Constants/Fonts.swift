@@ -49,6 +49,10 @@ extension UIFont {
         return UIFont(name: "SFProDisplay-Medium", size: 22) ?? UIFont(name: "Helvetica Neue", size: 22)!
     }
     
+    public class var displayMedium24: UIFont {
+        return UIFont(name: "SFProDisplay-Medium", size: 24) ?? UIFont(name: "Helvetica Neue", size: 24)!
+    }
+    
     //MARK: - Display Semibold
     public class var displaySemibold18: UIFont {
         return UIFont(name: "SFProDisplay-Semibold", size: 18) ?? UIFont(name: "Helvetica Neue", size: 18)!

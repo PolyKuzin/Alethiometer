@@ -13,6 +13,8 @@ class NameVC: BaseVC {
 
     var nextButton = UIButton()
     
+    var nameTextField = UITextField()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +23,12 @@ class NameVC: BaseVC {
         nextButton.setNextButton(on: view)
         nextButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
 
+        nameTextField.placeholder = "Name"
+        nameTextField.setBigTextField(on: view)
+        NSLayoutConstraint.activate([
+            nameTextField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 120),
+            nameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
     
     override func viewDidDisappear(_ animated: Bool)    {

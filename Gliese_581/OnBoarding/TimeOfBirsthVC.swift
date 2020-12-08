@@ -14,6 +14,8 @@ class TimeOfBirsthVC: BaseVC {
     var nextButton = UIButton()
     
     var datePickere = UIDatePicker()
+    
+    var clearButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,7 @@ class TimeOfBirsthVC: BaseVC {
         datePickere.preferredDatePickerStyle = .wheels
         datePickere.datePickerMode = .time
         datePickere.setDate(Date(timeIntervalSince1970: 908608500), animated: true)
+        setupClearButton()
     }
     
     override func viewDidDisappear(_ animated: Bool)    {
@@ -41,5 +44,19 @@ class TimeOfBirsthVC: BaseVC {
         navigationController.pushViewController(vc, animated: true)
         self.dismiss(animated: true, completion: nil)
 
+    }
+}
+
+extension TimeOfBirsthVC {
+    
+    func setupClearButton() {
+        clearButton.setClearButton(on: self.view)
+        clearButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        NSLayoutConstraint.activate([
+            clearButton.topAnchor.constraint(equalTo: datePickere.bottomAnchor, constant: 50),
+            clearButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            clearButton.widthAnchor.constraint(equalToConstant: 200),
+            clearButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
     }
 }

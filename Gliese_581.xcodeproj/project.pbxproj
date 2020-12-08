@@ -35,6 +35,14 @@
 		990CA537256AE971004A8105 /* RelationShipsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990CA536256AE971004A8105 /* RelationShipsVC.swift */; };
 		990CA53A256AE9A7004A8105 /* HandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990CA539256AE9A7004A8105 /* HandVC.swift */; };
 		990CA53D256AEB41004A8105 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990CA53C256AEB41004A8105 /* DatePicker.swift */; };
+		9923FF80258019B1004F1F02 /* BigTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FF7F258019B1004F1F02 /* BigTextField.swift */; };
+		9923FF9D25801EA8004F1F02 /* GenderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FF9C25801EA8004F1F02 /* GenderButton.swift */; };
+		9923FFA025802640004F1F02 /* GenderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FF9F25802640004F1F02 /* GenderLabel.swift */; };
+		9923FFA325802C26004F1F02 /* PayWallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FFA225802C26004F1F02 /* PayWallVC.swift */; };
+		9923FFA625802CAC004F1F02 /* FeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FFA525802CAC004F1F02 /* FeaturesView.swift */; };
+		9979BF9225742636005E4ED3 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */; };
+		9979BF9525742EAA005E4ED3 /* HandForAstroSkope.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */; };
+		99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF4F98258014FE00F74D68 /* ClearButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +76,14 @@
 		990CA536256AE971004A8105 /* RelationShipsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationShipsVC.swift; sourceTree = "<group>"; };
 		990CA539256AE9A7004A8105 /* HandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandVC.swift; sourceTree = "<group>"; };
 		990CA53C256AEB41004A8105 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		9923FF7F258019B1004F1F02 /* BigTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTextField.swift; sourceTree = "<group>"; };
+		9923FF9C25801EA8004F1F02 /* GenderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderButton.swift; sourceTree = "<group>"; };
+		9923FF9F25802640004F1F02 /* GenderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderLabel.swift; sourceTree = "<group>"; };
+		9923FFA225802C26004F1F02 /* PayWallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallVC.swift; sourceTree = "<group>"; };
+		9923FFA525802CAC004F1F02 /* FeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesView.swift; sourceTree = "<group>"; };
+		9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HandForAstroSkope.mlmodel; sourceTree = "<group>"; };
+		99CF4F98258014FE00F74D68 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +124,8 @@
 				990CA4E8256AC238004A8105 /* Assets.xcassets */,
 				990CA4EA256AC238004A8105 /* LaunchScreen.storyboard */,
 				990CA4ED256AC238004A8105 /* Info.plist */,
+				9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */,
+				9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */,
 			);
 			path = Gliese_581;
 			sourceTree = "<group>";
@@ -158,6 +176,7 @@
 				990CA533256AE943004A8105 /* NameVC.swift */,
 				990CA536256AE971004A8105 /* RelationShipsVC.swift */,
 				990CA539256AE9A7004A8105 /* HandVC.swift */,
+				9923FFA225802C26004F1F02 /* PayWallVC.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -174,11 +193,24 @@
 		990CA51B256ADB3D004A8105 /* UI_Elements */ = {
 			isa = PBXGroup;
 			children = (
-				990CA4F9256AC30F004A8105 /* NextButton.swift */,
+				99CF4F9B2580150C00F74D68 /* Buttons */,
 				990CA520256AE4AB004A8105 /* TitleLabel.swift */,
 				990CA53C256AEB41004A8105 /* DatePicker.swift */,
+				9923FF7F258019B1004F1F02 /* BigTextField.swift */,
+				9923FF9F25802640004F1F02 /* GenderLabel.swift */,
+				9923FFA525802CAC004F1F02 /* FeaturesView.swift */,
 			);
 			path = UI_Elements;
+			sourceTree = "<group>";
+		};
+		99CF4F9B2580150C00F74D68 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				990CA4F9256AC30F004A8105 /* NextButton.swift */,
+				99CF4F98258014FE00F74D68 /* ClearButton.swift */,
+				9923FF9C25801EA8004F1F02 /* GenderButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,21 +291,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9979BF9225742636005E4ED3 /* MobileNetV2.mlmodel in Sources */,
 				990CA51E256ADB7B004A8105 /* Fonts.swift in Sources */,
 				990CA53D256AEB41004A8105 /* DatePicker.swift in Sources */,
 				990CA4FA256AC30F004A8105 /* NextButton.swift in Sources */,
 				990CA4FD256AC323004A8105 /* Colors.swift in Sources */,
 				990CA52B256AE860004A8105 /* TimeOfBirsthVC.swift in Sources */,
+				9979BF9525742EAA005E4ED3 /* HandForAstroSkope.mlmodel in Sources */,
+				99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */,
 				990CA4F7256AC2F3004A8105 /* FirstVC.swift in Sources */,
 				990CA534256AE943004A8105 /* NameVC.swift in Sources */,
 				990CA4E0256AC236004A8105 /* AppDelegate.swift in Sources */,
 				990CA52E256AE8E7004A8105 /* CityOfBirsthVC.swift in Sources */,
+				9923FFA025802640004F1F02 /* GenderLabel.swift in Sources */,
+				9923FFA625802CAC004F1F02 /* FeaturesView.swift in Sources */,
 				990CA527256AE6E9004A8105 /* BaseVC.swift in Sources */,
 				990CA537256AE971004A8105 /* RelationShipsVC.swift in Sources */,
 				990CA524256AE656004A8105 /* DateOfBirsthVC.swift in Sources */,
 				990CA53A256AE9A7004A8105 /* HandVC.swift in Sources */,
+				9923FF9D25801EA8004F1F02 /* GenderButton.swift in Sources */,
 				990CA521256AE4AB004A8105 /* TitleLabel.swift in Sources */,
+				9923FF80258019B1004F1F02 /* BigTextField.swift in Sources */,
 				990CA531256AE913004A8105 /* GenderVC.swift in Sources */,
+				9923FFA325802C26004F1F02 /* PayWallVC.swift in Sources */,
 				990CA500256AC42C004A8105 /* BaseNC.swift in Sources */,
 				990CA4E2256AC236004A8105 /* SceneDelegate.swift in Sources */,
 			);

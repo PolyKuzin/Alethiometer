@@ -13,6 +13,8 @@ class CityOfBirsthVC: BaseVC {
 
     var nextButton = UIButton()
     
+    var cityTextField = UITextField()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +22,12 @@ class CityOfBirsthVC: BaseVC {
         label.text = "Your city of birth"
         nextButton.setNextButton(on: view)
         nextButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
-
+        cityTextField.setBigTextField(on: self.view)
+        cityTextField.placeholder = "City"
+        NSLayoutConstraint.activate([
+            cityTextField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 120),
+            cityTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
     
     override func viewDidDisappear(_ animated: Bool)    {
