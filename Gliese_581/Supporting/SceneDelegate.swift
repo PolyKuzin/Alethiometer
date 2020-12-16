@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window                = UIWindow(windowScene: windowScene)
         
         let nav1              = BaseNC()
-        let entryView         = FirstVC(nibName: nil, bundle: nil)
+        let entryView         = HomeVC(nibName: "HomeVC", bundle: nil)
         nav1.viewControllers  = [entryView]
         nav1.navigationBar.barTintColor  = .white
         nav1.navigationBar.isTranslucent = false

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9902B83A258A9909002041B2 /* Zodiac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902B839258A9909002041B2 /* Zodiac.swift */; };
+		9902B83F258A9BA3002041B2 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902B83E258A9BA3002041B2 /* BaseTableViewCell.swift */; };
+		9902B844258AA272002041B2 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902B842258AA272002041B2 /* MainCollectionViewCell.swift */; };
+		9902B845258AA272002041B2 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9902B843258AA272002041B2 /* MainCollectionViewCell.xib */; };
+		9902B849258AB5F0002041B2 /* RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902B848258AB5F0002041B2 /* RoundCorners.swift */; };
+		9902B84D258AB6AE002041B2 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902B84C258AB6AE002041B2 /* GradientBackground.swift */; };
 		990CA4E0256AC236004A8105 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990CA4DF256AC236004A8105 /* AppDelegate.swift */; };
 		990CA4E2256AC236004A8105 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990CA4E1256AC236004A8105 /* SceneDelegate.swift */; };
 		990CA4E9256AC238004A8105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 990CA4E8256AC238004A8105 /* Assets.xcassets */; };
@@ -42,10 +48,23 @@
 		9923FFA625802CAC004F1F02 /* FeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FFA525802CAC004F1F02 /* FeaturesView.swift */; };
 		9979BF9225742636005E4ED3 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */; };
 		9979BF9525742EAA005E4ED3 /* HandForAstroSkope.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */; };
+		997EDB1825895B19009E4122 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB1625895B19009E4122 /* HomeVC.swift */; };
+		997EDB1925895B19009E4122 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997EDB1725895B19009E4122 /* HomeVC.xib */; };
+		997EDB1F25895D0F009E4122 /* InstanceHoroscopeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB1D25895D0F009E4122 /* InstanceHoroscopeCell.swift */; };
+		997EDB2025895D0F009E4122 /* InstanceHoroscopeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997EDB1E25895D0F009E4122 /* InstanceHoroscopeCell.xib */; };
+		997EDB2625895F5B009E4122 /* FocusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB2425895F5B009E4122 /* FocusCell.swift */; };
+		997EDB2725895F5B009E4122 /* FocusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997EDB2525895F5B009E4122 /* FocusCell.xib */; };
+		997EDB2B25896168009E4122 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB2A25896168009E4122 /* CircleView.swift */; };
 		99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF4F98258014FE00F74D68 /* ClearButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9902B839258A9909002041B2 /* Zodiac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zodiac.swift; sourceTree = "<group>"; };
+		9902B83E258A9BA3002041B2 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		9902B842258AA272002041B2 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		9902B843258AA272002041B2 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		9902B848258AB5F0002041B2 /* RoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorners.swift; sourceTree = "<group>"; };
+		9902B84C258AB6AE002041B2 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		990CA4DC256AC236004A8105 /* Gliese_581.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gliese_581.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		990CA4DF256AC236004A8105 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		990CA4E1256AC236004A8105 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +102,13 @@
 		9923FFA525802CAC004F1F02 /* FeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesView.swift; sourceTree = "<group>"; };
 		9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HandForAstroSkope.mlmodel; sourceTree = "<group>"; };
+		997EDB1625895B19009E4122 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		997EDB1725895B19009E4122 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		997EDB1D25895D0F009E4122 /* InstanceHoroscopeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceHoroscopeCell.swift; sourceTree = "<group>"; };
+		997EDB1E25895D0F009E4122 /* InstanceHoroscopeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstanceHoroscopeCell.xib; sourceTree = "<group>"; };
+		997EDB2425895F5B009E4122 /* FocusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusCell.swift; sourceTree = "<group>"; };
+		997EDB2525895F5B009E4122 /* FocusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusCell.xib; sourceTree = "<group>"; };
+		997EDB2A25896168009E4122 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		99CF4F98258014FE00F74D68 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +123,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9902B83D258A9B85002041B2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9902B83E258A9BA3002041B2 /* BaseTableViewCell.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9902B841258AA241002041B2 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9902B842258AA272002041B2 /* MainCollectionViewCell.swift */,
+				9902B843258AA272002041B2 /* MainCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		9902B847258AB5D3002041B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9902B848258AB5F0002041B2 /* RoundCorners.swift */,
+				9902B84C258AB6AE002041B2 /* GradientBackground.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		990CA4D3256AC236004A8105 = {
 			isa = PBXGroup;
 			children = (
@@ -116,9 +168,13 @@
 		990CA4DE256AC236004A8105 /* Gliese_581 */ = {
 			isa = PBXGroup;
 			children = (
+				9902B847258AB5D3002041B2 /* Extensions */,
+				9902B83D258A9B85002041B2 /* Protocols */,
+				997EDB2925896159009E4122 /* Utils */,
 				990CA51B256ADB3D004A8105 /* UI_Elements */,
 				990CA51A256ADB30004A8105 /* Constants */,
 				990CA519256ADB20004A8105 /* OnBoarding */,
+				997EDB1B25895B29009E4122 /* home */,
 				990CA517256ADB07004A8105 /* Base */,
 				990CA516256AC5F2004A8105 /* Supporting */,
 				990CA4E8256AC238004A8105 /* Assets.xcassets */,
@@ -186,6 +242,7 @@
 			children = (
 				990CA4FC256AC323004A8105 /* Colors.swift */,
 				990CA51D256ADB7B004A8105 /* Fonts.swift */,
+				9902B839258A9909002041B2 /* Zodiac.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -193,6 +250,7 @@
 		990CA51B256ADB3D004A8105 /* UI_Elements */ = {
 			isa = PBXGroup;
 			children = (
+				997EDB2A25896168009E4122 /* CircleView.swift */,
 				99CF4F9B2580150C00F74D68 /* Buttons */,
 				990CA520256AE4AB004A8105 /* TitleLabel.swift */,
 				990CA53C256AEB41004A8105 /* DatePicker.swift */,
@@ -201,6 +259,35 @@
 				9923FFA525802CAC004F1F02 /* FeaturesView.swift */,
 			);
 			path = UI_Elements;
+			sourceTree = "<group>";
+		};
+		997EDB1B25895B29009E4122 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				997EDB1625895B19009E4122 /* HomeVC.swift */,
+				997EDB1725895B19009E4122 /* HomeVC.xib */,
+				9902B841258AA241002041B2 /* CollectionViewCell */,
+				997EDB2225895F46009E4122 /* TableViewCell */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		997EDB2225895F46009E4122 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				997EDB1D25895D0F009E4122 /* InstanceHoroscopeCell.swift */,
+				997EDB1E25895D0F009E4122 /* InstanceHoroscopeCell.xib */,
+				997EDB2425895F5B009E4122 /* FocusCell.swift */,
+				997EDB2525895F5B009E4122 /* FocusCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		997EDB2925896159009E4122 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		99CF4F9B2580150C00F74D68 /* Buttons */ = {
@@ -271,15 +358,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				990CA512256AC592004A8105 /* SF-Pro-Rounded-Medium.otf in Resources */,
+				997EDB1925895B19009E4122 /* HomeVC.xib in Resources */,
 				990CA50C256AC592004A8105 /* SF-Pro-Display-Semibold.otf in Resources */,
 				990CA4EC256AC238004A8105 /* LaunchScreen.storyboard in Resources */,
+				997EDB2725895F5B009E4122 /* FocusCell.xib in Resources */,
 				990CA50F256AC592004A8105 /* SF-Pro-Text-Bold.otf in Resources */,
 				990CA50D256AC592004A8105 /* SF-Pro-Display-Bold.otf in Resources */,
+				997EDB2025895D0F009E4122 /* InstanceHoroscopeCell.xib in Resources */,
 				990CA511256AC592004A8105 /* SF-Pro-Text-Semibold.otf in Resources */,
 				990CA514256AC592004A8105 /* SF-Pro-Display-Medium.otf in Resources */,
 				990CA50E256AC592004A8105 /* SF-Pro-Text-Medium.otf in Resources */,
 				990CA4E9256AC238004A8105 /* Assets.xcassets in Resources */,
 				990CA513256AC592004A8105 /* SF-Pro-Display-Regular.otf in Resources */,
+				9902B845258AA272002041B2 /* MainCollectionViewCell.xib in Resources */,
 				990CA510256AC592004A8105 /* SF-Pro-Text-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,13 +385,18 @@
 				9979BF9225742636005E4ED3 /* MobileNetV2.mlmodel in Sources */,
 				990CA51E256ADB7B004A8105 /* Fonts.swift in Sources */,
 				990CA53D256AEB41004A8105 /* DatePicker.swift in Sources */,
+				9902B844258AA272002041B2 /* MainCollectionViewCell.swift in Sources */,
 				990CA4FA256AC30F004A8105 /* NextButton.swift in Sources */,
 				990CA4FD256AC323004A8105 /* Colors.swift in Sources */,
+				9902B83A258A9909002041B2 /* Zodiac.swift in Sources */,
 				990CA52B256AE860004A8105 /* TimeOfBirsthVC.swift in Sources */,
+				997EDB2625895F5B009E4122 /* FocusCell.swift in Sources */,
 				9979BF9525742EAA005E4ED3 /* HandForAstroSkope.mlmodel in Sources */,
 				99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */,
 				990CA4F7256AC2F3004A8105 /* FirstVC.swift in Sources */,
 				990CA534256AE943004A8105 /* NameVC.swift in Sources */,
+				9902B84D258AB6AE002041B2 /* GradientBackground.swift in Sources */,
+				9902B849258AB5F0002041B2 /* RoundCorners.swift in Sources */,
 				990CA4E0256AC236004A8105 /* AppDelegate.swift in Sources */,
 				990CA52E256AE8E7004A8105 /* CityOfBirsthVC.swift in Sources */,
 				9923FFA025802640004F1F02 /* GenderLabel.swift in Sources */,
@@ -308,14 +404,18 @@
 				990CA527256AE6E9004A8105 /* BaseVC.swift in Sources */,
 				990CA537256AE971004A8105 /* RelationShipsVC.swift in Sources */,
 				990CA524256AE656004A8105 /* DateOfBirsthVC.swift in Sources */,
+				997EDB1825895B19009E4122 /* HomeVC.swift in Sources */,
+				9902B83F258A9BA3002041B2 /* BaseTableViewCell.swift in Sources */,
 				990CA53A256AE9A7004A8105 /* HandVC.swift in Sources */,
 				9923FF9D25801EA8004F1F02 /* GenderButton.swift in Sources */,
 				990CA521256AE4AB004A8105 /* TitleLabel.swift in Sources */,
 				9923FF80258019B1004F1F02 /* BigTextField.swift in Sources */,
 				990CA531256AE913004A8105 /* GenderVC.swift in Sources */,
 				9923FFA325802C26004F1F02 /* PayWallVC.swift in Sources */,
+				997EDB1F25895D0F009E4122 /* InstanceHoroscopeCell.swift in Sources */,
 				990CA500256AC42C004A8105 /* BaseNC.swift in Sources */,
 				990CA4E2256AC236004A8105 /* SceneDelegate.swift in Sources */,
+				997EDB2B25896168009E4122 /* CircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,13 +555,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				INFOPLIST_FILE = Gliese_581/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.00.01;
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.polykuzin.Gliese-581";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -475,13 +576,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				INFOPLIST_FILE = Gliese_581/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.00.01;
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.polykuzin.Gliese-581";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

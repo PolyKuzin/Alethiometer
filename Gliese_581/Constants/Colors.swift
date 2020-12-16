@@ -9,6 +9,10 @@ import UIKit
 
 extension UIColor {
     
+    public class var text: UIColor {
+        return UIColor(named: "Text") ?? UIColor.white
+    }
+    
     public class var buttonUp: UIColor {
         return UIColor(named: "Button's_Up") ?? UIColor.cyan
     }

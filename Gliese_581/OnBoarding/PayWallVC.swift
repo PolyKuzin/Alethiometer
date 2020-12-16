@@ -48,7 +48,7 @@ class PayWallVC : BaseVC {
     
     @objc
     private func goToDateOfBirthVC() {
-        let vc = HandVC()
+        let vc = FirstVC()
         guard let navigationController = navigationController else { return }
         navigationController.pushViewController(vc, animated: true)
         self.dismiss(animated: true, completion: nil)

@@ -254,8 +254,6 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
         NSLayoutConstraint.activate([
             myView.topAnchor.constraint(equalTo: label.bottomAnchor),
         ])
-        
-        
     }
     
     override func viewDidDisappear(_ animated: Bool)    {
@@ -266,10 +264,10 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     @objc
     private func goToDateOfBirthVC() {
-//        let vc = RelationShipsVC()
-//        guard let navigationController = navigationController else { return }
-//        navigationController.pushViewController(vc, animated: true)
-//        self.dismiss(animated: true, completion: nil)
+        let vc = PayWallVC()
+        guard let navigationController = navigationController else { return }
+        navigationController.pushViewController(vc, animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
