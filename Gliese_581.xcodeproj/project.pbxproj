@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22C01FE368FF320E571C7389 /* Pods_Gliese_581.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8B8043DF52DD0F747DCE7D /* Pods_Gliese_581.framework */; };
 		9902B83A258A9909002041B2 /* Zodiac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902B839258A9909002041B2 /* Zodiac.swift */; };
 		9902B83F258A9BA3002041B2 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902B83E258A9BA3002041B2 /* BaseTableViewCell.swift */; };
 		9902B844258AA272002041B2 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902B842258AA272002041B2 /* MainCollectionViewCell.swift */; };
@@ -46,6 +47,16 @@
 		9923FFA025802640004F1F02 /* GenderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FF9F25802640004F1F02 /* GenderLabel.swift */; };
 		9923FFA325802C26004F1F02 /* PayWallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FFA225802C26004F1F02 /* PayWallVC.swift */; };
 		9923FFA625802CAC004F1F02 /* FeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FFA525802CAC004F1F02 /* FeaturesView.swift */; };
+		993C877E2592266D004A4305 /* FloatinLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C877D2592266D004A4305 /* FloatinLayout.swift */; };
+		993C8781259226C1004A4305 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C8780259226C1004A4305 /* UIDevice.swift */; };
+		993C878425922723004A4305 /* Appearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C878325922723004A4305 /* Appearence.swift */; };
+		993C878C2592284F004A4305 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C878A2592284F004A4305 /* MenuController.swift */; };
+		993C878D2592284F004A4305 /* MenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 993C878B2592284F004A4305 /* MenuController.xib */; };
+		993C879125925639004A4305 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C878F25925638004A4305 /* CalendarCell.swift */; };
+		993C879225925639004A4305 /* CalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 993C879025925638004A4305 /* CalendarCell.xib */; };
+		993C879625925AD3004A4305 /* CalendarItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C879425925AD3004A4305 /* CalendarItemCollectionCell.swift */; };
+		993C879725925AD3004A4305 /* CalendarItemCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 993C879525925AD3004A4305 /* CalendarItemCollectionCell.xib */; };
+		993C879A25926076004A4305 /* HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C879925926076004A4305 /* HEX.swift */; };
 		9979BF9225742636005E4ED3 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */; };
 		9979BF9525742EAA005E4ED3 /* HandForAstroSkope.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */; };
 		997EDB1825895B19009E4122 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB1625895B19009E4122 /* HomeVC.swift */; };
@@ -59,6 +70,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31DBB4191EC3FECE395D622B /* Pods-Gliese_581.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gliese_581.debug.xcconfig"; path = "Target Support Files/Pods-Gliese_581/Pods-Gliese_581.debug.xcconfig"; sourceTree = "<group>"; };
+		74FD4D4481571704090C8EF3 /* Pods-Gliese_581.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gliese_581.release.xcconfig"; path = "Target Support Files/Pods-Gliese_581/Pods-Gliese_581.release.xcconfig"; sourceTree = "<group>"; };
 		9902B839258A9909002041B2 /* Zodiac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zodiac.swift; sourceTree = "<group>"; };
 		9902B83E258A9BA3002041B2 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		9902B842258AA272002041B2 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -100,6 +113,16 @@
 		9923FF9F25802640004F1F02 /* GenderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderLabel.swift; sourceTree = "<group>"; };
 		9923FFA225802C26004F1F02 /* PayWallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallVC.swift; sourceTree = "<group>"; };
 		9923FFA525802CAC004F1F02 /* FeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesView.swift; sourceTree = "<group>"; };
+		993C877D2592266D004A4305 /* FloatinLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatinLayout.swift; sourceTree = "<group>"; };
+		993C8780259226C1004A4305 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		993C878325922723004A4305 /* Appearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearence.swift; sourceTree = "<group>"; };
+		993C878A2592284F004A4305 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		993C878B2592284F004A4305 /* MenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuController.xib; sourceTree = "<group>"; };
+		993C878F25925638004A4305 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		993C879025925638004A4305 /* CalendarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCell.xib; sourceTree = "<group>"; };
+		993C879425925AD3004A4305 /* CalendarItemCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarItemCollectionCell.swift; sourceTree = "<group>"; };
+		993C879525925AD3004A4305 /* CalendarItemCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarItemCollectionCell.xib; sourceTree = "<group>"; };
+		993C879925926076004A4305 /* HEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HEX.swift; sourceTree = "<group>"; };
 		9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HandForAstroSkope.mlmodel; sourceTree = "<group>"; };
 		997EDB1625895B19009E4122 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -110,6 +133,7 @@
 		997EDB2525895F5B009E4122 /* FocusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusCell.xib; sourceTree = "<group>"; };
 		997EDB2A25896168009E4122 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		99CF4F98258014FE00F74D68 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
+		AC8B8043DF52DD0F747DCE7D /* Pods_Gliese_581.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gliese_581.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C01FE368FF320E571C7389 /* Pods_Gliese_581.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +170,8 @@
 			children = (
 				9902B848258AB5F0002041B2 /* RoundCorners.swift */,
 				9902B84C258AB6AE002041B2 /* GradientBackground.swift */,
+				993C8780259226C1004A4305 /* UIDevice.swift */,
+				993C879925926076004A4305 /* HEX.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +181,8 @@
 			children = (
 				990CA4DE256AC236004A8105 /* Gliese_581 */,
 				990CA4DD256AC236004A8105 /* Products */,
+				D990E65C2E1AB0F7F47D19A2 /* Pods */,
+				9CAC3E0CCAAC08369D0A51E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,6 +246,8 @@
 			children = (
 				990CA4FF256AC42C004A8105 /* BaseNC.swift */,
 				990CA526256AE6E9004A8105 /* BaseVC.swift */,
+				993C877D2592266D004A4305 /* FloatinLayout.swift */,
+				993C878325922723004A4305 /* Appearence.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -252,13 +283,21 @@
 			children = (
 				997EDB2A25896168009E4122 /* CircleView.swift */,
 				99CF4F9B2580150C00F74D68 /* Buttons */,
-				990CA520256AE4AB004A8105 /* TitleLabel.swift */,
+				995D9D2E2592232E00651893 /* Labels */,
 				990CA53C256AEB41004A8105 /* DatePicker.swift */,
 				9923FF7F258019B1004F1F02 /* BigTextField.swift */,
-				9923FF9F25802640004F1F02 /* GenderLabel.swift */,
 				9923FFA525802CAC004F1F02 /* FeaturesView.swift */,
 			);
 			path = UI_Elements;
+			sourceTree = "<group>";
+		};
+		995D9D2E2592232E00651893 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				990CA520256AE4AB004A8105 /* TitleLabel.swift */,
+				9923FF9F25802640004F1F02 /* GenderLabel.swift */,
+			);
+			path = Labels;
 			sourceTree = "<group>";
 		};
 		997EDB1B25895B29009E4122 /* home */ = {
@@ -268,6 +307,8 @@
 				997EDB1725895B19009E4122 /* HomeVC.xib */,
 				9902B841258AA241002041B2 /* CollectionViewCell */,
 				997EDB2225895F46009E4122 /* TableViewCell */,
+				993C878A2592284F004A4305 /* MenuController.swift */,
+				993C878B2592284F004A4305 /* MenuController.xib */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -279,6 +320,10 @@
 				997EDB1E25895D0F009E4122 /* InstanceHoroscopeCell.xib */,
 				997EDB2425895F5B009E4122 /* FocusCell.swift */,
 				997EDB2525895F5B009E4122 /* FocusCell.xib */,
+				993C878F25925638004A4305 /* CalendarCell.swift */,
+				993C879025925638004A4305 /* CalendarCell.xib */,
+				993C879425925AD3004A4305 /* CalendarItemCollectionCell.swift */,
+				993C879525925AD3004A4305 /* CalendarItemCollectionCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -300,6 +345,23 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		9CAC3E0CCAAC08369D0A51E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC8B8043DF52DD0F747DCE7D /* Pods_Gliese_581.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D990E65C2E1AB0F7F47D19A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31DBB4191EC3FECE395D622B /* Pods-Gliese_581.debug.xcconfig */,
+				74FD4D4481571704090C8EF3 /* Pods-Gliese_581.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,9 +369,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 990CA4F0256AC238004A8105 /* Build configuration list for PBXNativeTarget "Gliese_581" */;
 			buildPhases = (
+				5C7C6BC713F44D499B51D114 /* [CP] Check Pods Manifest.lock */,
 				990CA4D8256AC236004A8105 /* Sources */,
 				990CA4D9256AC236004A8105 /* Frameworks */,
 				990CA4DA256AC236004A8105 /* Resources */,
+				F98EAEC04EBFC9F1EB3DD9D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -365,10 +429,13 @@
 				990CA50F256AC592004A8105 /* SF-Pro-Text-Bold.otf in Resources */,
 				990CA50D256AC592004A8105 /* SF-Pro-Display-Bold.otf in Resources */,
 				997EDB2025895D0F009E4122 /* InstanceHoroscopeCell.xib in Resources */,
+				993C879725925AD3004A4305 /* CalendarItemCollectionCell.xib in Resources */,
 				990CA511256AC592004A8105 /* SF-Pro-Text-Semibold.otf in Resources */,
 				990CA514256AC592004A8105 /* SF-Pro-Display-Medium.otf in Resources */,
 				990CA50E256AC592004A8105 /* SF-Pro-Text-Medium.otf in Resources */,
 				990CA4E9256AC238004A8105 /* Assets.xcassets in Resources */,
+				993C878D2592284F004A4305 /* MenuController.xib in Resources */,
+				993C879225925639004A4305 /* CalendarCell.xib in Resources */,
 				990CA513256AC592004A8105 /* SF-Pro-Display-Regular.otf in Resources */,
 				9902B845258AA272002041B2 /* MainCollectionViewCell.xib in Resources */,
 				990CA510256AC592004A8105 /* SF-Pro-Text-Regular.otf in Resources */,
@@ -376,6 +443,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C7C6BC713F44D499B51D114 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gliese_581-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F98EAEC04EBFC9F1EB3DD9D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gliese_581/Pods-Gliese_581-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gliese_581/Pods-Gliese_581-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gliese_581/Pods-Gliese_581-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		990CA4D8256AC236004A8105 /* Sources */ = {
@@ -385,27 +494,33 @@
 				9979BF9225742636005E4ED3 /* MobileNetV2.mlmodel in Sources */,
 				990CA51E256ADB7B004A8105 /* Fonts.swift in Sources */,
 				990CA53D256AEB41004A8105 /* DatePicker.swift in Sources */,
+				993C877E2592266D004A4305 /* FloatinLayout.swift in Sources */,
+				993C878C2592284F004A4305 /* MenuController.swift in Sources */,
 				9902B844258AA272002041B2 /* MainCollectionViewCell.swift in Sources */,
 				990CA4FA256AC30F004A8105 /* NextButton.swift in Sources */,
 				990CA4FD256AC323004A8105 /* Colors.swift in Sources */,
 				9902B83A258A9909002041B2 /* Zodiac.swift in Sources */,
 				990CA52B256AE860004A8105 /* TimeOfBirsthVC.swift in Sources */,
+				993C878425922723004A4305 /* Appearence.swift in Sources */,
 				997EDB2625895F5B009E4122 /* FocusCell.swift in Sources */,
 				9979BF9525742EAA005E4ED3 /* HandForAstroSkope.mlmodel in Sources */,
 				99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */,
 				990CA4F7256AC2F3004A8105 /* FirstVC.swift in Sources */,
 				990CA534256AE943004A8105 /* NameVC.swift in Sources */,
+				993C879625925AD3004A4305 /* CalendarItemCollectionCell.swift in Sources */,
 				9902B84D258AB6AE002041B2 /* GradientBackground.swift in Sources */,
 				9902B849258AB5F0002041B2 /* RoundCorners.swift in Sources */,
 				990CA4E0256AC236004A8105 /* AppDelegate.swift in Sources */,
 				990CA52E256AE8E7004A8105 /* CityOfBirsthVC.swift in Sources */,
 				9923FFA025802640004F1F02 /* GenderLabel.swift in Sources */,
+				993C8781259226C1004A4305 /* UIDevice.swift in Sources */,
 				9923FFA625802CAC004F1F02 /* FeaturesView.swift in Sources */,
 				990CA527256AE6E9004A8105 /* BaseVC.swift in Sources */,
 				990CA537256AE971004A8105 /* RelationShipsVC.swift in Sources */,
 				990CA524256AE656004A8105 /* DateOfBirsthVC.swift in Sources */,
 				997EDB1825895B19009E4122 /* HomeVC.swift in Sources */,
 				9902B83F258A9BA3002041B2 /* BaseTableViewCell.swift in Sources */,
+				993C879A25926076004A4305 /* HEX.swift in Sources */,
 				990CA53A256AE9A7004A8105 /* HandVC.swift in Sources */,
 				9923FF9D25801EA8004F1F02 /* GenderButton.swift in Sources */,
 				990CA521256AE4AB004A8105 /* TitleLabel.swift in Sources */,
@@ -415,6 +530,7 @@
 				997EDB1F25895D0F009E4122 /* InstanceHoroscopeCell.swift in Sources */,
 				990CA500256AC42C004A8105 /* BaseNC.swift in Sources */,
 				990CA4E2256AC236004A8105 /* SceneDelegate.swift in Sources */,
+				993C879125925639004A4305 /* CalendarCell.swift in Sources */,
 				997EDB2B25896168009E4122 /* CircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,11 +667,12 @@
 		};
 		990CA4F1256AC238004A8105 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31DBB4191EC3FECE395D622B /* Pods-Gliese_581.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				INFOPLIST_FILE = Gliese_581/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -572,11 +689,12 @@
 		};
 		990CA4F2256AC238004A8105 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74FD4D4481571704090C8EF3 /* Pods-Gliese_581.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				INFOPLIST_FILE = Gliese_581/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

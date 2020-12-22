@@ -23,6 +23,17 @@ class FocusCell: UITableViewCell, BaseTableViewCell {
     @IBOutlet weak var familyLabel    : UILabel!
     @IBOutlet weak var healthLabel    : UILabel!
     
+    public var viewState : MenuController.ViewState.Focus = .initial {
+        didSet {
+            self.leftImageView.image = viewState.image
+            self.titleLabel.text = viewState.title
+            self.familyLabel.text = "Family"
+            self.careerLabel.text = "Career"
+            self.healthLabel.text = "Health"
+            self.heartLabel.text = "Relations"
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .clear

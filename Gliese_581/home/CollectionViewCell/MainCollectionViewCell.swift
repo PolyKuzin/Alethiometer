@@ -59,7 +59,7 @@ class MainCollectionViewCell: UICollectionViewCell {
         tableView.dataSource = self
         tableView.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.234, alpha: 1)
         tableView.roundCorners(.top, radius: 30)
-        tableView.contentInset = UIEdgeInsets(top: 26, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 0, right: 0)
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: InstanceHoroscopeCell.reuseID, bundle: nil), forCellReuseIdentifier: InstanceHoroscopeCell.reuseID)
         tableView.register(UINib(nibName: FocusCell.reuseID, bundle: nil), forCellReuseIdentifier: FocusCell.reuseID)

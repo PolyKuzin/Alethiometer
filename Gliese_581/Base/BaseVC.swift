@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import FloatingPanel
 
-class BaseVC: UIViewController {
+class BaseVC : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         view.backgroundColor = UIColor.background
     }
+}
+
+extension BaseVC : FloatingPanelControllerDelegate {
+    
 }
