@@ -39,6 +39,24 @@ class HomeVC: BaseVC {
         setupFloatingPanel()
     }
     
+    func setUpMenuControllerClosures() {
+        menuController.onLockedSelect = {
+            [weak self] in
+            guard let self = self else { return }
+            let alert = UIAlertController(title: "Платное", message: "ОПЛАТИ ПОДПИСКУ, ПАДЛА", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Хорошо", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        menuController.onUNLockedSelect = {
+            [weak self] in
+            guard let self = self else { return }
+            let alert = UIAlertController(title: "Бесплатное", message: "Пока не сделано, сорян", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "ок(", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     func setupFloatingPanel() {
         self.menuController    = MenuController()
         self.menuControllerFPC = FloatingPanelController()
@@ -48,7 +66,7 @@ class HomeVC: BaseVC {
         menuControllerFPC.layout = MenuFloatingLayout()
         menuControllerFPC.surfaceView.appearance = FloatingPanelController.appereance()
 
-//        setUpMenuControllerClosures()
+        setUpMenuControllerClosures()
 
         menuControllerFPC.set(contentViewController: menuController)
         menuControllerFPC.track(scrollView: menuController.tableView)

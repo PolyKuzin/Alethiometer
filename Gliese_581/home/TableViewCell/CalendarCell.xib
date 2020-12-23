@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="768" id="KGk-i7-Jjw" customClass="CalendarCell" customModule="Gliese_581" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="457" height="768"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="536" id="KGk-i7-Jjw" customClass="CalendarCell" customModule="Gliese_581" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="536"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="457" height="768"/>
+                <rect key="frame" x="0.0" y="0.0" width="457" height="536"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tX2-Ny-knP">
-                        <rect key="frame" x="20" y="21" width="417" height="726"/>
+                        <rect key="frame" x="20" y="21" width="417" height="505"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFI-D5-T2I">
                                 <rect key="frame" x="41" y="12" width="57" height="29"/>
@@ -39,14 +39,13 @@
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="T6e-ni-Ea1">
-                                <rect key="frame" x="0.0" y="61" width="417" height="424"/>
+                                <rect key="frame" x="0.0" y="61" width="417" height="530"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="424" id="8ga-W8-Dyx"/>
+                                    <constraint firstAttribute="height" constant="530" id="f5H-gN-dP5"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nev-9Q-BC8">
                                     <size key="itemSize" width="145" height="94"/>
-                                    <size key="estimatedItemSize" width="145" height="94"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -70,8 +69,8 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="tX2-Ny-knP" secondAttribute="trailing" constant="20" id="4Pb-Kw-Ws3"/>
                     <constraint firstItem="tX2-Ny-knP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="4y9-xi-Aj7"/>
+                    <constraint firstAttribute="bottom" secondItem="tX2-Ny-knP" secondAttribute="bottom" constant="10" id="DRg-sn-tbR"/>
                     <constraint firstItem="tX2-Ny-knP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Se9-og-Klo"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="tX2-Ny-knP" secondAttribute="bottom" constant="10" id="mkM-kh-FAf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -81,7 +80,7 @@
                 <outlet property="leftImageView" destination="EgW-AX-hVq" id="JET-jF-4ja"/>
                 <outlet property="titleLabel" destination="tFI-D5-T2I" id="zGE-tr-R4b"/>
             </connections>
-            <point key="canvasLocation" x="38.405797101449281" y="352.23214285714283"/>
+            <point key="canvasLocation" x="38.405797101449281" y="274.55357142857139"/>
         </tableViewCell>
     </objects>
     <resources>

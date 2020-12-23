@@ -23,7 +23,8 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
             self.leftImageView.image = viewState.image
             self.titleLabel.text = viewState.title
             self.items = viewState.items
-            collectionView.reloadData()
+            collectionView.frame = CGRect(x: 0, y: 0, width: 145*2 + 40, height: 95*4)
+//            collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: <#T##UICollectionView.ScrollPosition#>, animated: <#T##Bool#>)
             print(items.count)
         }
     }
@@ -41,29 +42,35 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
         layer.shadowOpacity           = 1
         layer.masksToBounds           = false
         
-        collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.isScrollEnabled = false
+        collectionView.backgroundColor = .clear
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
-//        collectionView.isScrollEnabled = false
-        collectionView.backgroundColor = .clear
-        collectionView.frame = CGRect(x: 0, y: 0, width: 335, height: 424)
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3.72, height: 95)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.minimumInteritemSpacing = 16
-        layout.minimumLineSpacing = 16
-        
+
         collectionView.register(UINib(nibName: "CalendarItemCollectionCell", bundle: nil), forCellWithReuseIdentifier: CalendarItemCollectionCell.reuseID)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
 }
 
-extension CalendarCell : UICollectionViewDelegate { }
+extension CalendarCell : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width / 2.25, height: 120)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 16
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+    }
+}
 
 extension CalendarCell : UICollectionViewDataSource {
     
@@ -76,5 +83,16 @@ extension CalendarCell : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarItemCollectionCell.reuseID, for: indexPath) as! CalendarItemCollectionCell
         cell.viewState = data
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let data = items[indexPath.row]
+        if data.isLocked {
+            guard let onSelect = data.onSelect.first else { return }
+            onSelect()
+        } else {
+            guard let onSelect = data.onSelect.last else { return }
+            onSelect()
+        }
     }
 }

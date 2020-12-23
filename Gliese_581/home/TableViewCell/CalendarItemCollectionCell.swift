@@ -22,28 +22,31 @@ class CalendarItemCollectionCell: UICollectionViewCell {
         let image     : UIImage
         let title     : String
         let isLocked  : Bool
-        
-        static let initial = ViewState(upColor: .clear, downColor: .clear, image: UIImage(), title: "", isLocked: true)
+        let onSelect  : [(()->())]
+        static let initial = ViewState(upColor: .clear, downColor: .clear, image: UIImage(), title: "", isLocked: true, onSelect: [{ }])
     }
 
     public var viewState : ViewState = .initial {
         didSet {
+            self.lockedView.roundCorners(.all, radius: 20)
+            self.lockedView.frame = CGRect(x: 0, y: 0, width: self.frame.width + 10, height: self.frame.height)
+            self.containerView.frame = CGRect(x: 0, y: 0, width: self.frame.width + 10, height: self.frame.height)
+            self.containerView.roundCorners(.all, radius: 20)
             self.containerView.setGradientBackground(upColor: viewState.upColor, downColor: viewState.downColor)
             self.iconImageView.image = viewState.image
             self.label.text = viewState.title
-//            if viewState.isLocked {
-//                self.lockedView.backgroundColor = UIColor.black
-//                self.lockedView.alpha = 0.1
-//            } else {
-//                self.lockedView.isHidden = true
-//            }
+            if viewState.isLocked {
+                self.lockedView.backgroundColor = UIColor.black
+                self.lockedView.alpha = 0.3
+            } else {
+                self.lockedView.isHidden = true
+            }
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .clear
-        containerView.frame = CGRect(x: 0, y: 0, width: 145, height: 95)
-//        lockedView.frame = CGRect(x: 0, y: 0, width: 145, height: 95)
+
     }
 }
