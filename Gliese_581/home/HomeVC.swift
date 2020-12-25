@@ -12,6 +12,11 @@ var isExpand = false
 
 class HomeVC: BaseVC {
     
+    private let segmentControl: ScrollableSegmentControl = {
+        let control        = ScrollableSegmentControl(frame: .zero)
+        control.frame      = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 30)
+        return control
+    }()
     
     @IBOutlet weak var profileButton   : UIButton!
     @IBOutlet weak var zodiacImageView : UIImageView!
@@ -37,6 +42,28 @@ class HomeVC: BaseVC {
         navigationController?.navigationBar.isTranslucent = true
         
         setupFloatingPanel()
+        setSegmentControl()
+        setupSegmentControl()
+    }
+    
+    let todayItem     = Item(icon: UIImage(), title: "Today", isSelected: false)
+    let tommorowItem       = Item(icon: UIImage(), title: "Tommorow",  isSelected: false)
+    let weekItem         = Item(icon: UIImage(), title: "Week",   isSelected: false)
+    let monthItem         = Item(icon: UIImage(), title: "Month",   isSelected: false)
+
+    func setSegmentControl() {
+        segmentControl.insertSegment(todayItem, index: 0)
+        segmentControl.insertSegment(tommorowItem,   index: 1)
+        segmentControl.insertSegment(weekItem,     index: 2)
+        segmentControl.insertSegment(monthItem,     index: 3)
+        segmentControl.setSelected(at: 0)
+        segmentControl.onSegmentSelect = { [weak self] selectedIndex in
+            guard let self = self else { return }
+            UIView.animate(withDuration: 0.2, animations: {
+//                self.scrollView.contentOffset = CGPoint(x: CGFloat(selectedIndex)*self.view.frame.width, y: 0)
+                self.segmentControl.setSelected(at: selectedIndex)
+            })
+        }
     }
     
     func setUpMenuControllerClosures() {
@@ -96,5 +123,19 @@ class HomeVC: BaseVC {
                 self.menuControllerFPC.move(to: .tip, animated: false)
             }
         }
+    }
+}
+
+extension HomeVC {
+    
+    func setupSegmentControl() {
+        self.view.addSubview(segmentControl)
+        segmentControl.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            segmentControl.heightAnchor.constraint(equalToConstant: 48),
+            segmentControl.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            segmentControl.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            segmentControl.bottomAnchor.constraint(equalTo: menuController.view.topAnchor, constant: -10)
+        ])
     }
 }

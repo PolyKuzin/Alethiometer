@@ -47,6 +47,11 @@
 		9923FFA025802640004F1F02 /* GenderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FF9F25802640004F1F02 /* GenderLabel.swift */; };
 		9923FFA325802C26004F1F02 /* PayWallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FFA225802C26004F1F02 /* PayWallVC.swift */; };
 		9923FFA625802CAC004F1F02 /* FeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FFA525802CAC004F1F02 /* FeaturesView.swift */; };
+		993249922595054300865617 /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993249912595054300865617 /* SegmentControl.swift */; };
+		993249962595055C00865617 /* SegmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993249952595055C00865617 /* SegmentItem.swift */; };
+		99324999259505B600865617 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99324998259505B600865617 /* Pin.swift */; };
+		9932499D2595062600865617 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9932499C2595062600865617 /* UIImageView.swift */; };
+		993249A0259506D500865617 /* SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9932499F259506D500865617 /* SafeIndex.swift */; };
 		993C877E2592266D004A4305 /* FloatinLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C877D2592266D004A4305 /* FloatinLayout.swift */; };
 		993C8781259226C1004A4305 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C8780259226C1004A4305 /* UIDevice.swift */; };
 		993C878425922723004A4305 /* Appearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C878325922723004A4305 /* Appearence.swift */; };
@@ -113,6 +118,11 @@
 		9923FF9F25802640004F1F02 /* GenderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderLabel.swift; sourceTree = "<group>"; };
 		9923FFA225802C26004F1F02 /* PayWallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallVC.swift; sourceTree = "<group>"; };
 		9923FFA525802CAC004F1F02 /* FeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesView.swift; sourceTree = "<group>"; };
+		993249912595054300865617 /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
+		993249952595055C00865617 /* SegmentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentItem.swift; sourceTree = "<group>"; };
+		99324998259505B600865617 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		9932499C2595062600865617 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		9932499F259506D500865617 /* SafeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeIndex.swift; sourceTree = "<group>"; };
 		993C877D2592266D004A4305 /* FloatinLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatinLayout.swift; sourceTree = "<group>"; };
 		993C8780259226C1004A4305 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		993C878325922723004A4305 /* Appearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearence.swift; sourceTree = "<group>"; };
@@ -172,6 +182,9 @@
 				9902B84C258AB6AE002041B2 /* GradientBackground.swift */,
 				993C8780259226C1004A4305 /* UIDevice.swift */,
 				993C879925926076004A4305 /* HEX.swift */,
+				99324998259505B600865617 /* Pin.swift */,
+				9932499C2595062600865617 /* UIImageView.swift */,
+				9932499F259506D500865617 /* SafeIndex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -281,7 +294,7 @@
 		990CA51B256ADB3D004A8105 /* UI_Elements */ = {
 			isa = PBXGroup;
 			children = (
-				997EDB2A25896168009E4122 /* CircleView.swift */,
+				993249902595053200865617 /* Views */,
 				99CF4F9B2580150C00F74D68 /* Buttons */,
 				995D9D2E2592232E00651893 /* Labels */,
 				990CA53C256AEB41004A8105 /* DatePicker.swift */,
@@ -289,6 +302,16 @@
 				9923FFA525802CAC004F1F02 /* FeaturesView.swift */,
 			);
 			path = UI_Elements;
+			sourceTree = "<group>";
+		};
+		993249902595053200865617 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				997EDB2A25896168009E4122 /* CircleView.swift */,
+				993249912595054300865617 /* SegmentControl.swift */,
+				993249952595055C00865617 /* SegmentItem.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		995D9D2E2592232E00651893 /* Labels */ = {
@@ -492,10 +515,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9979BF9225742636005E4ED3 /* MobileNetV2.mlmodel in Sources */,
+				9932499D2595062600865617 /* UIImageView.swift in Sources */,
 				990CA51E256ADB7B004A8105 /* Fonts.swift in Sources */,
+				993249A0259506D500865617 /* SafeIndex.swift in Sources */,
 				990CA53D256AEB41004A8105 /* DatePicker.swift in Sources */,
 				993C877E2592266D004A4305 /* FloatinLayout.swift in Sources */,
 				993C878C2592284F004A4305 /* MenuController.swift in Sources */,
+				993249922595054300865617 /* SegmentControl.swift in Sources */,
 				9902B844258AA272002041B2 /* MainCollectionViewCell.swift in Sources */,
 				990CA4FA256AC30F004A8105 /* NextButton.swift in Sources */,
 				990CA4FD256AC323004A8105 /* Colors.swift in Sources */,
@@ -506,6 +532,7 @@
 				9979BF9525742EAA005E4ED3 /* HandForAstroSkope.mlmodel in Sources */,
 				99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */,
 				990CA4F7256AC2F3004A8105 /* FirstVC.swift in Sources */,
+				993249962595055C00865617 /* SegmentItem.swift in Sources */,
 				990CA534256AE943004A8105 /* NameVC.swift in Sources */,
 				993C879625925AD3004A4305 /* CalendarItemCollectionCell.swift in Sources */,
 				9902B84D258AB6AE002041B2 /* GradientBackground.swift in Sources */,
@@ -513,6 +540,7 @@
 				990CA4E0256AC236004A8105 /* AppDelegate.swift in Sources */,
 				990CA52E256AE8E7004A8105 /* CityOfBirsthVC.swift in Sources */,
 				9923FFA025802640004F1F02 /* GenderLabel.swift in Sources */,
+				99324999259505B600865617 /* Pin.swift in Sources */,
 				993C8781259226C1004A4305 /* UIDevice.swift in Sources */,
 				9923FFA625802CAC004F1F02 /* FeaturesView.swift in Sources */,
 				990CA527256AE6E9004A8105 /* BaseVC.swift in Sources */,
@@ -672,7 +700,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				INFOPLIST_FILE = Gliese_581/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -694,7 +722,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				INFOPLIST_FILE = Gliese_581/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

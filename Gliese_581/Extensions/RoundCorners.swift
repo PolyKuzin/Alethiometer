@@ -27,6 +27,28 @@ extension UIView {
         case topRightBottomLeft
     }
     
+    // MARK: - Round Cornerns
+    /**
+     Sets the cornerRadius for selected corners from **Corners** enum
+     - parameters:
+        - corners:
+            * all
+            * top
+            * bottom
+            * topLeft
+            * topRight
+            * bottomLeft
+            * bottomRight
+            * allButTopLeft
+            * allButTopRight
+            * allButBottomLeft
+            * allButBottomRight
+            * left
+            * right
+            * topLeftBottomRight
+            * topRightBottomLeft
+        - radius: The **CGFloat** value to be set
+     */
     func roundCorners(_ corners: Corners, radius: CGFloat) {
         var cornerMasks = [CACornerMask]()
         

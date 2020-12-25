@@ -23,6 +23,7 @@ class CalendarItemCollectionCell: UICollectionViewCell {
         let title     : String
         let isLocked  : Bool
         let onSelect  : [(()->())]
+        
         static let initial = ViewState(upColor: .clear, downColor: .clear, image: UIImage(), title: "", isLocked: true, onSelect: [{ }])
     }
 
