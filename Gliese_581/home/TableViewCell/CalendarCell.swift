@@ -14,8 +14,23 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
     @IBOutlet weak var leftImageView   : UIImageView!
     @IBOutlet weak var titleLabel      : UILabel!
     @IBOutlet weak var containerView   : UIView!
-    @IBOutlet var categoryButtons: [UIButton]!
     
+    @NibWrapped(CenteredButton.self)
+    @IBOutlet var view0: UIView!
+    @NibWrapped(CenteredButton.self)
+    @IBOutlet var view1: UIView!
+    @NibWrapped(CenteredButton.self)
+    @IBOutlet var view2: UIView!
+    @NibWrapped(CenteredButton.self)
+    @IBOutlet var view3: UIView!
+    @NibWrapped(CenteredButton.self)
+    @IBOutlet var view4: UIView!
+    @NibWrapped(CenteredButton.self)
+    @IBOutlet var view5: UIView!
+    @NibWrapped(CenteredButton.self)
+    @IBOutlet var view6: UIView!
+    @NibWrapped(CenteredButton.self)
+    @IBOutlet var view7: UIView!
     
     var items : [ViewState] = []
     
@@ -35,40 +50,106 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
             self.items = viewState.items
             self.leftImageView.image = viewState.image
             self.titleLabel.text = viewState.title
-            for i in 0...categoryButtons.count - 1 {
-//                let imageView = UIImageView(image: UIImage(named: "Relate"))
-//                let layer = C
-//                categoryButtons[i].layer.addSublayer(<#T##layer: CALayer##CALayer#>)(imageView)
-//                NSLayoutConstraint.activate([
-//                    imageView.widthAnchor.constraint(equalToConstant: 45),
-//                    imageView.heightAnchor.constraint(equalToConstant: 45),
-//                    imageView.topAnchor.constraint(equalTo: categoryButtons[i].topAnchor, constant: 12),
-//                    imageView.centerXAnchor.constraint(equalTo: categoryButtons[i].centerXAnchor)
-//                ])
-                categoryButtons[safe: i]?.tag = i
-                categoryButtons[safe: i]?.setTitleColor(.black, for: .normal)
-                categoryButtons[safe: i]?.setTitle(items[i].title, for: .normal)
-                categoryButtons[safe: i]?.roundCorners(.all, radius: 20)
-                categoryButtons[safe: i]?.setGradientBackground(upColor: viewState.items[i].upColor, downColor: viewState.items[i].downColor)
-                if items[i].isLocked {
-                    let view = UIView(frame: CGRect(x: 0, y: 0, width: categoryButtons[i].frame.width, height: categoryButtons[i].frame.height))
-                    view.backgroundColor = .black
-                    view.alpha = 0.3
-                    let imageView = UIImageView(image: UIImage(named: "Relate"))
-                    view.addSubview(imageView)
-                    imageView.translatesAutoresizingMaskIntoConstraints = false
-                    NSLayoutConstraint.activate([
-                        imageView.heightAnchor.constraint(equalToConstant: 15),
-                        imageView.widthAnchor.constraint(equalToConstant: 15),
-                        imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 12),
-                        imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12)
-                    ])
-                    let tap = UITapGestureRecognizer(target: self, action: #selector(handleLocked))
-                    tap.numberOfTapsRequired = 1
-                    view.addGestureRecognizer(tap)
-                    categoryButtons[i].addSubview(view)
-                } else {
-                    categoryButtons[i].addTarget(self, action: #selector(handleUNLocked(sender:)), for: .touchUpInside)
+            for i in 0...items.count {
+                switch i {
+                case 0:
+                    view0.backgroundColor = .clear
+                    _view0.iconImageView?.image = items[i].image
+                    _view0.titleLabel?.textColor = .black
+                    _view0.titleLabel?.text = items[i].title
+                    _view0.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
+                    if items[i].isLocked {
+                        _view0.isEnabled = false
+                        _view0.onSelect = items[i].onSelect.first
+                    } else {
+                        _view0.onSelect = items[i].onSelect.last
+                    }
+                case 1:
+                    view1.backgroundColor = .clear
+                    _view1.iconImageView?.image = items[i].image
+                    _view1.titleLabel?.textColor = .black
+                    _view1.titleLabel?.text = items[i].title
+                    _view1.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
+                    if items[i].isLocked {
+                        _view1.isEnabled = false
+                        _view1.onSelect = items[i].onSelect.first
+                    } else {
+                        _view1.onSelect = items[i].onSelect.last
+                    }
+                case 2:
+                    view2.backgroundColor = .clear
+                    _view2.iconImageView?.image = items[i].image
+                    _view2.titleLabel?.textColor = .black
+                    _view2.titleLabel?.text = items[i].title
+                    _view2.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
+                    if items[i].isLocked {
+                        _view2.isEnabled = false
+                        _view2.onSelect = items[i].onSelect.first
+                    } else {
+                        _view2.onSelect = items[i].onSelect.last
+                    }
+                case 3:
+                    view3.backgroundColor = .clear
+                    _view3.iconImageView?.image = items[i].image
+                    _view3.titleLabel?.textColor = .black
+                    _view3.titleLabel?.text = items[i].title
+                    _view3.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
+                    if items[i].isLocked {
+                        _view3.isEnabled = false
+                        _view3.onSelect = items[i].onSelect.first
+                    } else {
+                        _view3.onSelect = items[i].onSelect.last
+                    }
+                case 4:
+                    view4.backgroundColor = .clear
+                    _view4.iconImageView?.image = items[i].image
+                    _view4.titleLabel?.textColor = .black
+                    _view4.titleLabel?.text = items[i].title
+                    _view4.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
+                    if items[i].isLocked {
+                        _view4.isEnabled = false
+                        _view4.onSelect = items[i].onSelect.first
+                    } else {
+                        _view4.onSelect = items[i].onSelect.last
+                    }
+                case 5:
+                    view5.backgroundColor = .clear
+                    _view5.iconImageView?.image = items[i].image
+                    _view5.titleLabel?.textColor = .black
+                    _view5.titleLabel?.text = items[i].title
+                    _view5.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
+                    if items[i].isLocked {
+                        _view5.isEnabled = false
+                        _view5.onSelect = items[i].onSelect.first
+                    } else {
+                        _view5.onSelect = items[i].onSelect.last
+                    }
+                case 6:
+                    view6.backgroundColor = .clear
+                    _view6.iconImageView?.image = items[i].image
+                    _view6.titleLabel?.textColor = .black
+                    _view6.titleLabel?.text = items[i].title
+                    _view6.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
+                    if items[i].isLocked {
+                        _view6.isEnabled = false
+                        _view6.onSelect = items[i].onSelect.first
+                    } else {
+                        _view6.onSelect = items[i].onSelect.last
+                    }
+                case 7:
+                    view7.backgroundColor = .clear
+                    _view7.iconImageView?.image = items[i].image
+                    _view7.titleLabel?.textColor = .black
+                    _view7.titleLabel?.text = items[i].title
+                    _view7.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
+                    if items[i].isLocked {
+                        _view7.isEnabled = false
+                        _view7.onSelect = items[i].onSelect.first
+                    } else {
+                        _view7.onSelect = items[i].onSelect.last
+                    }
+                default:
+                    break
                 }
             }
             print(items.count)

@@ -66,6 +66,11 @@ class HomeVC: BaseVC {
         }
     }
     
+    func openCalendarVC(icon: UIImage, title: String, subtitle: String, current: [Int], next: [Int], afterTheNext: [Int]) {
+//        let calendarVC = 
+        self.navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+    }
+    
     func setUpMenuControllerClosures() {
         menuController.onLockedSelect = {
             [weak self] in

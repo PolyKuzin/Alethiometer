@@ -42,6 +42,9 @@
 		990CA537256AE971004A8105 /* RelationShipsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990CA536256AE971004A8105 /* RelationShipsVC.swift */; };
 		990CA53A256AE9A7004A8105 /* HandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990CA539256AE9A7004A8105 /* HandVC.swift */; };
 		990CA53D256AEB41004A8105 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990CA53C256AEB41004A8105 /* DatePicker.swift */; };
+		990F142C2596675F00AA7603 /* CenteredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990F142B2596675F00AA7603 /* CenteredButton.swift */; };
+		990F142F259669D100AA7603 /* CenteredButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 990F142E259669D100AA7603 /* CenteredButton.xib */; };
+		990F14332596757F00AA7603 /* NibWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990F14322596757F00AA7603 /* NibWrapper.swift */; };
 		9923FF80258019B1004F1F02 /* BigTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FF7F258019B1004F1F02 /* BigTextField.swift */; };
 		9923FF9D25801EA8004F1F02 /* GenderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FF9C25801EA8004F1F02 /* GenderButton.swift */; };
 		9923FFA025802640004F1F02 /* GenderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FF9F25802640004F1F02 /* GenderLabel.swift */; };
@@ -113,6 +116,9 @@
 		990CA536256AE971004A8105 /* RelationShipsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationShipsVC.swift; sourceTree = "<group>"; };
 		990CA539256AE9A7004A8105 /* HandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandVC.swift; sourceTree = "<group>"; };
 		990CA53C256AEB41004A8105 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		990F142B2596675F00AA7603 /* CenteredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredButton.swift; sourceTree = "<group>"; };
+		990F142E259669D100AA7603 /* CenteredButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CenteredButton.xib; sourceTree = "<group>"; };
+		990F14322596757F00AA7603 /* NibWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibWrapper.swift; sourceTree = "<group>"; };
 		9923FF7F258019B1004F1F02 /* BigTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTextField.swift; sourceTree = "<group>"; };
 		9923FF9C25801EA8004F1F02 /* GenderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderButton.swift; sourceTree = "<group>"; };
 		9923FF9F25802640004F1F02 /* GenderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderLabel.swift; sourceTree = "<group>"; };
@@ -364,6 +370,9 @@
 				990CA4F9256AC30F004A8105 /* NextButton.swift */,
 				99CF4F98258014FE00F74D68 /* ClearButton.swift */,
 				9923FF9C25801EA8004F1F02 /* GenderButton.swift */,
+				990F142B2596675F00AA7603 /* CenteredButton.swift */,
+				990F142E259669D100AA7603 /* CenteredButton.xib */,
+				990F14322596757F00AA7603 /* NibWrapper.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -456,6 +465,7 @@
 				990CA511256AC592004A8105 /* SF-Pro-Text-Semibold.otf in Resources */,
 				990CA514256AC592004A8105 /* SF-Pro-Display-Medium.otf in Resources */,
 				990CA50E256AC592004A8105 /* SF-Pro-Text-Medium.otf in Resources */,
+				990F142F259669D100AA7603 /* CenteredButton.xib in Resources */,
 				990CA4E9256AC238004A8105 /* Assets.xcassets in Resources */,
 				993C878D2592284F004A4305 /* MenuController.xib in Resources */,
 				993C879225925639004A4305 /* CalendarCell.xib in Resources */,
@@ -515,9 +525,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9979BF9225742636005E4ED3 /* MobileNetV2.mlmodel in Sources */,
+				990F142C2596675F00AA7603 /* CenteredButton.swift in Sources */,
 				9932499D2595062600865617 /* UIImageView.swift in Sources */,
 				990CA51E256ADB7B004A8105 /* Fonts.swift in Sources */,
 				993249A0259506D500865617 /* SafeIndex.swift in Sources */,
+				990F14332596757F00AA7603 /* NibWrapper.swift in Sources */,
 				990CA53D256AEB41004A8105 /* DatePicker.swift in Sources */,
 				993C877E2592266D004A4305 /* FloatinLayout.swift in Sources */,
 				993C878C2592284F004A4305 /* MenuController.swift in Sources */,
