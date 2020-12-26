@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tX2-Ny-knP">
-                        <rect key="frame" x="20" y="10" width="335" height="570"/>
+                        <rect key="frame" x="20" y="10" width="396" height="570"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFI-D5-T2I">
-                                <rect key="frame" x="41" y="12" width="57" height="94"/>
+                                <rect key="frame" x="41" y="12" width="57" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" name="Main"/>
                                 <nil key="highlightedColor"/>
@@ -36,56 +36,56 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IfJ-Vj-4Kg" customClass="MKCenteredButtonViewWrapper" customModule="Gliese_581" customModuleProvider="target">
-                                <rect key="frame" x="16" y="126" width="145" height="95"/>
+                                <rect key="frame" x="16" y="46" width="175.5" height="115"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IfJ-Vj-4Kg" secondAttribute="height" multiplier="145:95" id="qCn-67-y9A"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xE3-2r-knL" customClass="MKCenteredButtonViewWrapper" customModule="Gliese_581" customModuleProvider="target">
-                                <rect key="frame" x="16" y="237" width="145" height="95"/>
+                                <rect key="frame" x="16" y="177" width="175.5" height="115"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xE3-2r-knL" secondAttribute="height" multiplier="145:95" id="IbL-vh-TBb"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vdc-Te-eeo" customClass="MKCenteredButtonViewWrapper" customModule="Gliese_581" customModuleProvider="target">
-                                <rect key="frame" x="16" y="459" width="145" height="95"/>
+                                <rect key="frame" x="16" y="439" width="175.5" height="115"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Vdc-Te-eeo" secondAttribute="height" multiplier="145:95" id="i28-BE-QEr"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjZ-Js-GiV" customClass="MKCenteredButtonViewWrapper" customModule="Gliese_581" customModuleProvider="target">
-                                <rect key="frame" x="174" y="459" width="145" height="95"/>
+                                <rect key="frame" x="204.5" y="439" width="175.5" height="115"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IjZ-Js-GiV" secondAttribute="height" multiplier="145:95" id="AcE-QW-Nwa"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sv5-u1-jlR" customClass="MKCenteredButtonViewWrapper" customModule="Gliese_581" customModuleProvider="target">
-                                <rect key="frame" x="174" y="237" width="145" height="95"/>
+                                <rect key="frame" x="204.5" y="177" width="175.5" height="115"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Sv5-u1-jlR" secondAttribute="height" multiplier="145:95" id="UoW-Yl-f7O"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywN-fh-ljl" customClass="MKCenteredButtonViewWrapper" customModule="Gliese_581" customModuleProvider="target">
-                                <rect key="frame" x="174" y="126" width="145" height="95"/>
+                                <rect key="frame" x="204.5" y="46" width="175.5" height="115"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ywN-fh-ljl" secondAttribute="height" multiplier="145:95" id="MSr-zh-mi2"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gc8-y1-XdP" customClass="MKCenteredButtonViewWrapper" customModule="Gliese_581" customModuleProvider="target">
-                                <rect key="frame" x="16" y="348" width="145" height="95"/>
+                                <rect key="frame" x="16" y="308" width="175.5" height="115"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Gc8-y1-XdP" secondAttribute="height" multiplier="145:95" id="8sB-2G-eTE"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEh-Bc-An3" customClass="MKCenteredButtonViewWrapper" customModule="Gliese_581" customModuleProvider="target">
-                                <rect key="frame" x="174" y="348" width="145" height="95"/>
+                                <rect key="frame" x="204.5" y="308" width="175.5" height="115"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JEh-Bc-An3" secondAttribute="height" multiplier="145:95" id="sln-bc-DYX"/>

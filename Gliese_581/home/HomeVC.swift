@@ -32,6 +32,7 @@ class HomeVC: BaseVC {
     
     private var menuControllerFPC      : FloatingPanelController!
     private var menuController         : MenuController!
+    private var calendarVC             : CalendarVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +47,10 @@ class HomeVC: BaseVC {
         setupSegmentControl()
     }
     
-    let todayItem     = Item(icon: UIImage(), title: "Today", isSelected: false)
-    let tommorowItem       = Item(icon: UIImage(), title: "Tommorow",  isSelected: false)
-    let weekItem         = Item(icon: UIImage(), title: "Week",   isSelected: false)
-    let monthItem         = Item(icon: UIImage(), title: "Month",   isSelected: false)
+    let todayItem    = Item(icon: UIImage(), title: "Today",    isSelected: false)
+    let tommorowItem = Item(icon: UIImage(), title: "Tommorow", isSelected: false)
+    let weekItem     = Item(icon: UIImage(), title: "Week",     isSelected: false)
+    let monthItem    = Item(icon: UIImage(), title: "Month",    isSelected: false)
 
     func setSegmentControl() {
         segmentControl.insertSegment(todayItem, index: 0)
@@ -66,12 +67,8 @@ class HomeVC: BaseVC {
         }
     }
     
-    func openCalendarVC(icon: UIImage, title: String, subtitle: String, current: [Int], next: [Int], afterTheNext: [Int]) {
-//        let calendarVC = 
-        self.navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
-    }
-    
     func setUpMenuControllerClosures() {
+        
         menuController.onLockedSelect = {
             [weak self] in
             guard let self = self else { return }
@@ -81,11 +78,12 @@ class HomeVC: BaseVC {
         }
         
         menuController.onUNLockedSelect = {
-            [weak self] in
+            [weak self] (viewState) in
             guard let self = self else { return }
-            let alert = UIAlertController(title: "Бесплатное", message: "Пока не сделано, сорян", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "ок(", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            self.calendarVC = CalendarVC()
+            self.calendarVC.loadView()
+            self.navigationController?.pushViewController(self.calendarVC, animated: true)
+            self.calendarVC.viewState = viewState
         }
     }
     
@@ -104,7 +102,6 @@ class HomeVC: BaseVC {
         menuControllerFPC.track(scrollView: menuController.tableView)
         menuControllerFPC.addPanel(toParent: self, animated: true)
         menuControllerFPC.surfaceView.grabberHandleSize = .init(width: 0, height: 0)
-//        menuControllerFPC
         menuController.makeStandartState()
         menuController.view.setNeedsLayout()
         UIView.animate(withDuration: 0.4) { [weak self] in

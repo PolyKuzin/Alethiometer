@@ -28,9 +28,6 @@ class CenteredButton : UIView {
                     imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 12),
                     imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12)
                 ])
-//                let tap = UITapGestureRecognizer(target: self, action: #selector(handleLocked))
-//                tap.numberOfTapsRequired = 1
-//                view.addGestureRecognizer(tap)
                 addSubview(view)
                 view.translatesAutoresizingMaskIntoConstraints = false
                 NSLayoutConstraint.activate([

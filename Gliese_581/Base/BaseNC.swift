@@ -26,8 +26,8 @@ class BaseNC: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBar.barTintColor = .background
-        self.navigationBar.tintColor = UIColor.clear
+        self.navigationBar.tintColor        = UIColor.clear
+        self.navigationBar.barTintColor     = .background
         self.navigationItem.backButtonTitle = ""
     }
 }
