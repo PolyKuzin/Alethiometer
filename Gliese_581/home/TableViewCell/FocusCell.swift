@@ -15,9 +15,13 @@ class FocusCell: UITableViewCell, BaseTableViewCell {
     @IBOutlet weak var leftImageView  : UIImageView!
     @IBOutlet weak var titleLabel     : UILabel!
     @IBOutlet weak var heartView      : CircularProgressView!
+    @IBOutlet weak var heartImage     : UIImageView!
     @IBOutlet weak var careerView     : CircularProgressView!
+    @IBOutlet weak var careerImage    : UIImageView!
     @IBOutlet weak var familyView     : CircularProgressView!
+    @IBOutlet weak var familyImage    : UIImageView!
     @IBOutlet weak var healthView     : CircularProgressView!
+    @IBOutlet weak var healthImage    : UIImageView!
     @IBOutlet weak var heartLabel     : UILabel!
     @IBOutlet weak var careerLabel    : UILabel!
     @IBOutlet weak var familyLabel    : UILabel!
@@ -37,6 +41,11 @@ class FocusCell: UITableViewCell, BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .clear
+        
+        heartImage.image = UIImage(named: "Relate")
+        careerImage.image = UIImage(named: "Relate")
+        familyImage.image = UIImage(named: "Relate")
+        healthImage.image = UIImage(named: "Health")
         containerView.roundCorners(.all, radius: 20)
         self.containerView.backgroundColor = UIColor(red: 0.238, green: 0.237, blue: 0.267, alpha: 1)
         heartView.roundCorners(.all, radius: 33)
@@ -62,8 +71,21 @@ class FocusCell: UITableViewCell, BaseTableViewCell {
     }
     
     func animateView(_ view: CircularProgressView) {
+        view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.05)
+        switch view {
+        case healthView:
+            view.configure(with: UIColor(red: 0.992, green: 1, blue: 0.587, alpha: 1), CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2)))
+        case careerView:
+            view.configure(with: UIColor(red: 0.729, green: 0.631, blue: 1, alpha: 1), CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2)))
+        case familyView:
+            view.configure(with: UIColor(red: 0.62, green: 1, blue: 0.587, alpha: 1), CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2)))
+        case heartView:
+            view.configure(with: UIColor(red: 0.976, green: 0.443, blue: 0.667, alpha: 1), CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2)))
+        default:
+            break
+        }
         view.createCircularPath()
-        view.progressAnimation(duration: 2)
+        view.progressAnimation(duration: 1)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

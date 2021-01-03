@@ -40,34 +40,78 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6O-Px-B7I" customClass="CircularProgressView" customModule="Gliese_581" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zCK-mh-SVz">
+                                                <rect key="frame" x="16" y="16" width="34" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="4YT-kz-iYB"/>
+                                                    <constraint firstAttribute="width" constant="34" id="diY-Td-cBK"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="66" id="1ic-6u-cVd"/>
+                                            <constraint firstItem="zCK-mh-SVz" firstAttribute="centerX" secondItem="S6O-Px-B7I" secondAttribute="centerX" id="P69-XV-wo3"/>
+                                            <constraint firstItem="zCK-mh-SVz" firstAttribute="centerY" secondItem="S6O-Px-B7I" secondAttribute="centerY" id="SY4-oe-k8E"/>
                                             <constraint firstAttribute="width" constant="66" id="bau-o8-7eM"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTu-iH-QNQ" customClass="CircularProgressView" customModule="Gliese_581" customModuleProvider="target">
                                         <rect key="frame" x="79" y="0.0" width="66" height="66"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cm2-tE-eYd">
+                                                <rect key="frame" x="16" y="16" width="34" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="LGj-Sk-6z2"/>
+                                                    <constraint firstAttribute="width" constant="34" id="toU-US-Djy"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <constraints>
+                                            <constraint firstItem="cm2-tE-eYd" firstAttribute="centerX" secondItem="gTu-iH-QNQ" secondAttribute="centerX" id="2Nb-lb-Hrx"/>
                                             <constraint firstAttribute="width" constant="66" id="95T-mN-1a9"/>
+                                            <constraint firstItem="cm2-tE-eYd" firstAttribute="centerY" secondItem="gTu-iH-QNQ" secondAttribute="centerY" id="N5P-af-sxy"/>
                                             <constraint firstAttribute="height" constant="66" id="uAw-5p-66a"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-pb-mAm" customClass="CircularProgressView" customModule="Gliese_581" customModuleProvider="target">
                                         <rect key="frame" x="158" y="0.0" width="66" height="66"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nMI-UH-P0a">
+                                                <rect key="frame" x="16" y="16" width="34" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="34" id="FcG-JD-IIo"/>
+                                                    <constraint firstAttribute="height" constant="34" id="qHZ-f3-zN6"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
+                                            <constraint firstItem="nMI-UH-P0a" firstAttribute="centerX" secondItem="WJc-pb-mAm" secondAttribute="centerX" id="V2C-GX-28t"/>
                                             <constraint firstAttribute="height" constant="66" id="W1r-6v-sSD"/>
                                             <constraint firstAttribute="width" constant="66" id="s32-2P-Rys"/>
+                                            <constraint firstItem="nMI-UH-P0a" firstAttribute="centerY" secondItem="WJc-pb-mAm" secondAttribute="centerY" id="yry-aq-ECr"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asG-TH-J4u" customClass="CircularProgressView" customModule="Gliese_581" customModuleProvider="target">
                                         <rect key="frame" x="237" y="0.0" width="66" height="66"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ABS-Fb-mix">
+                                                <rect key="frame" x="16" y="16" width="34" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="34" id="0ut-V6-IYc"/>
+                                                    <constraint firstAttribute="height" constant="34" id="m1H-cp-TMH"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="66" id="6WN-VS-ei7"/>
+                                            <constraint firstItem="ABS-Fb-mix" firstAttribute="centerX" secondItem="asG-TH-J4u" secondAttribute="centerX" id="7Qa-Aw-bh2"/>
                                             <constraint firstAttribute="height" constant="66" id="DWP-Us-Xa9"/>
+                                            <constraint firstItem="ABS-Fb-mix" firstAttribute="centerY" secondItem="asG-TH-J4u" secondAttribute="centerY" id="eot-OK-Rzg"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -145,13 +189,17 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="careerImage" destination="cm2-tE-eYd" id="teb-mq-NtE"/>
                 <outlet property="careerLabel" destination="6gl-CD-MKz" id="lYj-aP-qPK"/>
                 <outlet property="careerView" destination="gTu-iH-QNQ" id="FsQ-d0-Opx"/>
                 <outlet property="containerView" destination="IXc-7a-uGN" id="0lf-lb-P65"/>
+                <outlet property="familyImage" destination="nMI-UH-P0a" id="Jno-ow-xsA"/>
                 <outlet property="familyLabel" destination="rPY-lr-sSr" id="JI0-J8-hVT"/>
                 <outlet property="familyView" destination="WJc-pb-mAm" id="D8j-lz-0JC"/>
+                <outlet property="healthImage" destination="ABS-Fb-mix" id="4f4-pb-GxD"/>
                 <outlet property="healthLabel" destination="FvS-aR-IZD" id="7bh-jH-FwU"/>
                 <outlet property="healthView" destination="asG-TH-J4u" id="qn9-Ia-TlB"/>
+                <outlet property="heartImage" destination="zCK-mh-SVz" id="JSN-67-YzA"/>
                 <outlet property="heartLabel" destination="hek-fv-5yx" id="rDH-mV-LKp"/>
                 <outlet property="heartView" destination="S6O-Px-B7I" id="PrN-qs-qxH"/>
                 <outlet property="leftImageView" destination="6xS-qZ-JGa" id="Eo6-SL-AYr"/>
