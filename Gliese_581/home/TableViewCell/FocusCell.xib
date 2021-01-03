@@ -38,7 +38,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="At5-qn-NeV">
                                 <rect key="frame" x="22" y="57" width="303" height="66"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6O-Px-B7I" customClass="CircleView" customModule="Gliese_581" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6O-Px-B7I" customClass="CircularProgressView" customModule="Gliese_581" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
@@ -46,7 +46,7 @@
                                             <constraint firstAttribute="width" constant="66" id="bau-o8-7eM"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTu-iH-QNQ" customClass="CircleView" customModule="Gliese_581" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTu-iH-QNQ" customClass="CircularProgressView" customModule="Gliese_581" customModuleProvider="target">
                                         <rect key="frame" x="79" y="0.0" width="66" height="66"/>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <constraints>
@@ -54,7 +54,7 @@
                                             <constraint firstAttribute="height" constant="66" id="uAw-5p-66a"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-pb-mAm" customClass="CircleView" customModule="Gliese_581" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-pb-mAm" customClass="CircularProgressView" customModule="Gliese_581" customModuleProvider="target">
                                         <rect key="frame" x="158" y="0.0" width="66" height="66"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
@@ -62,7 +62,7 @@
                                             <constraint firstAttribute="width" constant="66" id="s32-2P-Rys"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asG-TH-J4u" customClass="CircleView" customModule="Gliese_581" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asG-TH-J4u" customClass="CircularProgressView" customModule="Gliese_581" customModuleProvider="target">
                                         <rect key="frame" x="237" y="0.0" width="66" height="66"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>

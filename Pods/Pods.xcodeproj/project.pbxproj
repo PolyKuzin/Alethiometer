@@ -1,0 +1,837 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		899318C1CEDE586664EC232A68069570 /* YandexMobileMetrica */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F74DCE6258F39EE8F1BB65951F54078C /* Build configuration list for PBXAggregateTarget "YandexMobileMetrica" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = YandexMobileMetrica;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		03243D151D31E9DF0BB90FEE6633D683 /* Pods-Gliese_581-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F205C95C3930F9E1780C497CEACE1603 /* Pods-Gliese_581-dummy.m */; };
+		1659A83A37A37847E63460EE37298260 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E60A4475942D3665F6A3F8D8CB8EA /* Controller.swift */; };
+		27A3FCA33FC096112F945F0969C4B4A1 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73AB5ECBE41D5E1A1EAE8454992560 /* UIExtensions.swift */; };
+		32CAD57136F62973B17307271803DABE /* PassthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFB1F8F64532AE32B5607B58DBEFD16 /* PassthroughView.swift */; };
+		418B744DEFDE1648A55B5017210252B2 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697AD943320EB18F0C37BF61E65BD41A /* Position.swift */; };
+		42290ADFDAA15ADDC859EFB62FE36920 /* BackdropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63156485F5B45821DA1F410C10AC64 /* BackdropView.swift */; };
+		48FA84B1A4D6A45CAF42580875F1942A /* FloatingPanel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE4B525DD680A31EF5366667785B26 /* FloatingPanel-dummy.m */; };
+		52BE6C55622CCE6BA1AA2C47741DA8E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		6D56344D523518D928E8D9B62A542076 /* SurfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFBD634EB5888A518EDBCDDC550E2A1 /* SurfaceView.swift */; };
+		84D31336D2BB42EE8AE2231C65278BD7 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BFB921B429445C1361189FA86F3B91 /* GrabberView.swift */; };
+		97EC0CF457117DFEC9A33CF45BDECBEF /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F695F11E478F754740B1A8AE88FFBA /* Core.swift */; };
+		A85DDC7CA48FEF8C82A7B9B661E8A3E5 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01BC924FB22F1DBA750662957F58353 /* Layout.swift */; };
+		B2E27C74797E8F71B15646DB256CA2F4 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279F4B081E7CFB057121B0CDCDE96B2 /* Behavior.swift */; };
+		B4CA4AB5B0B0CC75E54814CE654034EC /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710ABBA96160FD3FF2634AE9099DBFE2 /* Logger.swift */; };
+		B6B15C16791BE00AD28AB9762F5CF15E /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9075E13D0F8E68A9F277EC386F370A /* State.swift */; };
+		B95778FCDFFD4B36F83662A0615296C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		B9D3B51C78895E4225393292E707B2A4 /* Transitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1119F4C14495E940EEF7CDA9DDCD4A4A /* Transitioning.swift */; };
+		BBEBDD054036241D190EE68386D8BE4E /* LayoutAnchoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B38D8527214FC36F7F8E83675CEFE7 /* LayoutAnchoring.swift */; };
+		D2AE8B96364AB26782B3A6B996618F46 /* FloatingPanel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 414131DCEE17982DEA76FD444CF5DDCD /* FloatingPanel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3400A6384B9761D17DEF8DF42D29141 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		FA366DEC1BF3E38B2A3F77DAAA9A8840 /* Pods-Gliese_581-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6318B83BE62D69A7156DECB363E165AC /* Pods-Gliese_581-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF398918DF7A982CB84A5F8CD6A97F8 /* LayoutReferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484ACEF7C52E0CBD3EA8A3821135DB4D /* LayoutReferences.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84659BEE8A26561CB937A227E948D9B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4874E7E655CEB4C01E4572AD903AEA21;
+			remoteInfo = FloatingPanel;
+		};
+		AA89D1E71DF54BF23B7772C17C2D0A71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 899318C1CEDE586664EC232A68069570;
+			remoteInfo = YandexMobileMetrica;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01449508C495AF22472ED6CD3CEC7A40 /* YandexMobileMetrica-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YandexMobileMetrica-umbrella.h"; path = "ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YandexMobileMetrica-umbrella.h"; sourceTree = "<group>"; };
+		061B23A1EC1587A211A9F68BE3C2EA6F /* Pods-Gliese_581-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gliese_581-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0D6B33CF1175E1143265D5F9647E9595 /* Pods-Gliese_581-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gliese_581-Info.plist"; sourceTree = "<group>"; };
+		0F2E60A4475942D3665F6A3F8D8CB8EA /* Controller.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Controller.swift; path = Sources/Controller.swift; sourceTree = "<group>"; };
+		1119F4C14495E940EEF7CDA9DDCD4A4A /* Transitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transitioning.swift; path = Sources/Transitioning.swift; sourceTree = "<group>"; };
+		14428859DC989A052BF5BF9772D223F0 /* Pods-Gliese_581-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gliese_581-frameworks.sh"; sourceTree = "<group>"; };
+		19034B6D3C606CF7F04F20CD262C6BC3 /* YMMRevenueInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMRevenueInfo.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMRevenueInfo.h; sourceTree = "<group>"; };
+		1FA372025852E9C70DB4602A607FBC12 /* Pods-Gliese_581-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gliese_581-acknowledgements.plist"; sourceTree = "<group>"; };
+		24B38D8527214FC36F7F8E83675CEFE7 /* LayoutAnchoring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutAnchoring.swift; path = Sources/LayoutAnchoring.swift; sourceTree = "<group>"; };
+		265700112905C1D6BF0DF1A7CC225B1C /* FloatingPanel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FloatingPanel-Info.plist"; sourceTree = "<group>"; };
+		288C56FAE54E8ED312FBE2F94D804469 /* FloatingPanel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingPanel.debug.xcconfig; sourceTree = "<group>"; };
+		29F815B3F6BCBC417A2549AEE8E48B2A /* YMMUserProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMUserProfile.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMUserProfile.h; sourceTree = "<group>"; };
+		2D6C13283ADA5445B9FA5E7ACFCFE131 /* YMMErrorRepresentable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMErrorRepresentable.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMErrorRepresentable.h; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3D63156485F5B45821DA1F410C10AC64 /* BackdropView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackdropView.swift; path = Sources/BackdropView.swift; sourceTree = "<group>"; };
+		3E9DA7853646F9EBF945B4C8E21AF152 /* YandexMobileMetrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YandexMobileMetrica.debug.xcconfig; sourceTree = "<group>"; };
+		414131DCEE17982DEA76FD444CF5DDCD /* FloatingPanel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingPanel-umbrella.h"; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		484ACEF7C52E0CBD3EA8A3821135DB4D /* LayoutReferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutReferences.swift; path = Sources/LayoutReferences.swift; sourceTree = "<group>"; };
+		48BFB921B429445C1361189FA86F3B91 /* GrabberView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrabberView.swift; path = Sources/GrabberView.swift; sourceTree = "<group>"; };
+		4E72B04AC139BFD3B6124128F1340AC5 /* YMMYandexMetricaConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaConfiguration.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaConfiguration.h; sourceTree = "<group>"; };
+		4EBC3DC0636C6D043643B03CDD193861 /* YMMCompletionBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMCompletionBlocks.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMCompletionBlocks.h; sourceTree = "<group>"; };
+		4F77469DB6251908F1A9C621F2F1FCC2 /* YandexMobileMetricaCrashes-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YandexMobileMetricaCrashes-umbrella.h"; path = "ios/static/YandexMobileMetricaCrashes.framework/Versions/A/Headers/YandexMobileMetricaCrashes-umbrella.h"; sourceTree = "<group>"; };
+		53DF777B4538A067B67CB87890D495AB /* YMMError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMError.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMError.h; sourceTree = "<group>"; };
+		567E1259906A93B3818262B4F642523A /* YMMProfileAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMProfileAttribute.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMProfileAttribute.h; sourceTree = "<group>"; };
+		5EF0099603EF1C1613FF3898846F3268 /* Pods-Gliese_581.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gliese_581.debug.xcconfig"; sourceTree = "<group>"; };
+		6318B83BE62D69A7156DECB363E165AC /* Pods-Gliese_581-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gliese_581-umbrella.h"; sourceTree = "<group>"; };
+		647CEC9D3083CF4BA634856704E64D71 /* Pods-Gliese_581.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Gliese_581.modulemap"; sourceTree = "<group>"; };
+		697AD943320EB18F0C37BF61E65BD41A /* Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Position.swift; path = Sources/Position.swift; sourceTree = "<group>"; };
+		6C50E7F97F30C5533F8545BA6DB200AB /* YandexMobileMetrica.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YandexMobileMetrica.framework; path = ios/static/YandexMobileMetrica.framework; sourceTree = "<group>"; };
+		6FAAB7D3DE9B2564509ABD18687E938E /* FloatingPanel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FloatingPanel.framework; path = FloatingPanel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		710ABBA96160FD3FF2634AE9099DBFE2 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Sources/Logger.swift; sourceTree = "<group>"; };
+		7BFE4B525DD680A31EF5366667785B26 /* FloatingPanel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FloatingPanel-dummy.m"; sourceTree = "<group>"; };
+		7DCC03CDCE2B91743956C29ECB6FB871 /* YMMReporterConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMReporterConfiguration.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMReporterConfiguration.h; sourceTree = "<group>"; };
+		80CA573C928CE9E4FD4763935EF71F6B /* YMMECommerce.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMECommerce.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMECommerce.h; sourceTree = "<group>"; };
+		85873ABCA60BA5F5ADDFC425EAF51594 /* YandexMobileMetrica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YandexMobileMetrica.release.xcconfig; sourceTree = "<group>"; };
+		8D9075E13D0F8E68A9F277EC386F370A /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/State.swift; sourceTree = "<group>"; };
+		92E5A7A04697E3EF6B5341FF378B6335 /* YMMYandexMetrica.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetrica.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetrica.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DFBD634EB5888A518EDBCDDC550E2A1 /* SurfaceView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurfaceView.swift; path = Sources/SurfaceView.swift; sourceTree = "<group>"; };
+		A01BC924FB22F1DBA750662957F58353 /* Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Layout.swift; path = Sources/Layout.swift; sourceTree = "<group>"; };
+		ACE9DAF6A6C9336C2B924155F30C2B63 /* FloatingPanel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingPanel.release.xcconfig; sourceTree = "<group>"; };
+		B5A413CEABF5C0465AEFDC5475D6863D /* YMMYandexMetricaPreloadInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaPreloadInfo.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaPreloadInfo.h; sourceTree = "<group>"; };
+		B9C19AB35578C1F953E790CCD21906BA /* Pods-Gliese_581.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gliese_581.release.xcconfig"; sourceTree = "<group>"; };
+		CBFB1F8F64532AE32B5607B58DBEFD16 /* PassthroughView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassthroughView.swift; path = Sources/PassthroughView.swift; sourceTree = "<group>"; };
+		CD73AB5ECBE41D5E1A1EAE8454992560 /* UIExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIExtensions.swift; path = Sources/UIExtensions.swift; sourceTree = "<group>"; };
+		D27943DC6C3B7886A3FB42A685A622F8 /* FloatingPanel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FloatingPanel.modulemap; sourceTree = "<group>"; };
+		D3F0E74642DB3D7C2A957CACB378AC04 /* YandexMobileMetricaCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YandexMobileMetricaCrashes.framework; path = ios/static/YandexMobileMetricaCrashes.framework; sourceTree = "<group>"; };
+		D5510F1AE4AAE41A057A16D95C3BC975 /* YandexMobileMetrica.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YandexMobileMetrica.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YandexMobileMetrica.h; sourceTree = "<group>"; };
+		D9F695F11E478F754740B1A8AE88FFBA /* Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Core.swift; path = Sources/Core.swift; sourceTree = "<group>"; };
+		E42BDE9EB1E1E7F20F2F01400361A800 /* YMMVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMVersion.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMVersion.h; sourceTree = "<group>"; };
+		F205C95C3930F9E1780C497CEACE1603 /* Pods-Gliese_581-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gliese_581-dummy.m"; sourceTree = "<group>"; };
+		F279F4B081E7CFB057121B0CDCDE96B2 /* Behavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = Sources/Behavior.swift; sourceTree = "<group>"; };
+		F2DADE6D632B9A26B6A54BF46B9535A3 /* FloatingPanel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingPanel-prefix.pch"; sourceTree = "<group>"; };
+		F9FD95DC227F37511DB3159AC45316D2 /* YMMYandexMetricaReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaReporting.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaReporting.h; sourceTree = "<group>"; };
+		FD5310B0BD2C3DAE5E272EC0004A4ED7 /* Pods_Gliese_581.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Gliese_581.framework; path = "Pods-Gliese_581.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22DCC931BC415DDC7B648571C44E137D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52BE6C55622CCE6BA1AA2C47741DA8E2 /* Foundation.framework in Frameworks */,
+				B95778FCDFFD4B36F83662A0615296C3 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C13E5EAEB36C885F12CED940B5C78C98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3400A6384B9761D17DEF8DF42D29141 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00CD22C769B0F94433FA2B849B71BC34 /* Crashes */ = {
+			isa = PBXGroup;
+			children = (
+				4F77469DB6251908F1A9C621F2F1FCC2 /* YandexMobileMetricaCrashes-umbrella.h */,
+				410C2AE36F3787AC229C0959E00E6D94 /* Frameworks */,
+			);
+			name = Crashes;
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B7C2214174670A5F3DFB91C4CE0F17D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				87FF31707C574B7577FF66CCCF7EF2E0 /* Pods-Gliese_581 */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1F8650FC899DCC5A48D2E3CF4A45A4B5 /* YandexMobileMetrica */ = {
+			isa = PBXGroup;
+			children = (
+				35C484DCBAD18715FC533B4F2706E8C5 /* Static */,
+				D23E4F9EA5F56F379C259A464D8C80BA /* Support Files */,
+			);
+			name = YandexMobileMetrica;
+			path = YandexMobileMetrica;
+			sourceTree = "<group>";
+		};
+		35C484DCBAD18715FC533B4F2706E8C5 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				E35A29DD344028C70A7A94C775F59C2B /* Core */,
+				00CD22C769B0F94433FA2B849B71BC34 /* Crashes */,
+			);
+			name = Static;
+			sourceTree = "<group>";
+		};
+		35D2337778C31FA3529D81BFF491326C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D27943DC6C3B7886A3FB42A685A622F8 /* FloatingPanel.modulemap */,
+				7BFE4B525DD680A31EF5366667785B26 /* FloatingPanel-dummy.m */,
+				265700112905C1D6BF0DF1A7CC225B1C /* FloatingPanel-Info.plist */,
+				F2DADE6D632B9A26B6A54BF46B9535A3 /* FloatingPanel-prefix.pch */,
+				414131DCEE17982DEA76FD444CF5DDCD /* FloatingPanel-umbrella.h */,
+				288C56FAE54E8ED312FBE2F94D804469 /* FloatingPanel.debug.xcconfig */,
+				ACE9DAF6A6C9336C2B924155F30C2B63 /* FloatingPanel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FloatingPanel";
+			sourceTree = "<group>";
+		};
+		3AB4C908C33AFF04423C5E84886F545F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FAAB7D3DE9B2564509ABD18687E938E /* FloatingPanel.framework */,
+				FD5310B0BD2C3DAE5E272EC0004A4ED7 /* Pods_Gliese_581.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		410C2AE36F3787AC229C0959E00E6D94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3F0E74642DB3D7C2A957CACB378AC04 /* YandexMobileMetricaCrashes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87FF31707C574B7577FF66CCCF7EF2E0 /* Pods-Gliese_581 */ = {
+			isa = PBXGroup;
+			children = (
+				647CEC9D3083CF4BA634856704E64D71 /* Pods-Gliese_581.modulemap */,
+				061B23A1EC1587A211A9F68BE3C2EA6F /* Pods-Gliese_581-acknowledgements.markdown */,
+				1FA372025852E9C70DB4602A607FBC12 /* Pods-Gliese_581-acknowledgements.plist */,
+				F205C95C3930F9E1780C497CEACE1603 /* Pods-Gliese_581-dummy.m */,
+				14428859DC989A052BF5BF9772D223F0 /* Pods-Gliese_581-frameworks.sh */,
+				0D6B33CF1175E1143265D5F9647E9595 /* Pods-Gliese_581-Info.plist */,
+				6318B83BE62D69A7156DECB363E165AC /* Pods-Gliese_581-umbrella.h */,
+				5EF0099603EF1C1613FF3898846F3268 /* Pods-Gliese_581.debug.xcconfig */,
+				B9C19AB35578C1F953E790CCD21906BA /* Pods-Gliese_581.release.xcconfig */,
+			);
+			name = "Pods-Gliese_581";
+			path = "Target Support Files/Pods-Gliese_581";
+			sourceTree = "<group>";
+		};
+		BF8A5A90CF809B5FE932A384E07B5488 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C50E7F97F30C5533F8545BA6DB200AB /* YandexMobileMetrica.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C14DA15362602018040833B85552E9D8 /* FloatingPanel */ = {
+			isa = PBXGroup;
+			children = (
+				3D63156485F5B45821DA1F410C10AC64 /* BackdropView.swift */,
+				F279F4B081E7CFB057121B0CDCDE96B2 /* Behavior.swift */,
+				0F2E60A4475942D3665F6A3F8D8CB8EA /* Controller.swift */,
+				D9F695F11E478F754740B1A8AE88FFBA /* Core.swift */,
+				48BFB921B429445C1361189FA86F3B91 /* GrabberView.swift */,
+				A01BC924FB22F1DBA750662957F58353 /* Layout.swift */,
+				24B38D8527214FC36F7F8E83675CEFE7 /* LayoutAnchoring.swift */,
+				484ACEF7C52E0CBD3EA8A3821135DB4D /* LayoutReferences.swift */,
+				710ABBA96160FD3FF2634AE9099DBFE2 /* Logger.swift */,
+				CBFB1F8F64532AE32B5607B58DBEFD16 /* PassthroughView.swift */,
+				697AD943320EB18F0C37BF61E65BD41A /* Position.swift */,
+				8D9075E13D0F8E68A9F277EC386F370A /* State.swift */,
+				9DFBD634EB5888A518EDBCDDC550E2A1 /* SurfaceView.swift */,
+				1119F4C14495E940EEF7CDA9DDCD4A4A /* Transitioning.swift */,
+				CD73AB5ECBE41D5E1A1EAE8454992560 /* UIExtensions.swift */,
+				35D2337778C31FA3529D81BFF491326C /* Support Files */,
+			);
+			name = FloatingPanel;
+			path = FloatingPanel;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				E5290D820F8EF80842118F6710789365 /* Pods */,
+				3AB4C908C33AFF04423C5E84886F545F /* Products */,
+				1B7C2214174670A5F3DFB91C4CE0F17D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D23E4F9EA5F56F379C259A464D8C80BA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E9DA7853646F9EBF945B4C8E21AF152 /* YandexMobileMetrica.debug.xcconfig */,
+				85873ABCA60BA5F5ADDFC425EAF51594 /* YandexMobileMetrica.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YandexMobileMetrica";
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E35A29DD344028C70A7A94C775F59C2B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D5510F1AE4AAE41A057A16D95C3BC975 /* YandexMobileMetrica.h */,
+				01449508C495AF22472ED6CD3CEC7A40 /* YandexMobileMetrica-umbrella.h */,
+				4EBC3DC0636C6D043643B03CDD193861 /* YMMCompletionBlocks.h */,
+				80CA573C928CE9E4FD4763935EF71F6B /* YMMECommerce.h */,
+				53DF777B4538A067B67CB87890D495AB /* YMMError.h */,
+				2D6C13283ADA5445B9FA5E7ACFCFE131 /* YMMErrorRepresentable.h */,
+				567E1259906A93B3818262B4F642523A /* YMMProfileAttribute.h */,
+				7DCC03CDCE2B91743956C29ECB6FB871 /* YMMReporterConfiguration.h */,
+				19034B6D3C606CF7F04F20CD262C6BC3 /* YMMRevenueInfo.h */,
+				29F815B3F6BCBC417A2549AEE8E48B2A /* YMMUserProfile.h */,
+				E42BDE9EB1E1E7F20F2F01400361A800 /* YMMVersion.h */,
+				92E5A7A04697E3EF6B5341FF378B6335 /* YMMYandexMetrica.h */,
+				4E72B04AC139BFD3B6124128F1340AC5 /* YMMYandexMetricaConfiguration.h */,
+				B5A413CEABF5C0465AEFDC5475D6863D /* YMMYandexMetricaPreloadInfo.h */,
+				F9FD95DC227F37511DB3159AC45316D2 /* YMMYandexMetricaReporting.h */,
+				BF8A5A90CF809B5FE932A384E07B5488 /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		E5290D820F8EF80842118F6710789365 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C14DA15362602018040833B85552E9D8 /* FloatingPanel */,
+				1F8650FC899DCC5A48D2E3CF4A45A4B5 /* YandexMobileMetrica */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5C8967C2F7B999B0E82F72F8A50344B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2AE8B96364AB26782B3A6B996618F46 /* FloatingPanel-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEF5BF52401A7CFB7AA5C2E4314652F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA366DEC1BF3E38B2A3F77DAAA9A8840 /* Pods-Gliese_581-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		023956BD3CE3F62DFD0EF9A3B23DC206 /* Pods-Gliese_581 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B52489AF11A7B21AEC8F628C542FBF71 /* Build configuration list for PBXNativeTarget "Pods-Gliese_581" */;
+			buildPhases = (
+				5EEF5BF52401A7CFB7AA5C2E4314652F /* Headers */,
+				92C89E1ADCD9E6E2BF7DEC94EE7E05C6 /* Sources */,
+				C13E5EAEB36C885F12CED940B5C78C98 /* Frameworks */,
+				38ABD19CD8E50C649C31DFBF5844A8E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE2C4BE108BE965C2ED338A447F783BC /* PBXTargetDependency */,
+				87C6EFFCAF9E9612D946EE35DC23227A /* PBXTargetDependency */,
+			);
+			name = "Pods-Gliese_581";
+			productName = "Pods-Gliese_581";
+			productReference = FD5310B0BD2C3DAE5E272EC0004A4ED7 /* Pods_Gliese_581.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4874E7E655CEB4C01E4572AD903AEA21 /* FloatingPanel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D16F9348D825E651B6C98B708FA3920B /* Build configuration list for PBXNativeTarget "FloatingPanel" */;
+			buildPhases = (
+				5C8967C2F7B999B0E82F72F8A50344B0 /* Headers */,
+				27264655972209ADA966CD6CE06BB3F9 /* Sources */,
+				22DCC931BC415DDC7B648571C44E137D /* Frameworks */,
+				5F5908D3CFECA0DFDB4FE6DA0BCDC50C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FloatingPanel;
+			productName = FloatingPanel;
+			productReference = 6FAAB7D3DE9B2564509ABD18687E938E /* FloatingPanel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 3AB4C908C33AFF04423C5E84886F545F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4874E7E655CEB4C01E4572AD903AEA21 /* FloatingPanel */,
+				023956BD3CE3F62DFD0EF9A3B23DC206 /* Pods-Gliese_581 */,
+				899318C1CEDE586664EC232A68069570 /* YandexMobileMetrica */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38ABD19CD8E50C649C31DFBF5844A8E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F5908D3CFECA0DFDB4FE6DA0BCDC50C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27264655972209ADA966CD6CE06BB3F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42290ADFDAA15ADDC859EFB62FE36920 /* BackdropView.swift in Sources */,
+				B2E27C74797E8F71B15646DB256CA2F4 /* Behavior.swift in Sources */,
+				1659A83A37A37847E63460EE37298260 /* Controller.swift in Sources */,
+				97EC0CF457117DFEC9A33CF45BDECBEF /* Core.swift in Sources */,
+				48FA84B1A4D6A45CAF42580875F1942A /* FloatingPanel-dummy.m in Sources */,
+				84D31336D2BB42EE8AE2231C65278BD7 /* GrabberView.swift in Sources */,
+				A85DDC7CA48FEF8C82A7B9B661E8A3E5 /* Layout.swift in Sources */,
+				BBEBDD054036241D190EE68386D8BE4E /* LayoutAnchoring.swift in Sources */,
+				FAF398918DF7A982CB84A5F8CD6A97F8 /* LayoutReferences.swift in Sources */,
+				B4CA4AB5B0B0CC75E54814CE654034EC /* Logger.swift in Sources */,
+				32CAD57136F62973B17307271803DABE /* PassthroughView.swift in Sources */,
+				418B744DEFDE1648A55B5017210252B2 /* Position.swift in Sources */,
+				B6B15C16791BE00AD28AB9762F5CF15E /* State.swift in Sources */,
+				6D56344D523518D928E8D9B62A542076 /* SurfaceView.swift in Sources */,
+				B9D3B51C78895E4225393292E707B2A4 /* Transitioning.swift in Sources */,
+				27A3FCA33FC096112F945F0969C4B4A1 /* UIExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C89E1ADCD9E6E2BF7DEC94EE7E05C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03243D151D31E9DF0BB90FEE6633D683 /* Pods-Gliese_581-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87C6EFFCAF9E9612D946EE35DC23227A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YandexMobileMetrica;
+			target = 899318C1CEDE586664EC232A68069570 /* YandexMobileMetrica */;
+			targetProxy = AA89D1E71DF54BF23B7772C17C2D0A71 /* PBXContainerItemProxy */;
+		};
+		EE2C4BE108BE965C2ED338A447F783BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FloatingPanel;
+			target = 4874E7E655CEB4C01E4572AD903AEA21 /* FloatingPanel */;
+			targetProxy = 84659BEE8A26561CB937A227E948D9B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		20BF81A272A6E4F014335F588BB04CD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 288C56FAE54E8ED312FBE2F94D804469 /* FloatingPanel.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FloatingPanel/FloatingPanel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FloatingPanel/FloatingPanel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FloatingPanel/FloatingPanel.modulemap";
+				PRODUCT_MODULE_NAME = FloatingPanel;
+				PRODUCT_NAME = FloatingPanel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4E0083BB7DC8D46FFF4EC008A65B88E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACE9DAF6A6C9336C2B924155F30C2B63 /* FloatingPanel.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FloatingPanel/FloatingPanel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FloatingPanel/FloatingPanel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FloatingPanel/FloatingPanel.modulemap";
+				PRODUCT_MODULE_NAME = FloatingPanel;
+				PRODUCT_NAME = FloatingPanel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		554B956341C7A8D8592BB94AE7401F01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E9DA7853646F9EBF945B4C8E21AF152 /* YandexMobileMetrica.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62304A881E2E8663B538159C5B341DFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C19AB35578C1F953E790CCD21906BA /* Pods-Gliese_581.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Gliese_581/Pods-Gliese_581-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gliese_581/Pods-Gliese_581.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6EDA664A19CCA1E19EFD5C41B51D5A44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9E5D3FA065FA028A3EB510CC6EE7890F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85873ABCA60BA5F5ADDFC425EAF51594 /* YandexMobileMetrica.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8F0C1DD56D6433C25DA2D28D852E5BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EF0099603EF1C1613FF3898846F3268 /* Pods-Gliese_581.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Gliese_581/Pods-Gliese_581-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gliese_581/Pods-Gliese_581.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E747461F2583A8C997885F8223A8EDAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EDA664A19CCA1E19EFD5C41B51D5A44 /* Debug */,
+				E747461F2583A8C997885F8223A8EDAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B52489AF11A7B21AEC8F628C542FBF71 /* Build configuration list for PBXNativeTarget "Pods-Gliese_581" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8F0C1DD56D6433C25DA2D28D852E5BE /* Debug */,
+				62304A881E2E8663B538159C5B341DFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D16F9348D825E651B6C98B708FA3920B /* Build configuration list for PBXNativeTarget "FloatingPanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20BF81A272A6E4F014335F588BB04CD6 /* Debug */,
+				4E0083BB7DC8D46FFF4EC008A65B88E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F74DCE6258F39EE8F1BB65951F54078C /* Build configuration list for PBXAggregateTarget "YandexMobileMetrica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				554B956341C7A8D8592BB94AE7401F01 /* Debug */,
+				9E5D3FA065FA028A3EB510CC6EE7890F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

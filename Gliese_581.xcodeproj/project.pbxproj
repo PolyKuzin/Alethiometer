@@ -56,7 +56,6 @@
 		9932499D2595062600865617 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9932499C2595062600865617 /* UIImageView.swift */; };
 		993249A0259506D500865617 /* SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9932499F259506D500865617 /* SafeIndex.swift */; };
 		993C877E2592266D004A4305 /* FloatinLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C877D2592266D004A4305 /* FloatinLayout.swift */; };
-		993C8781259226C1004A4305 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C8780259226C1004A4305 /* UIDevice.swift */; };
 		993C878425922723004A4305 /* Appearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C878325922723004A4305 /* Appearence.swift */; };
 		993C878C2592284F004A4305 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C878A2592284F004A4305 /* MenuController.swift */; };
 		993C878D2592284F004A4305 /* MenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 993C878B2592284F004A4305 /* MenuController.xib */; };
@@ -66,6 +65,8 @@
 		994D1FD025977324002F8987 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D1FCE25977324002F8987 /* CalendarVC.swift */; };
 		994D1FD125977324002F8987 /* CalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994D1FCF25977324002F8987 /* CalendarVC.xib */; };
 		994D1FD425977E1C002F8987 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D1FD325977E1C002F8987 /* SectionHeader.swift */; };
+		9974DF2E25A204060036C971 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9974DF2D25A204060036C971 /* GoogleService-Info.plist */; };
+		9974DF3125A204830036C971 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9974DF3025A204830036C971 /* AnalyticsService.swift */; };
 		9979BF9225742636005E4ED3 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */; };
 		9979BF9525742EAA005E4ED3 /* HandForAstroSkope.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */; };
 		997EDB1825895B19009E4122 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB1625895B19009E4122 /* HomeVC.swift */; };
@@ -75,7 +76,12 @@
 		997EDB2625895F5B009E4122 /* FocusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB2425895F5B009E4122 /* FocusCell.swift */; };
 		997EDB2725895F5B009E4122 /* FocusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997EDB2525895F5B009E4122 /* FocusCell.xib */; };
 		997EDB2B25896168009E4122 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB2A25896168009E4122 /* CircleView.swift */; };
+		9997EAAB259B2798000BBAE3 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997EAAA259B2798000BBAE3 /* Date.swift */; };
 		99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF4F98258014FE00F74D68 /* ClearButton.swift */; };
+		99DF7D0025A0743A00EA9913 /* MounthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF7CFE25A0743A00EA9913 /* MounthCell.swift */; };
+		99DF7D0125A0743A00EA9913 /* MounthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99DF7CFF25A0743A00EA9913 /* MounthCell.xib */; };
+		99DF7D0525A07DA900EA9913 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF7D0325A07DA900EA9913 /* NumberCell.swift */; };
+		99DF7D0625A07DA900EA9913 /* NumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99DF7D0425A07DA900EA9913 /* NumberCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,7 +137,6 @@
 		9932499C2595062600865617 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		9932499F259506D500865617 /* SafeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeIndex.swift; sourceTree = "<group>"; };
 		993C877D2592266D004A4305 /* FloatinLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatinLayout.swift; sourceTree = "<group>"; };
-		993C8780259226C1004A4305 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		993C878325922723004A4305 /* Appearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearence.swift; sourceTree = "<group>"; };
 		993C878A2592284F004A4305 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		993C878B2592284F004A4305 /* MenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuController.xib; sourceTree = "<group>"; };
@@ -141,6 +146,8 @@
 		994D1FCE25977324002F8987 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		994D1FCF25977324002F8987 /* CalendarVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarVC.xib; sourceTree = "<group>"; };
 		994D1FD325977E1C002F8987 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		9974DF2D25A204060036C971 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9974DF3025A204830036C971 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HandForAstroSkope.mlmodel; sourceTree = "<group>"; };
 		997EDB1625895B19009E4122 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -150,7 +157,12 @@
 		997EDB2425895F5B009E4122 /* FocusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusCell.swift; sourceTree = "<group>"; };
 		997EDB2525895F5B009E4122 /* FocusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusCell.xib; sourceTree = "<group>"; };
 		997EDB2A25896168009E4122 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		9997EAAA259B2798000BBAE3 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		99CF4F98258014FE00F74D68 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
+		99DF7CFE25A0743A00EA9913 /* MounthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MounthCell.swift; sourceTree = "<group>"; };
+		99DF7CFF25A0743A00EA9913 /* MounthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MounthCell.xib; sourceTree = "<group>"; };
+		99DF7D0325A07DA900EA9913 /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
+		99DF7D0425A07DA900EA9913 /* NumberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberCell.xib; sourceTree = "<group>"; };
 		AC8B8043DF52DD0F747DCE7D /* Pods_Gliese_581.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gliese_581.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -183,18 +195,18 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
-		9902B847258AB5D3002041B2 /* Extensions */ = {
+		9902B847258AB5D3002041B2 /* Public */ = {
 			isa = PBXGroup;
 			children = (
 				9902B848258AB5F0002041B2 /* RoundCorners.swift */,
 				9902B84C258AB6AE002041B2 /* GradientBackground.swift */,
-				993C8780259226C1004A4305 /* UIDevice.swift */,
 				993C879925926076004A4305 /* HEX.swift */,
 				99324998259505B600865617 /* Pin.swift */,
 				9932499C2595062600865617 /* UIImageView.swift */,
 				9932499F259506D500865617 /* SafeIndex.swift */,
+				9997EAAA259B2798000BBAE3 /* Date.swift */,
 			);
-			path = Extensions;
+			path = Public;
 			sourceTree = "<group>";
 		};
 		990CA4D3256AC236004A8105 = {
@@ -218,11 +230,10 @@
 		990CA4DE256AC236004A8105 /* Gliese_581 */ = {
 			isa = PBXGroup;
 			children = (
-				9902B847258AB5D3002041B2 /* Extensions */,
+				9974DF3025A204830036C971 /* AnalyticsService.swift */,
 				9902B83D258A9B85002041B2 /* Protocols */,
 				997EDB2925896159009E4122 /* Utils */,
-				990CA51B256ADB3D004A8105 /* UI_Elements */,
-				990CA51A256ADB30004A8105 /* Constants */,
+				990CA51A256ADB30004A8105 /* Extentions */,
 				990CA519256ADB20004A8105 /* OnBoarding */,
 				997EDB1B25895B29009E4122 /* home */,
 				990CA517256ADB07004A8105 /* Base */,
@@ -230,6 +241,7 @@
 				990CA4E8256AC238004A8105 /* Assets.xcassets */,
 				990CA4EA256AC238004A8105 /* LaunchScreen.storyboard */,
 				990CA4ED256AC238004A8105 /* Info.plist */,
+				9974DF2D25A204060036C971 /* GoogleService-Info.plist */,
 				9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */,
 				9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */,
 			);
@@ -289,14 +301,16 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
-		990CA51A256ADB30004A8105 /* Constants */ = {
+		990CA51A256ADB30004A8105 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				9902B847258AB5D3002041B2 /* Public */,
+				990CA51B256ADB3D004A8105 /* UI_Elements */,
 				990CA4FC256AC323004A8105 /* Colors.swift */,
 				990CA51D256ADB7B004A8105 /* Fonts.swift */,
 				9902B839258A9909002041B2 /* Zodiac.swift */,
 			);
-			path = Constants;
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		990CA51B256ADB3D004A8105 /* UI_Elements */ = {
@@ -341,8 +355,7 @@
 				997EDB2225895F46009E4122 /* TableViewCell */,
 				993C878A2592284F004A4305 /* MenuController.swift */,
 				993C878B2592284F004A4305 /* MenuController.xib */,
-				994D1FCE25977324002F8987 /* CalendarVC.swift */,
-				994D1FCF25977324002F8987 /* CalendarVC.xib */,
+				99DF7CFC25A072A600EA9913 /* Calendar */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -378,6 +391,19 @@
 				990F14322596757F00AA7603 /* NibWrapper.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		99DF7CFC25A072A600EA9913 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				994D1FCE25977324002F8987 /* CalendarVC.swift */,
+				994D1FCF25977324002F8987 /* CalendarVC.xib */,
+				99DF7CFE25A0743A00EA9913 /* MounthCell.swift */,
+				99DF7CFF25A0743A00EA9913 /* MounthCell.xib */,
+				99DF7D0325A07DA900EA9913 /* NumberCell.swift */,
+				99DF7D0425A07DA900EA9913 /* NumberCell.xib */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		9CAC3E0CCAAC08369D0A51E7 /* Frameworks */ = {
@@ -459,6 +485,7 @@
 				990CA512256AC592004A8105 /* SF-Pro-Rounded-Medium.otf in Resources */,
 				997EDB1925895B19009E4122 /* HomeVC.xib in Resources */,
 				990CA50C256AC592004A8105 /* SF-Pro-Display-Semibold.otf in Resources */,
+				99DF7D0625A07DA900EA9913 /* NumberCell.xib in Resources */,
 				990CA4EC256AC238004A8105 /* LaunchScreen.storyboard in Resources */,
 				997EDB2725895F5B009E4122 /* FocusCell.xib in Resources */,
 				994D1FD125977324002F8987 /* CalendarVC.xib in Resources */,
@@ -470,9 +497,11 @@
 				990CA50E256AC592004A8105 /* SF-Pro-Text-Medium.otf in Resources */,
 				990F142F259669D100AA7603 /* CenteredButton.xib in Resources */,
 				990CA4E9256AC238004A8105 /* Assets.xcassets in Resources */,
+				99DF7D0125A0743A00EA9913 /* MounthCell.xib in Resources */,
 				993C878D2592284F004A4305 /* MenuController.xib in Resources */,
 				993C879225925639004A4305 /* CalendarCell.xib in Resources */,
 				990CA513256AC592004A8105 /* SF-Pro-Display-Regular.otf in Resources */,
+				9974DF2E25A204060036C971 /* GoogleService-Info.plist in Resources */,
 				9902B845258AA272002041B2 /* MainCollectionViewCell.xib in Resources */,
 				990CA510256AC592004A8105 /* SF-Pro-Text-Regular.otf in Resources */,
 			);
@@ -529,6 +558,7 @@
 			files = (
 				9979BF9225742636005E4ED3 /* MobileNetV2.mlmodel in Sources */,
 				990F142C2596675F00AA7603 /* CenteredButton.swift in Sources */,
+				9974DF3125A204830036C971 /* AnalyticsService.swift in Sources */,
 				9932499D2595062600865617 /* UIImageView.swift in Sources */,
 				990CA51E256ADB7B004A8105 /* Fonts.swift in Sources */,
 				993249A0259506D500865617 /* SafeIndex.swift in Sources */,
@@ -543,6 +573,7 @@
 				9902B83A258A9909002041B2 /* Zodiac.swift in Sources */,
 				994D1FD025977324002F8987 /* CalendarVC.swift in Sources */,
 				990CA52B256AE860004A8105 /* TimeOfBirsthVC.swift in Sources */,
+				99DF7D0025A0743A00EA9913 /* MounthCell.swift in Sources */,
 				993C878425922723004A4305 /* Appearence.swift in Sources */,
 				994D1FD425977E1C002F8987 /* SectionHeader.swift in Sources */,
 				997EDB2625895F5B009E4122 /* FocusCell.swift in Sources */,
@@ -557,7 +588,7 @@
 				990CA52E256AE8E7004A8105 /* CityOfBirsthVC.swift in Sources */,
 				9923FFA025802640004F1F02 /* GenderLabel.swift in Sources */,
 				99324999259505B600865617 /* Pin.swift in Sources */,
-				993C8781259226C1004A4305 /* UIDevice.swift in Sources */,
+				9997EAAB259B2798000BBAE3 /* Date.swift in Sources */,
 				9923FFA625802CAC004F1F02 /* FeaturesView.swift in Sources */,
 				990CA527256AE6E9004A8105 /* BaseVC.swift in Sources */,
 				990CA537256AE971004A8105 /* RelationShipsVC.swift in Sources */,
@@ -569,6 +600,7 @@
 				9923FF9D25801EA8004F1F02 /* GenderButton.swift in Sources */,
 				990CA521256AE4AB004A8105 /* TitleLabel.swift in Sources */,
 				9923FF80258019B1004F1F02 /* BigTextField.swift in Sources */,
+				99DF7D0525A07DA900EA9913 /* NumberCell.swift in Sources */,
 				990CA531256AE913004A8105 /* GenderVC.swift in Sources */,
 				9923FFA325802C26004F1F02 /* PayWallVC.swift in Sources */,
 				997EDB1F25895D0F009E4122 /* InstanceHoroscopeCell.swift in Sources */,
@@ -716,7 +748,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				INFOPLIST_FILE = Gliese_581/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -738,7 +770,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				INFOPLIST_FILE = Gliese_581/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

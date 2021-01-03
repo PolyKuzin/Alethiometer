@@ -11,6 +11,8 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
     
     static var reuseID = "CalendarCell"
     
+    var initialization = false
+    
     @IBOutlet weak var leftImageView   : UIImageView!
     @IBOutlet weak var titleLabel      : UILabel!
     @IBOutlet weak var containerView   : UIView!
@@ -58,11 +60,13 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
                     _view0.titleLabel?.textColor = .black
                     _view0.titleLabel?.text = items[i].title
                     _view0.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
-                    if items[i].isLocked {
-                        _view0.isEnabled = false
-                        _view0.onSelect = items[i].onSelect.first
-                    } else {
-                        _view0.onSelect = items[i].onSelect.last
+                    if !initialization {
+                        if items[i].isLocked {
+                            _view0.isEnabled = false
+                            _view0.onSelect = items[i].onSelect.first
+                        } else {
+                            _view0.onSelect = items[i].onSelect.last
+                        }
                     }
                 case 1:
                     view1.backgroundColor = .clear
@@ -70,11 +74,13 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
                     _view1.titleLabel?.textColor = .black
                     _view1.titleLabel?.text = items[i].title
                     _view1.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
-                    if items[i].isLocked {
-                        _view1.isEnabled = false
-                        _view1.onSelect = items[i].onSelect.first
-                    } else {
-                        _view1.onSelect = items[i].onSelect.last
+                    if !initialization {
+                        if items[i].isLocked {
+                            _view1.isEnabled = false
+                            _view1.onSelect = items[i].onSelect.first
+                        } else {
+                            _view1.onSelect = items[i].onSelect.last
+                        }
                     }
                 case 2:
                     view2.backgroundColor = .clear
@@ -82,11 +88,13 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
                     _view2.titleLabel?.textColor = .black
                     _view2.titleLabel?.text = items[i].title
                     _view2.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
-                    if items[i].isLocked {
-                        _view2.isEnabled = false
-                        _view2.onSelect = items[i].onSelect.first
-                    } else {
-                        _view2.onSelect = items[i].onSelect.last
+                    if !initialization {
+                        if items[i].isLocked {
+                            _view2.isEnabled = false
+                            _view2.onSelect = items[i].onSelect.first
+                        } else {
+                            _view2.onSelect = items[i].onSelect.last
+                        }
                     }
                 case 3:
                     view3.backgroundColor = .clear
@@ -94,11 +102,13 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
                     _view3.titleLabel?.textColor = .black
                     _view3.titleLabel?.text = items[i].title
                     _view3.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
-                    if items[i].isLocked {
-                        _view3.isEnabled = false
-                        _view3.onSelect = items[i].onSelect.first
-                    } else {
-                        _view3.onSelect = items[i].onSelect.last
+                    if !initialization {
+                        if items[i].isLocked {
+                            _view3.isEnabled = false
+                            _view3.onSelect = items[i].onSelect.first
+                        } else {
+                            _view3.onSelect = items[i].onSelect.last
+                        }
                     }
                 case 4:
                     view4.backgroundColor = .clear
@@ -106,11 +116,13 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
                     _view4.titleLabel?.textColor = .black
                     _view4.titleLabel?.text = items[i].title
                     _view4.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
-                    if items[i].isLocked {
-                        _view4.isEnabled = false
-                        _view4.onSelect = items[i].onSelect.first
-                    } else {
-                        _view4.onSelect = items[i].onSelect.last
+                    if !initialization {
+                        if items[i].isLocked {
+                            _view4.isEnabled = false
+                            _view4.onSelect = items[i].onSelect.first
+                        } else {
+                            _view4.onSelect = items[i].onSelect.last
+                        }
                     }
                 case 5:
                     view5.backgroundColor = .clear
@@ -118,11 +130,13 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
                     _view5.titleLabel?.textColor = .black
                     _view5.titleLabel?.text = items[i].title
                     _view5.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
-                    if items[i].isLocked {
-                        _view5.isEnabled = false
-                        _view5.onSelect = items[i].onSelect.first
-                    } else {
-                        _view5.onSelect = items[i].onSelect.last
+                    if !initialization {
+                        if items[i].isLocked {
+                            _view5.isEnabled = false
+                            _view5.onSelect = items[i].onSelect.first
+                        } else {
+                            _view5.onSelect = items[i].onSelect.last
+                        }
                     }
                 case 6:
                     view6.backgroundColor = .clear
@@ -130,11 +144,13 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
                     _view6.titleLabel?.textColor = .black
                     _view6.titleLabel?.text = items[i].title
                     _view6.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
-                    if items[i].isLocked {
-                        _view6.isEnabled = false
-                        _view6.onSelect = items[i].onSelect.first
-                    } else {
-                        _view6.onSelect = items[i].onSelect.last
+                    if !initialization {
+                        if items[i].isLocked {
+                            _view6.isEnabled = false
+                            _view6.onSelect = items[i].onSelect.first
+                        } else {
+                            _view6.onSelect = items[i].onSelect.last
+                        }
                     }
                 case 7:
                     view7.backgroundColor = .clear
@@ -142,15 +158,20 @@ class CalendarCell: UITableViewCell, BaseTableViewCell {
                     _view7.titleLabel?.textColor = .black
                     _view7.titleLabel?.text = items[i].title
                     _view7.unwrapped.setGradientBackground(upColor: items[i].upColor, downColor: items[i].downColor)
-                    if items[i].isLocked {
-                        _view7.isEnabled = false
-                        _view7.onSelect = items[i].onSelect.first
-                    } else {
-                        _view7.onSelect = items[i].onSelect.last
+                    if !initialization {
+                        if items[i].isLocked {
+                            _view7.isEnabled = false
+                            _view7.onSelect = items[i].onSelect.first
+                        } else {
+                            _view7.onSelect = items[i].onSelect.last
+                        }
                     }
                 default:
                     break
                 }
+            }
+            if items.count == 8 {
+                initialization = true
             }
             print(items.count)
         }

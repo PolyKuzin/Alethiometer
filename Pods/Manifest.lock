@@ -1,0 +1,27 @@
+PODS:
+  - FloatingPanel (2.1.0)
+  - YandexMobileMetrica (3.14.0):
+    - YandexMobileMetrica/Static (= 3.14.0)
+  - YandexMobileMetrica/Static (3.14.0):
+    - YandexMobileMetrica/Static/Core (= 3.14.0)
+    - YandexMobileMetrica/Static/Crashes (= 3.14.0)
+  - YandexMobileMetrica/Static/Core (3.14.0)
+  - YandexMobileMetrica/Static/Crashes (3.14.0):
+    - YandexMobileMetrica/Static/Core
+
+DEPENDENCIES:
+  - FloatingPanel
+  - YandexMobileMetrica
+
+SPEC REPOS:
+  trunk:
+    - FloatingPanel
+    - YandexMobileMetrica
+
+SPEC CHECKSUMS:
+  FloatingPanel: 1af47b69e26df98b8728307254a9a0f4eb3cd645
+  YandexMobileMetrica: a2dd4fd2f01ae7ae6850d786c443cb41fbbbea78
+
+PODFILE CHECKSUM: 64896b8fa7c50265a1d3e1d51ff2b5555624135c
+
+COCOAPODS: 1.10.0.beta.2

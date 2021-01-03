@@ -37,7 +37,6 @@ class HomeVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         expandButton.addTarget(self, action: #selector(self.handleExpand), for: .touchUpInside)
-        // Make the navigation bar background clear
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
@@ -82,8 +81,8 @@ class HomeVC: BaseVC {
             guard let self = self else { return }
             self.calendarVC = CalendarVC()
             self.calendarVC.loadView()
-            self.navigationController?.pushViewController(self.calendarVC, animated: true)
             self.calendarVC.viewState = viewState
+            self.navigationController?.pushViewController(self.calendarVC, animated: true)
         }
     }
     

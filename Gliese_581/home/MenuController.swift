@@ -70,7 +70,9 @@ class MenuController: BaseVC {
                                                  }, {
                                                     [weak self] in
                                                     guard self != nil else { return }
-                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 1, green: 0.874, blue: 0.426, alpha: 1), downColor: UIColor(red: 1, green: 0.426, blue: 0.495, alpha: 1), title: "HairCut", subtitle: "", current: [], next: [], afterTheNext: []))
+                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 1, green: 0.874, blue: 0.426, alpha: 1), downColor: UIColor(red: 1, green: 0.426, blue: 0.495, alpha: 1), title: "HairCut", subtitle: "В эти дни настолько охуенно стричься что просто пздц охуеть efsefsefsefsfsefsefsefsefsefsefsefsefse", mouths: [[currentMounth.0 : [14, 15, 16]],
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                [nextMounth.0 : [2, 4, 9]],
+                                                                                                                                                                                                                                                                [afterNextMounth.0 : [12, 22, 21]]]))
                                                  }]),
             CalendarCell.ViewState(upColor: UIColor(red: 0.472, green: 0.873, blue: 1, alpha: 1),
                                                  downColor: UIColor(red: 0.56, green: 0.522, blue: 1, alpha: 1), image: UIImage(named: "Relate")!, title: "Beginning", isLocked: false, onSelect: [{
@@ -80,7 +82,7 @@ class MenuController: BaseVC {
                                                  }, {
                                                     [weak self] in
                                                     guard self != nil else { return }
-                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 0.472, green: 0.873, blue: 1, alpha: 1), downColor: UIColor(red: 0.56, green: 0.522, blue: 1, alpha: 1), title: "Beginning", subtitle: "", current: [], next: [], afterTheNext: []))
+                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 0.472, green: 0.873, blue: 1, alpha: 1), downColor: UIColor(red: 0.56, green: 0.522, blue: 1, alpha: 1), title: "Beginning", subtitle: "", mouths: []))
                                                  }]),
             CalendarCell.ViewState(upColor: UIColor(red: 1, green: 0.676, blue: 0.87, alpha: 1),
                                                  downColor: UIColor(red: 1, green: 0.426, blue: 0.874, alpha: 1), image: UIImage(named: "Relate")!, title: "Сreativity", isLocked: false, onSelect: [{
@@ -90,7 +92,7 @@ class MenuController: BaseVC {
                                                  }, {
                                                     [weak self] in
                                                     guard self != nil else { return }
-                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 1, green: 0.676, blue: 0.87, alpha: 1), downColor: UIColor(red: 1, green: 0.426, blue: 0.874, alpha: 1), title: "Сreativity", subtitle: "", current: [], next: [], afterTheNext: []))
+                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 1, green: 0.676, blue: 0.87, alpha: 1), downColor: UIColor(red: 1, green: 0.426, blue: 0.874, alpha: 1), title: "Сreativity", subtitle: "", mouths: []))
                                                  }]),
             CalendarCell.ViewState(upColor: UIColor(red: 0.529, green: 0.967, blue: 0.914, alpha: 1),
                                                  downColor: UIColor(red: 0.327, green: 0.803, blue: 0.834, alpha: 1), image: UIImage(named: "Relate")!, title: "Housework", isLocked: false, onSelect: [{
@@ -100,7 +102,7 @@ class MenuController: BaseVC {
                                                  }, {
                                                     [weak self] in
                                                     guard self != nil else { return }
-                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 0.529, green: 0.967, blue: 0.914, alpha: 1), downColor: UIColor(red: 0.327, green: 0.803, blue: 0.834, alpha: 1), title: "Housework", subtitle: "", current: [], next: [], afterTheNext: []))
+                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 0.529, green: 0.967, blue: 0.914, alpha: 1), downColor: UIColor(red: 0.327, green: 0.803, blue: 0.834, alpha: 1), title: "Housework", subtitle: "", mouths: []))
                                                  }]),
             CalendarCell.ViewState(upColor: UIColor(red: 0.41, green: 0.971, blue: 0.803, alpha: 1),
                                                  downColor: UIColor(red: 0, green: 0.671, blue: 0.429, alpha: 1), image: UIImage(named: "Relate")!, title: "Garden", isLocked: false, onSelect: [{
@@ -110,17 +112,17 @@ class MenuController: BaseVC {
                                                  }, {
                                                     [weak self] in
                                                     guard self != nil else { return }
-                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 0.41, green: 0.971, blue: 0.803, alpha: 1), downColor: UIColor(red: 0, green: 0.671, blue: 0.429, alpha: 1), title: "Garden", subtitle: "", current: [], next: [], afterTheNext: []))
+                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 0.41, green: 0.971, blue: 0.803, alpha: 1), downColor: UIColor(red: 0, green: 0.671, blue: 0.429, alpha: 1), title: "Garden", subtitle: "", mouths: []))
                                                  }]),
             CalendarCell.ViewState(upColor: UIColor(red: 1, green: 0.605, blue: 0.605, alpha: 1),
-                                                 downColor: UIColor(red: 1, green: 0.309, blue: 0.641, alpha: 1), image: UIImage(named: "Relate")!, title: "Cash transactions", isLocked: false, onSelect: [{
+                                                 downColor: UIColor(red: 1, green: 0.309, blue: 0.641, alpha: 1), image: UIImage(named: "Relate")!, title: "Cash transactions", isLocked: true, onSelect: [{
                                                     [weak self] in
                                                     guard self != nil else { return }
                                                     self?.onLockedSelect?()
                                                  }, {
                                                     [weak self] in
                                                     guard self != nil else { return }
-                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 1, green: 0.605, blue: 0.605, alpha: 1), downColor: UIColor(red: 1, green: 0.309, blue: 0.641, alpha: 1), title: "Cash transactions", subtitle: "", current: [], next: [], afterTheNext: []))
+                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 1, green: 0.605, blue: 0.605, alpha: 1), downColor: UIColor(red: 1, green: 0.309, blue: 0.641, alpha: 1), title: "Cash transactions", subtitle: "", mouths: []))
                                                  }]),
             CalendarCell.ViewState(upColor: UIColor(red: 0.904, green: 0.747, blue: 1, alpha: 1),
                                                  downColor: UIColor(red: 0.776, green: 0.409, blue: 1, alpha: 1), image: UIImage(named: "Relate")!, title: "Study", isLocked: false, onSelect: [{
@@ -130,7 +132,7 @@ class MenuController: BaseVC {
                                                  }, {
                                                     [weak self] in
                                                     guard self != nil else { return }
-                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 0.904, green: 0.747, blue: 1, alpha: 1), downColor: UIColor(red: 0.776, green: 0.409, blue: 1, alpha: 1), title: "Study", subtitle: "", current: [], next: [], afterTheNext: []))
+                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 0.904, green: 0.747, blue: 1, alpha: 1), downColor: UIColor(red: 0.776, green: 0.409, blue: 1, alpha: 1), title: "Study", subtitle: "", mouths: []))
                                                  }]),
             CalendarCell.ViewState(upColor: UIColor(red: 1, green: 0.907, blue: 0.726, alpha: 1),
                                                  downColor: UIColor(red: 0.963, green: 0.814, blue: 0.286, alpha: 1), image: UIImage(named: "Relate")!, title: "Sport", isLocked: false, onSelect: [{
@@ -140,7 +142,7 @@ class MenuController: BaseVC {
                                                  }, {
                                                     [weak self] in
                                                     guard self != nil else { return }
-                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 1, green: 0.907, blue: 0.726, alpha: 1), downColor: UIColor(red: 0.963, green: 0.814, blue: 0.286, alpha: 1), title: "Sport", subtitle: "", current: [], next: [], afterTheNext: []))
+                                                    self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "Relate")!, upcolor: UIColor(red: 1, green: 0.907, blue: 0.726, alpha: 1), downColor: UIColor(red: 0.963, green: 0.814, blue: 0.286, alpha: 1), title: "Sport", subtitle: "", mouths: []))
                                                  }])
         ]))
     }

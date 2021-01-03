@@ -14,10 +14,10 @@ class FocusCell: UITableViewCell, BaseTableViewCell {
     @IBOutlet weak var containerView  : UIView!
     @IBOutlet weak var leftImageView  : UIImageView!
     @IBOutlet weak var titleLabel     : UILabel!
-    @IBOutlet weak var heartView      : UIView!
-    @IBOutlet weak var careerView     : UIView!
-    @IBOutlet weak var familyView     : UIView!
-    @IBOutlet weak var healthView     : UIView!
+    @IBOutlet weak var heartView      : CircularProgressView!
+    @IBOutlet weak var careerView     : CircularProgressView!
+    @IBOutlet weak var familyView     : CircularProgressView!
+    @IBOutlet weak var healthView     : CircularProgressView!
     @IBOutlet weak var heartLabel     : UILabel!
     @IBOutlet weak var careerLabel    : UILabel!
     @IBOutlet weak var familyLabel    : UILabel!
@@ -54,6 +54,16 @@ class FocusCell: UITableViewCell, BaseTableViewCell {
         layer.shadowRadius            = 8
         layer.shadowOpacity           = 1
         layer.masksToBounds           = false
+        
+        animateView(heartView)
+        animateView(careerView)
+        animateView(familyView)
+        animateView(healthView)
+    }
+    
+    func animateView(_ view: CircularProgressView) {
+        view.createCircularPath()
+        view.progressAnimation(duration: 2)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
