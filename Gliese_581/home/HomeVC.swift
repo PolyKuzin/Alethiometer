@@ -115,13 +115,13 @@ class HomeVC: BaseVC {
             isExpand = false
             self.expandButton.imageView?.transform = CGAffineTransform(rotationAngle: 0)
             UIView.animate(withDuration: 0.2) {
-                self.menuControllerFPC.move(to: .half, animated: false)
+                self.menuControllerFPC.move(to: .half, animated: true)
             }
         } else {
             self.expandButton.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
             isExpand = true
             UIView.animate(withDuration: 0.2) {
-                self.menuControllerFPC.move(to: .tip, animated: false)
+                self.menuControllerFPC.move(to: .tip, animated: true)
             }
         }
     }

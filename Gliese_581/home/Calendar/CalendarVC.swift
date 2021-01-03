@@ -7,15 +7,7 @@
 
 import UIKit
 
-var currentMounth = ("БЛЯЯЯЯЯЯЯЯ", 31)
-var nextMounth    = ("ПОЖАЛУЙСТАААА", 31)
-var afterNextMounth = ("ДААААААААА", 28)
-
-var monthsName = [currentMounth.0, nextMounth.0, afterNextMounth.0]
-var monthsDays = [currentMounth.1, nextMounth.1, afterNextMounth.1]
 class CalendarVC: BaseVC {
-    
-    var days : [Int]?
 
     @IBOutlet weak var containerView  : UIView!
     @IBOutlet weak var iconView       : UIImageView!
@@ -40,7 +32,6 @@ class CalendarVC: BaseVC {
             tableView.register(UINib(nibName: MounthCell.reuseID, bundle: nil), forCellReuseIdentifier: MounthCell.reuseID)
             tableView.delegate = self
             tableView.dataSource = self
-            getTotalDate(Calendar.current.component(.month, from: Date()))
             iconView.image = viewState.icon
             containerView.setGradientBackground(upColor: viewState.upcolor, downColor: viewState.downColor)
             titleLabel.text = viewState.title
@@ -56,25 +47,6 @@ class CalendarVC: BaseVC {
     
     @IBAction func handleClose(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-    }
-    
-    func getTotalDate(_ currentMounth: Int){
-        var current = currentMounth
-        var dateComponents = DateComponents()
-        dateComponents.year = Calendar.current.component(.year, from: Date())
-        var i = 1
-        while i < 4 {
-            dateComponents.month = current
-            let calendar = Calendar.current
-            let datez = calendar.date(from: dateComponents)
-            let interval = calendar.dateInterval(of: .month, for: datez!)!
-
-            let days = calendar.dateComponents([.day], from: interval.start, to: interval.end).day!
-            print(days)
-            self.days?.append(days)
-            i += 1
-            current += 1
-        }
     }
 }
 

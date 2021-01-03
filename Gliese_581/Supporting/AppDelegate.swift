@@ -8,6 +8,26 @@
 import UIKit
 import YandexMobileMetrica
 
+var currentMounth   = ("", 0)
+var nextMounth      = ("", 0)
+var afterNextMounth = ("", 0)
+var monthsName      = [currentMounth.0, nextMounth.0, afterNextMounth.0]
+var monthsDays      = [currentMounth.1, nextMounth.1, afterNextMounth.1]
+
+var heartAngle  = CGFloat(0)
+var careerAngle = CGFloat(0)
+var familyAngle = CGFloat(0)
+var healthAngle = CGFloat(0)
+
+var days1: ([Int], [Int], [Int]) = ((1...currentMounth.1).randomElements(8), (1...nextMounth.1).randomElements(8), (1...afterNextMounth.1).randomElements(8))
+var days2: ([Int], [Int], [Int]) = ((1...currentMounth.1).randomElements(8), (1...nextMounth.1).randomElements(8), (1...afterNextMounth.1).randomElements(8))
+var days3: ([Int], [Int], [Int]) = ((1...currentMounth.1).randomElements(8), (1...nextMounth.1).randomElements(8), (1...afterNextMounth.1).randomElements(8))
+var days4: ([Int], [Int], [Int]) = ((1...currentMounth.1).randomElements(8), (1...nextMounth.1).randomElements(8), (1...afterNextMounth.1).randomElements(8))
+var days5: ([Int], [Int], [Int]) = ((1...currentMounth.1).randomElements(8), (1...nextMounth.1).randomElements(8), (1...afterNextMounth.1).randomElements(8))
+var days6: ([Int], [Int], [Int]) = ((1...currentMounth.1).randomElements(8), (1...nextMounth.1).randomElements(8), (1...afterNextMounth.1).randomElements(8))
+var days7: ([Int], [Int], [Int]) = ((1...currentMounth.1).randomElements(8), (1...nextMounth.1).randomElements(8), (1...afterNextMounth.1).randomElements(8))
+var days8: ([Int], [Int], [Int]) = ((1...currentMounth.1).randomElements(8), (1...nextMounth.1).randomElements(8), (1...afterNextMounth.1).randomElements(8))
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -24,6 +44,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ###########
             ###########
             """)
+        let monthInt = Calendar.current.component(.month, from: Date())
+        for i in Months.allCases {
+            if i.rawValue.0 == monthInt { currentMounth = (i.rawValue.1, i.rawValue.2) }
+            if i.rawValue.0 == monthInt + 1 { nextMounth = (i.rawValue.1, i.rawValue.2) }
+            if i.rawValue.0 == monthInt + 2 { afterNextMounth = (i.rawValue.1, i.rawValue.2) }
+            if monthInt + 1 == 13 { nextMounth = (Months.January.rawValue.1, Months.January.rawValue.2) }
+            if monthInt + 1 == 14 { nextMounth = (Months.February.rawValue.1, Months.February.rawValue.2) }
+        }
+        heartAngle  = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
+        careerAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
+        familyAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
+        healthAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
+        
+
 //        FirebaseApp.configure()
         return true
     }
@@ -35,7 +69,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-    
+        
     }
 }
 
+public enum Months : CaseIterable {
+    
+    case January
+    case February
+    case March
+    case April
+    case May
+    case June
+    case July
+    case August
+    case September
+    case October
+    case November
+    case December
+
+    
+    var rawValue: (Int, String, Int) {
+        switch self {
+        case .January:   return (1, "January",   31)
+        case .February:  return (2, "February",  28)
+        case .March:     return (3, "March",     31)
+        case .April:     return (4, "April",     30)
+        case .May:       return (5, "May",       31)
+        case .June:      return (6, "June",      30)
+        case .July:      return (7, "July",      31)
+        case .August:    return (8, "August",    31)
+        case .September: return (9, "September", 30)
+        case .October:   return (10, "October",  31)
+        case .November:  return (11, "November", 30)
+        case .December:  return (12, "December", 31)
+        }
+    }
+}
+
+extension RangeExpression where Bound: FixedWidthInteger {
+    func randomElements(_ n: Int) -> [Bound] {
+        precondition(n > 0)
+        switch self {
+        case let range as Range<Bound>: return (0..<n).map { _ in .random(in: range) }
+        case let range as ClosedRange<Bound>: return (0..<n).map { _ in .random(in: range) }
+        default: return []
+        }
+    }
+}
