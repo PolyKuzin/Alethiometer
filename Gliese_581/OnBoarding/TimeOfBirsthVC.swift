@@ -27,7 +27,9 @@ class TimeOfBirsthVC: BaseVC {
         datePickere.setDatePicker(on: view)
         datePickere.preferredDatePickerStyle = .wheels
         datePickere.datePickerMode = .time
+        datePickere.locale = Locale(identifier: "en_GB")
         datePickere.setDate(Date(timeIntervalSince1970: 908608500), animated: true)
+        datePickere.setValue(UIColor.white, forKeyPath: "textColor")
         setupClearButton()
     }
     

@@ -19,7 +19,7 @@ extension UITextField {
         leftViewMode                 = .always
         autocorrectionType           = UITextAutocorrectionType.yes
         keyboardType                 = UIKeyboardType.default
-        returnKeyType                = UIReturnKeyType.continue
+        returnKeyType                = UIReturnKeyType.next
         clearButtonMode              = UITextField.ViewMode.whileEditing
         isSecureTextEntry            = false
         autocapitalizationType       = .sentences

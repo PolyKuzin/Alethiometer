@@ -15,9 +15,15 @@ class NameVC: BaseVC {
     
     var nameTextField = UITextField()
     
+    var nextFFrame = CGRect()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        self.view.addGestureRecognizer(tap)
+        
         label.setTitleLabel(on: view)
         label.text = "Your name"
         nextButton.setNextButton(on: view)
@@ -43,6 +49,21 @@ class NameVC: BaseVC {
         guard let navigationController = navigationController else { return }
         navigationController.pushViewController(vc, animated: true)
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc
+    func hideKeyboard() {
+        self.view.endEditing(true)
+    }
+    
+    @objc
+    func keyboardWillShow(sender: NSNotification) {
+        nextFFrame = nextButton.frame
+        self.nextButton.frame.origin.y = nextFFrame.origin.y - 200 // Move view 150 points upward
+    }
 
+    @objc
+    func keyboardWillHide(sender: NSNotification) {
+        self.nextButton.frame.origin.y = nextFFrame.origin.y // Move view to original position
     }
 }

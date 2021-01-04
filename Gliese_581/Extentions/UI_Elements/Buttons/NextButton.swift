@@ -16,14 +16,14 @@ extension UIButton {
         setTitle              ("Next", for: .normal)
         setTitleColor         (UIColor.white, for: .normal)
         layer.cornerRadius = 21
-        setGradientBackground(colorOne: UIColor.buttonUp, colorTwo: UIColor.buttonDown)
+        setGradientBackground(colorOne: UIColor(red: 0.734, green: 0.627, blue: 0.419, alpha: 1), colorTwo: UIColor(red: 1, green: 0.871, blue: 0.622, alpha: 1))
         view.addSubview(self)
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 65),
             leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -65),
+            bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -65),
         ])
     }
 }

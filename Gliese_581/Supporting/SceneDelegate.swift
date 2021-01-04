@@ -21,8 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window                = UIWindow(windowScene: windowScene)
         
         let nav1              = BaseNC()
-        let entryView         = HomeVC(nibName: "HomeVC", bundle: nil)
-        nav1.viewControllers  = [entryView]
+        let homeView         = HomeVC(nibName: "HomeVC", bundle: nil)
+        let onBoard           = FirstVC(nibName: nil,     bundle: nil)
+        UserDefaults.standard.bool(forKey: "Registered") ? (nav1.viewControllers  = [homeView]) : (nav1.viewControllers  = [onBoard])
         nav1.navigationBar.barTintColor  = .white
         nav1.navigationBar.isTranslucent = false
         nav1.navigationBar.shadowImage   = UIImage()

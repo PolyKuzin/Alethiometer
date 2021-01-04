@@ -196,5 +196,85 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F6BAC64C-042B-4E16-BAAC-B92C40422393"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/OnBoarding/HandVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "298"
+            endingLineNumber = "298"
+            landmarkName = "captureOutput(_:didOutput:from:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F6BAC64C-042B-4E16-BAAC-B92C40422393 - b4007c5dc2f77e7a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Bool) -&gt; () in Gliese_581.HandVC.captureOutput(_: __C.AVCaptureOutput, didOutput: __C.CMSampleBufferRef, from: __C.AVCaptureConnection) -&gt; ()"
+                  moduleName = "Gliese_581"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavelkuzin/Documents/Gliese_581/Gliese_581/OnBoarding/HandVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "292"
+                  endingLineNumber = "292"
+                  offsetFromSymbolStart = "340">
+               </Location>
+               <Location
+                  uuid = "F6BAC64C-042B-4E16-BAAC-B92C40422393 - 9d8d1a8fb28eceb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.VNRequest, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #2 (Swift.Bool) -&gt; () in Gliese_581.HandVC.captureOutput(_: __C.AVCaptureOutput, didOutput: __C.CMSampleBufferRef, from: __C.AVCaptureConnection) -&gt; ()"
+                  moduleName = "Gliese_581"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavelkuzin/Documents/Gliese_581/Gliese_581/OnBoarding/HandVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "293"
+                  endingLineNumber = "293"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1CA66499-57A4-46BC-918E-E65FADEEB845"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/OnBoarding/HandVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "captureOutput(_:didOutput:from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "922D7A6B-0392-4D88-9AF9-6CD903A192E0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/OnBoarding/HandVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
+            landmarkName = "runTimedCode()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -24,7 +24,7 @@ class DateOfBirsthVC: BaseVC {
         datePickere.setDatePicker(on: view)
         datePickere.preferredDatePickerStyle = .wheels
         datePickere.datePickerMode = .date
-        
+        datePickere.setValue(UIColor.white, forKeyPath: "textColor")
         datePickere.setDate(Date(timeIntervalSince1970: 908608500), animated: true)
         datePickere.minimumDate = Date(timeIntervalSince1970: -315630000)
         datePickere.maximumDate = Date(timeIntervalSince1970: 1136062800)

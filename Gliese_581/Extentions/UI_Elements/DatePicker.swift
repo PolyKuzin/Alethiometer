@@ -10,9 +10,6 @@ import UIKit
 extension UIDatePicker {
     
     func setDatePicker(on view: UIView) {
-//        backgroundColor = .clear
-//        tintColor = .white//UIColor(red: 0.281, green: 0.289, blue: 0.359, alpha: 1)
-        
         view.addSubview(self)
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

@@ -14,9 +14,8 @@ class BaseVC : UIViewController {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         view.backgroundColor = UIColor.background
+        self.navigationController?.navigationBar.isHidden = true
     }
 }
 
-extension BaseVC : FloatingPanelControllerDelegate {
-    
-}
+extension BaseVC : FloatingPanelControllerDelegate { }

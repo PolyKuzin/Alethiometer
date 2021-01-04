@@ -19,7 +19,7 @@ class FirstVC: BaseVC {
         label.text = "Красивый текст"
         nextButton.setNextButton(on: view)
         nextButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
-
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidDisappear(_ animated: Bool)    {

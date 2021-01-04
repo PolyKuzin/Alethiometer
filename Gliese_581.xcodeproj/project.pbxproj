@@ -67,8 +67,6 @@
 		994D1FD425977E1C002F8987 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D1FD325977E1C002F8987 /* SectionHeader.swift */; };
 		9974DF2E25A204060036C971 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9974DF2D25A204060036C971 /* GoogleService-Info.plist */; };
 		9974DF3125A204830036C971 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9974DF3025A204830036C971 /* AnalyticsService.swift */; };
-		9979BF9225742636005E4ED3 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */; };
-		9979BF9525742EAA005E4ED3 /* HandForAstroSkope.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */; };
 		997EDB1825895B19009E4122 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB1625895B19009E4122 /* HomeVC.swift */; };
 		997EDB1925895B19009E4122 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997EDB1725895B19009E4122 /* HomeVC.xib */; };
 		997EDB1F25895D0F009E4122 /* InstanceHoroscopeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB1D25895D0F009E4122 /* InstanceHoroscopeCell.swift */; };
@@ -76,6 +74,9 @@
 		997EDB2625895F5B009E4122 /* FocusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB2425895F5B009E4122 /* FocusCell.swift */; };
 		997EDB2725895F5B009E4122 /* FocusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997EDB2525895F5B009E4122 /* FocusCell.xib */; };
 		997EDB2B25896168009E4122 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB2A25896168009E4122 /* CircleView.swift */; };
+		9989337725A3A40C00CDBC39 /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9989337625A3A40C00CDBC39 /* Localize.swift */; };
+		9989337B25A3AC8200CDBC39 /* TinyYOLO.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9989337A25A3AC8200CDBC39 /* TinyYOLO.mlmodel */; };
+		9989337E25A3AE2900CDBC39 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9989337D25A3AE2900CDBC39 /* MobileNet.mlmodel */; };
 		9997EAAB259B2798000BBAE3 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997EAAA259B2798000BBAE3 /* Date.swift */; };
 		99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF4F98258014FE00F74D68 /* ClearButton.swift */; };
 		99DF7D0025A0743A00EA9913 /* MounthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF7CFE25A0743A00EA9913 /* MounthCell.swift */; };
@@ -148,8 +149,6 @@
 		994D1FD325977E1C002F8987 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		9974DF2D25A204060036C971 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9974DF3025A204830036C971 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
-		9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
-		9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HandForAstroSkope.mlmodel; sourceTree = "<group>"; };
 		997EDB1625895B19009E4122 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		997EDB1725895B19009E4122 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		997EDB1D25895D0F009E4122 /* InstanceHoroscopeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceHoroscopeCell.swift; sourceTree = "<group>"; };
@@ -157,6 +156,9 @@
 		997EDB2425895F5B009E4122 /* FocusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusCell.swift; sourceTree = "<group>"; };
 		997EDB2525895F5B009E4122 /* FocusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusCell.xib; sourceTree = "<group>"; };
 		997EDB2A25896168009E4122 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		9989337625A3A40C00CDBC39 /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
+		9989337A25A3AC8200CDBC39 /* TinyYOLO.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TinyYOLO.mlmodel; sourceTree = "<group>"; };
+		9989337D25A3AE2900CDBC39 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		9997EAAA259B2798000BBAE3 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		99CF4F98258014FE00F74D68 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		99DF7CFE25A0743A00EA9913 /* MounthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MounthCell.swift; sourceTree = "<group>"; };
@@ -242,8 +244,8 @@
 				990CA4EA256AC238004A8105 /* LaunchScreen.storyboard */,
 				990CA4ED256AC238004A8105 /* Info.plist */,
 				9974DF2D25A204060036C971 /* GoogleService-Info.plist */,
-				9979BF9425742EAA005E4ED3 /* HandForAstroSkope.mlmodel */,
-				9979BF9125742636005E4ED3 /* MobileNetV2.mlmodel */,
+				9989337A25A3AC8200CDBC39 /* TinyYOLO.mlmodel */,
+				9989337D25A3AE2900CDBC39 /* MobileNet.mlmodel */,
 			);
 			path = Gliese_581;
 			sourceTree = "<group>";
@@ -376,6 +378,7 @@
 		997EDB2925896159009E4122 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9989337625A3A40C00CDBC39 /* Localize.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -556,12 +559,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9979BF9225742636005E4ED3 /* MobileNetV2.mlmodel in Sources */,
 				990F142C2596675F00AA7603 /* CenteredButton.swift in Sources */,
 				9974DF3125A204830036C971 /* AnalyticsService.swift in Sources */,
 				9932499D2595062600865617 /* UIImageView.swift in Sources */,
 				990CA51E256ADB7B004A8105 /* Fonts.swift in Sources */,
 				993249A0259506D500865617 /* SafeIndex.swift in Sources */,
+				9989337E25A3AE2900CDBC39 /* MobileNet.mlmodel in Sources */,
 				990F14332596757F00AA7603 /* NibWrapper.swift in Sources */,
 				990CA53D256AEB41004A8105 /* DatePicker.swift in Sources */,
 				993C877E2592266D004A4305 /* FloatinLayout.swift in Sources */,
@@ -577,8 +580,8 @@
 				993C878425922723004A4305 /* Appearence.swift in Sources */,
 				994D1FD425977E1C002F8987 /* SectionHeader.swift in Sources */,
 				997EDB2625895F5B009E4122 /* FocusCell.swift in Sources */,
-				9979BF9525742EAA005E4ED3 /* HandForAstroSkope.mlmodel in Sources */,
 				99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */,
+				9989337725A3A40C00CDBC39 /* Localize.swift in Sources */,
 				990CA4F7256AC2F3004A8105 /* FirstVC.swift in Sources */,
 				993249962595055C00865617 /* SegmentItem.swift in Sources */,
 				990CA534256AE943004A8105 /* NameVC.swift in Sources */,
@@ -592,6 +595,7 @@
 				9923FFA625802CAC004F1F02 /* FeaturesView.swift in Sources */,
 				990CA527256AE6E9004A8105 /* BaseVC.swift in Sources */,
 				990CA537256AE971004A8105 /* RelationShipsVC.swift in Sources */,
+				9989337B25A3AC8200CDBC39 /* TinyYOLO.mlmodel in Sources */,
 				990CA524256AE656004A8105 /* DateOfBirsthVC.swift in Sources */,
 				997EDB1825895B19009E4122 /* HomeVC.swift in Sources */,
 				9902B83F258A9BA3002041B2 /* BaseTableViewCell.swift in Sources */,

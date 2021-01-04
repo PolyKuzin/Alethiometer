@@ -17,18 +17,20 @@ class BaseNC: UINavigationController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        guard let navigationController = navigationController else { return }
-        navigationController.navigationBar.barTintColor  = .clear
-        navigationController.navigationBar.isTranslucent = true
-        navigationController.navigationBar.shadowImage   = UIImage()
-        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBar.tintColor        = UIColor.clear
-        self.navigationBar.barTintColor     = .background
-        self.navigationItem.backButtonTitle = ""
+        guard let navigationController = navigationController else { return }
+//        navigationController.navigationBar.barTintColor  = .clear
+//        navigationController.navigationBar.isTranslucent = true
+//        navigationController.navigationBar.shadowImage   = UIImage()
+//        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        self.navigationBar.tintColor        = UIColor.clear
+////        self.navigationBar.barTintColor     = .clear
+//        self.navigationItem.backButtonTitle = ""
+        navigationController.navigationBar.isHidden = true
     }
 }
 

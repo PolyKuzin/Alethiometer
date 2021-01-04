@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CityOfBirsthVC: BaseVC {
+class CityOfBirsthVC: BaseVC, UITextFieldDelegate {
 
     let label = UILabel()
 
@@ -15,12 +15,18 @@ class CityOfBirsthVC: BaseVC {
     
     var cityTextField = UITextField()
     
+    var nextFFrame = CGRect()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        self.view.addGestureRecognizer(tap)
         label.setTitleLabel(on: view)
         label.text = "Your city of birth"
         nextButton.setNextButton(on: view)
+        cityTextField.delegate = self
         nextButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
         cityTextField.setBigTextField(on: self.view)
         cityTextField.placeholder = "City"
@@ -42,6 +48,21 @@ class CityOfBirsthVC: BaseVC {
         guard let navigationController = navigationController else { return }
         navigationController.pushViewController(vc, animated: true)
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc
+    func hideKeyboard() {
+        self.view.endEditing(true)
+    }
+    
+    @objc
+    func keyboardWillShow(sender: NSNotification) {
+        nextFFrame = nextButton.frame
+        self.nextButton.frame.origin.y = nextFFrame.origin.y - 200 // Move view 150 points upward
+    }
 
+    @objc
+    func keyboardWillHide(sender: NSNotification) {
+        self.nextButton.frame.origin.y = nextFFrame.origin.y // Move view to original position
     }
 }

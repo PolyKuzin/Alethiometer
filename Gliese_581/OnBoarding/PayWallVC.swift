@@ -14,6 +14,8 @@ class PayWallVC : BaseVC {
 
     var nextButton = UIButton()
     
+    var restoreButton = UIButton()
+    
     let feature1 = UIView()
     let feature2 = UIView()
     let feature3 = UIView()
@@ -28,16 +30,15 @@ class PayWallVC : BaseVC {
         nextButton.setTitle("Try FREE & Subscribe", for: .normal)
         nextButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
         
-        feature1.setFeaturesView(on: view, with: UIImage(named: "Alone") ?? #imageLiteral(resourceName: "back"), title: "Персональный гороскоп", subtitle: "Ежедневные советы о любви и работе")
+        feature1.setFeaturesView(on: view, with: UIImage(named: "payWall") ?? #imageLiteral(resourceName: "back"), title: "Personal horoscope".localized(), subtitle: "Daily tips about your life & future".localized())
         feature1.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 75).isActive = true
-        feature2.setFeaturesView(on: view, with: UIImage(named: "Alone") ?? #imageLiteral(resourceName: "back"), title: "Персональный гороскоп", subtitle: "Ежедневные советы о любви и работе")
+        feature2.setFeaturesView(on: view, with: UIImage(named: "payWall-2") ?? #imageLiteral(resourceName: "back"), title: "Focus of the day".localized(), subtitle: "What to pay special attention to".localized())
         feature2.topAnchor.constraint(equalTo: feature1.bottomAnchor, constant: 12).isActive = true
-        feature3.setFeaturesView(on: view, with: UIImage(named: "Alone") ?? #imageLiteral(resourceName: "back"), title: "Персональный гороскоп", subtitle: "Ежедневные советы о любви и работе")
+        feature3.setFeaturesView(on: view, with: UIImage(named: "payWall-1") ?? #imageLiteral(resourceName: "back"), title: "Lunar calendar".localized(), subtitle: "Haircuts, beginnings, garden, etc.".localized())
         feature3.topAnchor.constraint(equalTo: feature2.bottomAnchor, constant: 12).isActive = true
-        feature4.setFeaturesView(on: view, with: UIImage(named: "Alone") ?? #imageLiteral(resourceName: "back"), title: "Персональный гороскоп", subtitle: "Ежедневные советы о любви и работе")
-        feature4.topAnchor.constraint(equalTo: feature3.bottomAnchor, constant: 12).isActive = true
-        feature5.setFeaturesView(on: view, with: UIImage(named: "Alone") ?? #imageLiteral(resourceName: "back"), title: "Персональный гороскоп", subtitle: "Ежедневные советы о любви и работе")
-        feature5.topAnchor.constraint(equalTo: feature4.bottomAnchor, constant: 12).isActive = true
+        
+        restoreButton.setTitleColor(UIColor.grey, for: .normal)
+        restoreButton.setTitle("Restore purchases".localized(), for: .normal)
     }
     
     override func viewDidDisappear(_ animated: Bool)    {

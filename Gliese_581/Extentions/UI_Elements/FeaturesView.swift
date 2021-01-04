@@ -41,11 +41,11 @@ extension UIView {
         tit.translatesAutoresizingMaskIntoConstraints = false
         sub.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-            imageView.widthAnchor.constraint(equalToConstant: self.frame.height - 20),
+            imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
+            imageView.widthAnchor.constraint(equalToConstant: self.frame.height - 40),
             imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
-            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             
             tit.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
             tit.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 10),
