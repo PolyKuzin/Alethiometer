@@ -182,6 +182,12 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     var cameraPreviewLayer : AVCaptureVideoPreviewLayer?
     
+    var lastViewIsHand = false
+    
+    var shootCamera = UIButton()
+    
+    var skipButton = UIButton()
+    
     func setupCaptureSession() {
         captureSession.sessionPreset = AVCaptureSession.Preset.photo
     }
@@ -233,7 +239,7 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        label.numberOfLines = 2
         label.setTitleLabel(on: view)
         label.text = "Point phone's camera at your palm".localized()
 
@@ -243,14 +249,71 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
         setupPreviewLayer()
         startRunningCaptureSession()
         
-        let myView = MyCustomView()
-        myView.frame = self.view.frame
-        myView.backgroundColor = UIColor.clear
-        view.addSubview(myView)
-        myView.translatesAutoresizingMaskIntoConstraints = false
+//        let myView = MyCustomView()
+//        myView.frame = self.view.frame
+//        myView.backgroundColor = UIColor.clear
+//        view.addSubview(myView)
+//        myView.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            myView.topAnchor.constraint(equalTo: label.bottomAnchor),
+//        ])
+        self.view.addSubview(shootCamera)
+        shootCamera.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            myView.topAnchor.constraint(equalTo: label.bottomAnchor),
+            shootCamera.widthAnchor.constraint(equalToConstant: 72),
+            shootCamera.heightAnchor.constraint(equalToConstant: 72),
+            shootCamera.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -75),
+            shootCamera.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
+        shootCamera.layer.cornerRadius = 36
+        shootCamera.backgroundColor = .white
+        
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: 36, y: 36), radius: CGFloat(32), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
+            
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = circlePath.cgPath
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = UIColor.black.cgColor
+        shapeLayer.lineWidth = 2.0
+            
+        shootCamera.layer.addSublayer(shapeLayer)
+        shootCamera.addTarget(self, action: #selector(handleShoot), for: .touchUpInside)
+        
+        self.view.addSubview(skipButton)
+        skipButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+            skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+        ])
+        skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
+        skipButton.setTitle("Skip".localized(), for: .normal)
+        skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+    }
+    
+    @objc
+    func handleShoot() {
+        self.captureSession.stopRunning()
+        self.showUniversalLoadingView(true, loadingText: "Чекаем Ладоху")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            if self.lastViewIsHand {
+                self.showUniversalLoadingView(false)
+                self.showUniversalLoadingView(true, loadingText: "Ладоха супер, теперь звэзды...")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    let vc = PayWallVC()
+                        guard let navigationController = self.navigationController else { return }
+                        navigationController.pushViewController(vc, animated: true)
+                        self.dismiss(animated: true, completion: nil)
+                        self.showUniversalLoadingView(false)
+                }
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    self.showUniversalLoadingView(false)
+                    self.captureSession.startRunning()
+                    self.label.text = "Не смогли узнать ладошку - попробуйте еще раз"
+                }
+            }
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool)    {
@@ -276,17 +339,9 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
                 guard let first = results.first else { return }
                 print(first.identifier)
                 if first.identifier.contains("Band Aid") {
-                    DispatchQueue.main.async {
-                        self.captureSession.stopRunning()
-                        self.showUniversalLoadingView(true, loadingText: "Ладоха супер")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                            let vc = PayWallVC()
-                            guard let navigationController = self.navigationController else { return }
-                            navigationController.pushViewController(vc, animated: true)
-                            self.dismiss(animated: true, completion: nil)
-                            self.showUniversalLoadingView(false)
-                        }
-                    }
+                    self.lastViewIsHand = true
+                } else {
+                    self.lastViewIsHand = false
                 }
             }
             try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
@@ -300,12 +355,9 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
                         guard let first = results.first else { return }
                         print(first.identifier)
                         if first.identifier.contains("Band Aid") {
-                            DispatchQueue.main.async {
-                                let vc = PayWallVC()
-                                guard let navigationController = self.navigationController else { return }
-                                navigationController.pushViewController(vc, animated: true)
-                                self.dismiss(animated: true, completion: nil)
-                            }
+                            self.lastViewIsHand = true
+                        } else {
+                            self.lastViewIsHand = false
                         }
                     }
                     try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
@@ -320,6 +372,18 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
             })
         }
     }
+    
+//    DispatchQueue.main.async {
+//        self.captureSession.stopRunning()
+//        self.showUniversalLoadingView(true, loadingText: "Ладоха супер")
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+//            let vc = PayWallVC()
+//            guard let navigationController = self.navigationController else { return }
+//            navigationController.pushViewController(vc, animated: true)
+//            self.dismiss(animated: true, completion: nil)
+//            self.showUniversalLoadingView(false)
+//        }
+//    }
     
     @objc
     func runTimedCode() {
