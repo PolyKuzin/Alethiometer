@@ -10,16 +10,14 @@ import UIKit
 class GenderVC: BaseVC {
 
     let label = UILabel()
-
     var nextButton = UIButton()
-    
     var maleButton = UIButton()
-    
     var femaleButton = UIButton()
-    
     var maleLabel = UILabel()
-    
     var femaleLabel = UILabel()
+    var clearButton = UIButton()
+    var backButton = UIButton()
+    var skipButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,13 +54,32 @@ class GenderVC: BaseVC {
             femaleLabel.centerXAnchor.constraint(equalTo: femaleButton.centerXAnchor),
 
         ])
-
+        clearButton.setClearButton(on: self.view)
+        clearButton.addTarget(self, action: #selector(setChoiseLQBT), for: .touchUpInside)
+        NSLayoutConstraint.activate([
+            clearButton.topAnchor.constraint(equalTo: femaleLabel.bottomAnchor, constant: 40),
+            clearButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            clearButton.widthAnchor.constraint(equalToConstant: 200),
+            clearButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+        clearButton.setTitle("LGBQ+", for: .normal)
+        backButton.setBackButton(on: self.view)
+        backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        self.view.addSubview(skipButton)
+        skipButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+            skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+        ])
+        skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
+        skipButton.setTitle("Skip".localized(), for: .normal)
+        skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
     }
     
-    override func viewDidDisappear(_ animated: Bool)    {
-        super.viewWillDisappear(animated)
-        guard let navigationController = navigationController else { return }
-        navigationController.viewControllers.removeAll(where: { self === $0 })
+    @objc
+    private func goBack() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc
@@ -70,6 +87,7 @@ class GenderVC: BaseVC {
         maleButton.layer.borderWidth = 4
         maleButton.layer.borderColor = UIColor(red: 1, green: 0.48, blue: 0, alpha: 1).cgColor
         femaleButton.layer.borderWidth = 0
+        clearButton.layer.borderWidth = 0
     }
     
     @objc
@@ -77,6 +95,15 @@ class GenderVC: BaseVC {
         femaleButton.layer.borderWidth = 4
         femaleButton.layer.borderColor = UIColor(red: 0, green: 0.914, blue: 0.906, alpha: 1).cgColor
         maleButton.layer.borderWidth = 0
+        clearButton.layer.borderWidth = 0
+    }
+    
+    @objc
+    private func setChoiseLQBT() {
+        clearButton.layer.borderWidth = 4
+        clearButton.layer.borderColor = UIColor(red: 0, green: 0.914, blue: 0.906, alpha: 1).cgColor
+        maleButton.layer.borderWidth = 0
+        femaleButton.layer.borderWidth = 0
     }
     
     @objc
@@ -84,6 +111,16 @@ class GenderVC: BaseVC {
         let vc = NameVC()
         guard let navigationController = navigationController else { return }
         navigationController.pushViewController(vc, animated: true)
+        if femaleButton.layer.borderWidth != 0 {
+            UserDefaults.standard.setValue("Female", forKey: "Gender")
+            AnalyticsService.reportEvent(with: "Gender", parameters: ["Gender" : "Female"])
+        } else if maleButton.layer.borderWidth != 0 {
+            UserDefaults.standard.setValue("Male",   forKey: "Gender")
+            AnalyticsService.reportEvent(with: "Gender", parameters: ["Gender" : "Male"])
+        } else if clearButton.layer.borderWidth != 0 {
+            UserDefaults.standard.setValue("LQBT", forKey: "Gender")
+            AnalyticsService.reportEvent(with: "Gender", parameters: ["Gender" : "LQBT"])
+        }
         self.dismiss(animated: true, completion: nil)
     }
 }

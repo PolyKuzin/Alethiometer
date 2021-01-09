@@ -78,6 +78,10 @@
 		9989337B25A3AC8200CDBC39 /* TinyYOLO.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9989337A25A3AC8200CDBC39 /* TinyYOLO.mlmodel */; };
 		9989337E25A3AE2900CDBC39 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9989337D25A3AE2900CDBC39 /* MobileNet.mlmodel */; };
 		9997EAAB259B2798000BBAE3 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997EAAA259B2798000BBAE3 /* Date.swift */; };
+		99B83EBC25A9BB9500030FF4 /* ScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B83EBB25A9BB9500030FF4 /* ScrollVC.swift */; };
+		99B83EBF25A9C3A600030FF4 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B83EBE25A9C3A600030FF4 /* BackButton.swift */; };
+		99B83EC325A9EF9500030FF4 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B83EC125A9EF9500030FF4 /* TitleCell.swift */; };
+		99B83EC425A9EF9500030FF4 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99B83EC225A9EF9500030FF4 /* TitleCell.xib */; };
 		99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF4F98258014FE00F74D68 /* ClearButton.swift */; };
 		99DF7D0025A0743A00EA9913 /* MounthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF7CFE25A0743A00EA9913 /* MounthCell.swift */; };
 		99DF7D0125A0743A00EA9913 /* MounthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99DF7CFF25A0743A00EA9913 /* MounthCell.xib */; };
@@ -160,6 +164,10 @@
 		9989337A25A3AC8200CDBC39 /* TinyYOLO.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TinyYOLO.mlmodel; sourceTree = "<group>"; };
 		9989337D25A3AE2900CDBC39 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		9997EAAA259B2798000BBAE3 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		99B83EBB25A9BB9500030FF4 /* ScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollVC.swift; sourceTree = "<group>"; };
+		99B83EBE25A9C3A600030FF4 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		99B83EC125A9EF9500030FF4 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		99B83EC225A9EF9500030FF4 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 		99CF4F98258014FE00F74D68 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		99DF7CFE25A0743A00EA9913 /* MounthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MounthCell.swift; sourceTree = "<group>"; };
 		99DF7CFF25A0743A00EA9913 /* MounthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MounthCell.xib; sourceTree = "<group>"; };
@@ -358,6 +366,7 @@
 				993C878A2592284F004A4305 /* MenuController.swift */,
 				993C878B2592284F004A4305 /* MenuController.xib */,
 				99DF7CFC25A072A600EA9913 /* Calendar */,
+				99B83EBB25A9BB9500030FF4 /* ScrollVC.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -392,6 +401,7 @@
 				990F142B2596675F00AA7603 /* CenteredButton.swift */,
 				990F142E259669D100AA7603 /* CenteredButton.xib */,
 				990F14322596757F00AA7603 /* NibWrapper.swift */,
+				99B83EBE25A9C3A600030FF4 /* BackButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -401,6 +411,8 @@
 			children = (
 				994D1FCE25977324002F8987 /* CalendarVC.swift */,
 				994D1FCF25977324002F8987 /* CalendarVC.xib */,
+				99B83EC125A9EF9500030FF4 /* TitleCell.swift */,
+				99B83EC225A9EF9500030FF4 /* TitleCell.xib */,
 				99DF7CFE25A0743A00EA9913 /* MounthCell.swift */,
 				99DF7CFF25A0743A00EA9913 /* MounthCell.xib */,
 				99DF7D0325A07DA900EA9913 /* NumberCell.swift */,
@@ -500,6 +512,7 @@
 				990CA50E256AC592004A8105 /* SF-Pro-Text-Medium.otf in Resources */,
 				990F142F259669D100AA7603 /* CenteredButton.xib in Resources */,
 				990CA4E9256AC238004A8105 /* Assets.xcassets in Resources */,
+				99B83EC425A9EF9500030FF4 /* TitleCell.xib in Resources */,
 				99DF7D0125A0743A00EA9913 /* MounthCell.xib in Resources */,
 				993C878D2592284F004A4305 /* MenuController.xib in Resources */,
 				993C879225925639004A4305 /* CalendarCell.xib in Resources */,
@@ -560,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				990F142C2596675F00AA7603 /* CenteredButton.swift in Sources */,
+				99B83EBC25A9BB9500030FF4 /* ScrollVC.swift in Sources */,
 				9974DF3125A204830036C971 /* AnalyticsService.swift in Sources */,
 				9932499D2595062600865617 /* UIImageView.swift in Sources */,
 				990CA51E256ADB7B004A8105 /* Fonts.swift in Sources */,
@@ -574,6 +588,7 @@
 				990CA4FA256AC30F004A8105 /* NextButton.swift in Sources */,
 				990CA4FD256AC323004A8105 /* Colors.swift in Sources */,
 				9902B83A258A9909002041B2 /* Zodiac.swift in Sources */,
+				99B83EC325A9EF9500030FF4 /* TitleCell.swift in Sources */,
 				994D1FD025977324002F8987 /* CalendarVC.swift in Sources */,
 				990CA52B256AE860004A8105 /* TimeOfBirsthVC.swift in Sources */,
 				99DF7D0025A0743A00EA9913 /* MounthCell.swift in Sources */,
@@ -582,6 +597,7 @@
 				997EDB2625895F5B009E4122 /* FocusCell.swift in Sources */,
 				99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */,
 				9989337725A3A40C00CDBC39 /* Localize.swift in Sources */,
+				99B83EBF25A9C3A600030FF4 /* BackButton.swift in Sources */,
 				990CA4F7256AC2F3004A8105 /* FirstVC.swift in Sources */,
 				993249962595055C00865617 /* SegmentItem.swift in Sources */,
 				990CA534256AE943004A8105 /* NameVC.swift in Sources */,
@@ -752,7 +768,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				INFOPLIST_FILE = Gliese_581/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -774,7 +790,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				INFOPLIST_FILE = Gliese_581/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

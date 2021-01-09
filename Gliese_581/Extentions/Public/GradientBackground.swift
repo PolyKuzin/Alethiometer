@@ -29,4 +29,13 @@ extension UIView {
         
         layer.insertSublayer(gradientLayer, at: 0)
     }
+    
+    func setStarsBackground() {
+        let layer0 = CALayer()
+        layer0.contents = self
+        layer0.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 1, b: 0, c: 0, d: 1.2, tx: 0, ty: -0.1))
+        layer0.bounds = self.bounds
+        layer0.position = self.center
+        self.layer.addSublayer(layer0)
+    }
 }

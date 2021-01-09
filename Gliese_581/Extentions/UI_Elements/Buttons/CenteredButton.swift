@@ -19,12 +19,13 @@ class CenteredButton : UIView {
                 let view = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
                 view.backgroundColor = .black
                 view.alpha = 0.3
-                let imageView = UIImageView(image: UIImage(named: "Relate"))
+                let imageView = UIImageView(image: UIImage(named: "Locked"))
+                imageView.setImageColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1))
                 view.addSubview(imageView)
                 imageView.translatesAutoresizingMaskIntoConstraints = false
                 NSLayoutConstraint.activate([
                     imageView.heightAnchor.constraint(equalToConstant: 15),
-                    imageView.widthAnchor.constraint(equalToConstant: 15),
+                    imageView.widthAnchor.constraint(equalToConstant: 13),
                     imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 12),
                     imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12)
                 ])
@@ -51,6 +52,7 @@ class CenteredButton : UIView {
     func setGradient(_ upColor: UIColor, _ downColor: UIColor) {
         setGradientBackground(upColor: upColor, downColor: downColor)
     }
+    
 }
 
 extension CenteredButton {

@@ -77,6 +77,8 @@ class PayWallVC : BaseVC {
         ])
         restoreButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
         restoreButton.setTitle("Restore purchases".localized(), for: .normal)
+        
+        UserDefaults.standard.setValue(true, forKey: "Registered")
     }
     
     override func viewDidDisappear(_ animated: Bool)    {

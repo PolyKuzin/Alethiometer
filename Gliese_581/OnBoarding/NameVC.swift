@@ -10,13 +10,11 @@ import UIKit
 class NameVC: BaseVC {
 
     let label = UILabel()
-
     var nextButton = UIButton()
-    
     var nameTextField = UITextField()
-    
     var nextFFrame = CGRect()
-    
+    var backButton = UIButton()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
@@ -35,19 +33,30 @@ class NameVC: BaseVC {
             nameTextField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 120),
             nameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+        backButton.setBackButton(on: self.view)
+        backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
     }
     
-    override func viewDidDisappear(_ animated: Bool)    {
-        super.viewWillDisappear(animated)
-        guard let navigationController = navigationController else { return }
-        navigationController.viewControllers.removeAll(where: { self === $0 })
+    @objc
+    private func goBack() {
+        self.navigationController?.popViewController(animated: true)
     }
+    
+//    override func viewDidDisappear(_ animated: Bool)    {
+//        super.viewWillDisappear(animated)
+//        guard let navigationController = navigationController else { return }
+//        navigationController.viewControllers.removeAll(where: { self === $0 })
+//    }
     
     @objc
     private func goToDateOfBirthVC() {
         let vc = RelationShipsVC()
         guard let navigationController = navigationController else { return }
         navigationController.pushViewController(vc, animated: true)
+        if let name = nameTextField.text {
+            UserDefaults.standard.setValue(name, forKey: "UserName")
+            AnalyticsService.reportEvent(with: "UserName", parameters: ["UserName" : name])
+        }
         self.dismiss(animated: true, completion: nil)
     }
     

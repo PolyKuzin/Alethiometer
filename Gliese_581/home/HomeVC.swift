@@ -31,11 +31,48 @@ class HomeVC: BaseVC {
     @IBOutlet weak var luckyDaysView   : UIView!
     
     private var menuControllerFPC      : FloatingPanelController!
+    
+    
     private var menuController         : MenuController!
+    private var scrollControll         : ScrollVC!
+    
     private var calendarVC             : CalendarVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let image = UIImage(named: zodiacSign) {
+            zodiacImageView.image = image
+        }
+        zodiacNameLabel.text = zodiacSign
+        switch zodiacSign {
+        case "Aquarius":
+            dateLabel.text = "01.20 - 02.18"
+        case "Pisces":
+            dateLabel.text = "02.19 - 03.20"
+        case "Aries":
+            dateLabel.text = "03.21 - 04.19"
+        case "Taurus":
+            dateLabel.text = "04.20 - 05.20"
+        case "Gemini":
+            dateLabel.text = "05.21 - 06.20"
+        case "Cancer":
+            dateLabel.text = "06.21 - 07.22"
+        case "Leo":
+            dateLabel.text = "07.23 - 08.22"
+        case "Virgo":
+            dateLabel.text = "08.23 - 09.22"
+        case "Libra":
+            dateLabel.text = "09.23 - 10.22"
+        case "Scorpio":
+            dateLabel.text = "10.23 - 11.21"
+        case "Sagittarius":
+            dateLabel.text = "11.22 - 12.21"
+        case "Capricorn":
+            dateLabel.text = "12.22 - 01.19"
+        default:
+            dateLabel.text = ""
+        }
         expandButton.addTarget(self, action: #selector(self.handleExpand), for: .touchUpInside)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -60,7 +97,15 @@ class HomeVC: BaseVC {
         segmentControl.onSegmentSelect = { [weak self] selectedIndex in
             guard let self = self else { return }
             UIView.animate(withDuration: 0.2, animations: {
-//                self.scrollView.contentOffset = CGPoint(x: CGFloat(selectedIndex)*self.view.frame.width, y: 0)
+                if selectedIndex == 0 {
+//                    self.menuController.makeStandartState()
+                } else if selectedIndex == 1 {
+//                    self.menuController.makeStandartState()
+                } else if selectedIndex == 2 {
+//                    self.menuController.makeStandartState()
+                } else if selectedIndex == 3 {
+//                    self.menuController.makeStandartState()
+                }
                 self.segmentControl.setSelected(at: selectedIndex)
             })
         }
@@ -87,6 +132,7 @@ class HomeVC: BaseVC {
     }
     
     func setupFloatingPanel() {
+        self.scrollControll    = ScrollVC()
         self.menuController    = MenuController()
         self.menuControllerFPC = FloatingPanelController()
         menuControllerFPC.delegate = self
@@ -103,10 +149,10 @@ class HomeVC: BaseVC {
         menuControllerFPC.surfaceView.grabberHandleSize = .init(width: 0, height: 0)
         menuController.makeStandartState()
         menuController.view.setNeedsLayout()
-        UIView.animate(withDuration: 0.4) { [weak self] in
+        UIView.performWithoutAnimation( { [weak self] in
             guard let self = self else { return }
             self.menuController.view.layoutIfNeeded()
-        }
+        })
     }
     
     @objc

@@ -42,16 +42,8 @@ class FocusCell: UITableViewCell, BaseTableViewCell {
         super.awakeFromNib()
         self.backgroundColor = .clear
         
-        heartImage.image = UIImage(named: "Relate")
-        careerImage.image = UIImage(named: "Relate")
-        familyImage.image = UIImage(named: "Relate")
-        healthImage.image = UIImage(named: "Health")
         containerView.roundCorners(.all, radius: 20)
         self.containerView.backgroundColor = UIColor(red: 0.238, green: 0.237, blue: 0.267, alpha: 1)
-        heartView.roundCorners(.all, radius: 33)
-        careerView.roundCorners(.all, radius: 33)
-        familyView.roundCorners(.all, radius: 33)
-        healthView.roundCorners(.all, radius: 33)
         heartLabel.text = "Relations"
         careerLabel.text = "Career"
         familyLabel.text = "Family"
@@ -84,6 +76,7 @@ class FocusCell: UITableViewCell, BaseTableViewCell {
         default:
             break
         }
+        view.roundCorners(.all, radius: 33)
         view.createCircularPath()
         view.progressAnimation(duration: 1)
     }

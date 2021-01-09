@@ -10,17 +10,14 @@ import UIKit
 class RelationShipsVC: BaseVC {
 
     let label = UILabel()
-
     var nextButton = UIButton()
-    
     var aloneButton = UIButton()
-    
     var relateButton = UIButton()
-    
     var aloneLabel = UILabel()
-    
     var relateLabel = UILabel()
-    
+    var backButton = UIButton()
+    var skipButton = UIButton()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,13 +54,30 @@ class RelationShipsVC: BaseVC {
             aloneLabel.centerXAnchor.constraint(equalTo: aloneButton.centerXAnchor),
             relateLabel.centerXAnchor.constraint(equalTo: relateButton.centerXAnchor),
         ])
+        backButton.setBackButton(on: self.view)
+        backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        self.view.addSubview(skipButton)
+        skipButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+            skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+        ])
+        skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
+        skipButton.setTitle("Skip".localized(), for: .normal)
+        skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
     }
     
-    override func viewDidDisappear(_ animated: Bool)    {
-        super.viewWillDisappear(animated)
-        guard let navigationController = navigationController else { return }
-        navigationController.viewControllers.removeAll(where: { self === $0 })
+    @objc
+    private func goBack() {
+        self.navigationController?.popViewController(animated: true)
     }
+    
+//    override func viewDidDisappear(_ animated: Bool)    {
+//        super.viewWillDisappear(animated)
+//        guard let navigationController = navigationController else { return }
+//        navigationController.viewControllers.removeAll(where: { self === $0 })
+//    }
     
     @objc
     private func setChoiseMale() {
@@ -84,6 +98,13 @@ class RelationShipsVC: BaseVC {
         let vc = HandVC()
         guard let navigationController = navigationController else { return }
         navigationController.pushViewController(vc, animated: true)
+        if relateButton.layer.borderWidth != 0 {
+            UserDefaults.standard.setValue("In Relationship", forKey: "Relations")
+            AnalyticsService.reportEvent(with: "Relations", parameters: ["Relations" : "In Relationship"])
+        } else if aloneButton.layer.borderWidth != 0 {
+            UserDefaults.standard.setValue("Anone",   forKey: "Relations")
+            AnalyticsService.reportEvent(with: "Relations", parameters: ["Relations" : "Anone"])
+        }
         self.dismiss(animated: true, completion: nil)
     }
 }

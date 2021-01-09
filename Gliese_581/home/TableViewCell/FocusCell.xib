@@ -22,17 +22,17 @@
                         <rect key="frame" x="20" y="10" width="347" height="174"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vz-br-Q8l">
-                                <rect key="frame" x="41" y="12" width="286" height="25"/>
+                                <rect key="frame" x="47" y="12" width="280" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" name="Main"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6xS-qZ-JGa">
-                                <rect key="frame" x="16" y="16" width="15" height="23"/>
-                                <color key="backgroundColor" name="Main"/>
+                                <rect key="frame" x="16" y="16" width="26" height="26"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="lKy-Va-Gal"/>
-                                    <constraint firstAttribute="width" constant="15" id="wzK-Rc-bhq"/>
+                                    <constraint firstAttribute="height" constant="26" id="lKy-Va-Gal"/>
+                                    <constraint firstAttribute="width" constant="26" id="wzK-Rc-bhq"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="At5-qn-NeV">
@@ -41,7 +41,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6O-Px-B7I" customClass="CircularProgressView" customModule="Gliese_581" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zCK-mh-SVz">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="zCK-mh-SVz">
                                                 <rect key="frame" x="16" y="16" width="34" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="4YT-kz-iYB"/>
@@ -60,7 +60,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTu-iH-QNQ" customClass="CircularProgressView" customModule="Gliese_581" customModuleProvider="target">
                                         <rect key="frame" x="79" y="0.0" width="66" height="66"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cm2-tE-eYd">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Career" translatesAutoresizingMaskIntoConstraints="NO" id="cm2-tE-eYd">
                                                 <rect key="frame" x="16" y="16" width="34" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="LGj-Sk-6z2"/>
@@ -79,7 +79,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-pb-mAm" customClass="CircularProgressView" customModule="Gliese_581" customModuleProvider="target">
                                         <rect key="frame" x="158" y="0.0" width="66" height="66"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nMI-UH-P0a">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="nMI-UH-P0a">
                                                 <rect key="frame" x="16" y="16" width="34" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="34" id="FcG-JD-IIo"/>
@@ -98,7 +98,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asG-TH-J4u" customClass="CircularProgressView" customModule="Gliese_581" customModuleProvider="target">
                                         <rect key="frame" x="237" y="0.0" width="66" height="66"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ABS-Fb-mix">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Health" translatesAutoresizingMaskIntoConstraints="NO" id="ABS-Fb-mix">
                                                 <rect key="frame" x="16" y="16" width="34" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="34" id="0ut-V6-IYc"/>
@@ -172,7 +172,7 @@
                             <constraint firstItem="hek-fv-5yx" firstAttribute="centerX" secondItem="S6O-Px-B7I" secondAttribute="centerX" id="opN-zM-yLQ"/>
                             <constraint firstItem="At5-qn-NeV" firstAttribute="top" secondItem="2vz-br-Q8l" secondAttribute="bottom" constant="20" id="qgG-x7-dBk"/>
                             <constraint firstItem="6xS-qZ-JGa" firstAttribute="leading" secondItem="IXc-7a-uGN" secondAttribute="leading" constant="16" id="rpj-hm-t9b"/>
-                            <constraint firstItem="2vz-br-Q8l" firstAttribute="leading" secondItem="6xS-qZ-JGa" secondAttribute="trailing" constant="10" id="tRY-rN-7Ag"/>
+                            <constraint firstItem="2vz-br-Q8l" firstAttribute="leading" secondItem="6xS-qZ-JGa" secondAttribute="trailing" constant="5" id="tRY-rN-7Ag"/>
                             <constraint firstItem="rPY-lr-sSr" firstAttribute="centerX" secondItem="WJc-pb-mAm" secondAttribute="centerX" id="xVO-RF-c8b"/>
                         </constraints>
                     </view>
@@ -209,6 +209,10 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Career" width="34" height="30"/>
+        <image name="Health" width="34" height="34"/>
+        <image name="Heart" width="34" height="33"/>
+        <image name="Home" width="36" height="36"/>
         <namedColor name="Main">
             <color red="1" green="0.87058823529411766" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

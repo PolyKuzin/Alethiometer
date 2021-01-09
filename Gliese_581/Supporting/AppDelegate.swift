@@ -8,6 +8,8 @@
 import UIKit
 import YandexMobileMetrica
 
+var zodiacSign      = ""
+
 var currentMounth   = ("", 0)
 var nextMounth      = ("", 0)
 var afterNextMounth = ("", 0)
@@ -34,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let configuration = YMMYandexMetricaConfiguration.init(apiKey: "710ec4a5-8503-4371-a935-2825ec321888")
         YMMYandexMetrica.activate(with: configuration!)
+        
         print(
             """
             ###########
@@ -44,6 +47,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ###########
             ###########
             """)
+        
+        if UserDefaults.standard.bool(forKey: "Registered") {
+            zodiacSign = getZodiacSign(UserDefaults.standard.value(forKey: "DateOfBirth") as! Date)
+            print(
+                """
+                ###########
+                ###########
+                ###########
+                \(zodiacSign)
+                ###########
+                ###########
+                ###########
+                """)
+        }
         let monthInt = Calendar.current.component(.month, from: Date())
         for i in Months.allCases {
             if i.rawValue.0 == monthInt { currentMounth = (i.rawValue.1, i.rawValue.2) }
@@ -56,7 +73,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         careerAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
         familyAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
         healthAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
-        
 
 //        FirebaseApp.configure()
         return true
@@ -70,6 +86,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         
+    }
+    
+    func getZodiacSign(_ date : Date) -> String{
+        let calendar = Calendar.current
+        let d = calendar.component(.day, from: date)
+        let m = calendar.component(.month, from: date)
+        switch (d,m) {
+        case (21...31,1),(1...19,2):
+            return "Aquarius"
+        case (20...29,2),(1...20,3):
+            return "Pisces"
+        case (21...31,3),(1...20,4):
+            return "Aries"
+        case (21...30,4),(1...21,5):
+            return "Taurus"
+        case (22...31,5),(1...21,6):
+            return "Gemini"
+        case (22...30,6),(1...22,7):
+            return "Cancer"
+        case (23...31,7),(1...22,8):
+            return "Leo"
+        case (23...31,8),(1...23,9):
+            return "Virgo"
+        case (24...30,9),(1...23,10):
+            return "Libra"
+        case (24...31,10),(1...22,11):
+            return "Scorpio"
+        case (23...30,11),(1...21,12):
+            return "Sagittarius"
+        default:
+            return "Capricorn"
+        }
     }
 }
 

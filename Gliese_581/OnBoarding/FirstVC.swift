@@ -10,7 +10,6 @@ import UIKit
 class FirstVC: BaseVC {
     
     let label = UILabel()
-
     var nextButton = UIButton()
     
     override func viewDidLoad() {
@@ -22,11 +21,11 @@ class FirstVC: BaseVC {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    override func viewDidDisappear(_ animated: Bool)    {
-        super.viewWillDisappear(animated)
-        guard let navigationController = navigationController else { return }
-        navigationController.viewControllers.removeAll(where: { self === $0 })
-    }
+//    override func viewDidDisappear(_ animated: Bool)    {
+//        super.viewWillDisappear(animated)
+//        guard let navigationController = navigationController else { return }
+//        navigationController.viewControllers.removeAll(where: { self === $0 })
+//    }
     
     @objc
     private func goToDateOfBirthVC() {
@@ -37,7 +36,7 @@ class FirstVC: BaseVC {
     }
 }
 
-//Gradient backGround color
+//MARK: - Gradient backGround color
 extension UIView {
     
     func setGradientBackground(colorOne: UIColor, colorTwo: UIColor) {

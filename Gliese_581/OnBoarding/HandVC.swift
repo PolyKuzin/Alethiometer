@@ -165,29 +165,19 @@ class MyCustomView: UIView {
 class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     let label = UILabel()
-
     var gameTimer  : Timer?
-    
     let cameraView = UIView()
-    
     var captureSession = AVCaptureSession()
-    
     var frontCamera : AVCaptureDevice?
-    
     var backCamera : AVCaptureDevice?
-    
     var currentCamera : AVCaptureDevice?
-    
     var photoOutput : AVCapturePhotoOutput?
-    
     var cameraPreviewLayer : AVCaptureVideoPreviewLayer?
-    
     var lastViewIsHand = false
-    
     var shootCamera = UIButton()
-    
     var skipButton = UIButton()
-    
+    var backButton = UIButton()
+
     func setupCaptureSession() {
         captureSession.sessionPreset = AVCaptureSession.Preset.photo
     }
@@ -207,7 +197,11 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     func setupInputOutput() {
         do {
-            let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamera!)
+            guard let camera = currentCamera else {
+                goToDateOfBirthVC()
+                return
+            }
+            let captureDeviceInput = try AVCaptureDeviceInput(device: camera)
             captureSession.addInput(captureDeviceInput)
             photoOutput?.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
         } catch {
@@ -289,6 +283,13 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
         skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
         skipButton.setTitle("Skip".localized(), for: .normal)
         skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        backButton.setBackButton(on: self.view)
+        backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+    }
+    
+    @objc
+    private func goBack() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc
@@ -301,26 +302,28 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
                 self.showUniversalLoadingView(true, loadingText: "Ладоха супер, теперь звэзды...")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     let vc = PayWallVC()
-                        guard let navigationController = self.navigationController else { return }
-                        navigationController.pushViewController(vc, animated: true)
-                        self.dismiss(animated: true, completion: nil)
-                        self.showUniversalLoadingView(false)
+                    guard let navigationController = self.navigationController else { return }
+                    navigationController.pushViewController(vc, animated: true)
+                    AnalyticsService.reportEvent(with: "Palm Regognition")
+                    self.dismiss(animated: true, completion: nil)
+                    self.showUniversalLoadingView(false)
                 }
             } else {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     self.showUniversalLoadingView(false)
                     self.captureSession.startRunning()
                     self.label.text = "Не смогли узнать ладошку - попробуйте еще раз"
+                    AnalyticsService.reportEvent(with: "Wrong Palm Regognition")
                 }
             }
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool)    {
-        super.viewWillDisappear(animated)
-        guard let navigationController = navigationController else { return }
-        navigationController.viewControllers.removeAll(where: { self === $0 })
-    }
+//    override func viewDidDisappear(_ animated: Bool)    {
+//        super.viewWillDisappear(animated)
+//        guard let navigationController = navigationController else { return }
+//        navigationController.viewControllers.removeAll(where: { self === $0 })
+//    }
     
     @objc
     private func goToDateOfBirthVC() {

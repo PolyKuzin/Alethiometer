@@ -10,12 +10,12 @@ import UIKit
 class TimeOfBirsthVC: BaseVC {
     
     let label = UILabel()
-
     var nextButton = UIButton()
-    
-    var datePickere = UIDatePicker()
-    
+    var backButton = UIButton()
+    var datePicker = UIDatePicker()
     var clearButton = UIButton()
+    var date = ""
+    var skipButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,28 +24,43 @@ class TimeOfBirsthVC: BaseVC {
         label.text = "Your time of birth"
         nextButton.setNextButton(on: view)
         nextButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
-        datePickere.setDatePicker(on: view)
-        datePickere.preferredDatePickerStyle = .wheels
-        datePickere.datePickerMode = .time
-        datePickere.locale = Locale(identifier: "en_GB")
-        datePickere.setDate(Date(timeIntervalSince1970: 908608500), animated: true)
-        datePickere.setValue(UIColor.white, forKeyPath: "textColor")
+        datePicker.setDatePicker(on: view)
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.datePickerMode = .time
+        datePicker.locale = Locale(identifier: "en_GB")
+        datePicker.setDate(Date(timeIntervalSince1970: 908608500), animated: true)
+        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        datePicker.addTarget(self, action: #selector(datehandler(sender:)), for: UIControl.Event.valueChanged)
         setupClearButton()
+        backButton.setBackButton(on: self.view)
+        backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
     }
     
-    override func viewDidDisappear(_ animated: Bool)    {
-        super.viewWillDisappear(animated)
-        guard let navigationController = navigationController else { return }
-        navigationController.viewControllers.removeAll(where: { self === $0 })
+    @objc
+    private func goBack() {
+        self.navigationController?.popViewController(animated: true)
     }
+    
+    @objc func datehandler(sender: UIDatePicker) {
+        let timeFormatter = DateFormatter()
+        timeFormatter.timeStyle = DateFormatter.Style.short
+        date = timeFormatter.string(from: datePicker.date)
+    }
+    
+//    override func viewDidDisappear(_ animated: Bool)    {
+//        super.viewWillDisappear(animated)
+//        guard let navigationController = navigationController else { return }
+//        navigationController.viewControllers.removeAll(where: { self === $0 })
+//    }
     
     @objc
     private func goToDateOfBirthVC() {
         let vc = CityOfBirsthVC()
         guard let navigationController = navigationController else { return }
         navigationController.pushViewController(vc, animated: true)
+        UserDefaults.standard.setValue(date, forKey: "TimeOfBirth")
+        AnalyticsService.reportEvent(with: "TimeOfBirth", parameters: ["TimeOfBirth" : date])
         self.dismiss(animated: true, completion: nil)
-
     }
 }
 
@@ -55,7 +70,7 @@ extension TimeOfBirsthVC {
         clearButton.setClearButton(on: self.view)
         clearButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
         NSLayoutConstraint.activate([
-            clearButton.topAnchor.constraint(equalTo: datePickere.bottomAnchor, constant: 50),
+            clearButton.topAnchor.constraint(equalTo: datePicker.bottomAnchor, constant: 50),
             clearButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             clearButton.widthAnchor.constraint(equalToConstant: 200),
             clearButton.heightAnchor.constraint(equalToConstant: 50)
