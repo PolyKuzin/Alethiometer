@@ -25,6 +25,7 @@ class TimeOfBirsthVC: BaseVC {
         didSet {
             if changed {
                 nextButton.isEnabled = true
+                nextButton.alpha = 1
             }
         }
     }
@@ -35,6 +36,7 @@ class TimeOfBirsthVC: BaseVC {
         label.setTitleLabel(on: view)
         label.text = "Your time of birth"
         
+        nextButton.alpha = 0.3
         nextButton.isEnabled = false
         nextButton.setNextButton(on: view)
         nextButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
@@ -58,6 +60,7 @@ class TimeOfBirsthVC: BaseVC {
     }
     
     @objc func datehandler(sender: UIDatePicker) {
+        changed = true
         let timeFormatter = DateFormatter()
         timeFormatter.timeStyle = DateFormatter.Style.short
         date = timeFormatter.string(from: datePicker.date)
@@ -82,7 +85,7 @@ extension TimeOfBirsthVC {
         clearButton.setClearButton(on: self.view)
         clearButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
         NSLayoutConstraint.activate([
-            clearButton.topAnchor.constraint(equalTo: datePicker.bottomAnchor, constant: 50),
+            clearButton.topAnchor.constraint(equalTo: datePicker.bottomAnchor, constant: 40),
             clearButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             clearButton.widthAnchor.constraint(equalToConstant: 200),
             clearButton.heightAnchor.constraint(equalToConstant: 50)

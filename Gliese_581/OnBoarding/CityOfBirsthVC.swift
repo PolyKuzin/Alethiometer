@@ -18,6 +18,9 @@ class CityOfBirsthVC: BaseVC, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.alpha = 0.3
+        nextButton.isEnabled = false
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -45,18 +48,29 @@ class CityOfBirsthVC: BaseVC, UITextFieldDelegate {
         skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
         skipButton.setTitle("Skip".localized(), for: .normal)
         skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        cityTextField.addTarget(self, action: #selector(actionTextFieldIsEditingChanged), for: .editingChanged)
+    }
+    
+    @objc
+    private func actionTextFieldIsEditingChanged(sender: UITextField) {
+         if let text = sender.text {
+            if !text.isEmpty {
+                nextButton.alpha = 1
+                nextButton.isEnabled = true
+            } else {
+                nextButton.alpha = 0.3
+                nextButton.isEnabled = false
+            }
+         } else {
+            nextButton.alpha = 0.3
+            nextButton.isEnabled = false
+        }
     }
     
     @objc
     private func goBack() {
         self.navigationController?.popViewController(animated: true)
     }
-    
-//    override func viewDidDisappear(_ animated: Bool)    {
-//        super.viewWillDisappear(animated)
-//        guard let navigationController = navigationController else { return }
-//        navigationController.viewControllers.removeAll(where: { self === $0 })
-//    }
     
     @objc
     private func goToDateOfBirthVC() {

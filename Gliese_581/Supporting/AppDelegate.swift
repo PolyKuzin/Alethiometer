@@ -8,7 +8,11 @@
 import UIKit
 import YandexMobileMetrica
 
-var zodiacSign      = ""
+var zodiacSign      = "" {
+    didSet {
+        downLoadText()
+    }
+}
 var todayText       = ""
 var tomorrowText    = ""
 var weekText        = ""
@@ -77,87 +81,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         careerAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
         familyAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
         healthAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
-
-//        tommorowHeartAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
-        let todayURLString = "https://www.astrology.com/horoscope/daily/\(zodiacSign.lowercased()).html"
-        guard let todayURL = URL(string: todayURLString) else {
-            print("Error: \(todayURLString) doesn't seem to be a valid URL")
-            return true
-        }
-        do {
-            let HTMLString = try String(contentsOf: todayURL, encoding: .ascii)
-            if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
-                if let range = tT.range(of: "</span> ") {
-                    let text = tT[range.upperBound...]
-                    todayText = String(text)
-                }
-                print("#######################")
-                print("HTML : \(todayText)")
-                print("#######################")
-            }
-        } catch let error {
-            print("Error: \(error)")
-        }
-        
-        let tomorrowURLString = "https://www.astrology.com/horoscope/daily/tomorrow/\(zodiacSign.lowercased()).html"
-        guard let tommorowURL = URL(string: tomorrowURLString) else {
-            print("Error: \(tomorrowURLString) doesn't seem to be a valid URL")
-            return true
-        }
-        do {
-            let HTMLString = try String(contentsOf: tommorowURL, encoding: .ascii)
-            if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
-                if let range = tT.range(of: "</span> ") {
-                    let text = tT[range.upperBound...]
-                    tomorrowText = String(text)
-                }
-                print("#######################")
-                print("HTML : \(tomorrowText)")
-                print("#######################")
-            }
-        } catch let error {
-            print("Error: \(error)")
-        }
-        let weekURLString = "https://www.astrology.com/horoscope/weekly-overview/\(zodiacSign.lowercased()).html"
-        guard let weekURL = URL(string: weekURLString) else {
-            print("Error: \(weekURLString) doesn't seem to be a valid URL")
-            return true
-        }
-        do {
-            let HTMLString = try String(contentsOf: weekURL, encoding: .ascii)
-            if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
-                if let range = tT.range(of: "</span> ") {
-                    let text = tT[range.upperBound...]
-                    weekText = String(text)
-                }
-                print("#######################")
-                print("HTML : \(weekText)")
-                print("#######################")
-            }
-        } catch let error {
-            print("Error: \(error)")
-        }
-        let monthURLString = "https://www.astrology.com/horoscope/monthly-overview/\(zodiacSign.lowercased()).html"
-        guard let monthURL = URL(string: monthURLString) else {
-            print("Error: \(monthURLString) doesn't seem to be a valid URL")
-            return true
-        }
-        do {
-            let HTMLString = try String(contentsOf: monthURL, encoding: .ascii)
-            if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
-                if let range = tT.range(of: "</span> ") {
-                    let text = tT[range.upperBound...]
-                    monthText = String(text)
-                    monthText = monthText.replacingOccurrences(of: "<br>", with: "")
-                    monthText = monthText.replacingOccurrences(of: "â", with: "'")
-                }
-                print("#######################")
-                print("HTML : \(monthText)")
-                print("#######################")
-            }
-        } catch let error {
-            print("Error: \(error)")
-        }
         return true
     }
 
@@ -176,38 +99,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mutableStr = NSMutableAttributedString(attributedString: htmlText!)
         mutableStr.setFontFace(font: UIFont.displayMedium20, color: .text)
         return mutableStr
-    }
-    
-    func getZodiacSign(_ date : Date) -> String{
-        let calendar = Calendar.current
-        let d = calendar.component(.day, from: date)
-        let m = calendar.component(.month, from: date)
-        switch (d,m) {
-        case (21...31,1),(1...19,2):
-            return "Aquarius"
-        case (20...29,2),(1...20,3):
-            return "Pisces"
-        case (21...31,3),(1...20,4):
-            return "Aries"
-        case (21...30,4),(1...21,5):
-            return "Taurus"
-        case (22...31,5),(1...21,6):
-            return "Gemini"
-        case (22...30,6),(1...22,7):
-            return "Cancer"
-        case (23...31,7),(1...22,8):
-            return "Leo"
-        case (23...31,8),(1...23,9):
-            return "Virgo"
-        case (24...30,9),(1...23,10):
-            return "Libra"
-        case (24...31,10),(1...22,11):
-            return "Scorpio"
-        case (23...30,11),(1...21,12):
-            return "Sagittarius"
-        default:
-            return "Capricorn"
-        }
     }
 }
 
@@ -253,5 +144,119 @@ extension RangeExpression where Bound: FixedWidthInteger {
         case let range as ClosedRange<Bound>: return (0..<n).map { _ in .random(in: range) }
         default: return []
         }
+    }
+}
+
+public func downLoadText() {
+    let todayURLString = "https://www.astrology.com/horoscope/daily/\(zodiacSign.lowercased()).html"
+    guard let todayURL = URL(string: todayURLString) else {
+        print("Error: \(todayURLString) doesn't seem to be a valid URL")
+        return
+    }
+    do {
+        let HTMLString = try String(contentsOf: todayURL, encoding: .ascii)
+        if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
+            if let range = tT.range(of: "</span> ") {
+                let text = tT[range.upperBound...]
+                todayText = String(text)
+            }
+            print("#######################")
+            print("HTML : \(todayText)")
+            print("#######################")
+        }
+    } catch let error {
+        print("Error: \(error)")
+    }
+    
+    let tomorrowURLString = "https://www.astrology.com/horoscope/daily/tomorrow/\(zodiacSign.lowercased()).html"
+    guard let tommorowURL = URL(string: tomorrowURLString) else {
+        print("Error: \(tomorrowURLString) doesn't seem to be a valid URL")
+        return
+    }
+    do {
+        let HTMLString = try String(contentsOf: tommorowURL, encoding: .ascii)
+        if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
+            if let range = tT.range(of: "</span> ") {
+                let text = tT[range.upperBound...]
+                tomorrowText = String(text)
+            }
+            print("#######################")
+            print("HTML : \(tomorrowText)")
+            print("#######################")
+        }
+    } catch let error {
+        print("Error: \(error)")
+    }
+    let weekURLString = "https://www.astrology.com/horoscope/weekly-overview/\(zodiacSign.lowercased()).html"
+    guard let weekURL = URL(string: weekURLString) else {
+        print("Error: \(weekURLString) doesn't seem to be a valid URL")
+        return
+    }
+    do {
+        let HTMLString = try String(contentsOf: weekURL, encoding: .ascii)
+        if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
+            if let range = tT.range(of: "</span> ") {
+                let text = tT[range.upperBound...]
+                weekText = String(text)
+            }
+            print("#######################")
+            print("HTML : \(weekText)")
+            print("#######################")
+        }
+    } catch let error {
+        print("Error: \(error)")
+    }
+    let monthURLString = "https://www.astrology.com/horoscope/monthly-overview/\(zodiacSign.lowercased()).html"
+    guard let monthURL = URL(string: monthURLString) else {
+        print("Error: \(monthURLString) doesn't seem to be a valid URL")
+        return
+    }
+    do {
+        let HTMLString = try String(contentsOf: monthURL, encoding: .ascii)
+        if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
+            if let range = tT.range(of: "</span> ") {
+                let text = tT[range.upperBound...]
+                monthText = String(text)
+                monthText = monthText.replacingOccurrences(of: "<br>", with: "")
+                monthText = monthText.replacingOccurrences(of: "â", with: "'")
+            }
+            print("#######################")
+            print("HTML : \(monthText)")
+            print("#######################")
+        }
+    } catch let error {
+        print("Error: \(error)")
+    }
+}
+
+func getZodiacSign(_ date : Date) -> String{
+    let calendar = Calendar.current
+    let d = calendar.component(.day, from: date)
+    let m = calendar.component(.month, from: date)
+    switch (d,m) {
+    case (21...31,1),(1...19,2):
+        return "Aquarius"
+    case (20...29,2),(1...20,3):
+        return "Pisces"
+    case (21...31,3),(1...20,4):
+        return "Aries"
+    case (21...30,4),(1...21,5):
+        return "Taurus"
+    case (22...31,5),(1...21,6):
+        return "Gemini"
+    case (22...30,6),(1...22,7):
+        return "Cancer"
+    case (23...31,7),(1...22,8):
+        return "Leo"
+    case (23...31,8),(1...23,9):
+        return "Virgo"
+    case (24...30,9),(1...23,10):
+        return "Libra"
+    case (24...31,10),(1...22,11):
+        return "Scorpio"
+    case (23...30,11),(1...21,12):
+        return "Sagittarius"
+    default:
+        return "Capricorn"
     }
 }

@@ -20,7 +20,9 @@ class RelationShipsVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nextButton.alpha = 0.3
+        nextButton.isEnabled = false
+        
         label.setTitleLabel(on: view)
         label.text = "Relationships"
         nextButton.setNextButton(on: view)
@@ -73,14 +75,10 @@ class RelationShipsVC: BaseVC {
         self.navigationController?.popViewController(animated: true)
     }
     
-//    override func viewDidDisappear(_ animated: Bool)    {
-//        super.viewWillDisappear(animated)
-//        guard let navigationController = navigationController else { return }
-//        navigationController.viewControllers.removeAll(where: { self === $0 })
-//    }
-    
     @objc
     private func setChoiseMale() {
+        nextButton.alpha = 1
+        nextButton.isEnabled = true
         aloneButton.layer.borderWidth = 4
         aloneButton.layer.borderColor = UIColor(red: 0.545, green: 0.471, blue: 0.792, alpha: 1).cgColor
         relateButton.layer.borderWidth = 0
@@ -88,6 +86,8 @@ class RelationShipsVC: BaseVC {
     
     @objc
     private func setChoiseFemale() {
+        nextButton.alpha = 1
+        nextButton.isEnabled = true
         relateButton.layer.borderWidth = 4
         relateButton.layer.borderColor = UIColor(red: 0.933, green: 0.29, blue: 0.455, alpha: 1).cgColor
         aloneButton.layer.borderWidth = 0

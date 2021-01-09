@@ -14,6 +14,7 @@ class NameVC: BaseVC {
     var nameTextField = UITextField()
     var nextFFrame = CGRect()
     var backButton = UIButton()
+    var skipButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,18 +36,39 @@ class NameVC: BaseVC {
         ])
         backButton.setBackButton(on: self.view)
         backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        nameTextField.addTarget(self, action: #selector(actionTextFieldIsEditingChanged), for: .editingChanged)
+        self.view.addSubview(skipButton)
+        skipButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+            skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+        ])
+        skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
+        skipButton.setTitle("Skip".localized(), for: .normal)
+        skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+    }
+    
+    @objc
+    private func actionTextFieldIsEditingChanged(sender: UITextField) {
+         if let text = sender.text {
+            if !text.isEmpty {
+                nextButton.alpha = 1
+                nextButton.isEnabled = true
+            } else {
+                nextButton.alpha = 0.3
+                nextButton.isEnabled = false
+            }
+         } else {
+            nextButton.alpha = 0.3
+            nextButton.isEnabled = false
+        }
     }
     
     @objc
     private func goBack() {
         self.navigationController?.popViewController(animated: true)
     }
-    
-//    override func viewDidDisappear(_ animated: Bool)    {
-//        super.viewWillDisappear(animated)
-//        guard let navigationController = navigationController else { return }
-//        navigationController.viewControllers.removeAll(where: { self === $0 })
-//    }
     
     @objc
     private func goToDateOfBirthVC() {

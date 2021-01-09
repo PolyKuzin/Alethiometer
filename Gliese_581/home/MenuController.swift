@@ -54,7 +54,7 @@ class MenuController: BaseVC {
                 transition.type = CATransitionType.push
                 transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
                 transition.fillMode = CAMediaTimingFillMode.forwards
-                transition.duration = 0.5
+                transition.duration = 0.25
                 transition.subtype = CATransitionSubtype.fromRight
                 self.tableView.layer.add(transition, forKey: "UITableViewReloadDataAnimationKey")
             } else {
@@ -62,7 +62,7 @@ class MenuController: BaseVC {
                 transition.type = CATransitionType.push
                 transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
                 transition.fillMode = CAMediaTimingFillMode.forwards
-                transition.duration = 0.5
+                transition.duration = 0.25
                 transition.subtype = CATransitionSubtype.fromLeft
                 self.tableView.layer.add(transition, forKey: "UITableViewReloadDataAnimationKey")
             }

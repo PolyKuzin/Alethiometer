@@ -21,7 +21,8 @@ class GenderVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nextButton.alpha = 0.3
+        nextButton.isEnabled = false
         label.setTitleLabel(on: view)
         label.text = "Your gender"
         nextButton.setNextButton(on: view)
@@ -88,6 +89,8 @@ class GenderVC: BaseVC {
         maleButton.layer.borderColor = UIColor(red: 1, green: 0.48, blue: 0, alpha: 1).cgColor
         femaleButton.layer.borderWidth = 0
         clearButton.layer.borderWidth = 0
+        nextButton.alpha = 1
+        nextButton.isEnabled = true
     }
     
     @objc
@@ -96,6 +99,8 @@ class GenderVC: BaseVC {
         femaleButton.layer.borderColor = UIColor(red: 0, green: 0.914, blue: 0.906, alpha: 1).cgColor
         maleButton.layer.borderWidth = 0
         clearButton.layer.borderWidth = 0
+        nextButton.alpha = 1
+        nextButton.isEnabled = true
     }
     
     @objc
@@ -104,6 +109,8 @@ class GenderVC: BaseVC {
         clearButton.layer.borderColor = UIColor(red: 0, green: 0.914, blue: 0.906, alpha: 1).cgColor
         maleButton.layer.borderWidth = 0
         femaleButton.layer.borderWidth = 0
+        nextButton.alpha = 1
+        nextButton.isEnabled = true
     }
     
     @objc

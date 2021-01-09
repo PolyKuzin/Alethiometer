@@ -11,7 +11,7 @@ extension UIButton {
 
     func setBackButton(on view: UIView) {
         self.frame  = CGRect(x: 0, y: 0, width: 13, height: 20)
-        self.setImage(UIImage(named: "Relate"), for: .normal)
+        self.setImage(UIImage(named: "BackButton"), for: .normal)
 //        backgroundColor = .purple
         view.addSubview(self)
         self.translatesAutoresizingMaskIntoConstraints = false

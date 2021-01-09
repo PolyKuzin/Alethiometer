@@ -12,16 +12,13 @@ class DateOfBirsthVC: BaseVC {
     let label = UILabel()
     var nextButton = UIButton()
     var backButton = UIButton()
-    var datePicker = UIDatePicker() {
-        didSet {
-            changed = true
-        }
-    }
+    var datePicker = UIDatePicker()
     var date = ""
     var changed = false {
         didSet {
             if changed {
                 nextButton.isEnabled = true
+                nextButton.alpha = 1
             }
         }
     }
@@ -41,6 +38,7 @@ class DateOfBirsthVC: BaseVC {
         datePicker.maximumDate = Date(timeIntervalSince1970: 1136062800)
 
         nextButton.isEnabled = false
+        nextButton.alpha = 0.3
         nextButton.setNextButton(on: view)
         nextButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
         datePicker.addTarget(self, action: #selector(datehandler(sender:)), for: UIControl.Event.valueChanged)
@@ -55,6 +53,7 @@ class DateOfBirsthVC: BaseVC {
     
     @objc
     private func datehandler(sender: UIDatePicker) {
+        changed = true
         let timeFormatter = DateFormatter()
         timeFormatter.timeStyle = DateFormatter.Style.short
         date = timeFormatter.string(from: datePicker.date)
