@@ -12,18 +12,33 @@ class TimeOfBirsthVC: BaseVC {
     let label = UILabel()
     var nextButton = UIButton()
     var backButton = UIButton()
-    var datePicker = UIDatePicker()
+    var datePicker = UIDatePicker() {
+        didSet {
+            changed = true
+        }
+    }
     var clearButton = UIButton()
     var date = ""
     var skipButton = UIButton()
+    
+    var changed = false {
+        didSet {
+            if changed {
+                nextButton.isEnabled = true
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         label.setTitleLabel(on: view)
         label.text = "Your time of birth"
+        
+        nextButton.isEnabled = false
         nextButton.setNextButton(on: view)
         nextButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        
         datePicker.setDatePicker(on: view)
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .time
@@ -31,6 +46,7 @@ class TimeOfBirsthVC: BaseVC {
         datePicker.setDate(Date(timeIntervalSince1970: 908608500), animated: true)
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         datePicker.addTarget(self, action: #selector(datehandler(sender:)), for: UIControl.Event.valueChanged)
+        
         setupClearButton()
         backButton.setBackButton(on: self.view)
         backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
@@ -47,19 +63,15 @@ class TimeOfBirsthVC: BaseVC {
         date = timeFormatter.string(from: datePicker.date)
     }
     
-//    override func viewDidDisappear(_ animated: Bool)    {
-//        super.viewWillDisappear(animated)
-//        guard let navigationController = navigationController else { return }
-//        navigationController.viewControllers.removeAll(where: { self === $0 })
-//    }
-    
     @objc
     private func goToDateOfBirthVC() {
         let vc = CityOfBirsthVC()
         guard let navigationController = navigationController else { return }
         navigationController.pushViewController(vc, animated: true)
-        UserDefaults.standard.setValue(date, forKey: "TimeOfBirth")
-        AnalyticsService.reportEvent(with: "TimeOfBirth", parameters: ["TimeOfBirth" : date])
+        if date != "" {
+            UserDefaults.standard.setValue(date, forKey: "TimeOfBirth")
+            AnalyticsService.reportEvent(with: "TimeOfBirth", parameters: ["TimeOfBirth" : date])
+        }
         self.dismiss(animated: true, completion: nil)
     }
 }

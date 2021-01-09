@@ -82,6 +82,13 @@
 		99B83EBF25A9C3A600030FF4 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B83EBE25A9C3A600030FF4 /* BackButton.swift */; };
 		99B83EC325A9EF9500030FF4 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B83EC125A9EF9500030FF4 /* TitleCell.swift */; };
 		99B83EC425A9EF9500030FF4 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99B83EC225A9EF9500030FF4 /* TitleCell.xib */; };
+		99CBA9FC25AA05030093FFF1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBA9FB25AA05030093FFF1 /* String.swift */; };
+		99CBAA0625AA27030093FFF1 /* TomorrowMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBAA0425AA27030093FFF1 /* TomorrowMenuVC.swift */; };
+		99CBAA0725AA27030093FFF1 /* TomorrowMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99CBAA0525AA27030093FFF1 /* TomorrowMenuVC.xib */; };
+		99CBAA0C25AA288C0093FFF1 /* WeekMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBAA0A25AA288C0093FFF1 /* WeekMenuVC.swift */; };
+		99CBAA0D25AA288C0093FFF1 /* WeekMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99CBAA0B25AA288C0093FFF1 /* WeekMenuVC.xib */; };
+		99CBAA1225AA28FC0093FFF1 /* MonthMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBAA1025AA28FC0093FFF1 /* MonthMenuVC.swift */; };
+		99CBAA1325AA28FC0093FFF1 /* MonthMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99CBAA1125AA28FC0093FFF1 /* MonthMenuVC.xib */; };
 		99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF4F98258014FE00F74D68 /* ClearButton.swift */; };
 		99DF7D0025A0743A00EA9913 /* MounthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF7CFE25A0743A00EA9913 /* MounthCell.swift */; };
 		99DF7D0125A0743A00EA9913 /* MounthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99DF7CFF25A0743A00EA9913 /* MounthCell.xib */; };
@@ -168,6 +175,13 @@
 		99B83EBE25A9C3A600030FF4 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		99B83EC125A9EF9500030FF4 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		99B83EC225A9EF9500030FF4 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
+		99CBA9FB25AA05030093FFF1 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		99CBAA0425AA27030093FFF1 /* TomorrowMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowMenuVC.swift; sourceTree = "<group>"; };
+		99CBAA0525AA27030093FFF1 /* TomorrowMenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TomorrowMenuVC.xib; sourceTree = "<group>"; };
+		99CBAA0A25AA288C0093FFF1 /* WeekMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekMenuVC.swift; sourceTree = "<group>"; };
+		99CBAA0B25AA288C0093FFF1 /* WeekMenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekMenuVC.xib; sourceTree = "<group>"; };
+		99CBAA1025AA28FC0093FFF1 /* MonthMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMenuVC.swift; sourceTree = "<group>"; };
+		99CBAA1125AA28FC0093FFF1 /* MonthMenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthMenuVC.xib; sourceTree = "<group>"; };
 		99CF4F98258014FE00F74D68 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		99DF7CFE25A0743A00EA9913 /* MounthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MounthCell.swift; sourceTree = "<group>"; };
 		99DF7CFF25A0743A00EA9913 /* MounthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MounthCell.xib; sourceTree = "<group>"; };
@@ -215,6 +229,7 @@
 				9932499C2595062600865617 /* UIImageView.swift */,
 				9932499F259506D500865617 /* SafeIndex.swift */,
 				9997EAAA259B2798000BBAE3 /* Date.swift */,
+				99CBA9FB25AA05030093FFF1 /* String.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -362,11 +377,16 @@
 				997EDB1625895B19009E4122 /* HomeVC.swift */,
 				997EDB1725895B19009E4122 /* HomeVC.xib */,
 				9902B841258AA241002041B2 /* CollectionViewCell */,
+				99DF7CFC25A072A600EA9913 /* Calendar */,
 				997EDB2225895F46009E4122 /* TableViewCell */,
 				993C878A2592284F004A4305 /* MenuController.swift */,
 				993C878B2592284F004A4305 /* MenuController.xib */,
-				99DF7CFC25A072A600EA9913 /* Calendar */,
-				99B83EBB25A9BB9500030FF4 /* ScrollVC.swift */,
+				99CBAA0425AA27030093FFF1 /* TomorrowMenuVC.swift */,
+				99CBAA0525AA27030093FFF1 /* TomorrowMenuVC.xib */,
+				99CBAA0A25AA288C0093FFF1 /* WeekMenuVC.swift */,
+				99CBAA0B25AA288C0093FFF1 /* WeekMenuVC.xib */,
+				99CBAA1025AA28FC0093FFF1 /* MonthMenuVC.swift */,
+				99CBAA1125AA28FC0093FFF1 /* MonthMenuVC.xib */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -374,6 +394,7 @@
 		997EDB2225895F46009E4122 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				99B83EBB25A9BB9500030FF4 /* ScrollVC.swift */,
 				997EDB1D25895D0F009E4122 /* InstanceHoroscopeCell.swift */,
 				997EDB1E25895D0F009E4122 /* InstanceHoroscopeCell.xib */,
 				997EDB2425895F5B009E4122 /* FocusCell.swift */,
@@ -499,6 +520,8 @@
 			files = (
 				990CA512256AC592004A8105 /* SF-Pro-Rounded-Medium.otf in Resources */,
 				997EDB1925895B19009E4122 /* HomeVC.xib in Resources */,
+				99CBAA1325AA28FC0093FFF1 /* MonthMenuVC.xib in Resources */,
+				99CBAA0725AA27030093FFF1 /* TomorrowMenuVC.xib in Resources */,
 				990CA50C256AC592004A8105 /* SF-Pro-Display-Semibold.otf in Resources */,
 				99DF7D0625A07DA900EA9913 /* NumberCell.xib in Resources */,
 				990CA4EC256AC238004A8105 /* LaunchScreen.storyboard in Resources */,
@@ -513,6 +536,7 @@
 				990F142F259669D100AA7603 /* CenteredButton.xib in Resources */,
 				990CA4E9256AC238004A8105 /* Assets.xcassets in Resources */,
 				99B83EC425A9EF9500030FF4 /* TitleCell.xib in Resources */,
+				99CBAA0D25AA288C0093FFF1 /* WeekMenuVC.xib in Resources */,
 				99DF7D0125A0743A00EA9913 /* MounthCell.xib in Resources */,
 				993C878D2592284F004A4305 /* MenuController.xib in Resources */,
 				993C879225925639004A4305 /* CalendarCell.xib in Resources */,
@@ -572,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99CBA9FC25AA05030093FFF1 /* String.swift in Sources */,
 				990F142C2596675F00AA7603 /* CenteredButton.swift in Sources */,
 				99B83EBC25A9BB9500030FF4 /* ScrollVC.swift in Sources */,
 				9974DF3125A204830036C971 /* AnalyticsService.swift in Sources */,
@@ -587,14 +612,17 @@
 				9902B844258AA272002041B2 /* MainCollectionViewCell.swift in Sources */,
 				990CA4FA256AC30F004A8105 /* NextButton.swift in Sources */,
 				990CA4FD256AC323004A8105 /* Colors.swift in Sources */,
+				99CBAA1225AA28FC0093FFF1 /* MonthMenuVC.swift in Sources */,
 				9902B83A258A9909002041B2 /* Zodiac.swift in Sources */,
 				99B83EC325A9EF9500030FF4 /* TitleCell.swift in Sources */,
+				99CBAA0625AA27030093FFF1 /* TomorrowMenuVC.swift in Sources */,
 				994D1FD025977324002F8987 /* CalendarVC.swift in Sources */,
 				990CA52B256AE860004A8105 /* TimeOfBirsthVC.swift in Sources */,
 				99DF7D0025A0743A00EA9913 /* MounthCell.swift in Sources */,
 				993C878425922723004A4305 /* Appearence.swift in Sources */,
 				994D1FD425977E1C002F8987 /* SectionHeader.swift in Sources */,
 				997EDB2625895F5B009E4122 /* FocusCell.swift in Sources */,
+				99CBAA0C25AA288C0093FFF1 /* WeekMenuVC.swift in Sources */,
 				99CF4F99258014FE00F74D68 /* ClearButton.swift in Sources */,
 				9989337725A3A40C00CDBC39 /* Localize.swift in Sources */,
 				99B83EBF25A9C3A600030FF4 /* BackButton.swift in Sources */,

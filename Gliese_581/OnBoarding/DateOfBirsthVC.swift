@@ -12,9 +12,19 @@ class DateOfBirsthVC: BaseVC {
     let label = UILabel()
     var nextButton = UIButton()
     var backButton = UIButton()
-    var datePicker = UIDatePicker()
+    var datePicker = UIDatePicker() {
+        didSet {
+            changed = true
+        }
+    }
     var date = ""
-//    var skipButton = UIButton()
+    var changed = false {
+        didSet {
+            if changed {
+                nextButton.isEnabled = true
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +40,7 @@ class DateOfBirsthVC: BaseVC {
         datePicker.minimumDate = Date(timeIntervalSince1970: -315630000)
         datePicker.maximumDate = Date(timeIntervalSince1970: 1136062800)
 
+        nextButton.isEnabled = false
         nextButton.setNextButton(on: view)
         nextButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
         datePicker.addTarget(self, action: #selector(datehandler(sender:)), for: UIControl.Event.valueChanged)
@@ -48,12 +59,6 @@ class DateOfBirsthVC: BaseVC {
         timeFormatter.timeStyle = DateFormatter.Style.short
         date = timeFormatter.string(from: datePicker.date)
     }
-    
-//    override func viewDidDisappear(_ animated: Bool)    {
-//        super.viewWillDisappear(animated)
-//        guard let navigationController = navigationController else { return }
-//        navigationController.viewControllers.removeAll(where: { self === $0 })
-//    }
     
     @objc
     private func goToDateOfBirthVC() {

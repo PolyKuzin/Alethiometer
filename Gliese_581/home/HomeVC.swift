@@ -9,6 +9,7 @@ import UIKit
 import FloatingPanel
 
 var isExpand = false
+var currentFocus = 0
 
 class HomeVC: BaseVC {
     
@@ -32,15 +33,18 @@ class HomeVC: BaseVC {
     
     private var menuControllerFPC      : FloatingPanelController!
     
-    
     private var menuController         : MenuController!
+    private var tomorrowMenuVC         : TomorrowMenuVC!
+    private var weekMenuVC             : WeekMenuVC!
+    private var monthMenuVC            : MonthMenuVC!
+    
     private var scrollControll         : ScrollVC!
     
     private var calendarVC             : CalendarVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         if let image = UIImage(named: zodiacSign) {
             zodiacImageView.image = image
         }
@@ -98,13 +102,17 @@ class HomeVC: BaseVC {
             guard let self = self else { return }
             UIView.animate(withDuration: 0.2, animations: {
                 if selectedIndex == 0 {
-//                    self.menuController.makeStandartState()
+                    currentFocus = 0
+                    self.menuController.makeStandartState()
                 } else if selectedIndex == 1 {
-//                    self.menuController.makeStandartState()
+                    currentFocus = 1
+                    self.menuController.makeTomorrowState()
                 } else if selectedIndex == 2 {
-//                    self.menuController.makeStandartState()
+                    currentFocus = 2
+                    self.menuController.makeWeekState()
                 } else if selectedIndex == 3 {
-//                    self.menuController.makeStandartState()
+                    currentFocus = 3
+                    self.menuController.makeMonthState()
                 }
                 self.segmentControl.setSelected(at: selectedIndex)
             })
@@ -132,7 +140,6 @@ class HomeVC: BaseVC {
     }
     
     func setupFloatingPanel() {
-        self.scrollControll    = ScrollVC()
         self.menuController    = MenuController()
         self.menuControllerFPC = FloatingPanelController()
         menuControllerFPC.delegate = self

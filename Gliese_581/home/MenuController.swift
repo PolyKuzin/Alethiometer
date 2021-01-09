@@ -56,7 +56,8 @@ class MenuController: BaseVC {
     @IBOutlet weak var tableView : UITableView!
     
     func makeStandartState() {
-        viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: "Трудно сосредоточиться. Вы с энтузиазмом беретесь за дела, но довести начатое до конца удается не всегда. Из-за сгоряча сказанных слов вы можете лишиться поддерж...Трудно сосредоточиться. Вы с энтузиазмом беретесь за дела, но довести начатое до конца удается не всегда. Из-за сгоряча сказанных слов вы можете лишиться поддерж...Трудно сосредоточиться. Вы с энтузиазмом беретесь за дела, но довести начатое до конца удается не всегда. Из-за сгоряча сказанных слов вы можете лишиться поддерж...Трудно сосредоточиться. Вы с энтузиазмом беретесь за дела, но довести начатое до конца удается не всегда. Из-за сгоряча сказанных слов вы можете лишиться поддерж...", onTap: {
+        viewState.rows.removeAll()
+        viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: todayText, onTap: {
                                                     [weak self] in
                                                     guard let self = self else { return }
                                                     UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })}))
@@ -143,6 +144,33 @@ class MenuController: BaseVC {
                                                     self?.onUNLockedSelect?(CalendarVC.ViewState(icon: UIImage(named: "running 1")!, upcolor: UIColor(red: 1, green: 0.907, blue: 0.726, alpha: 1), downColor: UIColor(red: 0.963, green: 0.814, blue: 0.286, alpha: 1), title: "Sport", subtitle: "", mouths: [[currentMounth.0 : days8.0],[nextMounth.0 : days8.1],[afterNextMounth.0 : days8.2]]))
                                                  }])
         ]))
+    }
+    
+    func makeTomorrowState() {
+        viewState.rows.removeAll()
+        viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: tomorrowText, onTap: {
+                                                    [weak self] in
+                                                    guard let self = self else { return }
+                                                    UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })}))
+        viewState.rows.append(ViewState.Focus(image: UIImage(named: "payWall-2")!, title: "Focus today", onHeartTap: {}, onCareerTap: {}, onFamilyTap: {}, onHealthTap: {}))
+    }
+    
+    func makeWeekState() {
+        viewState.rows.removeAll()
+        viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: weekText, onTap: {
+                                                    [weak self] in
+                                                    guard let self = self else { return }
+                                                    UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })}))
+        viewState.rows.append(ViewState.Focus(image: UIImage(named: "payWall-2")!, title: "Focus today", onHeartTap: {}, onCareerTap: {}, onFamilyTap: {}, onHealthTap: {}))
+    }
+    
+    func makeMonthState() {
+        viewState.rows.removeAll()
+        viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: monthText, onTap: {
+                                                    [weak self] in
+                                                    guard let self = self else { return }
+                                                    UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })}))
+        viewState.rows.append(ViewState.Focus(image: UIImage(named: "payWall-2")!, title: "Focus today", onHeartTap: {}, onCareerTap: {}, onFamilyTap: {}, onHealthTap: {}))
     }
     
     override func viewDidLoad() {

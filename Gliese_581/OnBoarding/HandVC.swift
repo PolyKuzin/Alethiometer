@@ -319,12 +319,6 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
         }
     }
     
-//    override func viewDidDisappear(_ animated: Bool)    {
-//        super.viewWillDisappear(animated)
-//        guard let navigationController = navigationController else { return }
-//        navigationController.viewControllers.removeAll(where: { self === $0 })
-//    }
-    
     @objc
     private func goToDateOfBirthVC() {
         let vc = PayWallVC()
@@ -375,18 +369,6 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
             })
         }
     }
-    
-//    DispatchQueue.main.async {
-//        self.captureSession.stopRunning()
-//        self.showUniversalLoadingView(true, loadingText: "Ладоха супер")
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-//            let vc = PayWallVC()
-//            guard let navigationController = self.navigationController else { return }
-//            navigationController.pushViewController(vc, animated: true)
-//            self.dismiss(animated: true, completion: nil)
-//            self.showUniversalLoadingView(false)
-//        }
-//    }
     
     @objc
     func runTimedCode() {
