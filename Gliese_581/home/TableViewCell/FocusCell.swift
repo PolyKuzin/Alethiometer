@@ -66,49 +66,13 @@ class FocusCell: UITableViewCell, BaseTableViewCell {
         view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.05)
         switch view {
         case healthView:
-            switch currentFocus {
-            case 1:
-                <#code#>
-            case 2:
-                <#code#>
-            case 3:
-                <#code#>
-            default:
-                view.configure(with: UIColor(red: 0.992, green: 1, blue: 0.587, alpha: 1), heartAngle)
-            }
+            view.configure(with: UIColor(red: 0.992, green: 1, blue: 0.587, alpha: 1), heartAngle)
         case careerView:
-            switch currentFocus {
-            case 1:
-                <#code#>
-            case 2:
-                <#code#>
-            case 3:
-                <#code#>
-            default:
-                view.configure(with: UIColor(red: 0.729, green: 0.631, blue: 1, alpha: 1), careerAngle)
-            }
+            view.configure(with: UIColor(red: 0.729, green: 0.631, blue: 1, alpha: 1), careerAngle)
         case familyView:
-            switch currentFocus {
-            case 1:
-                <#code#>
-            case 2:
-                <#code#>
-            case 3:
-                <#code#>
-            default:
-                view.configure(with: UIColor(red: 0.62, green: 1, blue: 0.587, alpha: 1), familyAngle)
-            }
+            view.configure(with: UIColor(red: 0.62, green: 1, blue: 0.587, alpha: 1), familyAngle)
         case heartView:
-            switch currentFocus {
-            case 1:
-                <#code#>
-            case 2:
-                <#code#>
-            case 3:
-                <#code#>
-            default:
-                view.configure(with: UIColor(red: 0.976, green: 0.443, blue: 0.667, alpha: 1), healthAngle)
-            }
+            view.configure(with: UIColor(red: 0.976, green: 0.443, blue: 0.667, alpha: 1), healthAngle)
         default:
             break
         }
