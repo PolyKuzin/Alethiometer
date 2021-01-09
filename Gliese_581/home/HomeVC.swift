@@ -9,7 +9,7 @@ import UIKit
 import FloatingPanel
 
 var isExpand = false
-var currentFocus = 0
+var currentFocus = (0, 0)
 
 class HomeVC: BaseVC {
     
@@ -102,16 +102,20 @@ class HomeVC: BaseVC {
             guard let self = self else { return }
             UIView.animate(withDuration: 0.2, animations: {
                 if selectedIndex == 0 {
-                    currentFocus = 0
+                    currentFocus.0 = currentFocus.1
+                    currentFocus.1 = 0
                     self.menuController.makeStandartState()
                 } else if selectedIndex == 1 {
-                    currentFocus = 1
+                    currentFocus.0 = currentFocus.1
+                    currentFocus.1 = 1
                     self.menuController.makeTomorrowState()
                 } else if selectedIndex == 2 {
-                    currentFocus = 2
+                    currentFocus.0 = currentFocus.1
+                    currentFocus.1 = 2
                     self.menuController.makeWeekState()
                 } else if selectedIndex == 3 {
-                    currentFocus = 3
+                    currentFocus.0 = currentFocus.1
+                    currentFocus.1 = 3
                     self.menuController.makeMonthState()
                 }
                 self.segmentControl.setSelected(at: selectedIndex)

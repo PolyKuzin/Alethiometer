@@ -49,7 +49,24 @@ class MenuController: BaseVC {
     
     public var viewState : ViewState = .initial {
         didSet {
-            tableView.reloadData()
+            if currentFocus.0 < currentFocus.1 {
+                let transition = CATransition()
+                transition.type = CATransitionType.push
+                transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+                transition.fillMode = CAMediaTimingFillMode.forwards
+                transition.duration = 0.5
+                transition.subtype = CATransitionSubtype.fromRight
+                self.tableView.layer.add(transition, forKey: "UITableViewReloadDataAnimationKey")
+            } else {
+                let transition = CATransition()
+                transition.type = CATransitionType.push
+                transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+                transition.fillMode = CAMediaTimingFillMode.forwards
+                transition.duration = 0.5
+                transition.subtype = CATransitionSubtype.fromLeft
+                self.tableView.layer.add(transition, forKey: "UITableViewReloadDataAnimationKey")
+            }
+            self.tableView.reloadData()
         }
     }
 
