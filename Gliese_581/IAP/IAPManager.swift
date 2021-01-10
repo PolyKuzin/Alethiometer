@@ -54,7 +54,7 @@ extension IAPManager : SKPaymentTransactionObserver {
         for transaction in transactions {
             switch transaction.transactionState {
             case .deferred   : break
-            case .purchasing : break
+            case .purchasing : showUniversalLoadingView(true, loadingText: "Waitng for Validation ^_^")
             case .failed     : failed(transaction)
             case .purchased  : completed(transaction)
             case.restored    : restored(transaction)
@@ -62,6 +62,7 @@ extension IAPManager : SKPaymentTransactionObserver {
                 fatalError()
             }
         }
+        showUniversalLoadingView(false)
     }
     
     private func failed(_ transaction: SKPaymentTransaction) {
