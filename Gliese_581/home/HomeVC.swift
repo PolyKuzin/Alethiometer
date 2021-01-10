@@ -44,7 +44,6 @@ class HomeVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if UserDefaults.standard.bool(forKey: "Registered") {
             zodiacSign = getZodiacSign(UserDefaults.standard.value(forKey: "DateOfBirth") as! Date)
             print(

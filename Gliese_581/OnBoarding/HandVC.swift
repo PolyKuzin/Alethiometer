@@ -177,7 +177,8 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
     var shootCamera = UIButton()
     var skipButton = UIButton()
     var backButton = UIButton()
-
+var havePushed = false
+    
     func setupCaptureSession() {
         captureSession.sessionPreset = AVCaptureSession.Preset.photo
     }
@@ -290,6 +291,7 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
     @objc
     private func goBack() {
         self.navigationController?.popViewController(animated: true)
+        self.captureSession.stopRunning()
     }
     
     @objc
@@ -324,6 +326,7 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
         let vc = PayWallVC()
         guard let navigationController = navigationController else { return }
         navigationController.pushViewController(vc, animated: true)
+        self.captureSession.stopRunning()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -360,10 +363,14 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
                     try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
                 } else {
                     DispatchQueue.main.async {
-                        let vc = PayWallVC()
-                        guard let navigationController = self.navigationController else { return }
-                        navigationController.pushViewController(vc, animated: true)
-                        self.dismiss(animated: true, completion: nil)
+                        if !self.havePushed {
+                            self.havePushed = true
+                            self.captureSession.stopRunning()
+                            let vc = PayWallVC()
+                            guard let navigationController = self.navigationController else { return }
+                            navigationController.pushViewController(vc, animated: true)
+                            self.dismiss(animated: true, completion: nil)
+                        }
                     }
                 }
             })

@@ -18,6 +18,8 @@ class NameVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.alpha = 0.3
+        nextButton.isEnabled = false
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))

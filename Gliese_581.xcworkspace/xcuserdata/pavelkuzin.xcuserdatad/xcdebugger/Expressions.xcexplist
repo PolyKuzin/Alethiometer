@@ -10,5 +10,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "HomeVC.viewDidLoad():HomeVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "setProVersion">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		7B2521AF7D893B91AE5455F116CF6182 /* OpenSSL-XM */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D9113CBAA4DD6AC3A5FCC1BA908F135A /* Build configuration list for PBXAggregateTarget "OpenSSL-XM" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "OpenSSL-XM";
+			productName = "OpenSSL-XM";
+		};
 		899318C1CEDE586664EC232A68069570 /* YandexMobileMetrica */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = F74DCE6258F39EE8F1BB65951F54078C /* Build configuration list for PBXAggregateTarget "YandexMobileMetrica" */;
@@ -15,43 +25,51 @@
 			dependencies = (
 			);
 			name = YandexMobileMetrica;
+			productName = YandexMobileMetrica;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		03243D151D31E9DF0BB90FEE6633D683 /* Pods-Gliese_581-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F205C95C3930F9E1780C497CEACE1603 /* Pods-Gliese_581-dummy.m */; };
-		1659A83A37A37847E63460EE37298260 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E60A4475942D3665F6A3F8D8CB8EA /* Controller.swift */; };
-		27A3FCA33FC096112F945F0969C4B4A1 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73AB5ECBE41D5E1A1EAE8454992560 /* UIExtensions.swift */; };
-		32CAD57136F62973B17307271803DABE /* PassthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFB1F8F64532AE32B5607B58DBEFD16 /* PassthroughView.swift */; };
-		418B744DEFDE1648A55B5017210252B2 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697AD943320EB18F0C37BF61E65BD41A /* Position.swift */; };
-		42290ADFDAA15ADDC859EFB62FE36920 /* BackdropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63156485F5B45821DA1F410C10AC64 /* BackdropView.swift */; };
-		48FA84B1A4D6A45CAF42580875F1942A /* FloatingPanel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE4B525DD680A31EF5366667785B26 /* FloatingPanel-dummy.m */; };
-		52BE6C55622CCE6BA1AA2C47741DA8E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		6D56344D523518D928E8D9B62A542076 /* SurfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFBD634EB5888A518EDBCDDC550E2A1 /* SurfaceView.swift */; };
-		84D31336D2BB42EE8AE2231C65278BD7 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BFB921B429445C1361189FA86F3B91 /* GrabberView.swift */; };
-		97EC0CF457117DFEC9A33CF45BDECBEF /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F695F11E478F754740B1A8AE88FFBA /* Core.swift */; };
-		A85DDC7CA48FEF8C82A7B9B661E8A3E5 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01BC924FB22F1DBA750662957F58353 /* Layout.swift */; };
-		B2E27C74797E8F71B15646DB256CA2F4 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279F4B081E7CFB057121B0CDCDE96B2 /* Behavior.swift */; };
-		B4CA4AB5B0B0CC75E54814CE654034EC /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710ABBA96160FD3FF2634AE9099DBFE2 /* Logger.swift */; };
-		B6B15C16791BE00AD28AB9762F5CF15E /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9075E13D0F8E68A9F277EC386F370A /* State.swift */; };
-		B95778FCDFFD4B36F83662A0615296C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		B9D3B51C78895E4225393292E707B2A4 /* Transitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1119F4C14495E940EEF7CDA9DDCD4A4A /* Transitioning.swift */; };
-		BBEBDD054036241D190EE68386D8BE4E /* LayoutAnchoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B38D8527214FC36F7F8E83675CEFE7 /* LayoutAnchoring.swift */; };
-		D2AE8B96364AB26782B3A6B996618F46 /* FloatingPanel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 414131DCEE17982DEA76FD444CF5DDCD /* FloatingPanel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E3400A6384B9761D17DEF8DF42D29141 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		FA366DEC1BF3E38B2A3F77DAAA9A8840 /* Pods-Gliese_581-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6318B83BE62D69A7156DECB363E165AC /* Pods-Gliese_581-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAF398918DF7A982CB84A5F8CD6A97F8 /* LayoutReferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484ACEF7C52E0CBD3EA8A3821135DB4D /* LayoutReferences.swift */; };
+		0235661CEC757F944072D480575DA609 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		1659A83A37A37847E63460EE37298260 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8333E8A7123ECFEB520A0FF26B1BB163 /* Controller.swift */; };
+		27A3FCA33FC096112F945F0969C4B4A1 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDC7BA5BD2E845F37829E68DACABEFB /* UIExtensions.swift */; };
+		32CAD57136F62973B17307271803DABE /* PassthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3CCB5E6D598A8C1C3026BF82681BB0 /* PassthroughView.swift */; };
+		4128C75956120955102AFDAEA74D5BA4 /* Pods-Gliese_581-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F205C95C3930F9E1780C497CEACE1603 /* Pods-Gliese_581-dummy.m */; };
+		418B744DEFDE1648A55B5017210252B2 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221BD1DE3F44D7C77ADA98461580DA4C /* Position.swift */; };
+		42290ADFDAA15ADDC859EFB62FE36920 /* BackdropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F1F1266A78C87E85AEAF15F6C573F /* BackdropView.swift */; };
+		48FA84B1A4D6A45CAF42580875F1942A /* FloatingPanel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0A6B5E24F4E88EE2E6859901404051 /* FloatingPanel-dummy.m */; };
+		594272573E6B956E3E06FCA943EFB0BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		60F379474B2B7D40ABC73233DC5804CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		6D56344D523518D928E8D9B62A542076 /* SurfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C48FEA5A87FBCEB555C2BF8B8D6AA /* SurfaceView.swift */; };
+		84D31336D2BB42EE8AE2231C65278BD7 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD855DDAEBD5D51D0C4FBC2E594F1860 /* GrabberView.swift */; };
+		97EC0CF457117DFEC9A33CF45BDECBEF /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09142D18CC5A14166347D469C7C6DF8 /* Core.swift */; };
+		A85DDC7CA48FEF8C82A7B9B661E8A3E5 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45281429DB671BD6E39977025846632F /* Layout.swift */; };
+		B2E27C74797E8F71B15646DB256CA2F4 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E1261F2E50DC39EDFA3E3CAB59C12 /* Behavior.swift */; };
+		B4CA4AB5B0B0CC75E54814CE654034EC /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDAA04EAB85BB35C52F8FBF8D4000C9 /* Logger.swift */; };
+		B6B15C16791BE00AD28AB9762F5CF15E /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67422331F8E4478E43797B3F635BAF /* State.swift */; };
+		B9D3B51C78895E4225393292E707B2A4 /* Transitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3AECFBA7BA4303195C777139209AB1 /* Transitioning.swift */; };
+		BBEBDD054036241D190EE68386D8BE4E /* LayoutAnchoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB12CF649C698A062967163CD9750E3 /* LayoutAnchoring.swift */; };
+		D2AE8B96364AB26782B3A6B996618F46 /* FloatingPanel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70F663050881B3A2B20713AB1A28B282 /* FloatingPanel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC1B64E475DF31878501747FEA512EA0 /* Pods-Gliese_581-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6318B83BE62D69A7156DECB363E165AC /* Pods-Gliese_581-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF398918DF7A982CB84A5F8CD6A97F8 /* LayoutReferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5C554FDE63F789DAEB60682A827670 /* LayoutReferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		84659BEE8A26561CB937A227E948D9B5 /* PBXContainerItemProxy */ = {
+		49B59F166A12EA0B51530ED7A04F57C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4874E7E655CEB4C01E4572AD903AEA21;
 			remoteInfo = FloatingPanel;
 		};
-		AA89D1E71DF54BF23B7772C17C2D0A71 /* PBXContainerItemProxy */ = {
+		C1F5E15824CDE3B3A8F1D75145E9B4D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B2521AF7D893B91AE5455F116CF6182;
+			remoteInfo = "OpenSSL-XM";
+		};
+		EAF1A481C7E205D4363238C107396753 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -61,62 +79,141 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01449508C495AF22472ED6CD3CEC7A40 /* YandexMobileMetrica-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YandexMobileMetrica-umbrella.h"; path = "ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YandexMobileMetrica-umbrella.h"; sourceTree = "<group>"; };
+		00ECEFEF12804FC17F2648C40F265692 /* opensslv.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = opensslv.h; path = opensslIncludes/openssl/opensslv.h; sourceTree = "<group>"; };
+		03CFC0663AD868D542C3D92876356BF9 /* tls1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tls1.h; path = opensslIncludes/openssl/tls1.h; sourceTree = "<group>"; };
+		04B365F0F87DB831C672276FB5AEBCAF /* dh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dh.h; path = opensslIncludes/openssl/dh.h; sourceTree = "<group>"; };
+		05180D0A9285327AC9D52ADAB314EA9D /* asn1_mac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = asn1_mac.h; path = opensslIncludes/openssl/asn1_mac.h; sourceTree = "<group>"; };
 		061B23A1EC1587A211A9F68BE3C2EA6F /* Pods-Gliese_581-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gliese_581-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0806CFD5DCB183865545771B7A04D8A5 /* FloatingPanel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FloatingPanel.modulemap; sourceTree = "<group>"; };
+		0B2E34237298E19D05900FA34C102FED /* pkcs12.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pkcs12.h; path = opensslIncludes/openssl/pkcs12.h; sourceTree = "<group>"; };
 		0D6B33CF1175E1143265D5F9647E9595 /* Pods-Gliese_581-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gliese_581-Info.plist"; sourceTree = "<group>"; };
-		0F2E60A4475942D3665F6A3F8D8CB8EA /* Controller.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Controller.swift; path = Sources/Controller.swift; sourceTree = "<group>"; };
-		1119F4C14495E940EEF7CDA9DDCD4A4A /* Transitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transitioning.swift; path = Sources/Transitioning.swift; sourceTree = "<group>"; };
+		0EB12CF649C698A062967163CD9750E3 /* LayoutAnchoring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutAnchoring.swift; path = Sources/LayoutAnchoring.swift; sourceTree = "<group>"; };
+		0EB5F06AAA3A8E4E1350D170ACE09F13 /* ts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ts.h; path = opensslIncludes/openssl/ts.h; sourceTree = "<group>"; };
+		10AA48122AC997D232AF16BD151B7AEF /* symhacks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = symhacks.h; path = opensslIncludes/openssl/symhacks.h; sourceTree = "<group>"; };
+		121D70660FB20237584860162AEAC5BD /* YandexMobileMetrica.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YandexMobileMetrica.framework; path = ios/static/YandexMobileMetrica.framework; sourceTree = "<group>"; };
 		14428859DC989A052BF5BF9772D223F0 /* Pods-Gliese_581-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gliese_581-frameworks.sh"; sourceTree = "<group>"; };
-		19034B6D3C606CF7F04F20CD262C6BC3 /* YMMRevenueInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMRevenueInfo.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMRevenueInfo.h; sourceTree = "<group>"; };
+		1B5C554FDE63F789DAEB60682A827670 /* LayoutReferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutReferences.swift; path = Sources/LayoutReferences.swift; sourceTree = "<group>"; };
 		1FA372025852E9C70DB4602A607FBC12 /* Pods-Gliese_581-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gliese_581-acknowledgements.plist"; sourceTree = "<group>"; };
-		24B38D8527214FC36F7F8E83675CEFE7 /* LayoutAnchoring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutAnchoring.swift; path = Sources/LayoutAnchoring.swift; sourceTree = "<group>"; };
-		265700112905C1D6BF0DF1A7CC225B1C /* FloatingPanel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FloatingPanel-Info.plist"; sourceTree = "<group>"; };
-		288C56FAE54E8ED312FBE2F94D804469 /* FloatingPanel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingPanel.debug.xcconfig; sourceTree = "<group>"; };
-		29F815B3F6BCBC417A2549AEE8E48B2A /* YMMUserProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMUserProfile.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMUserProfile.h; sourceTree = "<group>"; };
-		2D6C13283ADA5445B9FA5E7ACFCFE131 /* YMMErrorRepresentable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMErrorRepresentable.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMErrorRepresentable.h; sourceTree = "<group>"; };
-		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		3D63156485F5B45821DA1F410C10AC64 /* BackdropView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackdropView.swift; path = Sources/BackdropView.swift; sourceTree = "<group>"; };
-		3E9DA7853646F9EBF945B4C8E21AF152 /* YandexMobileMetrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YandexMobileMetrica.debug.xcconfig; sourceTree = "<group>"; };
-		414131DCEE17982DEA76FD444CF5DDCD /* FloatingPanel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingPanel-umbrella.h"; sourceTree = "<group>"; };
-		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		484ACEF7C52E0CBD3EA8A3821135DB4D /* LayoutReferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutReferences.swift; path = Sources/LayoutReferences.swift; sourceTree = "<group>"; };
-		48BFB921B429445C1361189FA86F3B91 /* GrabberView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrabberView.swift; path = Sources/GrabberView.swift; sourceTree = "<group>"; };
-		4E72B04AC139BFD3B6124128F1340AC5 /* YMMYandexMetricaConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaConfiguration.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaConfiguration.h; sourceTree = "<group>"; };
-		4EBC3DC0636C6D043643B03CDD193861 /* YMMCompletionBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMCompletionBlocks.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMCompletionBlocks.h; sourceTree = "<group>"; };
-		4F77469DB6251908F1A9C621F2F1FCC2 /* YandexMobileMetricaCrashes-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YandexMobileMetricaCrashes-umbrella.h"; path = "ios/static/YandexMobileMetricaCrashes.framework/Versions/A/Headers/YandexMobileMetricaCrashes-umbrella.h"; sourceTree = "<group>"; };
-		53DF777B4538A067B67CB87890D495AB /* YMMError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMError.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMError.h; sourceTree = "<group>"; };
-		567E1259906A93B3818262B4F642523A /* YMMProfileAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMProfileAttribute.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMProfileAttribute.h; sourceTree = "<group>"; };
+		208FE85ED584F7805DB472B370074EEC /* rc4.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rc4.h; path = opensslIncludes/openssl/rc4.h; sourceTree = "<group>"; };
+		221BD1DE3F44D7C77ADA98461580DA4C /* Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Position.swift; path = Sources/Position.swift; sourceTree = "<group>"; };
+		2525CC9842CA05D7ED5BBDFEDE72DD68 /* ssl3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssl3.h; path = opensslIncludes/openssl/ssl3.h; sourceTree = "<group>"; };
+		2541CA2E869E795BA4C056C373F2B3C8 /* ui.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ui.h; path = opensslIncludes/openssl/ui.h; sourceTree = "<group>"; };
+		2DDCDF9B3D005B016F56174CA9DBE31C /* camellia.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = camellia.h; path = opensslIncludes/openssl/camellia.h; sourceTree = "<group>"; };
+		2FDAA04EAB85BB35C52F8FBF8D4000C9 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Sources/Logger.swift; sourceTree = "<group>"; };
+		35B15AF3D20C1E370070850803968026 /* mdc2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mdc2.h; path = opensslIncludes/openssl/mdc2.h; sourceTree = "<group>"; };
+		3716923204F45DF52ACEB61C85810D09 /* crypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto.h; path = opensslIncludes/openssl/crypto.h; sourceTree = "<group>"; };
+		37FBBF643B83E010C4711EA1BE9DE544 /* FloatingPanel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingPanel.debug.xcconfig; sourceTree = "<group>"; };
+		382C48FEA5A87FBCEB555C2BF8B8D6AA /* SurfaceView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurfaceView.swift; path = Sources/SurfaceView.swift; sourceTree = "<group>"; };
+		38CBFBA7DD2BD836558CB178AF5F455D /* lhash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lhash.h; path = opensslIncludes/openssl/lhash.h; sourceTree = "<group>"; };
+		392B035735B9F56FE6F8A3640CF10AAE /* libssl.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libssl.a; path = lib/libssl.a; sourceTree = "<group>"; };
+		3DD8C847965C64159340A83FA8080B4A /* pkcs7.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pkcs7.h; path = opensslIncludes/openssl/pkcs7.h; sourceTree = "<group>"; };
+		3FE8925122F2856B10F0C89BA08DFC66 /* seed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = seed.h; path = opensslIncludes/openssl/seed.h; sourceTree = "<group>"; };
+		412862561C4D784E4298075992C808AB /* YandexMobileMetrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YandexMobileMetrica.debug.xcconfig; sourceTree = "<group>"; };
+		41F60A1F500F155951E7A1FE9B352949 /* pem2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pem2.h; path = opensslIncludes/openssl/pem2.h; sourceTree = "<group>"; };
+		43E8B94DAAA73B702A57756C31868D39 /* ossl_typ.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ossl_typ.h; path = opensslIncludes/openssl/ossl_typ.h; sourceTree = "<group>"; };
+		45281429DB671BD6E39977025846632F /* Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Layout.swift; path = Sources/Layout.swift; sourceTree = "<group>"; };
+		452E8114AA6D400E4D2486BFC42154D8 /* blowfish.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = blowfish.h; path = opensslIncludes/openssl/blowfish.h; sourceTree = "<group>"; };
+		47ABBC6178E7CE9B9BD40F494DD90FBB /* ecdsa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ecdsa.h; path = opensslIncludes/openssl/ecdsa.h; sourceTree = "<group>"; };
+		492B0935FD39285B07D548F1D262D72E /* libcrypto.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcrypto.a; path = lib/libcrypto.a; sourceTree = "<group>"; };
+		49AB7582EE556BAAFD57BA5B2A59BADB /* YMMReporterConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMReporterConfiguration.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMReporterConfiguration.h; sourceTree = "<group>"; };
+		4B9634CBCF6BE5F637749A845159AEC5 /* txt_db.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = txt_db.h; path = opensslIncludes/openssl/txt_db.h; sourceTree = "<group>"; };
+		4D2D82945ACBF58650FF0B38ABDC8B30 /* YandexMobileMetrica.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YandexMobileMetrica.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YandexMobileMetrica.h; sourceTree = "<group>"; };
+		4FDE115B780D82AE3216686088D8BA2B /* krb5_asn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = krb5_asn.h; path = opensslIncludes/openssl/krb5_asn.h; sourceTree = "<group>"; };
+		5121188878F69127D2868EBBD43E62CB /* ocsp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ocsp.h; path = opensslIncludes/openssl/ocsp.h; sourceTree = "<group>"; };
+		527FDBFBF2771BAB6D49C53ED61863D3 /* engine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = engine.h; path = opensslIncludes/openssl/engine.h; sourceTree = "<group>"; };
+		56AC021AA8038812B90F7DBD79DFAE46 /* bio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bio.h; path = opensslIncludes/openssl/bio.h; sourceTree = "<group>"; };
+		5762DE93ECDBED9968BCF43CD320EDFE /* dso.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dso.h; path = opensslIncludes/openssl/dso.h; sourceTree = "<group>"; };
+		59512708BDE3EAA65F56A9AD524F88B1 /* objects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = objects.h; path = opensslIncludes/openssl/objects.h; sourceTree = "<group>"; };
+		5B1F01E3ABB6C38E0A56205776E8BE01 /* conf_api.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = conf_api.h; path = opensslIncludes/openssl/conf_api.h; sourceTree = "<group>"; };
+		5DE3C9B7BB1A69C601E239125213E5CC /* YandexMobileMetricaCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YandexMobileMetricaCrashes.framework; path = ios/static/YandexMobileMetricaCrashes.framework; sourceTree = "<group>"; };
+		5E6F1F1266A78C87E85AEAF15F6C573F /* BackdropView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackdropView.swift; path = Sources/BackdropView.swift; sourceTree = "<group>"; };
 		5EF0099603EF1C1613FF3898846F3268 /* Pods-Gliese_581.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gliese_581.debug.xcconfig"; sourceTree = "<group>"; };
+		5FC0F0F4F443C63E26E9CBCC01324E33 /* rand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rand.h; path = opensslIncludes/openssl/rand.h; sourceTree = "<group>"; };
+		626541E9B80E3F47D272EC2FF0F1235D /* dsa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dsa.h; path = opensslIncludes/openssl/dsa.h; sourceTree = "<group>"; };
 		6318B83BE62D69A7156DECB363E165AC /* Pods-Gliese_581-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gliese_581-umbrella.h"; sourceTree = "<group>"; };
+		642841D9ED5E950352140C9D88D3A42C /* x509_vfy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x509_vfy.h; path = opensslIncludes/openssl/x509_vfy.h; sourceTree = "<group>"; };
 		647CEC9D3083CF4BA634856704E64D71 /* Pods-Gliese_581.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Gliese_581.modulemap"; sourceTree = "<group>"; };
-		697AD943320EB18F0C37BF61E65BD41A /* Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Position.swift; path = Sources/Position.swift; sourceTree = "<group>"; };
-		6C50E7F97F30C5533F8545BA6DB200AB /* YandexMobileMetrica.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YandexMobileMetrica.framework; path = ios/static/YandexMobileMetrica.framework; sourceTree = "<group>"; };
-		6FAAB7D3DE9B2564509ABD18687E938E /* FloatingPanel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FloatingPanel.framework; path = FloatingPanel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		710ABBA96160FD3FF2634AE9099DBFE2 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Sources/Logger.swift; sourceTree = "<group>"; };
-		7BFE4B525DD680A31EF5366667785B26 /* FloatingPanel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FloatingPanel-dummy.m"; sourceTree = "<group>"; };
-		7DCC03CDCE2B91743956C29ECB6FB871 /* YMMReporterConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMReporterConfiguration.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMReporterConfiguration.h; sourceTree = "<group>"; };
-		80CA573C928CE9E4FD4763935EF71F6B /* YMMECommerce.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMECommerce.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMECommerce.h; sourceTree = "<group>"; };
-		85873ABCA60BA5F5ADDFC425EAF51594 /* YandexMobileMetrica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YandexMobileMetrica.release.xcconfig; sourceTree = "<group>"; };
-		8D9075E13D0F8E68A9F277EC386F370A /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/State.swift; sourceTree = "<group>"; };
-		92E5A7A04697E3EF6B5341FF378B6335 /* YMMYandexMetrica.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetrica.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetrica.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DFBD634EB5888A518EDBCDDC550E2A1 /* SurfaceView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SurfaceView.swift; path = Sources/SurfaceView.swift; sourceTree = "<group>"; };
-		A01BC924FB22F1DBA750662957F58353 /* Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Layout.swift; path = Sources/Layout.swift; sourceTree = "<group>"; };
-		ACE9DAF6A6C9336C2B924155F30C2B63 /* FloatingPanel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingPanel.release.xcconfig; sourceTree = "<group>"; };
-		B5A413CEABF5C0465AEFDC5475D6863D /* YMMYandexMetricaPreloadInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaPreloadInfo.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaPreloadInfo.h; sourceTree = "<group>"; };
+		65833C1072556FB008C17A1ADDCE010E /* cms.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cms.h; path = opensslIncludes/openssl/cms.h; sourceTree = "<group>"; };
+		6AABFA80E9DD70DBEFF01CC45A762B6C /* ec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ec.h; path = opensslIncludes/openssl/ec.h; sourceTree = "<group>"; };
+		6FAAB7D3DE9B2564509ABD18687E938E /* FloatingPanel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FloatingPanel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		708CCAB28979952999C65C7DECA03AD3 /* kssl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = kssl.h; path = opensslIncludes/openssl/kssl.h; sourceTree = "<group>"; };
+		70C750F4AA0782C04D7E1DFC2BAFEED6 /* md5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = md5.h; path = opensslIncludes/openssl/md5.h; sourceTree = "<group>"; };
+		70F663050881B3A2B20713AB1A28B282 /* FloatingPanel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingPanel-umbrella.h"; sourceTree = "<group>"; };
+		72B6EC1DADE459EEC1EBA0ABFAB14640 /* srp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = srp.h; path = opensslIncludes/openssl/srp.h; sourceTree = "<group>"; };
+		740E050D262AA3DD174915FD12C3CD65 /* ecdh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ecdh.h; path = opensslIncludes/openssl/ecdh.h; sourceTree = "<group>"; };
+		75ABA1956A984D0DA04188D2EE8C4703 /* dtls1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dtls1.h; path = opensslIncludes/openssl/dtls1.h; sourceTree = "<group>"; };
+		8214BB0F409294AF2320DEFEACCBD3A7 /* asn1t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = asn1t.h; path = opensslIncludes/openssl/asn1t.h; sourceTree = "<group>"; };
+		8260AFD82FA9BD528E88896DE0EB5DFF /* ripemd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ripemd.h; path = opensslIncludes/openssl/ripemd.h; sourceTree = "<group>"; };
+		827F3664084E7A7356C22E0D83A7C75A /* YMMVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMVersion.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMVersion.h; sourceTree = "<group>"; };
+		8333E8A7123ECFEB520A0FF26B1BB163 /* Controller.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Controller.swift; path = Sources/Controller.swift; sourceTree = "<group>"; };
+		85B77F0E8940D055D14598F6217C3AC5 /* FloatingPanel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FloatingPanel-Info.plist"; sourceTree = "<group>"; };
+		8A67EE6BCD0B2727D7C0BD750AEF345E /* YMMErrorRepresentable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMErrorRepresentable.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMErrorRepresentable.h; sourceTree = "<group>"; };
+		8E67422331F8E4478E43797B3F635BAF /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/State.swift; sourceTree = "<group>"; };
+		91765F1A60546D6AD666949491C0F32E /* YMMYandexMetricaReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaReporting.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaReporting.h; sourceTree = "<group>"; };
+		920E1261F2E50DC39EDFA3E3CAB59C12 /* Behavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = Sources/Behavior.swift; sourceTree = "<group>"; };
+		93A7EB0C1A6FA159BF7531C6A0F6B394 /* e_os2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = e_os2.h; path = opensslIncludes/openssl/e_os2.h; sourceTree = "<group>"; };
+		94FB90D39CB7BE88C76BBE0F4EC6CA27 /* safestack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = safestack.h; path = opensslIncludes/openssl/safestack.h; sourceTree = "<group>"; };
+		95FC0B6100490BFEA8BAEDAF491A3D22 /* conf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = conf.h; path = opensslIncludes/openssl/conf.h; sourceTree = "<group>"; };
+		9637CF10FF8D99FCD613C336BC046557 /* YMMYandexMetricaPreloadInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaPreloadInfo.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaPreloadInfo.h; sourceTree = "<group>"; };
+		984ABEED667B89C035F8126510CDB145 /* cast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cast.h; path = opensslIncludes/openssl/cast.h; sourceTree = "<group>"; };
+		9860D9C0043B90E5D49BB414E9F7D469 /* FloatingPanel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingPanel.release.xcconfig; sourceTree = "<group>"; };
+		9B5B03182D3EB472F7C06209A8A05489 /* ssl23.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssl23.h; path = opensslIncludes/openssl/ssl23.h; sourceTree = "<group>"; };
+		9C600A11004787715F03D64659F09939 /* bn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bn.h; path = opensslIncludes/openssl/bn.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FE3640A9C30B52E4A8AA2D432C7F161 /* modes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = modes.h; path = opensslIncludes/openssl/modes.h; sourceTree = "<group>"; };
+		A76191B68F17AF6A5037E058FBE84C7D /* asn1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = asn1.h; path = opensslIncludes/openssl/asn1.h; sourceTree = "<group>"; };
+		A76211CDB61989D5BFD96CDE560E1A1D /* pqueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pqueue.h; path = opensslIncludes/openssl/pqueue.h; sourceTree = "<group>"; };
+		AA543FB3F69106C74126FDB67D5D96D6 /* YandexMobileMetrica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YandexMobileMetrica.release.xcconfig; sourceTree = "<group>"; };
+		AC0A6B5E24F4E88EE2E6859901404051 /* FloatingPanel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FloatingPanel-dummy.m"; sourceTree = "<group>"; };
+		ADEC9CD0E7920AEC91CB26DB40BFBD90 /* des_old.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = des_old.h; path = opensslIncludes/openssl/des_old.h; sourceTree = "<group>"; };
+		AE4666CF9BA7720354589D85E8FD0AFC /* whrlpool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = whrlpool.h; path = opensslIncludes/openssl/whrlpool.h; sourceTree = "<group>"; };
+		AE65D5CEBC81C75A43F1B775BCF1DD80 /* hmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = opensslIncludes/openssl/hmac.h; sourceTree = "<group>"; };
+		AFDAE95C0A569843E39783525B133857 /* rc2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rc2.h; path = opensslIncludes/openssl/rc2.h; sourceTree = "<group>"; };
+		B0DB38A26F534B6106FB6066AA7A9F8D /* des.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = des.h; path = opensslIncludes/openssl/des.h; sourceTree = "<group>"; };
+		B2806FD017547694359362A851F16862 /* YMMYandexMetricaConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaConfiguration.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaConfiguration.h; sourceTree = "<group>"; };
+		B6CFED622AD0A761156750599BBD45FC /* evp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = evp.h; path = opensslIncludes/openssl/evp.h; sourceTree = "<group>"; };
 		B9C19AB35578C1F953E790CCD21906BA /* Pods-Gliese_581.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gliese_581.release.xcconfig"; sourceTree = "<group>"; };
-		CBFB1F8F64532AE32B5607B58DBEFD16 /* PassthroughView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassthroughView.swift; path = Sources/PassthroughView.swift; sourceTree = "<group>"; };
-		CD73AB5ECBE41D5E1A1EAE8454992560 /* UIExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIExtensions.swift; path = Sources/UIExtensions.swift; sourceTree = "<group>"; };
-		D27943DC6C3B7886A3FB42A685A622F8 /* FloatingPanel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FloatingPanel.modulemap; sourceTree = "<group>"; };
-		D3F0E74642DB3D7C2A957CACB378AC04 /* YandexMobileMetricaCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YandexMobileMetricaCrashes.framework; path = ios/static/YandexMobileMetricaCrashes.framework; sourceTree = "<group>"; };
-		D5510F1AE4AAE41A057A16D95C3BC975 /* YandexMobileMetrica.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YandexMobileMetrica.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YandexMobileMetrica.h; sourceTree = "<group>"; };
-		D9F695F11E478F754740B1A8AE88FFBA /* Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Core.swift; path = Sources/Core.swift; sourceTree = "<group>"; };
-		E42BDE9EB1E1E7F20F2F01400361A800 /* YMMVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMVersion.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMVersion.h; sourceTree = "<group>"; };
+		BC3AECFBA7BA4303195C777139209AB1 /* Transitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transitioning.swift; path = Sources/Transitioning.swift; sourceTree = "<group>"; };
+		BCD62A3E7752B56BD384884CB3ADA5F5 /* YandexMobileMetrica-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YandexMobileMetrica-umbrella.h"; path = "ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YandexMobileMetrica-umbrella.h"; sourceTree = "<group>"; };
+		BDE6CCDA2ACFA04F49E73ED2890C370E /* YMMUserProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMUserProfile.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMUserProfile.h; sourceTree = "<group>"; };
+		BE3CCB5E6D598A8C1C3026BF82681BB0 /* PassthroughView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassthroughView.swift; path = Sources/PassthroughView.swift; sourceTree = "<group>"; };
+		BEE3DE952E80F3C7D478A5908263D2F4 /* srtp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = srtp.h; path = opensslIncludes/openssl/srtp.h; sourceTree = "<group>"; };
+		C00D0571664390A8FD23152FDB1DCA40 /* YMMECommerce.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMECommerce.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMECommerce.h; sourceTree = "<group>"; };
+		C0555A167139CEED4AD854DA7D592A00 /* ui_compat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ui_compat.h; path = opensslIncludes/openssl/ui_compat.h; sourceTree = "<group>"; };
+		C09142D18CC5A14166347D469C7C6DF8 /* Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Core.swift; path = Sources/Core.swift; sourceTree = "<group>"; };
+		C495D28E1658820168B7DAA4342B07DA /* ssl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssl.h; path = opensslIncludes/openssl/ssl.h; sourceTree = "<group>"; };
+		C642C913F3DBD68D38807DDCA3E910F2 /* sha.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha.h; path = opensslIncludes/openssl/sha.h; sourceTree = "<group>"; };
+		C78CDCB69B801121BBAD6C4C67C78F07 /* ebcdic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ebcdic.h; path = opensslIncludes/openssl/ebcdic.h; sourceTree = "<group>"; };
+		CABFC407B01BEB70BFBD02C0F2EA53A7 /* idea.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = idea.h; path = opensslIncludes/openssl/idea.h; sourceTree = "<group>"; };
+		CBC16519267FE642690ACD30A7C6DFFA /* buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = opensslIncludes/openssl/buffer.h; sourceTree = "<group>"; };
+		CEEAFC81D2BA88F287F9BD61784C33A2 /* aes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes.h; path = opensslIncludes/openssl/aes.h; sourceTree = "<group>"; };
+		D096F95B60C2DBD9850BB827FC14865F /* FloatingPanel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingPanel-prefix.pch"; sourceTree = "<group>"; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D2D6225F80AE83190CD76E39D960FB00 /* YMMRevenueInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMRevenueInfo.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMRevenueInfo.h; sourceTree = "<group>"; };
+		D537215CA173A2A71A64A0A2270C8456 /* obj_mac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = obj_mac.h; path = opensslIncludes/openssl/obj_mac.h; sourceTree = "<group>"; };
+		D67235938D76104BF8033F4E3689BC0E /* x509.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x509.h; path = opensslIncludes/openssl/x509.h; sourceTree = "<group>"; };
+		D6B133DC47350D28134DD5998C87D5BB /* YMMProfileAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMProfileAttribute.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMProfileAttribute.h; sourceTree = "<group>"; };
+		D6D1B10388D79087F36F06E483EF5ABC /* OpenSSL-XM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-XM.release.xcconfig"; sourceTree = "<group>"; };
+		D7A573A8BF5E1FD4361A58331AD5A2F9 /* md4.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = md4.h; path = opensslIncludes/openssl/md4.h; sourceTree = "<group>"; };
+		DD3D4052BE78E172BBD431C76B971220 /* YandexMobileMetricaCrashes-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YandexMobileMetricaCrashes-umbrella.h"; path = "ios/static/YandexMobileMetricaCrashes.framework/Versions/A/Headers/YandexMobileMetricaCrashes-umbrella.h"; sourceTree = "<group>"; };
+		DD4C93E0795418BDC0ECCCAE4DE5BA0F /* YMMError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMError.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMError.h; sourceTree = "<group>"; };
+		DD855DDAEBD5D51D0C4FBC2E594F1860 /* GrabberView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrabberView.swift; path = Sources/GrabberView.swift; sourceTree = "<group>"; };
+		E681D265AB99B6B9D905427E08DC15D5 /* opensslconf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = opensslconf.h; path = opensslIncludes/openssl/opensslconf.h; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EAD8AAC3153F191778AF2CD6665F86C5 /* OpenSSL-XM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-XM.debug.xcconfig"; sourceTree = "<group>"; };
+		EAEF59BF717B77964B34ED451A0D19B5 /* pem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pem.h; path = opensslIncludes/openssl/pem.h; sourceTree = "<group>"; };
+		EBDC7BA5BD2E845F37829E68DACABEFB /* UIExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIExtensions.swift; path = Sources/UIExtensions.swift; sourceTree = "<group>"; };
+		EC022BE86D916A04DDE2DFB0DE5CA7AB /* comp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = comp.h; path = opensslIncludes/openssl/comp.h; sourceTree = "<group>"; };
+		EE052DA8BA657EB018EE7A6110B0128D /* cmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmac.h; path = opensslIncludes/openssl/cmac.h; sourceTree = "<group>"; };
+		F05E82A510F0643D48D1E6CCC07D5314 /* x509v3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x509v3.h; path = opensslIncludes/openssl/x509v3.h; sourceTree = "<group>"; };
 		F205C95C3930F9E1780C497CEACE1603 /* Pods-Gliese_581-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gliese_581-dummy.m"; sourceTree = "<group>"; };
-		F279F4B081E7CFB057121B0CDCDE96B2 /* Behavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = Sources/Behavior.swift; sourceTree = "<group>"; };
-		F2DADE6D632B9A26B6A54BF46B9535A3 /* FloatingPanel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingPanel-prefix.pch"; sourceTree = "<group>"; };
-		F9FD95DC227F37511DB3159AC45316D2 /* YMMYandexMetricaReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaReporting.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaReporting.h; sourceTree = "<group>"; };
-		FD5310B0BD2C3DAE5E272EC0004A4ED7 /* Pods_Gliese_581.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Gliese_581.framework; path = "Pods-Gliese_581.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3ACEC118BC3AA14660F0005F35D1300 /* err.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = err.h; path = opensslIncludes/openssl/err.h; sourceTree = "<group>"; };
+		F3BB60AE0C0BCB8E95E067252F1E99CF /* rsa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rsa.h; path = opensslIncludes/openssl/rsa.h; sourceTree = "<group>"; };
+		F4F921D1D235CCF576A7FF90A4A16753 /* YMMCompletionBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMCompletionBlocks.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMCompletionBlocks.h; sourceTree = "<group>"; };
+		FAA7FF5B855EDB848DC3B04D48847A77 /* YMMYandexMetrica.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetrica.h; path = ios/static/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetrica.h; sourceTree = "<group>"; };
+		FD5310B0BD2C3DAE5E272EC0004A4ED7 /* Pods_Gliese_581.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gliese_581.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE33902725AF2AAD49B54D35195906E6 /* stack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stack.h; path = opensslIncludes/openssl/stack.h; sourceTree = "<group>"; };
+		FEF879C815B24F7351A399EAF9A11658 /* ssl2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssl2.h; path = opensslIncludes/openssl/ssl2.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,35 +221,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BE6C55622CCE6BA1AA2C47741DA8E2 /* Foundation.framework in Frameworks */,
-				B95778FCDFFD4B36F83662A0615296C3 /* UIKit.framework in Frameworks */,
+				0235661CEC757F944072D480575DA609 /* Foundation.framework in Frameworks */,
+				594272573E6B956E3E06FCA943EFB0BC /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C13E5EAEB36C885F12CED940B5C78C98 /* Frameworks */ = {
+		4161E840C6585013BAB708B6E4CEE6A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3400A6384B9761D17DEF8DF42D29141 /* Foundation.framework in Frameworks */,
+				60F379474B2B7D40ABC73233DC5804CA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00CD22C769B0F94433FA2B849B71BC34 /* Crashes */ = {
+		07352D810EA496BAB80246FF4624F2FF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4F77469DB6251908F1A9C621F2F1FCC2 /* YandexMobileMetricaCrashes-umbrella.h */,
-				410C2AE36F3787AC229C0959E00E6D94 /* Frameworks */,
+				EAD8AAC3153F191778AF2CD6665F86C5 /* OpenSSL-XM.debug.xcconfig */,
+				D6D1B10388D79087F36F06E483EF5ABC /* OpenSSL-XM.release.xcconfig */,
 			);
-			name = Crashes;
+			name = "Support Files";
+			path = "../Target Support Files/OpenSSL-XM";
 			sourceTree = "<group>";
 		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,35 +263,16 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		1F8650FC899DCC5A48D2E3CF4A45A4B5 /* YandexMobileMetrica */ = {
+		2B61B18CC42EFA1B8BAC0F8A5E5E1507 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				35C484DCBAD18715FC533B4F2706E8C5 /* Static */,
-				D23E4F9EA5F56F379C259A464D8C80BA /* Support Files */,
-			);
-			name = YandexMobileMetrica;
-			path = YandexMobileMetrica;
-			sourceTree = "<group>";
-		};
-		35C484DCBAD18715FC533B4F2706E8C5 /* Static */ = {
-			isa = PBXGroup;
-			children = (
-				E35A29DD344028C70A7A94C775F59C2B /* Core */,
-				00CD22C769B0F94433FA2B849B71BC34 /* Crashes */,
-			);
-			name = Static;
-			sourceTree = "<group>";
-		};
-		35D2337778C31FA3529D81BFF491326C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D27943DC6C3B7886A3FB42A685A622F8 /* FloatingPanel.modulemap */,
-				7BFE4B525DD680A31EF5366667785B26 /* FloatingPanel-dummy.m */,
-				265700112905C1D6BF0DF1A7CC225B1C /* FloatingPanel-Info.plist */,
-				F2DADE6D632B9A26B6A54BF46B9535A3 /* FloatingPanel-prefix.pch */,
-				414131DCEE17982DEA76FD444CF5DDCD /* FloatingPanel-umbrella.h */,
-				288C56FAE54E8ED312FBE2F94D804469 /* FloatingPanel.debug.xcconfig */,
-				ACE9DAF6A6C9336C2B924155F30C2B63 /* FloatingPanel.release.xcconfig */,
+				0806CFD5DCB183865545771B7A04D8A5 /* FloatingPanel.modulemap */,
+				AC0A6B5E24F4E88EE2E6859901404051 /* FloatingPanel-dummy.m */,
+				85B77F0E8940D055D14598F6217C3AC5 /* FloatingPanel-Info.plist */,
+				D096F95B60C2DBD9850BB827FC14865F /* FloatingPanel-prefix.pch */,
+				70F663050881B3A2B20713AB1A28B282 /* FloatingPanel-umbrella.h */,
+				37FBBF643B83E010C4711EA1BE9DE544 /* FloatingPanel.debug.xcconfig */,
+				9860D9C0043B90E5D49BB414E9F7D469 /* FloatingPanel.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FloatingPanel";
@@ -208,12 +287,164 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		410C2AE36F3787AC229C0959E00E6D94 /* Frameworks */ = {
+		48796C6C329CDC39DFBDBCEB2B1F9353 /* Crashes */ = {
 			isa = PBXGroup;
 			children = (
-				D3F0E74642DB3D7C2A957CACB378AC04 /* YandexMobileMetricaCrashes.framework */,
+				DD3D4052BE78E172BBD431C76B971220 /* YandexMobileMetricaCrashes-umbrella.h */,
+				4AD6AE5674B40E60911BAA5DC8B3E0FA /* Frameworks */,
+			);
+			name = Crashes;
+			sourceTree = "<group>";
+		};
+		4A8DCBE3170851DC4D6A2A87E21435F5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4D2D82945ACBF58650FF0B38ABDC8B30 /* YandexMobileMetrica.h */,
+				BCD62A3E7752B56BD384884CB3ADA5F5 /* YandexMobileMetrica-umbrella.h */,
+				F4F921D1D235CCF576A7FF90A4A16753 /* YMMCompletionBlocks.h */,
+				C00D0571664390A8FD23152FDB1DCA40 /* YMMECommerce.h */,
+				DD4C93E0795418BDC0ECCCAE4DE5BA0F /* YMMError.h */,
+				8A67EE6BCD0B2727D7C0BD750AEF345E /* YMMErrorRepresentable.h */,
+				D6B133DC47350D28134DD5998C87D5BB /* YMMProfileAttribute.h */,
+				49AB7582EE556BAAFD57BA5B2A59BADB /* YMMReporterConfiguration.h */,
+				D2D6225F80AE83190CD76E39D960FB00 /* YMMRevenueInfo.h */,
+				BDE6CCDA2ACFA04F49E73ED2890C370E /* YMMUserProfile.h */,
+				827F3664084E7A7356C22E0D83A7C75A /* YMMVersion.h */,
+				FAA7FF5B855EDB848DC3B04D48847A77 /* YMMYandexMetrica.h */,
+				B2806FD017547694359362A851F16862 /* YMMYandexMetricaConfiguration.h */,
+				9637CF10FF8D99FCD613C336BC046557 /* YMMYandexMetricaPreloadInfo.h */,
+				91765F1A60546D6AD666949491C0F32E /* YMMYandexMetricaReporting.h */,
+				E4B524E4B179C3CD1D602AD8DF38CBBF /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		4AD6AE5674B40E60911BAA5DC8B3E0FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DE3C9B7BB1A69C601E239125213E5CC /* YandexMobileMetricaCrashes.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CB0DA1568F87D15B3FB669DEA7FBDF5 /* YandexMobileMetrica */ = {
+			isa = PBXGroup;
+			children = (
+				6BDC70A1A074EFABB77E9E37FA4AB74C /* Static */,
+				CC6F50F7B7D49E739489225D6864C338 /* Support Files */,
+			);
+			path = YandexMobileMetrica;
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5FAA72835AC47148487F71564DB12CBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				492B0935FD39285B07D548F1D262D72E /* libcrypto.a */,
+				392B035735B9F56FE6F8A3640CF10AAE /* libssl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BDC70A1A074EFABB77E9E37FA4AB74C /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				4A8DCBE3170851DC4D6A2A87E21435F5 /* Core */,
+				48796C6C329CDC39DFBDBCEB2B1F9353 /* Crashes */,
+			);
+			name = Static;
+			sourceTree = "<group>";
+		};
+		6E91D8256708264398F20DA127BB3A6A /* OpenSSL-XM */ = {
+			isa = PBXGroup;
+			children = (
+				CEEAFC81D2BA88F287F9BD61784C33A2 /* aes.h */,
+				A76191B68F17AF6A5037E058FBE84C7D /* asn1.h */,
+				05180D0A9285327AC9D52ADAB314EA9D /* asn1_mac.h */,
+				8214BB0F409294AF2320DEFEACCBD3A7 /* asn1t.h */,
+				56AC021AA8038812B90F7DBD79DFAE46 /* bio.h */,
+				452E8114AA6D400E4D2486BFC42154D8 /* blowfish.h */,
+				9C600A11004787715F03D64659F09939 /* bn.h */,
+				CBC16519267FE642690ACD30A7C6DFFA /* buffer.h */,
+				2DDCDF9B3D005B016F56174CA9DBE31C /* camellia.h */,
+				984ABEED667B89C035F8126510CDB145 /* cast.h */,
+				EE052DA8BA657EB018EE7A6110B0128D /* cmac.h */,
+				65833C1072556FB008C17A1ADDCE010E /* cms.h */,
+				EC022BE86D916A04DDE2DFB0DE5CA7AB /* comp.h */,
+				95FC0B6100490BFEA8BAEDAF491A3D22 /* conf.h */,
+				5B1F01E3ABB6C38E0A56205776E8BE01 /* conf_api.h */,
+				3716923204F45DF52ACEB61C85810D09 /* crypto.h */,
+				B0DB38A26F534B6106FB6066AA7A9F8D /* des.h */,
+				ADEC9CD0E7920AEC91CB26DB40BFBD90 /* des_old.h */,
+				04B365F0F87DB831C672276FB5AEBCAF /* dh.h */,
+				626541E9B80E3F47D272EC2FF0F1235D /* dsa.h */,
+				5762DE93ECDBED9968BCF43CD320EDFE /* dso.h */,
+				75ABA1956A984D0DA04188D2EE8C4703 /* dtls1.h */,
+				93A7EB0C1A6FA159BF7531C6A0F6B394 /* e_os2.h */,
+				C78CDCB69B801121BBAD6C4C67C78F07 /* ebcdic.h */,
+				6AABFA80E9DD70DBEFF01CC45A762B6C /* ec.h */,
+				740E050D262AA3DD174915FD12C3CD65 /* ecdh.h */,
+				47ABBC6178E7CE9B9BD40F494DD90FBB /* ecdsa.h */,
+				527FDBFBF2771BAB6D49C53ED61863D3 /* engine.h */,
+				F3ACEC118BC3AA14660F0005F35D1300 /* err.h */,
+				B6CFED622AD0A761156750599BBD45FC /* evp.h */,
+				AE65D5CEBC81C75A43F1B775BCF1DD80 /* hmac.h */,
+				CABFC407B01BEB70BFBD02C0F2EA53A7 /* idea.h */,
+				4FDE115B780D82AE3216686088D8BA2B /* krb5_asn.h */,
+				708CCAB28979952999C65C7DECA03AD3 /* kssl.h */,
+				38CBFBA7DD2BD836558CB178AF5F455D /* lhash.h */,
+				D7A573A8BF5E1FD4361A58331AD5A2F9 /* md4.h */,
+				70C750F4AA0782C04D7E1DFC2BAFEED6 /* md5.h */,
+				35B15AF3D20C1E370070850803968026 /* mdc2.h */,
+				9FE3640A9C30B52E4A8AA2D432C7F161 /* modes.h */,
+				D537215CA173A2A71A64A0A2270C8456 /* obj_mac.h */,
+				59512708BDE3EAA65F56A9AD524F88B1 /* objects.h */,
+				5121188878F69127D2868EBBD43E62CB /* ocsp.h */,
+				E681D265AB99B6B9D905427E08DC15D5 /* opensslconf.h */,
+				00ECEFEF12804FC17F2648C40F265692 /* opensslv.h */,
+				43E8B94DAAA73B702A57756C31868D39 /* ossl_typ.h */,
+				EAEF59BF717B77964B34ED451A0D19B5 /* pem.h */,
+				41F60A1F500F155951E7A1FE9B352949 /* pem2.h */,
+				0B2E34237298E19D05900FA34C102FED /* pkcs12.h */,
+				3DD8C847965C64159340A83FA8080B4A /* pkcs7.h */,
+				A76211CDB61989D5BFD96CDE560E1A1D /* pqueue.h */,
+				5FC0F0F4F443C63E26E9CBCC01324E33 /* rand.h */,
+				AFDAE95C0A569843E39783525B133857 /* rc2.h */,
+				208FE85ED584F7805DB472B370074EEC /* rc4.h */,
+				8260AFD82FA9BD528E88896DE0EB5DFF /* ripemd.h */,
+				F3BB60AE0C0BCB8E95E067252F1E99CF /* rsa.h */,
+				94FB90D39CB7BE88C76BBE0F4EC6CA27 /* safestack.h */,
+				3FE8925122F2856B10F0C89BA08DFC66 /* seed.h */,
+				C642C913F3DBD68D38807DDCA3E910F2 /* sha.h */,
+				72B6EC1DADE459EEC1EBA0ABFAB14640 /* srp.h */,
+				BEE3DE952E80F3C7D478A5908263D2F4 /* srtp.h */,
+				C495D28E1658820168B7DAA4342B07DA /* ssl.h */,
+				FEF879C815B24F7351A399EAF9A11658 /* ssl2.h */,
+				9B5B03182D3EB472F7C06209A8A05489 /* ssl23.h */,
+				2525CC9842CA05D7ED5BBDFEDE72DD68 /* ssl3.h */,
+				FE33902725AF2AAD49B54D35195906E6 /* stack.h */,
+				10AA48122AC997D232AF16BD151B7AEF /* symhacks.h */,
+				03CFC0663AD868D542C3D92876356BF9 /* tls1.h */,
+				0EB5F06AAA3A8E4E1350D170ACE09F13 /* ts.h */,
+				4B9634CBCF6BE5F637749A845159AEC5 /* txt_db.h */,
+				2541CA2E869E795BA4C056C373F2B3C8 /* ui.h */,
+				C0555A167139CEED4AD854DA7D592A00 /* ui_compat.h */,
+				AE4666CF9BA7720354589D85E8FD0AFC /* whrlpool.h */,
+				D67235938D76104BF8033F4E3689BC0E /* x509.h */,
+				642841D9ED5E950352140C9D88D3A42C /* x509_vfy.h */,
+				F05E82A510F0643D48D1E6CCC07D5314 /* x509v3.h */,
+				5FAA72835AC47148487F71564DB12CBD /* Frameworks */,
+				07352D810EA496BAB80246FF4624F2FF /* Support Files */,
+			);
+			path = "OpenSSL-XM";
 			sourceTree = "<group>";
 		};
 		87FF31707C574B7577FF66CCCF7EF2E0 /* Pods-Gliese_581 */ = {
@@ -233,36 +464,24 @@
 			path = "Target Support Files/Pods-Gliese_581";
 			sourceTree = "<group>";
 		};
-		BF8A5A90CF809B5FE932A384E07B5488 /* Frameworks */ = {
+		B5C23ADC17532FBB004F98742443A809 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6C50E7F97F30C5533F8545BA6DB200AB /* YandexMobileMetrica.framework */,
+				D64A2E81B0DDCC29F09B39CE6C013896 /* FloatingPanel */,
+				6E91D8256708264398F20DA127BB3A6A /* OpenSSL-XM */,
+				4CB0DA1568F87D15B3FB669DEA7FBDF5 /* YandexMobileMetrica */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		C14DA15362602018040833B85552E9D8 /* FloatingPanel */ = {
+		CC6F50F7B7D49E739489225D6864C338 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3D63156485F5B45821DA1F410C10AC64 /* BackdropView.swift */,
-				F279F4B081E7CFB057121B0CDCDE96B2 /* Behavior.swift */,
-				0F2E60A4475942D3665F6A3F8D8CB8EA /* Controller.swift */,
-				D9F695F11E478F754740B1A8AE88FFBA /* Core.swift */,
-				48BFB921B429445C1361189FA86F3B91 /* GrabberView.swift */,
-				A01BC924FB22F1DBA750662957F58353 /* Layout.swift */,
-				24B38D8527214FC36F7F8E83675CEFE7 /* LayoutAnchoring.swift */,
-				484ACEF7C52E0CBD3EA8A3821135DB4D /* LayoutReferences.swift */,
-				710ABBA96160FD3FF2634AE9099DBFE2 /* Logger.swift */,
-				CBFB1F8F64532AE32B5607B58DBEFD16 /* PassthroughView.swift */,
-				697AD943320EB18F0C37BF61E65BD41A /* Position.swift */,
-				8D9075E13D0F8E68A9F277EC386F370A /* State.swift */,
-				9DFBD634EB5888A518EDBCDDC550E2A1 /* SurfaceView.swift */,
-				1119F4C14495E940EEF7CDA9DDCD4A4A /* Transitioning.swift */,
-				CD73AB5ECBE41D5E1A1EAE8454992560 /* UIExtensions.swift */,
-				35D2337778C31FA3529D81BFF491326C /* Support Files */,
+				412862561C4D784E4298075992C808AB /* YandexMobileMetrica.debug.xcconfig */,
+				AA543FB3F69106C74126FDB67D5D96D6 /* YandexMobileMetrica.release.xcconfig */,
 			);
-			name = FloatingPanel;
-			path = FloatingPanel;
+			name = "Support Files";
+			path = "../Target Support Files/YandexMobileMetrica";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -270,61 +489,41 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				E5290D820F8EF80842118F6710789365 /* Pods */,
+				B5C23ADC17532FBB004F98742443A809 /* Pods */,
 				3AB4C908C33AFF04423C5E84886F545F /* Products */,
 				1B7C2214174670A5F3DFB91C4CE0F17D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D23E4F9EA5F56F379C259A464D8C80BA /* Support Files */ = {
+		D64A2E81B0DDCC29F09B39CE6C013896 /* FloatingPanel */ = {
 			isa = PBXGroup;
 			children = (
-				3E9DA7853646F9EBF945B4C8E21AF152 /* YandexMobileMetrica.debug.xcconfig */,
-				85873ABCA60BA5F5ADDFC425EAF51594 /* YandexMobileMetrica.release.xcconfig */,
+				5E6F1F1266A78C87E85AEAF15F6C573F /* BackdropView.swift */,
+				920E1261F2E50DC39EDFA3E3CAB59C12 /* Behavior.swift */,
+				8333E8A7123ECFEB520A0FF26B1BB163 /* Controller.swift */,
+				C09142D18CC5A14166347D469C7C6DF8 /* Core.swift */,
+				DD855DDAEBD5D51D0C4FBC2E594F1860 /* GrabberView.swift */,
+				45281429DB671BD6E39977025846632F /* Layout.swift */,
+				0EB12CF649C698A062967163CD9750E3 /* LayoutAnchoring.swift */,
+				1B5C554FDE63F789DAEB60682A827670 /* LayoutReferences.swift */,
+				2FDAA04EAB85BB35C52F8FBF8D4000C9 /* Logger.swift */,
+				BE3CCB5E6D598A8C1C3026BF82681BB0 /* PassthroughView.swift */,
+				221BD1DE3F44D7C77ADA98461580DA4C /* Position.swift */,
+				8E67422331F8E4478E43797B3F635BAF /* State.swift */,
+				382C48FEA5A87FBCEB555C2BF8B8D6AA /* SurfaceView.swift */,
+				BC3AECFBA7BA4303195C777139209AB1 /* Transitioning.swift */,
+				EBDC7BA5BD2E845F37829E68DACABEFB /* UIExtensions.swift */,
+				2B61B18CC42EFA1B8BAC0F8A5E5E1507 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/YandexMobileMetrica";
+			path = FloatingPanel;
 			sourceTree = "<group>";
 		};
-		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+		E4B524E4B179C3CD1D602AD8DF38CBBF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
-				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+				121D70660FB20237584860162AEAC5BD /* YandexMobileMetrica.framework */,
 			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		E35A29DD344028C70A7A94C775F59C2B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				D5510F1AE4AAE41A057A16D95C3BC975 /* YandexMobileMetrica.h */,
-				01449508C495AF22472ED6CD3CEC7A40 /* YandexMobileMetrica-umbrella.h */,
-				4EBC3DC0636C6D043643B03CDD193861 /* YMMCompletionBlocks.h */,
-				80CA573C928CE9E4FD4763935EF71F6B /* YMMECommerce.h */,
-				53DF777B4538A067B67CB87890D495AB /* YMMError.h */,
-				2D6C13283ADA5445B9FA5E7ACFCFE131 /* YMMErrorRepresentable.h */,
-				567E1259906A93B3818262B4F642523A /* YMMProfileAttribute.h */,
-				7DCC03CDCE2B91743956C29ECB6FB871 /* YMMReporterConfiguration.h */,
-				19034B6D3C606CF7F04F20CD262C6BC3 /* YMMRevenueInfo.h */,
-				29F815B3F6BCBC417A2549AEE8E48B2A /* YMMUserProfile.h */,
-				E42BDE9EB1E1E7F20F2F01400361A800 /* YMMVersion.h */,
-				92E5A7A04697E3EF6B5341FF378B6335 /* YMMYandexMetrica.h */,
-				4E72B04AC139BFD3B6124128F1340AC5 /* YMMYandexMetricaConfiguration.h */,
-				B5A413CEABF5C0465AEFDC5475D6863D /* YMMYandexMetricaPreloadInfo.h */,
-				F9FD95DC227F37511DB3159AC45316D2 /* YMMYandexMetricaReporting.h */,
-				BF8A5A90CF809B5FE932A384E07B5488 /* Frameworks */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		E5290D820F8EF80842118F6710789365 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C14DA15362602018040833B85552E9D8 /* FloatingPanel */,
-				1F8650FC899DCC5A48D2E3CF4A45A4B5 /* YandexMobileMetrica */,
-			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,11 +537,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EEF5BF52401A7CFB7AA5C2E4314652F /* Headers */ = {
+		77BC8C96A23C5C0255FC0C5EB8D2634F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA366DEC1BF3E38B2A3F77DAAA9A8840 /* Pods-Gliese_581-umbrella.h in Headers */,
+				EC1B64E475DF31878501747FEA512EA0 /* Pods-Gliese_581-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,18 +550,19 @@
 /* Begin PBXNativeTarget section */
 		023956BD3CE3F62DFD0EF9A3B23DC206 /* Pods-Gliese_581 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B52489AF11A7B21AEC8F628C542FBF71 /* Build configuration list for PBXNativeTarget "Pods-Gliese_581" */;
+			buildConfigurationList = FC6A408B8AE4E7C396D0D902F0E05DA2 /* Build configuration list for PBXNativeTarget "Pods-Gliese_581" */;
 			buildPhases = (
-				5EEF5BF52401A7CFB7AA5C2E4314652F /* Headers */,
-				92C89E1ADCD9E6E2BF7DEC94EE7E05C6 /* Sources */,
-				C13E5EAEB36C885F12CED940B5C78C98 /* Frameworks */,
-				38ABD19CD8E50C649C31DFBF5844A8E5 /* Resources */,
+				77BC8C96A23C5C0255FC0C5EB8D2634F /* Headers */,
+				B9686E6971055CA1659492B03BA59E88 /* Sources */,
+				4161E840C6585013BAB708B6E4CEE6A1 /* Frameworks */,
+				4EAB4DC3D0A65F7852529F6B4ADD0CCE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EE2C4BE108BE965C2ED338A447F783BC /* PBXTargetDependency */,
-				87C6EFFCAF9E9612D946EE35DC23227A /* PBXTargetDependency */,
+				5B4B3DA947B0B2A6AD4DA5199736D755 /* PBXTargetDependency */,
+				3E818CD82E651EC3832F73654F27DB9F /* PBXTargetDependency */,
+				303DBB64B92DD2FBE63325815BD01C44 /* PBXTargetDependency */,
 			);
 			name = "Pods-Gliese_581";
 			productName = "Pods-Gliese_581";
@@ -394,7 +594,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1220;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -410,6 +610,7 @@
 			projectRoot = "";
 			targets = (
 				4874E7E655CEB4C01E4572AD903AEA21 /* FloatingPanel */,
+				7B2521AF7D893B91AE5455F116CF6182 /* OpenSSL-XM */,
 				023956BD3CE3F62DFD0EF9A3B23DC206 /* Pods-Gliese_581 */,
 				899318C1CEDE586664EC232A68069570 /* YandexMobileMetrica */,
 			);
@@ -417,7 +618,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		38ABD19CD8E50C649C31DFBF5844A8E5 /* Resources */ = {
+		4EAB4DC3D0A65F7852529F6B4ADD0CCE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -457,112 +658,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92C89E1ADCD9E6E2BF7DEC94EE7E05C6 /* Sources */ = {
+		B9686E6971055CA1659492B03BA59E88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03243D151D31E9DF0BB90FEE6633D683 /* Pods-Gliese_581-dummy.m in Sources */,
+				4128C75956120955102AFDAEA74D5BA4 /* Pods-Gliese_581-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		87C6EFFCAF9E9612D946EE35DC23227A /* PBXTargetDependency */ = {
+		303DBB64B92DD2FBE63325815BD01C44 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = YandexMobileMetrica;
 			target = 899318C1CEDE586664EC232A68069570 /* YandexMobileMetrica */;
-			targetProxy = AA89D1E71DF54BF23B7772C17C2D0A71 /* PBXContainerItemProxy */;
+			targetProxy = EAF1A481C7E205D4363238C107396753 /* PBXContainerItemProxy */;
 		};
-		EE2C4BE108BE965C2ED338A447F783BC /* PBXTargetDependency */ = {
+		3E818CD82E651EC3832F73654F27DB9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "OpenSSL-XM";
+			target = 7B2521AF7D893B91AE5455F116CF6182 /* OpenSSL-XM */;
+			targetProxy = C1F5E15824CDE3B3A8F1D75145E9B4D0 /* PBXContainerItemProxy */;
+		};
+		5B4B3DA947B0B2A6AD4DA5199736D755 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FloatingPanel;
 			target = 4874E7E655CEB4C01E4572AD903AEA21 /* FloatingPanel */;
-			targetProxy = 84659BEE8A26561CB937A227E948D9B5 /* PBXContainerItemProxy */;
+			targetProxy = 49B59F166A12EA0B51530ED7A04F57C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		20BF81A272A6E4F014335F588BB04CD6 /* Debug */ = {
+		374FD501F7A612828016553AD7E6AFE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 288C56FAE54E8ED312FBE2F94D804469 /* FloatingPanel.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FloatingPanel/FloatingPanel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FloatingPanel/FloatingPanel-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/FloatingPanel/FloatingPanel.modulemap";
-				PRODUCT_MODULE_NAME = FloatingPanel;
-				PRODUCT_NAME = FloatingPanel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4E0083BB7DC8D46FFF4EC008A65B88E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACE9DAF6A6C9336C2B924155F30C2B63 /* FloatingPanel.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FloatingPanel/FloatingPanel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FloatingPanel/FloatingPanel-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/FloatingPanel/FloatingPanel.modulemap";
-				PRODUCT_MODULE_NAME = FloatingPanel;
-				PRODUCT_NAME = FloatingPanel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		554B956341C7A8D8592BB94AE7401F01 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E9DA7853646F9EBF945B4C8E21AF152 /* YandexMobileMetrica.debug.xcconfig */;
+			baseConfigurationReference = 412862561C4D784E4298075992C808AB /* YandexMobileMetrica.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -572,46 +706,7 @@
 			};
 			name = Debug;
 		};
-		62304A881E2E8663B538159C5B341DFF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9C19AB35578C1F953E790CCD21906BA /* Pods-Gliese_581.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Gliese_581/Pods-Gliese_581-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Gliese_581/Pods-Gliese_581.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6EDA664A19CCA1E19EFD5C41B51D5A44 /* Debug */ = {
+		593F10BFFA94DAC7D6E17FB8A7F32D72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -638,6 +733,139 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		746F76CF6FEE55949231ABC3372138DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6D1B10388D79087F36F06E483EF5ABC /* OpenSSL-XM.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86518A0CEE0F43AA111017F2DAA066F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EF0099603EF1C1613FF3898846F3268 /* Pods-Gliese_581.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Gliese_581/Pods-Gliese_581-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gliese_581/Pods-Gliese_581.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		97F7BE59B322E7F4783157967B042EDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAD8AAC3153F191778AF2CD6665F86C5 /* OpenSSL-XM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0374B8CF9A7D6A45F6D116D698D1C19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -676,30 +904,12 @@
 			};
 			name = Debug;
 		};
-		9E5D3FA065FA028A3EB510CC6EE7890F /* Release */ = {
+		ABA6DC1FDE2310313EFC4844B19B0CF4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85873ABCA60BA5F5ADDFC425EAF51594 /* YandexMobileMetrica.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		A8F0C1DD56D6433C25DA2D28D852E5BE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EF0099603EF1C1613FF3898846F3268 /* Pods-Gliese_581.debug.xcconfig */;
+			baseConfigurationReference = B9C19AB35578C1F953E790CCD21906BA /* Pods-Gliese_581.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -726,69 +936,97 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ADA5EC3C796FF158DCE8BA6A9E5D2D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA543FB3F69106C74126FDB67D5D96D6 /* YandexMobileMetrica.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD930234F9947514E16C28226C5B562E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37FBBF643B83E010C4711EA1BE9DE544 /* FloatingPanel.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FloatingPanel/FloatingPanel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FloatingPanel/FloatingPanel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FloatingPanel/FloatingPanel.modulemap";
+				PRODUCT_MODULE_NAME = FloatingPanel;
+				PRODUCT_NAME = FloatingPanel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		E747461F2583A8C997885F8223A8EDAC /* Release */ = {
+		CE578F332095A23B7B56EC864C55C897 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9860D9C0043B90E5D49BB414E9F7D469 /* FloatingPanel.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FloatingPanel/FloatingPanel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FloatingPanel/FloatingPanel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
+				MODULEMAP_FILE = "Target Support Files/FloatingPanel/FloatingPanel.modulemap";
+				PRODUCT_MODULE_NAME = FloatingPanel;
+				PRODUCT_NAME = FloatingPanel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -798,17 +1036,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6EDA664A19CCA1E19EFD5C41B51D5A44 /* Debug */,
-				E747461F2583A8C997885F8223A8EDAC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B52489AF11A7B21AEC8F628C542FBF71 /* Build configuration list for PBXNativeTarget "Pods-Gliese_581" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A8F0C1DD56D6433C25DA2D28D852E5BE /* Debug */,
-				62304A881E2E8663B538159C5B341DFF /* Release */,
+				A0374B8CF9A7D6A45F6D116D698D1C19 /* Debug */,
+				593F10BFFA94DAC7D6E17FB8A7F32D72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -816,8 +1045,17 @@
 		D16F9348D825E651B6C98B708FA3920B /* Build configuration list for PBXNativeTarget "FloatingPanel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				20BF81A272A6E4F014335F588BB04CD6 /* Debug */,
-				4E0083BB7DC8D46FFF4EC008A65B88E6 /* Release */,
+				CD930234F9947514E16C28226C5B562E /* Debug */,
+				CE578F332095A23B7B56EC864C55C897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9113CBAA4DD6AC3A5FCC1BA908F135A /* Build configuration list for PBXAggregateTarget "OpenSSL-XM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97F7BE59B322E7F4783157967B042EDD /* Debug */,
+				746F76CF6FEE55949231ABC3372138DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -825,8 +1063,17 @@
 		F74DCE6258F39EE8F1BB65951F54078C /* Build configuration list for PBXAggregateTarget "YandexMobileMetrica" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				554B956341C7A8D8592BB94AE7401F01 /* Debug */,
-				9E5D3FA065FA028A3EB510CC6EE7890F /* Release */,
+				374FD501F7A612828016553AD7E6AFE2 /* Debug */,
+				ADA5EC3C796FF158DCE8BA6A9E5D2D9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC6A408B8AE4E7C396D0D902F0E05DA2 /* Build configuration list for PBXNativeTarget "Pods-Gliese_581" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86518A0CEE0F43AA111017F2DAA066F9 /* Debug */,
+				ABA6DC1FDE2310313EFC4844B19B0CF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

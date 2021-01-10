@@ -42,6 +42,20 @@ var days8: ([Int], [Int], [Int]) = ((1...currentMounth.1).randomElements(8), (1.
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        IAPManager.shared.setupPurchases { (success) in
+            if success {
+                print(
+                    """
+                    ###########
+                    ###########
+                    ###########
+                    CAN MAKE PURCHAISES
+                    """)
+                IAPManager.shared.getProducts()
+            }
+        }
+        
         let configuration = YMMYandexMetricaConfiguration.init(apiKey: "710ec4a5-8503-4371-a935-2825ec321888")
         YMMYandexMetrica.activate(with: configuration!)
         
@@ -51,11 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ###########
             ###########
             \(UIDevice.modelName)
-            ###########
-            ###########
-            ###########
             """)
-        
         if UserDefaults.standard.bool(forKey: "Registered") {
             zodiacSign = getZodiacSign(UserDefaults.standard.value(forKey: "DateOfBirth") as! Date)
             print(
@@ -64,11 +74,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 ###########
                 ###########
                 \(zodiacSign)
-                ###########
-                ###########
-                ###########
                 """)
         }
+        print("""
+            \(UserDefaults.standard.bool(forKey: "setProVersion"))
+            \(UserDefaults.standard.bool(forKey: "setProVersion"))
+            \(UserDefaults.standard.bool(forKey: "setProVersion"))
+            \(UserDefaults.standard.bool(forKey: "setProVersion"))
+            \(UserDefaults.standard.bool(forKey: "setProVersion"))
+            \(UserDefaults.standard.bool(forKey: "setProVersion"))
+            \(UserDefaults.standard.bool(forKey: "setProVersion"))
+            \(UserDefaults.standard.bool(forKey: "setProVersion"))
+
+            """)
         let monthInt = Calendar.current.component(.month, from: Date())
         for i in Months.allCases {
             if i.rawValue.0 == monthInt { currentMounth = (i.rawValue.1, i.rawValue.2) }
@@ -81,6 +99,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         careerAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
         familyAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
         healthAngle = CGFloat.random(in: (-.pi / 2)..<(3 * .pi / 2))
+        
+        let reciptValidator = ReceiptValidator()
+        let result = reciptValidator.validateReceipt()
+        
+        switch result {
+        case let .success(reciept):
+            guard let purchase = reciept.inAppPurchaseReceipts?.filter({$0.productIdentifier == IAPProducts.autoRenew.rawValue}).first else { return true }
+            if purchase.subscriptionExpirationDate?.compare(Date()) == .some(.orderedDescending) {
+                AnalyticsService.reportEvent(with: "Purchase", parameters: ["data" : purchase.purchaseDate ?? "0000000"])
+                UserDefaults.standard.setValue(true, forKey: "setProVersion")
+            } else {
+                UserDefaults.standard.setValue(false, forKey: "setProVersion")
+            }
+        case let .error(error):
+            print(error.localizedDescription)
+        }
         return true
     }
 

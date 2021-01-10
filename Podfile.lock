@@ -1,5 +1,6 @@
 PODS:
   - FloatingPanel (2.1.0)
+  - OpenSSL-XM (1.0.210.1)
   - YandexMobileMetrica (3.14.0):
     - YandexMobileMetrica/Static (= 3.14.0)
   - YandexMobileMetrica/Static (3.14.0):
@@ -11,17 +12,20 @@ PODS:
 
 DEPENDENCIES:
   - FloatingPanel
+  - OpenSSL-XM
   - YandexMobileMetrica
 
 SPEC REPOS:
   trunk:
     - FloatingPanel
+    - OpenSSL-XM
     - YandexMobileMetrica
 
 SPEC CHECKSUMS:
   FloatingPanel: 1af47b69e26df98b8728307254a9a0f4eb3cd645
+  OpenSSL-XM: f2d7697be2a4b01a2c62239fd577e4137cab4f3a
   YandexMobileMetrica: a2dd4fd2f01ae7ae6850d786c443cb41fbbbea78
 
-PODFILE CHECKSUM: 64896b8fa7c50265a1d3e1d51ff2b5555624135c
+PODFILE CHECKSUM: 13b448a897e5bcfb7d01f6beeab7abddf50a90e5
 
-COCOAPODS: 1.10.0.beta.2
+COCOAPODS: 1.10.1

@@ -15,8 +15,8 @@ extension UIButton {
 //        backgroundColor = .purple
         view.addSubview(self)
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.widthAnchor.constraint(equalToConstant: 13).isActive = true
-        self.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        self.widthAnchor.constraint(equalToConstant: 44).isActive = true
+        self.heightAnchor.constraint(equalToConstant: 44).isActive = true
         self.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         self.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
     }

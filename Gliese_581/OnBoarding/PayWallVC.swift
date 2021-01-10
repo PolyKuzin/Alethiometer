@@ -6,28 +6,27 @@
 //
 
 import UIKit
+import StoreKit
 
 class PayWallVC : BaseVC {
     
-    
-    let label = UILabel()
-
-    var supplyLabel = UILabel()
-    
-    var nextButton = UIButton()
-    
+    let feature1      = UIView()
+    let feature2      = UIView()
+    let feature3      = UIView()
+    let feature4      = UIView()
+    let feature5      = UIView()
+    let label         = UILabel()
+    var supplyLabel   = UILabel()
+    var nextButton    = UIButton()
+    var notNowButton  = UIButton()
     var restoreButton = UIButton()
     
-    var notNowButton = UIButton()
+    let iapManager = IAPManager.shared
+    let notificationCenteer = NotificationCenter.default
     
-    let feature1 = UIView()
-    let feature2 = UIView()
-    let feature3 = UIView()
-    let feature4 = UIView()
-    let feature5 = UIView()
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        notificationCenteer.addObserver(self, selector: #selector(goToHomeVC), name: NSNotification.Name(IAPProducts.autoRenew.rawValue), object: nil)
         label.setTitleLabel(on: view)
         label.text = "Became PRO-horoscoper"
         nextButton.setNextButton(on: view)
@@ -65,7 +64,7 @@ class PayWallVC : BaseVC {
         label.numberOfLines = 2
         supplyLabel.textAlignment = .center
         supplyLabel.textColor = UIColor(red: 0.613, green: 0.613, blue: 0.613, alpha: 1)
-        supplyLabel.text = "Try 7 days free, then $19/year. Cancel anytime."
+        supplyLabel.text = "Try 7 days free, then \(priceStringFor(IAPManager.shared.products[0])) Cancel anytime."
         supplyLabel.numberOfLines = 2
         
         self.view.addSubview(restoreButton)
@@ -80,6 +79,17 @@ class PayWallVC : BaseVC {
         
         UserDefaults.standard.setValue(true, forKey: "Registered")
     }
+    deinit {
+        notificationCenteer.removeObserver(self)
+    }
+    
+    private func priceStringFor(_ product: SKProduct) -> String {
+        let numberFormattor = NumberFormatter()
+        numberFormattor.numberStyle = .currency
+        numberFormattor.locale = product.priceLocale
+        
+        return numberFormattor.string(from: product.price)!
+    }
     
     override func viewDidDisappear(_ animated: Bool)    {
         super.viewWillDisappear(animated)
@@ -89,12 +99,13 @@ class PayWallVC : BaseVC {
     
     @objc
     private func togglePayment() {
-        
+        let identifire = iapManager.products.filter({$0.productIdentifier == IAPProducts.autoRenew.rawValue}).first?.productIdentifier
+        iapManager.purchase(productWith: identifire!)
     }
     
     @objc
     private func restorePurchaice() {
-        
+        iapManager.restoreCompletedTransactions()
     }
     
     @objc

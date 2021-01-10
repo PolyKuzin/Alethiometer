@@ -5,9 +5,10 @@ EXCLUDED_ARCHS[sdk=iphonesimulator*] = $(EXCLUDED_ARCHS__EFFECTIVE_PLATFORM_SUFF
 EXCLUDED_ARCHS__EFFECTIVE_PLATFORM_SUFFIX_simulator__NATIVE_ARCH_64_BIT_x86_64__XCODE_1200 = arm64 arm64e armv7 armv7s armv6 armv8
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FloatingPanel" "${PODS_ROOT}/YandexMobileMetrica/ios/static"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FloatingPanel/FloatingPanel.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FloatingPanel/FloatingPanel.framework/Headers" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/OpenSSL-XM"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"sqlite3" -l"z" -framework "AdSupport" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreTelephony" -framework "FloatingPanel" -framework "Foundation" -framework "SystemConfiguration" -framework "UIKit" -framework "YandexMobileMetrica" -framework "YandexMobileMetricaCrashes"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/OpenSSL-XM/lib"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"crypto" -l"sqlite3" -l"ssl" -l"z" -framework "AdSupport" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreTelephony" -framework "FloatingPanel" -framework "Foundation" -framework "SystemConfiguration" -framework "UIKit" -framework "YandexMobileMetrica" -framework "YandexMobileMetricaCrashes"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

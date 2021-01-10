@@ -25,9 +25,13 @@
                     <color key="backgroundColor" name="Background"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMT-rP-9LH">
-                    <rect key="frame" x="20" y="44" width="20" height="22"/>
+                    <rect key="frame" x="20" y="44" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="HBL-eF-WrI"/>
+                        <constraint firstAttribute="height" constant="44" id="mF8-cP-wy0"/>
+                    </constraints>
                     <color key="tintColor" name="Main"/>
-                    <state key="normal" image="arrow.uturn.backward" catalog="system"/>
+                    <state key="normal" image="BackButton"/>
                     <connections>
                         <action selector="handleClose:" destination="-1" eventType="touchUpInside" id="GKn-MC-Y23"/>
                     </connections>
@@ -47,7 +51,7 @@
         </view>
     </objects>
     <resources>
-        <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
+        <image name="BackButton" width="13" height="22"/>
         <namedColor name="Background">
             <color red="0.21176470588235294" green="0.20784313725490197" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
