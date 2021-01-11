@@ -14,6 +14,7 @@ struct Fonts {
     static let displayMedium22            = UIFont(name: "SFProDisplay-Medium",    size: 22)
     static let displaySemibold18        = UIFont(name: "SFProDisplay-Semibold", size: 18)
     static let displaySemibold22        = UIFont(name: "SFProDisplay-Semibold", size: 22)
+    static let displaySemibold20        = UIFont(name: "SFProDisplay-Semibold", size: 20)
     static let displaySemibold28        = UIFont(name: "SFProDisplay-Semibold", size: 28)
     static let textRegular17            = UIFont(name: "SFProText-Regular",     size: 17)
     static let textRegular14            = UIFont(name: "SFProText-Regular",     size: 14)
@@ -58,6 +59,10 @@ extension UIFont {
         return UIFont(name: "SFProDisplay-Semibold", size: 18) ?? UIFont(name: "Helvetica Neue", size: 18)!
     }
     
+    public class var displaySemibold20: UIFont {
+        return UIFont(name: "SFProDisplay-Semibold", size: 20) ?? UIFont(name: "Helvetica Neue", size: 20)!
+    }
+    
     public class var displaySemibold22: UIFont {
         return UIFont(name: "SFProDisplay-Semibold", size: 22) ?? UIFont(name: "Helvetica Neue", size: 22)!
     }
@@ -91,6 +96,10 @@ extension UIFont {
     
     public class var textSemibold17: UIFont {
         return UIFont(name: "SFProText-Semibold",    size: 17) ?? UIFont(name: "Helvetica Neue", size: 17)!
+    }
+    
+    public class var textSemibold20: UIFont {
+        return UIFont(name: "SFProText-Semibold",    size: 20) ?? UIFont(name: "Helvetica Neue", size: 20)!
     }
     
     //MARK: - TEXT Bold

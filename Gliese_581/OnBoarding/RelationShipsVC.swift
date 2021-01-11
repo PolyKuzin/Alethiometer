@@ -24,7 +24,7 @@ class RelationShipsVC: BaseVC {
         nextButton.isEnabled = false
         
         label.setTitleLabel(on: view)
-        label.text = "Relationships"
+        label.text = "Your relationships"
         nextButton.setNextButton(on: view)
         nextButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
 
@@ -61,7 +61,7 @@ class RelationShipsVC: BaseVC {
         self.view.addSubview(skipButton)
         skipButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
             skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
             skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])

@@ -15,6 +15,7 @@ class CityOfBirsthVC: BaseVC, UITextFieldDelegate {
     var cityTextField = UITextField()
     var nextFFrame = CGRect()
     var skipButton = UIButton()
+    var explanationLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,7 @@ class CityOfBirsthVC: BaseVC, UITextFieldDelegate {
         self.view.addSubview(skipButton)
         skipButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
             skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
             skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
@@ -49,6 +50,17 @@ class CityOfBirsthVC: BaseVC, UITextFieldDelegate {
         skipButton.setTitle("Skip".localized(), for: .normal)
         skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
         cityTextField.addTarget(self, action: #selector(actionTextFieldIsEditingChanged), for: .editingChanged)
+        
+        explanationLabel.setupexplanationLabel(on: self.view)
+        NSLayoutConstraint.activate([
+            explanationLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            explanationLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            explanationLabel.topAnchor.constraint(equalTo: cityTextField.bottomAnchor, constant: 10)
+        ])
+        explanationLabel.text = "We need to know your place of birth to determine the correct time zone".localized()
+        cityTextField.attributedPlaceholder = NSAttributedString(string: "City",
+                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1),
+                                                  NSAttributedString.Key.font: UIFont(name: "SFProDisplay-Medium", size: 18)!])
     }
     
     @objc

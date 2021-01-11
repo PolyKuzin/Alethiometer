@@ -15,7 +15,8 @@ class NameVC: BaseVC {
     var nextFFrame = CGRect()
     var backButton = UIButton()
     var skipButton = UIButton()
-
+    var explanationLabel = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.alpha = 0.3
@@ -42,13 +43,23 @@ class NameVC: BaseVC {
         self.view.addSubview(skipButton)
         skipButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
             skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
             skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
         skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
         skipButton.setTitle("Skip".localized(), for: .normal)
         skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        explanationLabel.setupexplanationLabel(on: self.view)
+        NSLayoutConstraint.activate([
+            explanationLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            explanationLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            explanationLabel.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 10)
+        ])
+        explanationLabel.text = "How can we call you?".localized()
+        nameTextField.attributedPlaceholder = NSAttributedString(string: "Name",
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1),
+                                                                              NSAttributedString.Key.font: UIFont(name: "SFProDisplay-Medium", size: 18)!])
     }
     
     @objc

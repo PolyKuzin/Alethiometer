@@ -12,10 +12,9 @@ extension UIButton {
     func setMaleButton(on view: UIView) {
         frame = CGRect(x: 0, y: 0, width: 156, height: 156)
         backgroundColor = .white
-        backgroundColor = UIColor.darkBackground
+        backgroundColor = UIColor(red: 0.239, green: 0.235, blue: 0.267, alpha: 1)
         layer.cornerRadius = 20
         layer.masksToBounds = true
-        
         
         view.addSubview(self)
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +28,7 @@ extension UIButton {
     func setFemaleButton(on view: UIView) {
         frame = CGRect(x: 0, y: 0, width: 156, height: 156)
         backgroundColor = .white
-        backgroundColor = UIColor.darkBackground
+        backgroundColor = UIColor(red: 0.239, green: 0.235, blue: 0.267, alpha: 1)
         layer.cornerRadius = 20
         layer.masksToBounds = true
         

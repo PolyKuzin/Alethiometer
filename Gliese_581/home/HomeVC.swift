@@ -106,10 +106,10 @@ class HomeVC: BaseVC {
     let monthItem    = Item(icon: UIImage(), title: "Month",    isSelected: false)
 
     func setSegmentControl() {
-        segmentControl.insertSegment(todayItem, index: 0)
-        segmentControl.insertSegment(tommorowItem,   index: 1)
+        segmentControl.insertSegment(todayItem,    index: 0)
+        segmentControl.insertSegment(tommorowItem, index: 1)
         segmentControl.insertSegment(weekItem,     index: 2)
-        segmentControl.insertSegment(monthItem,     index: 3)
+        segmentControl.insertSegment(monthItem,    index: 3)
         segmentControl.setSelected(at: 0)
         segmentControl.onSegmentSelect = { [weak self] selectedIndex in
             guard let self = self else { return }

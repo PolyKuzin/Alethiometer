@@ -236,7 +236,7 @@ var havePushed = false
         super.viewDidLoad()
         label.numberOfLines = 2
         label.setTitleLabel(on: view)
-        label.text = "Point phone's camera at your palm".localized()
+        label.text = "Take photo of your hand palm".localized()
 
         setupCaptureSession()
         setupDevice()
@@ -277,7 +277,7 @@ var havePushed = false
         self.view.addSubview(skipButton)
         skipButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
             skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
             skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
@@ -297,11 +297,11 @@ var havePushed = false
     @objc
     func handleShoot() {
         self.captureSession.stopRunning()
-        showUniversalLoadingView(true, loadingText: "Чекаем Ладоху")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        showUniversalLoadingView(true, loadingText: "Checking the palm".localized())
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             if self.lastViewIsHand {
                 showUniversalLoadingView(false)
-                showUniversalLoadingView(true, loadingText: "Ладоха супер, теперь звэзды...")
+                showUniversalLoadingView(true, loadingText: "Analyzing parameters of the palm lines")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     let vc = PayWallVC()
                     guard let navigationController = self.navigationController else { return }
@@ -314,7 +314,7 @@ var havePushed = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     showUniversalLoadingView(false)
                     self.captureSession.startRunning()
-                    self.label.text = "Не смогли узнать ладошку - попробуйте еще раз"
+                    self.label.text = "Couldn't recognize the palm - try again"
                     AnalyticsService.reportEvent(with: "Wrong Palm Regognition")
                 }
             }
@@ -414,13 +414,15 @@ func makeLoadingView(withFrame frame: CGRect, loadingText text: String?) -> UIVi
 
     loadingView.addSubview(activityIndicator)
     if !text!.isEmpty {
-        let lbl = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+        let lbl = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 40, height: 300))
         let cpoint = CGPoint(x: activityIndicator.frame.origin.x + activityIndicator.frame.size.width / 2, y: activityIndicator.frame.origin.y + 80)
         lbl.center = cpoint
         lbl.textColor = UIColor.white
         lbl.textAlignment = .center
         lbl.text = text
         lbl.tag = 1234
+        lbl.numberOfLines = 0
+        lbl.lineBreakMode = .byWordWrapping
         loadingView.addSubview(lbl)
     }
     return loadingView

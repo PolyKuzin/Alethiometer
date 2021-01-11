@@ -65,6 +65,7 @@
 		994D1FD025977324002F8987 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D1FCE25977324002F8987 /* CalendarVC.swift */; };
 		994D1FD125977324002F8987 /* CalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994D1FCF25977324002F8987 /* CalendarVC.xib */; };
 		994D1FD425977E1C002F8987 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D1FD325977E1C002F8987 /* SectionHeader.swift */; };
+		9958E73625ACDA9A000E7770 /* ExplanationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958E73525ACDA9A000E7770 /* ExplanationLabel.swift */; };
 		9974DF2E25A204060036C971 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9974DF2D25A204060036C971 /* GoogleService-Info.plist */; };
 		9974DF3125A204830036C971 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9974DF3025A204830036C971 /* AnalyticsService.swift */; };
 		997EDB1825895B19009E4122 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB1625895B19009E4122 /* HomeVC.swift */; };
@@ -164,6 +165,7 @@
 		994D1FCE25977324002F8987 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		994D1FCF25977324002F8987 /* CalendarVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarVC.xib; sourceTree = "<group>"; };
 		994D1FD325977E1C002F8987 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		9958E73525ACDA9A000E7770 /* ExplanationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationLabel.swift; sourceTree = "<group>"; };
 		9974DF2D25A204060036C971 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9974DF3025A204830036C971 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		997EDB1625895B19009E4122 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 			children = (
 				990CA520256AE4AB004A8105 /* TitleLabel.swift */,
 				9923FF9F25802640004F1F02 /* GenderLabel.swift */,
+				9958E73525ACDA9A000E7770 /* ExplanationLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 				997EDB1F25895D0F009E4122 /* InstanceHoroscopeCell.swift in Sources */,
 				990CA500256AC42C004A8105 /* BaseNC.swift in Sources */,
 				990CA4E2256AC236004A8105 /* SceneDelegate.swift in Sources */,
+				9958E73625ACDA9A000E7770 /* ExplanationLabel.swift in Sources */,
 				993C879125925639004A4305 /* CalendarCell.swift in Sources */,
 				997EDB2B25896168009E4122 /* CircleView.swift in Sources */,
 			);

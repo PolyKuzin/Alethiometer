@@ -15,7 +15,8 @@ extension UIDatePicker {
         NSLayoutConstraint.activate([
             leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            topAnchor.constraint(equalTo: view.topAnchor, constant: 125),
+            centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }

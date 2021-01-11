@@ -9,7 +9,8 @@ import UIKit
 
 class TimeOfBirsthVC: BaseVC {
     
-    let label = UILabel()
+    var label = UILabel()
+    var explanationLabel = UILabel()
     var nextButton = UIButton()
     var backButton = UIButton()
     var datePicker = UIDatePicker() {
@@ -49,6 +50,14 @@ class TimeOfBirsthVC: BaseVC {
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         datePicker.addTarget(self, action: #selector(datehandler(sender:)), for: UIControl.Event.valueChanged)
         
+        explanationLabel.setupexplanationLabel(on: self.view)
+        NSLayoutConstraint.activate([
+            explanationLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            explanationLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            explanationLabel.bottomAnchor.constraint(equalTo: datePicker.topAnchor, constant: -5)
+        ])
+        
+        explanationLabel.text = "We need to know your time of birth in order to make your natal chart correctly".localized()
         setupClearButton()
         backButton.setBackButton(on: self.view)
         backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)

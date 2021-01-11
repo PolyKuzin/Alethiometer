@@ -11,9 +11,9 @@ extension UILabel {
     
     func setTitleLabel(on view: UIView) {
         textColor = UIColor.main
-        font = UIFont(name: "SFProDisplay-Semibold", size: 24)
+        font = UIFont(name: "SFProDisplay-Bold", size: 32)
         textAlignment = .center
-        
+        numberOfLines = 0
         view.addSubview(self)
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

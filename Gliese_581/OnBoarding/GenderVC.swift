@@ -69,7 +69,7 @@ class GenderVC: BaseVC {
         self.view.addSubview(skipButton)
         skipButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
             skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
             skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
@@ -87,6 +87,7 @@ class GenderVC: BaseVC {
     private func setChoiseMale() {
         maleButton.layer.borderWidth = 4
         maleButton.layer.borderColor = UIColor(red: 1, green: 0.48, blue: 0, alpha: 1).cgColor
+        clearButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
         femaleButton.layer.borderWidth = 0
         clearButton.layer.borderWidth = 0
         nextButton.alpha = 1
@@ -97,6 +98,7 @@ class GenderVC: BaseVC {
     private func setChoiseFemale() {
         femaleButton.layer.borderWidth = 4
         femaleButton.layer.borderColor = UIColor(red: 0, green: 0.914, blue: 0.906, alpha: 1).cgColor
+        clearButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
         maleButton.layer.borderWidth = 0
         clearButton.layer.borderWidth = 0
         nextButton.alpha = 1
@@ -106,7 +108,8 @@ class GenderVC: BaseVC {
     @objc
     private func setChoiseLQBT() {
         clearButton.layer.borderWidth = 4
-        clearButton.layer.borderColor = UIColor(red: 0, green: 0.914, blue: 0.906, alpha: 1).cgColor
+        clearButton.layer.borderColor = UIColor(red: 0.829, green: 0.453, blue: 0.589, alpha: 1).cgColor
+        clearButton.setTitleColor(UIColor(red: 0.829, green: 0.453, blue: 0.589, alpha: 1), for: .normal)
         maleButton.layer.borderWidth = 0
         femaleButton.layer.borderWidth = 0
         nextButton.alpha = 1

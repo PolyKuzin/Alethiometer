@@ -28,10 +28,10 @@ class PayWallVC : BaseVC {
         super.viewDidLoad()
         notificationCenteer.addObserver(self, selector: #selector(goToHomeVC), name: NSNotification.Name(IAPProducts.autoRenew.rawValue), object: nil)
         label.setTitleLabel(on: view)
-        label.text = "Became PRO-horoscoper"
+        label.text = "Become a PRO-Horoscoper"
         nextButton.setNextButton(on: view)
         nextButton.setTitle("Try FREE & Subscribe", for: .normal)
-        
+        nextButton.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 20)
         notNowButton.addTarget(self, action: #selector(goToHomeVC), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(togglePayment), for: .touchUpInside)
         restoreButton.addTarget(self, action: #selector(restorePurchaice), for: .touchUpInside)
@@ -48,7 +48,7 @@ class PayWallVC : BaseVC {
         NSLayoutConstraint.activate([
             notNowButton.heightAnchor.constraint(equalToConstant: 19),
             notNowButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
-            notNowButton.bottomAnchor.constraint(equalTo: self.feature1.topAnchor, constant: -10)
+            notNowButton.bottomAnchor.constraint(equalTo: self.feature1.topAnchor, constant: -15)
         ])
         notNowButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
         notNowButton.setTitle("Not now".localized(), for: .normal)
@@ -64,13 +64,13 @@ class PayWallVC : BaseVC {
         label.numberOfLines = 2
         supplyLabel.textAlignment = .center
         supplyLabel.textColor = UIColor(red: 0.613, green: 0.613, blue: 0.613, alpha: 1)
-        supplyLabel.text = "Try 7 days free, then \(priceStringFor(IAPManager.shared.products[0])) Cancel anytime."
+        supplyLabel.text = "Try 7 days free, then $7,99 Cancel anytime."
         supplyLabel.numberOfLines = 2
-        
+        supplyLabel.font = UIFont(name: "SFProDisplay-Regular", size: 16)
         self.view.addSubview(restoreButton)
         restoreButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            restoreButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            restoreButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             restoreButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
             restoreButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
