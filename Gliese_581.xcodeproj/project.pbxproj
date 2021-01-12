@@ -66,6 +66,9 @@
 		994D1FD125977324002F8987 /* CalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994D1FCF25977324002F8987 /* CalendarVC.xib */; };
 		994D1FD425977E1C002F8987 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D1FD325977E1C002F8987 /* SectionHeader.swift */; };
 		9958E73625ACDA9A000E7770 /* ExplanationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958E73525ACDA9A000E7770 /* ExplanationLabel.swift */; };
+		9958E73A25ADFCE1000E7770 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958E73925ADFCE1000E7770 /* SettingsVC.swift */; };
+		9958E73F25AE1BD9000E7770 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958E73E25AE1BD9000E7770 /* SettingsView.swift */; };
+		9958E74325AE1E4C000E7770 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958E74225AE1E4C000E7770 /* EditProfileVC.swift */; };
 		9974DF2E25A204060036C971 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9974DF2D25A204060036C971 /* GoogleService-Info.plist */; };
 		9974DF3125A204830036C971 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9974DF3025A204830036C971 /* AnalyticsService.swift */; };
 		997EDB1825895B19009E4122 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB1625895B19009E4122 /* HomeVC.swift */; };
@@ -166,6 +169,9 @@
 		994D1FCF25977324002F8987 /* CalendarVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarVC.xib; sourceTree = "<group>"; };
 		994D1FD325977E1C002F8987 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		9958E73525ACDA9A000E7770 /* ExplanationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationLabel.swift; sourceTree = "<group>"; };
+		9958E73925ADFCE1000E7770 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		9958E73E25AE1BD9000E7770 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9958E74225AE1E4C000E7770 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		9974DF2D25A204060036C971 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9974DF3025A204830036C971 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		997EDB1625895B19009E4122 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -280,6 +286,7 @@
 				997EDB2925896159009E4122 /* Utils */,
 				990CA51A256ADB30004A8105 /* Extentions */,
 				990CA519256ADB20004A8105 /* OnBoarding */,
+				9958E73D25AE1B8B000E7770 /* Settings */,
 				997EDB1B25895B29009E4122 /* home */,
 				990CA517256ADB07004A8105 /* Base */,
 				990CA516256AC5F2004A8105 /* Supporting */,
@@ -380,6 +387,16 @@
 				994D1FD325977E1C002F8987 /* SectionHeader.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9958E73D25AE1B8B000E7770 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9958E73925ADFCE1000E7770 /* SettingsVC.swift */,
+				9958E73E25AE1BD9000E7770 /* SettingsView.swift */,
+				9958E74225AE1E4C000E7770 /* EditProfileVC.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		995D9D2E2592232E00651893 /* Labels */ = {
@@ -651,15 +668,18 @@
 				9989337E25A3AE2900CDBC39 /* MobileNet.mlmodel in Sources */,
 				990F14332596757F00AA7603 /* NibWrapper.swift in Sources */,
 				990CA53D256AEB41004A8105 /* DatePicker.swift in Sources */,
+				9958E73A25ADFCE1000E7770 /* SettingsVC.swift in Sources */,
 				993C877E2592266D004A4305 /* FloatinLayout.swift in Sources */,
 				99CBAA2225AB3CA00093FFF1 /* IAPManager.swift in Sources */,
 				993C878C2592284F004A4305 /* MenuController.swift in Sources */,
 				993249922595054300865617 /* SegmentControl.swift in Sources */,
 				9902B844258AA272002041B2 /* MainCollectionViewCell.swift in Sources */,
 				990CA4FA256AC30F004A8105 /* NextButton.swift in Sources */,
+				9958E73F25AE1BD9000E7770 /* SettingsView.swift in Sources */,
 				990CA4FD256AC323004A8105 /* Colors.swift in Sources */,
 				99CBAA1225AA28FC0093FFF1 /* MonthMenuVC.swift in Sources */,
 				9902B83A258A9909002041B2 /* Zodiac.swift in Sources */,
+				9958E74325AE1E4C000E7770 /* EditProfileVC.swift in Sources */,
 				99B83EC325A9EF9500030FF4 /* TitleCell.swift in Sources */,
 				99CBAA0625AA27030093FFF1 /* TomorrowMenuVC.swift in Sources */,
 				994D1FD025977324002F8987 /* CalendarVC.swift in Sources */,
@@ -846,7 +866,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Gliese_581/Info.plist;
@@ -872,7 +892,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Gliese_581/Info.plist;

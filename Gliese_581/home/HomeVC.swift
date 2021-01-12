@@ -13,7 +13,7 @@ var currentFocus = (0, 0)
 
 class HomeVC: BaseVC {
     
-    private let segmentControl: ScrollableSegmentControl = {
+    public var segmentControl: ScrollableSegmentControl = {
         let control        = ScrollableSegmentControl(frame: .zero)
         control.frame      = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 30)
         return control
@@ -90,6 +90,7 @@ class HomeVC: BaseVC {
         default:
             dateLabel.text = ""
         }
+        profileButton.addTarget(self, action: #selector(gotoSettingsVC), for: .touchUpInside)
         expandButton.addTarget(self, action: #selector(self.handleExpand), for: .touchUpInside)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -100,11 +101,17 @@ class HomeVC: BaseVC {
         setupSegmentControl()
     }
     
-    let todayItem    = Item(icon: UIImage(), title: "Today",    isSelected: false)
-    let tommorowItem = Item(icon: UIImage(), title: "Tommorow", isSelected: false)
-    let weekItem     = Item(icon: UIImage(), title: "Week",     isSelected: false)
-    let monthItem    = Item(icon: UIImage(), title: "Month",    isSelected: false)
+    let todayItem    = Item(icon: UIImage(), title: "Today".localized(),    isSelected: false)
+    let tommorowItem = Item(icon: UserDefaults.standard.bool(forKey: "setProVersion") ? UIImage() : UIImage(named: "Locked")!, title: "Tommorow", isSelected: false)
+    let weekItem     = Item(icon: UserDefaults.standard.bool(forKey: "setProVersion") ? UIImage() : UIImage(named: "Locked")!, title: "Week",     isSelected: false)
+    let monthItem    = Item(icon: UserDefaults.standard.bool(forKey: "setProVersion") ? UIImage() : UIImage(named: "Locked")!, title: "Month",    isSelected: false)
 
+    @objc
+    private func gotoSettingsVC() {
+        let settingsVC = SettingsVC()
+        self.navigationController?.pushViewController(settingsVC, animated: true)
+    }
+    
     func setSegmentControl() {
         segmentControl.insertSegment(todayItem,    index: 0)
         segmentControl.insertSegment(tommorowItem, index: 1)
@@ -132,7 +139,17 @@ class HomeVC: BaseVC {
                     self.menuController.makeMonthState()
                 }
                 self.segmentControl.setSelected(at: selectedIndex)
+                if !UserDefaults.standard.bool(forKey: "setProVersion") {
+                    self.menuController.makeStandartState()
+                    self.segmentControl.openPayWall?()
+                }
             })
+        }
+        segmentControl.openPayWall = { [weak self] in
+            guard let self = self else { return }
+            let alert = UIAlertController(title: "Платное", message: "ОПЛАТИ ПОДПИСКУ, ПАДЛА", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Хорошо", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     

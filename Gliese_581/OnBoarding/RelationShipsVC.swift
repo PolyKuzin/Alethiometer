@@ -18,6 +18,8 @@ class RelationShipsVC: BaseVC {
     var backButton = UIButton()
     var skipButton = UIButton()
 
+    var isEditMode = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.alpha = 0.3
@@ -58,16 +60,20 @@ class RelationShipsVC: BaseVC {
         ])
         backButton.setBackButton(on: self.view)
         backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-        self.view.addSubview(skipButton)
-        skipButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
-            skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
-            skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-        ])
-        skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
-        skipButton.setTitle("Skip".localized(), for: .normal)
-        skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        if !isEditMode {
+            self.view.addSubview(skipButton)
+            skipButton.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
+                skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+                skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+            ])
+            skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
+            skipButton.setTitle("Skip".localized(), for: .normal)
+            skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        } else {
+            nextButton.setTitle("Save", for: .normal)
+        }
     }
     
     @objc
@@ -95,16 +101,37 @@ class RelationShipsVC: BaseVC {
     
     @objc
     private func goToDateOfBirthVC() {
-        let vc = HandVC()
-        guard let navigationController = navigationController else { return }
-        navigationController.pushViewController(vc, animated: true)
-        if relateButton.layer.borderWidth != 0 {
-            UserDefaults.standard.setValue("In Relationship", forKey: "Relations")
-            AnalyticsService.reportEvent(with: "Relations", parameters: ["Relations" : "In Relationship"])
-        } else if aloneButton.layer.borderWidth != 0 {
-            UserDefaults.standard.setValue("Anone",   forKey: "Relations")
-            AnalyticsService.reportEvent(with: "Relations", parameters: ["Relations" : "Anone"])
+        if isEditMode {
+            if relateButton.layer.borderWidth != 0 {
+                UserDefaults.standard.setValue("In Relationship", forKey: "Relations")
+                AnalyticsService.reportEvent(with: "Relations", parameters: ["Relations-Changed" : "In Relationship"])
+            } else if aloneButton.layer.borderWidth != 0 {
+                UserDefaults.standard.setValue("Alone",   forKey: "Relations")
+                AnalyticsService.reportEvent(with: "Relations", parameters: ["Relations-Changed" : "Anone"])
+            } else {
+                UserDefaults.standard.setValue("",   forKey: "Relations")
+                AnalyticsService.reportEvent(with: "Relations", parameters: ["Relations-Changed" : "Не указал статус отношений"])
+            }
+            let alert = UIAlertController(title: "Your relationship status has changed!", message: "It will be changed on main screen)".localized(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Thanks)", style: .default, handler: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: true)
+            }))
+            self.present(alert, animated: true)
+        } else {
+            let vc = HandVC()
+            guard let navigationController = navigationController else { return }
+            navigationController.pushViewController(vc, animated: true)
+            if relateButton.layer.borderWidth != 0 {
+                UserDefaults.standard.setValue("In Relationship", forKey: "Relations")
+                AnalyticsService.reportEvent(with: "Relations", parameters: ["Relations" : "In Relationship"])
+            } else if aloneButton.layer.borderWidth != 0 {
+                UserDefaults.standard.setValue("Alone",   forKey: "Relations")
+                AnalyticsService.reportEvent(with: "Relations", parameters: ["Relations" : "Anone"])
+            } else {
+                UserDefaults.standard.setValue("",   forKey: "Relations")
+                AnalyticsService.reportEvent(with: "Relations", parameters: ["Relations" : "Не указал статус отношений"])
+            }
         }
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
     }
 }

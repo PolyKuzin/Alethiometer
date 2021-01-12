@@ -7,6 +7,8 @@
 
 import UIKit
 
+var selectedSegmentIndex = 0
+
 class MenuController: BaseVC {
     
     var onLockedSelect   : (()->())?
@@ -74,10 +76,12 @@ class MenuController: BaseVC {
     
     func makeStandartState() {
         viewState.rows.removeAll()
-        viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: todayText, onTap: {
-                                                    [weak self] in
-                                                    guard let self = self else { return }
-                                                    UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })}))
+        if todayText != "" {
+            viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: todayText, onTap: {
+                                                        [weak self] in
+                                                        guard let self = self else { return }
+                                                        UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })}))
+        }
         viewState.rows.append(ViewState.Focus(image: UIImage(named: "payWall-2")!, title: "Focus today", onHeartTap: {}, onCareerTap: {}, onFamilyTap: {}, onHealthTap: {}))
         viewState.rows.append(ViewState.Calendar(image: UIImage(named: "payWall-1")!, title: "Calendar", items: [
             CalendarCell.ViewState(upColor: UIColor(red: 1, green: 0.874, blue: 0.426, alpha: 1),
@@ -165,34 +169,39 @@ class MenuController: BaseVC {
     
     func makeTomorrowState() {
         viewState.rows.removeAll()
-        viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: tomorrowText, onTap: {
-                                                    [weak self] in
-                                                    guard let self = self else { return }
-                                                    UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })}))
-        viewState.rows.append(ViewState.Focus(image: UIImage(named: "payWall-2")!, title: "Focus today", onHeartTap: {}, onCareerTap: {}, onFamilyTap: {}, onHealthTap: {}))
+        if tomorrowText != "" {
+            viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: tomorrowText, onTap: {
+                                                        [weak self] in
+                                                        guard let self = self else { return }
+                                                        UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })}))
+        }
+        viewState.rows.append(ViewState.Focus(image: UIImage(named: "payWall-2")!, title: "Focus tomorrow", onHeartTap: {}, onCareerTap: {}, onFamilyTap: {}, onHealthTap: {}))
     }
     
     func makeWeekState() {
         viewState.rows.removeAll()
-        viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: weekText, onTap: {
-                                                    [weak self] in
-                                                    guard let self = self else { return }
-                                                    UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })}))
-        viewState.rows.append(ViewState.Focus(image: UIImage(named: "payWall-2")!, title: "Focus today", onHeartTap: {}, onCareerTap: {}, onFamilyTap: {}, onHealthTap: {}))
+        if weekText != "" {
+            viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: weekText, onTap: {
+                                                        [weak self] in
+                                                        guard let self = self else { return }
+                                                        UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })}))
+        }
+        viewState.rows.append(ViewState.Focus(image: UIImage(named: "payWall-2")!, title: "Week focus", onHeartTap: {}, onCareerTap: {}, onFamilyTap: {}, onHealthTap: {}))
     }
     
     func makeMonthState() {
         viewState.rows.removeAll()
-        viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: monthText, onTap: {
-                                                    [weak self] in
-                                                    guard let self = self else { return }
-                                                    UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })}))
-        viewState.rows.append(ViewState.Focus(image: UIImage(named: "payWall-2")!, title: "Focus today", onHeartTap: {}, onCareerTap: {}, onFamilyTap: {}, onHealthTap: {}))
+        if monthText != "" {
+            viewState.rows.append(ViewState.Instant(image: UIImage(named: "flash 1")!, title: "Instant horoscope", body: monthText, onTap: {
+                                                        [weak self] in
+                                                        guard let self = self else { return }
+                                                        UIView.transition(with: self.tableView, duration: 0.35, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() })}))
+        }
+        viewState.rows.append(ViewState.Focus(image: UIImage(named: "payWall-2")!, title: "Month focus", onHeartTap: {}, onCareerTap: {}, onFamilyTap: {}, onHealthTap: {}))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.234, alpha: 1)
@@ -202,6 +211,16 @@ class MenuController: BaseVC {
         tableView.register(UINib(nibName: InstanceHoroscopeCell.reuseID, bundle: nil), forCellReuseIdentifier: InstanceHoroscopeCell.reuseID)
         tableView.register(UINib(nibName: FocusCell.reuseID, bundle: nil), forCellReuseIdentifier: FocusCell.reuseID)
         tableView.register(UINib(nibName: CalendarCell.reuseID, bundle: nil), forCellReuseIdentifier: CalendarCell.reuseID)
+    }
+    
+    private func makeTransition(with type: CATransitionSubtype) {
+        let transition = CATransition()
+        transition.type = CATransitionType.push
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.fillMode = CAMediaTimingFillMode.forwards
+        transition.duration = 0.25
+        transition.subtype = type
+        self.tableView.layer.add(transition, forKey: "UITableViewReloadDataAnimationKey")
     }
 }
 

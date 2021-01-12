@@ -18,6 +18,8 @@ class GenderVC: BaseVC {
     var clearButton = UIButton()
     var backButton = UIButton()
     var skipButton = UIButton()
+    
+    var isEditMode = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,16 +68,18 @@ class GenderVC: BaseVC {
         clearButton.setTitle("LGBQ+", for: .normal)
         backButton.setBackButton(on: self.view)
         backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-        self.view.addSubview(skipButton)
-        skipButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
-            skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
-            skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-        ])
-        skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
-        skipButton.setTitle("Skip".localized(), for: .normal)
-        skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        if !isEditMode {
+            self.view.addSubview(skipButton)
+            skipButton.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
+                skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+                skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+            ])
+            skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
+            skipButton.setTitle("Skip".localized(), for: .normal)
+            skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        }
     }
     
     @objc
@@ -118,18 +122,44 @@ class GenderVC: BaseVC {
     
     @objc
     private func goToDateOfBirthVC() {
-        let vc = NameVC()
-        guard let navigationController = navigationController else { return }
-        navigationController.pushViewController(vc, animated: true)
-        if femaleButton.layer.borderWidth != 0 {
-            UserDefaults.standard.setValue("Female", forKey: "Gender")
-            AnalyticsService.reportEvent(with: "Gender", parameters: ["Gender" : "Female"])
-        } else if maleButton.layer.borderWidth != 0 {
-            UserDefaults.standard.setValue("Male",   forKey: "Gender")
-            AnalyticsService.reportEvent(with: "Gender", parameters: ["Gender" : "Male"])
-        } else if clearButton.layer.borderWidth != 0 {
-            UserDefaults.standard.setValue("LQBT", forKey: "Gender")
-            AnalyticsService.reportEvent(with: "Gender", parameters: ["Gender" : "LQBT"])
+        if isEditMode {
+            if femaleButton.layer.borderWidth != 0 {
+                UserDefaults.standard.setValue("Female", forKey: "Gender")
+                AnalyticsService.reportEvent(with: "Gender-Changed", parameters: ["Gender" : "Female"])
+            } else if maleButton.layer.borderWidth != 0 {
+                UserDefaults.standard.setValue("Male",   forKey: "Gender")
+                AnalyticsService.reportEvent(with: "Gender-Changed", parameters: ["Gender" : "Male"])
+            } else if clearButton.layer.borderWidth != 0 {
+                UserDefaults.standard.setValue("LGBT", forKey: "Gender")
+                AnalyticsService.reportEvent(with: "Gender-Changed", parameters: ["Gender" : "LQBT"])
+            } else {
+                UserDefaults.standard.setValue("", forKey: "Gender")
+                AnalyticsService.reportEvent(with: "Gender-Changed", parameters: ["Gender" : "Не указал пол"])
+            }
+            let alert = UIAlertController(title: "Your gender info has changed!", message: "It will be changed on main screen)".localized(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Thanks)", style: .default, handler: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: true)
+            }))
+            self.present(alert, animated: true)
+
+        } else {
+            let vc = NameVC()
+            guard let navigationController = navigationController else { return }
+            navigationController.pushViewController(vc, animated: true)
+            if femaleButton.layer.borderWidth != 0 {
+                UserDefaults.standard.setValue("Female", forKey: "Gender")
+                AnalyticsService.reportEvent(with: "Gender", parameters: ["Gender" : "Female"])
+            } else if maleButton.layer.borderWidth != 0 {
+                UserDefaults.standard.setValue("Male",   forKey: "Gender")
+                AnalyticsService.reportEvent(with: "Gender", parameters: ["Gender" : "Male"])
+            } else if clearButton.layer.borderWidth != 0 {
+                UserDefaults.standard.setValue("LGBT", forKey: "Gender")
+                AnalyticsService.reportEvent(with: "Gender", parameters: ["Gender" : "LQBT"])
+            } else {
+                UserDefaults.standard.setValue("", forKey: "Gender")
+                AnalyticsService.reportEvent(with: "Gender", parameters: ["Gender" : "Не указал пол"])
+            }
+
         }
         self.dismiss(animated: true, completion: nil)
     }

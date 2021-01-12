@@ -15,7 +15,8 @@ struct Item {
 
 class ScrollableSegmentControl: UIView {
         
-    var onSegmentSelect: ((Int) -> ())?
+    var openPayWall     : (() -> ())?
+    var onSegmentSelect : ((Int) -> ())?
     
     override var intrinsicContentSize: CGSize {
       return UIView.layoutFittingExpandedSize
@@ -37,7 +38,7 @@ class ScrollableSegmentControl: UIView {
         return cv
     }()
     
-    private var items = [Item]() {
+    public var items = [Item]() {
         didSet {
             collectionView.reloadData()
         }
@@ -76,20 +77,28 @@ extension ScrollableSegmentControl {
                 UIView.animate(withDuration: 0.2, animations: {
                     self.items.enumerated().forEach { (_index,_) in self.items[_index].isSelected = false }
 //                    self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .left, animated: false)
-                    self.items[index].isSelected = true
                 })
+                self.items[index].isSelected = true
             case 1:
                 UIView.animate(withDuration: 0.2, animations: {
                     self.items.enumerated().forEach { (_index,_) in self.items[_index].isSelected = false }
 //                    self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
-                    self.items[index].isSelected = true
                 })
-            default:
+                self.items[index].isSelected = true
+            case 2:
                 UIView.animate(withDuration: 0.2, animations: {
                     self.items.enumerated().forEach { (_index,_) in self.items[_index].isSelected = false }
-//                    self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .right, animated: false)
-                    self.items[index].isSelected = true
+//                    self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
                 })
+                self.items[index].isSelected = true
+            case 3:
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.items.enumerated().forEach { (_index,_) in self.items[_index].isSelected = false }
+//                    self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
+                })
+                self.items[index].isSelected = true
+            default:
+                break
             }
         }
     }
@@ -105,14 +114,19 @@ extension ScrollableSegmentControl: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ScrollableCollectionViewCELL().reuseID, for: indexPath) as! ScrollableCollectionViewCELL
         cell.mainLabel.text = items[indexPath.row].title
         cell.mainIcon.image    = items[indexPath.row].icon
+        if indexPath.row == 0 {
+            cell.setupNormalLayout()
+        } else {
+            cell.setupLayout()
+        }
         if items[indexPath.row].isSelected {
             cell.backgroundColor        = UIColor.main
             cell.mainLabel.textColor    = .black
-            cell.mainIcon.setImageColor(.black)
+            cell.mainIcon.setImageColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0.3))
         } else {
             cell.backgroundColor        = .clear
             cell.mainLabel.textColor    = UIColor.white
-            cell.mainIcon.setImageColor(UIColor.main)
+            cell.mainIcon.setImageColor(UIColor(red: 1, green: 1, blue: 1, alpha: 0.3))
         }
         return cell
     }

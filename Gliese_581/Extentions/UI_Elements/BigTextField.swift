@@ -10,7 +10,7 @@ import UIKit
 extension UITextField {
     
     func setBigTextField(on view: UIView) {
-        frame                        = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 40, height: 66)
+        frame                        = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 40, height: 58)
         layer.cornerRadius           = 17
         backgroundColor              = UIColor(red: 0.239, green: 0.235, blue: 0.267, alpha: 1)
         font                         = UIFont(name: "SFProDisplay-Medium", size: 18)

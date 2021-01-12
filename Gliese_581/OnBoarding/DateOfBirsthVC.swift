@@ -23,6 +23,8 @@ class DateOfBirsthVC: BaseVC {
         }
     }
     
+    var isEditMode = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +36,9 @@ class DateOfBirsthVC: BaseVC {
         datePicker.datePickerMode = .date
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         datePicker.setDate(Date(timeIntervalSince1970: 908608500), animated: true)
+        if isEditMode {
+            datePicker.setDate(UserDefaults.standard.value(forKey: "DateOfBirth") as! Date, animated: true)
+        }
         datePicker.minimumDate = Date(timeIntervalSince1970: -315630000)
         datePicker.maximumDate = Date()
 
@@ -44,6 +49,10 @@ class DateOfBirsthVC: BaseVC {
         datePicker.addTarget(self, action: #selector(datehandler(sender:)), for: UIControl.Event.valueChanged)
         backButton.setBackButton(on: self.view)
         backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        
+        if isEditMode {
+            nextButton.setTitle("Save".localized(), for: .normal)
+        }
     }
     
     @objc
@@ -61,11 +70,21 @@ class DateOfBirsthVC: BaseVC {
     
     @objc
     private func goToDateOfBirthVC() {
-        let vc = TimeOfBirsthVC()
-        guard let navigationController = navigationController else { return }
-        navigationController.pushViewController(vc, animated: true)
-        UserDefaults.standard.setValue(datePicker.date, forKey: "DateOfBirth")
-        AnalyticsService.reportEvent(with: "DateOfBirth", parameters: ["DateOfBirth" : date])
-        self.dismiss(animated: true, completion: nil)
+        if isEditMode {
+            UserDefaults.standard.setValue(datePicker.date, forKey: "DateOfBirth")
+            AnalyticsService.reportEvent(with: "DateOfBirth-Changed", parameters: ["DateOfBirth" : date])
+            let alert = UIAlertController(title: "Your date of birth has changed!", message: "It will be changed when you restart the app)".localized(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Thanks)", style: .default, handler: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: true)
+            }))
+            self.present(alert, animated: true)
+        } else {
+            let vc = TimeOfBirsthVC()
+            guard let navigationController = navigationController else { return }
+            navigationController.pushViewController(vc, animated: true)
+            UserDefaults.standard.setValue(datePicker.date, forKey: "DateOfBirth")
+            AnalyticsService.reportEvent(with: "DateOfBirth", parameters: ["DateOfBirth" : date])
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

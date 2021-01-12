@@ -17,12 +17,12 @@ class NameVC: BaseVC {
     var skipButton = UIButton()
     var explanationLabel = UILabel()
     
+    var isEditMode = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.alpha = 0.3
         nextButton.isEnabled = false
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         self.view.addGestureRecognizer(tap)
         
@@ -40,16 +40,18 @@ class NameVC: BaseVC {
         backButton.setBackButton(on: self.view)
         backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         nameTextField.addTarget(self, action: #selector(actionTextFieldIsEditingChanged), for: .editingChanged)
-        self.view.addSubview(skipButton)
-        skipButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
-            skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
-            skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-        ])
-        skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
-        skipButton.setTitle("Skip".localized(), for: .normal)
-        skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        if !isEditMode {
+            self.view.addSubview(skipButton)
+            skipButton.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
+                skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+                skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+            ])
+            skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
+            skipButton.setTitle("Skip".localized(), for: .normal)
+            skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        }
         explanationLabel.setupexplanationLabel(on: self.view)
         NSLayoutConstraint.activate([
             explanationLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -60,6 +62,10 @@ class NameVC: BaseVC {
         nameTextField.attributedPlaceholder = NSAttributedString(string: "Name",
                                                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1),
                                                                               NSAttributedString.Key.font: UIFont(name: "SFProDisplay-Medium", size: 18)!])
+        if isEditMode {
+            nameTextField.text = UserDefaults.standard.string(forKey: "UserName")!
+            nextButton.setTitle("Save".localized(), for: .normal)
+        }
     }
     
     @objc
@@ -85,12 +91,30 @@ class NameVC: BaseVC {
     
     @objc
     private func goToDateOfBirthVC() {
-        let vc = RelationShipsVC()
-        guard let navigationController = navigationController else { return }
-        navigationController.pushViewController(vc, animated: true)
-        if let name = nameTextField.text {
-            UserDefaults.standard.setValue(name, forKey: "UserName")
-            AnalyticsService.reportEvent(with: "UserName", parameters: ["UserName" : name])
+        if isEditMode {
+            if let name = nameTextField.text {
+                UserDefaults.standard.setValue(name, forKey: "UserName")
+                AnalyticsService.reportEvent(with: "UserName-Changed", parameters: ["UserName" : name])
+            } else {
+                UserDefaults.standard.setValue("", forKey: "UserName")
+                AnalyticsService.reportEvent(with: "UserName-Changed", parameters: ["UserName" : "Не указал имя"])
+            }
+            let alert = UIAlertController(title: "Your name has changed!", message: "It will be changed on main screen)".localized(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Thanks)", style: .default, handler: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: true)
+            }))
+            self.present(alert, animated: true)
+        } else {
+            let vc = RelationShipsVC()
+            guard let navigationController = navigationController else { return }
+            navigationController.pushViewController(vc, animated: true)
+            if let name = nameTextField.text {
+                UserDefaults.standard.setValue(name, forKey: "UserName")
+                AnalyticsService.reportEvent(with: "UserName", parameters: ["UserName" : name])
+            } else {
+                UserDefaults.standard.setValue("", forKey: "UserName")
+                AnalyticsService.reportEvent(with: "UserName", parameters: ["UserName" : "Не указал имя"])
+            }
         }
         self.dismiss(animated: true, completion: nil)
     }
@@ -98,16 +122,5 @@ class NameVC: BaseVC {
     @objc
     func hideKeyboard() {
         self.view.endEditing(true)
-    }
-    
-    @objc
-    func keyboardWillShow(sender: NSNotification) {
-        nextFFrame = nextButton.frame
-        self.nextButton.frame.origin.y = nextFFrame.origin.y - 200 // Move view 150 points upward
-    }
-
-    @objc
-    func keyboardWillHide(sender: NSNotification) {
-        self.nextButton.frame.origin.y = nextFFrame.origin.y // Move view to original position
     }
 }

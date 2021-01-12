@@ -29,7 +29,7 @@ class ScrollableCollectionViewCELL : UICollectionViewCell {
         super.init(frame: frame)
         layer.cornerRadius   = frame.height / 2
         
-        setupLayout()
+//        setupLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,10 +41,28 @@ class ScrollableCollectionViewCELL : UICollectionViewCell {
         NSLayoutConstraint.activate([
             mainLabel.heightAnchor      .constraint(equalToConstant: 22),
             mainLabel.trailingAnchor    .constraint(equalTo: trailingAnchor, constant: -16 ),
-            mainLabel.leadingAnchor     .constraint(equalTo: leadingAnchor,  constant: 16 ),
             mainLabel.centerYAnchor     .constraint(equalTo: centerYAnchor)
-//            mainLabel.topAnchor         .constraint(equalTo: topAnchor, constant: 13),
-//            mainLabel.bottomAnchor      .constraint(equalTo: bottomAnchor, constant: -13)
         ])
+        if !UserDefaults.standard.bool(forKey: "setProVersion") {
+            addSubview(mainIcon)
+            mainIcon.setImageColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0.3))
+            mainIcon.leadingAnchor  .constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+            mainIcon.heightAnchor   .constraint(equalToConstant: 15).isActive     = true
+            mainIcon.widthAnchor    .constraint(equalToConstant: 13).isActive      = true
+            mainIcon.centerYAnchor  .constraint(equalTo: centerYAnchor).isActive = true
+            mainIcon.trailingAnchor .constraint(equalTo: mainLabel.leadingAnchor, constant: -5).isActive = true
+        } else {
+            mainLabel.leadingAnchor  .constraint(equalTo: leadingAnchor,  constant: 16 ).isActive = true
+        }
+    }
+    
+    func setupNormalLayout() {
+        addSubview(mainLabel)
+        NSLayoutConstraint.activate([
+            mainLabel.heightAnchor      .constraint(equalToConstant: 22),
+            mainLabel.trailingAnchor    .constraint(equalTo: trailingAnchor, constant: -16 ),
+            mainLabel.centerYAnchor     .constraint(equalTo: centerYAnchor)
+        ])
+        mainLabel.leadingAnchor  .constraint(equalTo: leadingAnchor,  constant: 16 ).isActive = true
     }
 }

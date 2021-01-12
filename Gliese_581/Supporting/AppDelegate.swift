@@ -8,9 +8,12 @@
 import UIKit
 import YandexMobileMetrica
 
+var downloaded = false
 var zodiacSign      = "" {
     didSet {
-        downLoadText()
+        if !downloaded {
+            downLoadText()
+        }
     }
 }
 var todayText       = ""
@@ -76,17 +79,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 \(zodiacSign)
                 """)
         }
-        print("""
-            \(UserDefaults.standard.bool(forKey: "setProVersion"))
-            \(UserDefaults.standard.bool(forKey: "setProVersion"))
-            \(UserDefaults.standard.bool(forKey: "setProVersion"))
-            \(UserDefaults.standard.bool(forKey: "setProVersion"))
-            \(UserDefaults.standard.bool(forKey: "setProVersion"))
-            \(UserDefaults.standard.bool(forKey: "setProVersion"))
-            \(UserDefaults.standard.bool(forKey: "setProVersion"))
-            \(UserDefaults.standard.bool(forKey: "setProVersion"))
-
-            """)
         let monthInt = Calendar.current.component(.month, from: Date())
         for i in Months.allCases {
             if i.rawValue.0 == monthInt { currentMounth = (i.rawValue.1, i.rawValue.2) }
@@ -110,7 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 AnalyticsService.reportEvent(with: "Purchase", parameters: ["data" : purchase.purchaseDate ?? "0000000"])
                 UserDefaults.standard.setValue(true, forKey: "setProVersion")
             } else {
-                UserDefaults.standard.setValue(false, forKey: "setProVersion")
+                UserDefaults.standard.setValue(true, forKey: "setProVersion")
             }
         case let .error(error):
             print(error.localizedDescription)
@@ -201,66 +193,68 @@ public func downLoadText() {
     } catch let error {
         print("Error: \(error)")
     }
-    
-    let tomorrowURLString = "https://www.astrology.com/horoscope/daily/tomorrow/\(zodiacSign.lowercased()).html"
-    guard let tommorowURL = URL(string: tomorrowURLString) else {
-        print("Error: \(tomorrowURLString) doesn't seem to be a valid URL")
-        return
-    }
-    do {
-        let HTMLString = try String(contentsOf: tommorowURL, encoding: .ascii)
-        if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
-            if let range = tT.range(of: "</span> ") {
-                let text = tT[range.upperBound...]
-                tomorrowText = String(text)
-            }
-            print("#######################")
-            print("HTML : \(tomorrowText)")
-            print("#######################")
+    if UserDefaults.standard.bool(forKey: "setProVersion") {
+        let tomorrowURLString = "https://www.astrology.com/horoscope/daily/tomorrow/\(zodiacSign.lowercased()).html"
+        guard let tommorowURL = URL(string: tomorrowURLString) else {
+            print("Error: \(tomorrowURLString) doesn't seem to be a valid URL")
+            return
         }
-    } catch let error {
-        print("Error: \(error)")
-    }
-    let weekURLString = "https://www.astrology.com/horoscope/weekly-overview/\(zodiacSign.lowercased()).html"
-    guard let weekURL = URL(string: weekURLString) else {
-        print("Error: \(weekURLString) doesn't seem to be a valid URL")
-        return
-    }
-    do {
-        let HTMLString = try String(contentsOf: weekURL, encoding: .ascii)
-        if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
-            if let range = tT.range(of: "</span> ") {
-                let text = tT[range.upperBound...]
-                weekText = String(text)
+        do {
+            let HTMLString = try String(contentsOf: tommorowURL, encoding: .ascii)
+            if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
+                if let range = tT.range(of: "</span> ") {
+                    let text = tT[range.upperBound...]
+                    tomorrowText = String(text)
+                }
+                print("#######################")
+                print("HTML : \(tomorrowText)")
+                print("#######################")
             }
-            print("#######################")
-            print("HTML : \(weekText)")
-            print("#######################")
+        } catch let error {
+            print("Error: \(error)")
         }
-    } catch let error {
-        print("Error: \(error)")
-    }
-    let monthURLString = "https://www.astrology.com/horoscope/monthly-overview/\(zodiacSign.lowercased()).html"
-    guard let monthURL = URL(string: monthURLString) else {
-        print("Error: \(monthURLString) doesn't seem to be a valid URL")
-        return
-    }
-    do {
-        let HTMLString = try String(contentsOf: monthURL, encoding: .ascii)
-        if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
-            if let range = tT.range(of: "</span> ") {
-                let text = tT[range.upperBound...]
-                monthText = String(text)
-                monthText = monthText.replacingOccurrences(of: "<br>", with: "")
-                monthText = monthText.replacingOccurrences(of: "â", with: "'")
+        let weekURLString = "https://www.astrology.com/horoscope/weekly-overview/\(zodiacSign.lowercased()).html"
+        guard let weekURL = URL(string: weekURLString) else {
+            print("Error: \(weekURLString) doesn't seem to be a valid URL")
+            return
+        }
+        do {
+            let HTMLString = try String(contentsOf: weekURL, encoding: .ascii)
+            if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
+                if let range = tT.range(of: "</span> ") {
+                    let text = tT[range.upperBound...]
+                    weekText = String(text)
+                }
+                print("#######################")
+                print("HTML : \(weekText)")
+                print("#######################")
             }
-            print("#######################")
-            print("HTML : \(monthText)")
-            print("#######################")
+        } catch let error {
+            print("Error: \(error)")
         }
-    } catch let error {
-        print("Error: \(error)")
+        let monthURLString = "https://www.astrology.com/horoscope/monthly-overview/\(zodiacSign.lowercased()).html"
+        guard let monthURL = URL(string: monthURLString) else {
+            print("Error: \(monthURLString) doesn't seem to be a valid URL")
+            return
+        }
+        do {
+            let HTMLString = try String(contentsOf: monthURL, encoding: .ascii)
+            if let tT = HTMLString.slice(from: "<span class=\"date\">", to: "</p>") {
+                if let range = tT.range(of: "</span> ") {
+                    let text = tT[range.upperBound...]
+                    monthText = String(text)
+                    monthText = monthText.replacingOccurrences(of: "<br>", with: "")
+                    monthText = monthText.replacingOccurrences(of: "â", with: "'")
+                }
+                print("#######################")
+                print("HTML : \(monthText)")
+                print("#######################")
+            }
+        } catch let error {
+            print("Error: \(error)")
+        }
     }
+    downloaded = true
 }
 
 func getZodiacSign(_ date : Date) -> String{

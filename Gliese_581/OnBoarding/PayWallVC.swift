@@ -36,11 +36,14 @@ class PayWallVC : BaseVC {
         nextButton.addTarget(self, action: #selector(togglePayment), for: .touchUpInside)
         restoreButton.addTarget(self, action: #selector(restorePurchaice), for: .touchUpInside)
         
-        feature1.setFeaturesView(on: view, with: UIImage(named: "payWall") ?? #imageLiteral(resourceName: "back"), title: "Personal horoscope".localized(), subtitle: "Daily tips about your life & future".localized())
+        feature1.setFeaturesView(on: view, with: UIImage(named: "payWall") ?? #imageLiteral(resourceName: "back"), title: "Personal horoscope".localized(),
+                                 subtitle: "Daily tips about your life & future".localized(), isClickable: true)
         feature1.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 75).isActive = true
-        feature2.setFeaturesView(on: view, with: UIImage(named: "payWall-2") ?? #imageLiteral(resourceName: "back"), title: "Focus of the day".localized(), subtitle: "What to pay special attention to".localized())
+        feature2.setFeaturesView(on: view, with: UIImage(named: "payWall-2") ?? #imageLiteral(resourceName: "back"), title: "Focus of the day".localized(),
+                                 subtitle: "What to pay special attention to".localized(), isClickable: true)
         feature2.topAnchor.constraint(equalTo: feature1.bottomAnchor, constant: 12).isActive = true
-        feature3.setFeaturesView(on: view, with: UIImage(named: "payWall-1") ?? #imageLiteral(resourceName: "back"), title: "Lunar calendar".localized(), subtitle: "Haircuts, beginnings, garden, etc.".localized())
+        feature3.setFeaturesView(on: view, with: UIImage(named: "payWall-1") ?? #imageLiteral(resourceName: "back"), title: "Lunar calendar".localized(),
+                                 subtitle: "Haircuts, beginnings, garden, etc.".localized(), isClickable: true)
         feature3.topAnchor.constraint(equalTo: feature2.bottomAnchor, constant: 12).isActive = true
         
         self.view.addSubview(notNowButton)

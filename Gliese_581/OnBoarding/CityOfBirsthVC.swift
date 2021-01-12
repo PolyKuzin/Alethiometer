@@ -17,13 +17,13 @@ class CityOfBirsthVC: BaseVC, UITextFieldDelegate {
     var skipButton = UIButton()
     var explanationLabel = UILabel()
     
+    var isEditMode = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.alpha = 0.3
         nextButton.isEnabled = false
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         self.view.addGestureRecognizer(tap)
         label.setTitleLabel(on: view)
@@ -39,16 +39,18 @@ class CityOfBirsthVC: BaseVC, UITextFieldDelegate {
         ])
         backButton.setBackButton(on: self.view)
         backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-        self.view.addSubview(skipButton)
-        skipButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
-            skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
-            skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-        ])
-        skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
-        skipButton.setTitle("Skip".localized(), for: .normal)
-        skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        if !isEditMode {
+            self.view.addSubview(skipButton)
+            skipButton.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                skipButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
+                skipButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+                skipButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+            ])
+            skipButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
+            skipButton.setTitle("Skip".localized(), for: .normal)
+            skipButton.addTarget(self, action: #selector(goToDateOfBirthVC), for: .touchUpInside)
+        }
         cityTextField.addTarget(self, action: #selector(actionTextFieldIsEditingChanged), for: .editingChanged)
         
         explanationLabel.setupexplanationLabel(on: self.view)
@@ -61,6 +63,10 @@ class CityOfBirsthVC: BaseVC, UITextFieldDelegate {
         cityTextField.attributedPlaceholder = NSAttributedString(string: "City",
                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1),
                                                   NSAttributedString.Key.font: UIFont(name: "SFProDisplay-Medium", size: 18)!])
+        if isEditMode {
+            cityTextField.text = UserDefaults.standard.string(forKey: "CityOfBirth")!
+            nextButton.setTitle("Save".localized(), for: .normal)
+        }
     }
     
     @objc
@@ -86,29 +92,36 @@ class CityOfBirsthVC: BaseVC, UITextFieldDelegate {
     
     @objc
     private func goToDateOfBirthVC() {
-        let vc = GenderVC()
-        guard let navigationController = navigationController else { return }
-        navigationController.pushViewController(vc, animated: true)
-        if let city = cityTextField.text {
-            UserDefaults.standard.setValue(city, forKey: "CityOfBirth")
-            AnalyticsService.reportEvent(with: "CityOfBirth", parameters: ["CityOfBirth" : city])
+        if isEditMode {
+            if let name = cityTextField.text {
+                UserDefaults.standard.setValue(name, forKey: "CityOfBirth")
+                AnalyticsService.reportEvent(with: "CityOfBirth-Changed", parameters: ["CityOfBirth" : name])
+            } else {
+                UserDefaults.standard.setValue("", forKey: "CityOfBirth")
+                AnalyticsService.reportEvent(with: "CityOfBirth-Changed", parameters: ["CityOfBirth" : "Не указал название"])
+            }
+            let alert = UIAlertController(title: "Your home icty info has changed!", message: "It will be changed on main screen)".localized(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Thanks)", style: .default, handler: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: true)
+            }))
+            self.present(alert, animated: true)
+        } else {
+            let vc = GenderVC()
+            guard let navigationController = navigationController else { return }
+            navigationController.pushViewController(vc, animated: true)
+            if let city = cityTextField.text {
+                UserDefaults.standard.setValue(city, forKey: "CityOfBirth")
+                AnalyticsService.reportEvent(with: "CityOfBirth", parameters: ["CityOfBirth" : city])
+            } else {
+                UserDefaults.standard.setValue("", forKey: "CityOfBirth")
+                AnalyticsService.reportEvent(with: "CityOfBirth", parameters: ["CityOfBirth" : "Не указал город"])
+            }
+            self.dismiss(animated: true, completion: nil)
         }
-        self.dismiss(animated: true, completion: nil)
     }
     
     @objc
     func hideKeyboard() {
         self.view.endEditing(true)
-    }
-    
-    @objc
-    func keyboardWillShow(sender: NSNotification) {
-        nextFFrame = nextButton.frame
-        self.nextButton.frame.origin.y = nextFFrame.origin.y - 200 // Move view 150 points upward
-    }
-
-    @objc
-    func keyboardWillHide(sender: NSNotification) {
-        self.nextButton.frame.origin.y = nextFFrame.origin.y // Move view to original position
     }
 }

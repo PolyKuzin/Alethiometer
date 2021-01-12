@@ -17,7 +17,7 @@ class AnalyticsService {
     static public func reportEvent(with name: String) {
         if !UIDevice.modelName.contains("Simulator") {
             YMMYandexMetrica.reportEvent(name, onFailure: { (error) in
-                debugPrint("REPORT ERROR: %@", error.localizedDescription)
+                debugPrint("Ошибка Аналитики: %@", error.localizedDescription)
             })
         }
     }
@@ -26,7 +26,7 @@ class AnalyticsService {
     static public func reportEvent(with name: String, parameters: [String: Any]) {
         if !UIDevice.modelName.contains("Simulator") {
             YMMYandexMetrica.reportEvent(name, parameters: parameters, onFailure: { (error) in
-                debugPrint("REPORT ERROR: %@", error.localizedDescription)
+                debugPrint("Ошибка Аналитики: %@", error.localizedDescription)
             })
         }
     }
