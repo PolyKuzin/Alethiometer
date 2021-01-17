@@ -177,7 +177,9 @@ class HandVC: BaseVC, AVCaptureVideoDataOutputSampleBufferDelegate {
     var shootCamera = UIButton()
     var skipButton = UIButton()
     var backButton = UIButton()
-var havePushed = false
+    var havePushed = false
+    let viewSH = UIView()
+    var handImage = UIImageView()
     
     func setupCaptureSession() {
         captureSession.sessionPreset = AVCaptureSession.Preset.photo
@@ -236,7 +238,6 @@ var havePushed = false
         super.viewDidLoad()
         label.numberOfLines = 2
         label.setTitleLabel(on: view)
-        label.text = "Take photo of your hand palm".localized()
 
         setupCaptureSession()
         setupDevice()
@@ -244,20 +245,34 @@ var havePushed = false
         setupPreviewLayer()
         startRunningCaptureSession()
         
-//        let myView = MyCustomView()
-//        myView.frame = self.view.frame
-//        myView.backgroundColor = UIColor.clear
-//        view.addSubview(myView)
-//        myView.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            myView.topAnchor.constraint(equalTo: label.bottomAnchor),
-//        ])
+        viewSH.isHidden = true
+        view.addSubview(viewSH)
+        viewSH.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            viewSH.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 50),
+            viewSH.heightAnchor.constraint(equalTo: viewSH.widthAnchor),
+            viewSH.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            viewSH.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        viewSH.backgroundColor = UIColor(red: 0.239, green: 0.235, blue: 0.267, alpha: 0.3)
+        viewSH.layer.cornerRadius = 17
+        
+        handImage.image = UIImage(named: "Hand")
+        view.addSubview(handImage)
+        handImage.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            handImage.widthAnchor.constraint(equalToConstant: 250),
+            handImage.heightAnchor.constraint(equalToConstant: 250),
+            handImage.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            handImage.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        handImage.isHidden = true
         self.view.addSubview(shootCamera)
         shootCamera.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             shootCamera.widthAnchor.constraint(equalToConstant: 72),
             shootCamera.heightAnchor.constraint(equalToConstant: 72),
-            shootCamera.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -75),
+            shootCamera.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -75),
             shootCamera.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
         shootCamera.layer.cornerRadius = 36
@@ -297,25 +312,61 @@ var havePushed = false
     @objc
     func handleShoot() {
         self.captureSession.stopRunning()
-        showUniversalLoadingView(true, loadingText: "Checking the palm".localized())
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             if self.lastViewIsHand {
-                showUniversalLoadingView(false)
-                showUniversalLoadingView(true, loadingText: "Analyzing parameters of the palm lines")
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    let vc = PayWallVC()
-                    guard let navigationController = self.navigationController else { return }
-                    navigationController.pushViewController(vc, animated: true)
-                    AnalyticsService.reportEvent(with: "Palm Regognition")
-                    self.dismiss(animated: true, completion: nil)
-                    showUniversalLoadingView(false)
+                self.label.isHidden = false
+                self.label.textColor = UIColor.main
+                self.label.text = "Analyzing..."
+                self.handImage.isHidden = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    self.label.text = "Success!"
+                    self.handImage.image = UIImage(named: "Success")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                        let vc = PayWallVC()
+                        guard let navigationController = self.navigationController else { return }
+                        navigationController.pushViewController(vc, animated: true)
+                        AnalyticsService.reportEvent(with: "Palm Regognition")
+                        self.dismiss(animated: true, completion: nil)
+                    }
                 }
             } else {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    showUniversalLoadingView(false)
-                    self.captureSession.startRunning()
-                    self.label.text = "Couldn't recognize the palm - try again"
-                    AnalyticsService.reportEvent(with: "Wrong Palm Regognition")
+                    self.label.isHidden = false
+                    self.label.textColor = UIColor.main
+                    self.label.text = "Analyzing..."
+                    self.handImage.isHidden = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        self.captureSession.startRunning()
+                        self.label.text = "Something is wrong!"
+                        self.handImage.isHidden = false
+                        let expLabel = UILabel()
+                        expLabel.setupexplanationLabel(on: self.view)
+                        expLabel.text = "We couldn't recognize your palm. Please, try again!"
+                        NSLayoutConstraint.activate([
+                            expLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+                            expLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+                            expLabel.topAnchor.constraint(equalTo: self.label.bottomAnchor, constant: 16),
+                        ])
+                        self.viewSH.isHidden = false
+                        let explanationLabel3 = UILabel()
+                        explanationLabel3.setupexplanationLabel(on: self.view)
+                        NSLayoutConstraint.activate([
+                            explanationLabel3.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+                            explanationLabel3.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+                            explanationLabel3.topAnchor.constraint(equalTo: self.handImage.bottomAnchor, constant: 40)
+                        ])
+                        explanationLabel3.text = "Place your palm on a plain background".localized()
+                        self.cameraPreviewLayer?.backgroundColor = UIColor.background.withAlphaComponent(0.3).cgColor
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) {
+                            self.label.isHidden = true
+                            explanationLabel3.isHidden = true
+                            expLabel.isHidden = true
+                            self.handImage.isHidden = true
+                            self.viewSH.isHidden = true
+                            self.cameraPreviewLayer?.backgroundColor = UIColor.clear.cgColor
+                        }
+                        AnalyticsService.reportEvent(with: "Wrong Palm Regognition")
+                    }
                 }
             }
         }

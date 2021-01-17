@@ -38,10 +38,6 @@ class SettingsVC : BaseVC {
                                  subtitle: "Haircuts, beginnings, garden, etc.".localized(), isClickable: true)
         feature3.topAnchor.constraint(equalTo: feature2.bottomAnchor, constant: 12).isActive = true
         
-        nextButton.setNextButton(on: view)
-        nextButton.setTitle("Try FREE & Subscribe", for: .normal)
-        nextButton.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 20)
-        nextButton.addTarget(self, action: #selector(togglePayment), for: .touchUpInside)
         let tap1 = UITapGestureRecognizer(target: self, action: #selector(handle1(tap:)))
         tap1.numberOfTapsRequired = 1
         self.feature1.addGestureRecognizer(tap1)
@@ -92,17 +88,6 @@ class SettingsVC : BaseVC {
         
         activityViewController.isModalInPresentation = true
         self.present(activityViewController, animated: true, completion: nil)
-    }
-    
-    @objc
-    private func togglePayment() {
-        let identifire = iapManager.products.filter({$0.productIdentifier == IAPProducts.autoRenew.rawValue}).first?.productIdentifier
-        iapManager.purchase(productWith: identifire!)
-    }
-    
-    @objc
-    private func restorePurchaice() {
-        iapManager.restoreCompletedTransactions()
     }
     
     @objc

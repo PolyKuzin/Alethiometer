@@ -94,12 +94,12 @@ extension WeekMenuVC : UITableViewDataSource {
             cell.selectionStyle = .none
             cell.viewState = MenuController.ViewState.Instant(image: data.image, title: data.title, body: data.body, onTap: data.onTap)
             return cell
-        case is ViewState.Focus:
-            let data = viewState.rows[indexPath.row] as! ViewState.Focus
-            let cell = tableView.dequeueReusableCell(withIdentifier: FocusCell.reuseID) as! FocusCell
-            cell.selectionStyle = .none
-            cell.viewState = MenuController.ViewState.Focus(image: data.image, title: data.title, onHeartTap: data.onHealthTap, onCareerTap: data.onCareerTap, onFamilyTap: data.onFamilyTap, onHealthTap: data.onFamilyTap)
-            return cell
+//        case is ViewState.Focus:
+//            let data = viewState.rows[indexPath.row] as! ViewState.Focus
+//            let cell = tableView.dequeueReusableCell(withIdentifier: FocusCell.reuseID) as! FocusCell
+//            cell.selectionStyle = .none
+//            cell.viewState = MenuController.ViewState.FocusToday(image: data.image, title: data.title, onHeartTap: data.onHealthTap, onCareerTap: data.onCareerTap, onFamilyTap: data.onFamilyTap, onHealthTap: data.onFamilyTap)
+//            return cell
         case is ViewState.Calendar:
             let data = viewState.rows[indexPath.row] as! ViewState.Calendar
             let cell = tableView.dequeueReusableCell(withIdentifier: CalendarCell.reuseID) as! CalendarCell

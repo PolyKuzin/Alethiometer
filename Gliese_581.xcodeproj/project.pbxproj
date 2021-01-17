@@ -50,6 +50,7 @@
 		9923FFA025802640004F1F02 /* GenderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FF9F25802640004F1F02 /* GenderLabel.swift */; };
 		9923FFA325802C26004F1F02 /* PayWallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FFA225802C26004F1F02 /* PayWallVC.swift */; };
 		9923FFA625802CAC004F1F02 /* FeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FFA525802CAC004F1F02 /* FeaturesView.swift */; };
+		992BE5AD25B4C69A007329E7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992BE5AC25B4C69A007329E7 /* Notifications.swift */; };
 		993249922595054300865617 /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993249912595054300865617 /* SegmentControl.swift */; };
 		993249962595055C00865617 /* SegmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993249952595055C00865617 /* SegmentItem.swift */; };
 		99324999259505B600865617 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99324998259505B600865617 /* Pin.swift */; };
@@ -69,6 +70,7 @@
 		9958E73A25ADFCE1000E7770 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958E73925ADFCE1000E7770 /* SettingsVC.swift */; };
 		9958E73F25AE1BD9000E7770 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958E73E25AE1BD9000E7770 /* SettingsView.swift */; };
 		9958E74325AE1E4C000E7770 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958E74225AE1E4C000E7770 /* EditProfileVC.swift */; };
+		9973AC4225AF8159003FE44F /* MainPayWallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973AC4125AF8159003FE44F /* MainPayWallVC.swift */; };
 		9974DF2E25A204060036C971 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9974DF2D25A204060036C971 /* GoogleService-Info.plist */; };
 		9974DF3125A204830036C971 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9974DF3025A204830036C971 /* AnalyticsService.swift */; };
 		997EDB1825895B19009E4122 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB1625895B19009E4122 /* HomeVC.swift */; };
@@ -79,9 +81,9 @@
 		997EDB2725895F5B009E4122 /* FocusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997EDB2525895F5B009E4122 /* FocusCell.xib */; };
 		997EDB2B25896168009E4122 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EDB2A25896168009E4122 /* CircleView.swift */; };
 		9989337725A3A40C00CDBC39 /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9989337625A3A40C00CDBC39 /* Localize.swift */; };
-		9989337B25A3AC8200CDBC39 /* TinyYOLO.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9989337A25A3AC8200CDBC39 /* TinyYOLO.mlmodel */; };
 		9989337E25A3AE2900CDBC39 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9989337D25A3AE2900CDBC39 /* MobileNet.mlmodel */; };
 		9997EAAB259B2798000BBAE3 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997EAAA259B2798000BBAE3 /* Date.swift */; };
+		99AAF11925B36DE80066538F /* HandInstructionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AAF11825B36DE80066538F /* HandInstructionVC.swift */; };
 		99B83EBC25A9BB9500030FF4 /* ScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B83EBB25A9BB9500030FF4 /* ScrollVC.swift */; };
 		99B83EBF25A9C3A600030FF4 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B83EBE25A9C3A600030FF4 /* BackButton.swift */; };
 		99B83EC325A9EF9500030FF4 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B83EC125A9EF9500030FF4 /* TitleCell.swift */; };
@@ -153,6 +155,8 @@
 		9923FF9F25802640004F1F02 /* GenderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderLabel.swift; sourceTree = "<group>"; };
 		9923FFA225802C26004F1F02 /* PayWallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallVC.swift; sourceTree = "<group>"; };
 		9923FFA525802CAC004F1F02 /* FeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesView.swift; sourceTree = "<group>"; };
+		992BE5A925B4C616007329E7 /* Gliese_581.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gliese_581.entitlements; sourceTree = "<group>"; };
+		992BE5AC25B4C69A007329E7 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		993249912595054300865617 /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
 		993249952595055C00865617 /* SegmentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentItem.swift; sourceTree = "<group>"; };
 		99324998259505B600865617 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 		9958E73925ADFCE1000E7770 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		9958E73E25AE1BD9000E7770 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9958E74225AE1E4C000E7770 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		9973AC4125AF8159003FE44F /* MainPayWallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPayWallVC.swift; sourceTree = "<group>"; };
 		9974DF2D25A204060036C971 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9974DF3025A204830036C971 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		997EDB1625895B19009E4122 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -182,9 +187,9 @@
 		997EDB2525895F5B009E4122 /* FocusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusCell.xib; sourceTree = "<group>"; };
 		997EDB2A25896168009E4122 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		9989337625A3A40C00CDBC39 /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
-		9989337A25A3AC8200CDBC39 /* TinyYOLO.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TinyYOLO.mlmodel; sourceTree = "<group>"; };
 		9989337D25A3AE2900CDBC39 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		9997EAAA259B2798000BBAE3 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		99AAF11825B36DE80066538F /* HandInstructionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandInstructionVC.swift; sourceTree = "<group>"; };
 		99B83EBB25A9BB9500030FF4 /* ScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollVC.swift; sourceTree = "<group>"; };
 		99B83EBE25A9C3A600030FF4 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		99B83EC125A9EF9500030FF4 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
@@ -278,10 +283,14 @@
 		990CA4DE256AC236004A8105 /* Gliese_581 */ = {
 			isa = PBXGroup;
 			children = (
+				992BE5A925B4C616007329E7 /* Gliese_581.entitlements */,
 				99CBAA2525AB623A0093FFF1 /* AppleIncRootCertificate.cer */,
+				990CA4DF256AC236004A8105 /* AppDelegate.swift */,
+				9973AC4125AF8159003FE44F /* MainPayWallVC.swift */,
+				992BE5AB25B4C678007329E7 /* Notifications */,
 				99CBAA2425AB622C0093FFF1 /* Validation */,
 				99CBAA1C25AB3BBE0093FFF1 /* IAP */,
-				9974DF3025A204830036C971 /* AnalyticsService.swift */,
+				992BE5B225B4C6AA007329E7 /* Analytics */,
 				9902B83D258A9B85002041B2 /* Protocols */,
 				997EDB2925896159009E4122 /* Utils */,
 				990CA51A256ADB30004A8105 /* Extentions */,
@@ -294,7 +303,6 @@
 				990CA4EA256AC238004A8105 /* LaunchScreen.storyboard */,
 				990CA4ED256AC238004A8105 /* Info.plist */,
 				9974DF2D25A204060036C971 /* GoogleService-Info.plist */,
-				9989337A25A3AC8200CDBC39 /* TinyYOLO.mlmodel */,
 				9989337D25A3AE2900CDBC39 /* MobileNet.mlmodel */,
 			);
 			path = Gliese_581;
@@ -319,7 +327,6 @@
 		990CA516256AC5F2004A8105 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				990CA4DF256AC236004A8105 /* AppDelegate.swift */,
 				990CA4E1256AC236004A8105 /* SceneDelegate.swift */,
 				990CA502256AC569004A8105 /* Fonts */,
 			);
@@ -347,6 +354,7 @@
 				990CA530256AE913004A8105 /* GenderVC.swift */,
 				990CA533256AE943004A8105 /* NameVC.swift */,
 				990CA536256AE971004A8105 /* RelationShipsVC.swift */,
+				99AAF11825B36DE80066538F /* HandInstructionVC.swift */,
 				990CA539256AE9A7004A8105 /* HandVC.swift */,
 				9923FFA225802C26004F1F02 /* PayWallVC.swift */,
 			);
@@ -376,6 +384,22 @@
 				9923FFA525802CAC004F1F02 /* FeaturesView.swift */,
 			);
 			path = UI_Elements;
+			sourceTree = "<group>";
+		};
+		992BE5AB25B4C678007329E7 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				992BE5AC25B4C69A007329E7 /* Notifications.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		992BE5B225B4C6AA007329E7 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				9974DF3025A204830036C971 /* AnalyticsService.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 		993249902595053200865617 /* Views */ = {
@@ -663,8 +687,10 @@
 				9974DF3125A204830036C971 /* AnalyticsService.swift in Sources */,
 				9932499D2595062600865617 /* UIImageView.swift in Sources */,
 				99CBAA1E25AB3BD60093FFF1 /* IAPProducts.swift in Sources */,
+				9973AC4225AF8159003FE44F /* MainPayWallVC.swift in Sources */,
 				990CA51E256ADB7B004A8105 /* Fonts.swift in Sources */,
 				993249A0259506D500865617 /* SafeIndex.swift in Sources */,
+				99AAF11925B36DE80066538F /* HandInstructionVC.swift in Sources */,
 				9989337E25A3AE2900CDBC39 /* MobileNet.mlmodel in Sources */,
 				990F14332596757F00AA7603 /* NibWrapper.swift in Sources */,
 				990CA53D256AEB41004A8105 /* DatePicker.swift in Sources */,
@@ -705,8 +731,8 @@
 				9997EAAB259B2798000BBAE3 /* Date.swift in Sources */,
 				9923FFA625802CAC004F1F02 /* FeaturesView.swift in Sources */,
 				990CA527256AE6E9004A8105 /* BaseVC.swift in Sources */,
+				992BE5AD25B4C69A007329E7 /* Notifications.swift in Sources */,
 				990CA537256AE971004A8105 /* RelationShipsVC.swift in Sources */,
-				9989337B25A3AC8200CDBC39 /* TinyYOLO.mlmodel in Sources */,
 				990CA524256AE656004A8105 /* DateOfBirsthVC.swift in Sources */,
 				997EDB1825895B19009E4122 /* HomeVC.swift in Sources */,
 				9902B83F258A9BA3002041B2 /* BaseTableViewCell.swift in Sources */,
@@ -865,8 +891,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Gliese_581/Gliese_581.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Gliese_581/Info.plist;
@@ -891,8 +918,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Gliese_581/Gliese_581.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = JJC3HHT8LN;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Gliese_581/Info.plist;

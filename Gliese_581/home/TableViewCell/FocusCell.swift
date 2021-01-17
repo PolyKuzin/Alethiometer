@@ -27,7 +27,18 @@ class FocusCell: UITableViewCell, BaseTableViewCell {
     @IBOutlet weak var familyLabel    : UILabel!
     @IBOutlet weak var healthLabel    : UILabel!
     
-    public var viewState : MenuController.ViewState.Focus = .initial {
+    struct ViewState {
+        var image : UIImage
+        var title : String
+        let onHeartTap  : (()->())
+        let onCareerTap : (()->())
+        let onFamilyTap : (()->())
+        let onHealthTap : (()->())
+        
+        static let initial = ViewState(image: UIImage(), title: "", onHeartTap: {}, onCareerTap: {}, onFamilyTap: {}, onHealthTap: {})
+    }
+    
+    public var viewState : ViewState = .initial {
         didSet {
             self.leftImageView.image = viewState.image
             self.titleLabel.text = viewState.title
@@ -35,6 +46,10 @@ class FocusCell: UITableViewCell, BaseTableViewCell {
             self.careerLabel.text = "Career"
             self.healthLabel.text = "Health"
             self.heartLabel.text = "Relations"
+            animateView(heartView)
+            animateView(careerView)
+            animateView(familyView)
+            animateView(healthView)
         }
     }
     
@@ -55,24 +70,43 @@ class FocusCell: UITableViewCell, BaseTableViewCell {
         layer.shadowRadius            = 8
         layer.shadowOpacity           = 1
         layer.masksToBounds           = false
-        
-        animateView(heartView)
-        animateView(careerView)
-        animateView(familyView)
-        animateView(healthView)
     }
     
     func animateView(_ view: CircularProgressView) {
         view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.05)
         switch view {
         case healthView:
-            view.configure(with: UIColor(red: 0.992, green: 1, blue: 0.587, alpha: 1), heartAngle)
+            switch titleLabel.text  {
+            case "Focus today".localized()    : view.configure(with: UIColor(red: 0.992, green: 1, blue: 0.587, alpha: 1), UserDefaults.standard.value(forKey: "todayHeartAngle") as! CGFloat)
+            case "Focus tomorrow".localized() : view.configure(with: UIColor(red: 0.992, green: 1, blue: 0.587, alpha: 1), UserDefaults.standard.value(forKey: "tomorrowHeartAngle") as! CGFloat)
+            case "Week focus".localized()     : view.configure(with: UIColor(red: 0.992, green: 1, blue: 0.587, alpha: 1), UserDefaults.standard.value(forKey: "weekHeartAngle") as! CGFloat)
+            case "Month focus".localized()    : view.configure(with: UIColor(red: 0.992, green: 1, blue: 0.587, alpha: 1), UserDefaults.standard.value(forKey: "monthHeartAngle") as! CGFloat)
+            default: break
+            }
         case careerView:
-            view.configure(with: UIColor(red: 0.729, green: 0.631, blue: 1, alpha: 1), careerAngle)
+            switch titleLabel.text {
+            case "Focus today".localized()    : view.configure(with: UIColor(red: 0.729, green: 0.631, blue: 1, alpha: 1), UserDefaults.standard.value(forKey: "todayCareerAngle") as! CGFloat)
+            case "Focus tomorrow".localized() : view.configure(with: UIColor(red: 0.729, green: 0.631, blue: 1, alpha: 1), UserDefaults.standard.value(forKey: "tomorrowCareerAngle") as! CGFloat)
+            case "Week focus".localized()     : view.configure(with: UIColor(red: 0.729, green: 0.631, blue: 1, alpha: 1), UserDefaults.standard.value(forKey: "weekCareerAngle") as! CGFloat)
+            case "Month focus".localized()    : view.configure(with: UIColor(red: 0.729, green: 0.631, blue: 1, alpha: 1), UserDefaults.standard.value(forKey: "monthCareerAngle") as! CGFloat)
+            default: break
+            }
         case familyView:
-            view.configure(with: UIColor(red: 0.62, green: 1, blue: 0.587, alpha: 1), familyAngle)
+            switch titleLabel.text {
+            case "Focus today".localized()    : view.configure(with: UIColor(red: 0.62, green: 1, blue: 0.587, alpha: 1), UserDefaults.standard.value(forKey: "todayFamilyAngle") as! CGFloat)
+            case "Focus tomorrow".localized() : view.configure(with: UIColor(red: 0.62, green: 1, blue: 0.587, alpha: 1), UserDefaults.standard.value(forKey: "tomorrowFamilyAngle") as! CGFloat)
+            case "Week focus".localized()     : view.configure(with: UIColor(red: 0.62, green: 1, blue: 0.587, alpha: 1), UserDefaults.standard.value(forKey: "weekFamilyAngle") as! CGFloat)
+            case "Month focus".localized()    : view.configure(with: UIColor(red: 0.62, green: 1, blue: 0.587, alpha: 1), UserDefaults.standard.value(forKey: "monthFamilyAngle") as! CGFloat)
+            default: break
+            }
         case heartView:
-            view.configure(with: UIColor(red: 0.976, green: 0.443, blue: 0.667, alpha: 1), healthAngle)
+            switch titleLabel.text {
+            case "Focus today"    : view.configure(with: UIColor(red: 0.976, green: 0.443, blue: 0.667, alpha: 1), UserDefaults.standard.value(forKey: "todayHealthAngle") as! CGFloat)
+            case "Focus tomorrow" : view.configure(with: UIColor(red: 0.976, green: 0.443, blue: 0.667, alpha: 1), UserDefaults.standard.value(forKey: "tomorrowHealthAngle") as! CGFloat)
+            case "Week focus"     : view.configure(with: UIColor(red: 0.976, green: 0.443, blue: 0.667, alpha: 1), UserDefaults.standard.value(forKey: "weekHealthAngle") as! CGFloat)
+            case "Month focus"    : view.configure(with: UIColor(red: 0.976, green: 0.443, blue: 0.667, alpha: 1), UserDefaults.standard.value(forKey: "monthHealthAngle") as! CGFloat)
+            default: break
+            }
         default:
             break
         }

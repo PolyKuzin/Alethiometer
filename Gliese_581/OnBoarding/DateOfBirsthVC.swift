@@ -30,11 +30,11 @@ class DateOfBirsthVC: BaseVC {
         
         label.setTitleLabel(on: view)
         label.text = "Your date of birth"
-        
         datePicker.setDatePicker(on: view)
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        datePicker.setValue(false, forKey: "highlightsToday")
         datePicker.setDate(Date(timeIntervalSince1970: 908608500), animated: true)
         if isEditMode {
             datePicker.setDate(UserDefaults.standard.value(forKey: "DateOfBirth") as! Date, animated: true)

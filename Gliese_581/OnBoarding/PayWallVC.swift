@@ -34,7 +34,6 @@ class PayWallVC : BaseVC {
         nextButton.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 20)
         notNowButton.addTarget(self, action: #selector(goToHomeVC), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(togglePayment), for: .touchUpInside)
-        restoreButton.addTarget(self, action: #selector(restorePurchaice), for: .touchUpInside)
         
         feature1.setFeaturesView(on: view, with: UIImage(named: "payWall") ?? #imageLiteral(resourceName: "back"), title: "Personal horoscope".localized(),
                                  subtitle: "Daily tips about your life & future".localized(), isClickable: true)
@@ -79,7 +78,8 @@ class PayWallVC : BaseVC {
         ])
         restoreButton.setTitleColor(UIColor(red: 0.446, green: 0.446, blue: 0.446, alpha: 1), for: .normal)
         restoreButton.setTitle("Restore purchases".localized(), for: .normal)
-        
+        restoreButton.addTarget(self, action: #selector(restorePurchaice), for: .touchUpInside)
+
         UserDefaults.standard.setValue(true, forKey: "Registered")
     }
     deinit {

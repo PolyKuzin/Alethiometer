@@ -48,6 +48,7 @@ class TimeOfBirsthVC: BaseVC {
         datePicker.locale = Locale(identifier: "en_GB")
         datePicker.setDate(Date(timeIntervalSince1970: 908608500), animated: true)
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        datePicker.setValue(false, forKey: "highlightsToday")
         datePicker.addTarget(self, action: #selector(datehandler(sender:)), for: UIControl.Event.valueChanged)
         
         explanationLabel.setupexplanationLabel(on: self.view)

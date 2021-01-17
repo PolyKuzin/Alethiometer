@@ -118,7 +118,7 @@ class RelationShipsVC: BaseVC {
             }))
             self.present(alert, animated: true)
         } else {
-            let vc = HandVC()
+            let vc = HandInstructionVC()
             guard let navigationController = navigationController else { return }
             navigationController.pushViewController(vc, animated: true)
             if relateButton.layer.borderWidth != 0 {
@@ -132,6 +132,5 @@ class RelationShipsVC: BaseVC {
                 AnalyticsService.reportEvent(with: "Relations", parameters: ["Relations" : "Не указал статус отношений"])
             }
         }
-//        self.dismiss(animated: true, completion: nil)
     }
 }

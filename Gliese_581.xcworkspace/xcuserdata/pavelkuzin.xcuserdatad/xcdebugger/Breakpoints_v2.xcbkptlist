@@ -132,5 +132,335 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53D99B56-7DBE-4D6A-8269-144B5C102A72"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/home/TableViewCell/FocusCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "animateView(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "53D99B56-7DBE-4D6A-8269-144B5C102A72 - 98177281d222df9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gliese_581.FocusCell.animateView(Gliese_581.CircularProgressView) -&gt; ()"
+                  moduleName = "Gliese_581"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavelkuzin/Documents/Gliese_581/Gliese_581/home/TableViewCell/FocusCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "519">
+               </Location>
+               <Location
+                  uuid = "53D99B56-7DBE-4D6A-8269-144B5C102A72 - 98177281d222df9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gliese_581.FocusCell.animateView(Gliese_581.CircularProgressView) -&gt; ()"
+                  moduleName = "Gliese_581"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavelkuzin/Documents/Gliese_581/Gliese_581/home/TableViewCell/FocusCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "598">
+               </Location>
+               <Location
+                  uuid = "53D99B56-7DBE-4D6A-8269-144B5C102A72 - 98177281d222df9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gliese_581.FocusCell.animateView(Gliese_581.CircularProgressView) -&gt; ()"
+                  moduleName = "Gliese_581"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavelkuzin/Documents/Gliese_581/Gliese_581/home/TableViewCell/FocusCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1287">
+               </Location>
+               <Location
+                  uuid = "53D99B56-7DBE-4D6A-8269-144B5C102A72 - 98177281d222df9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gliese_581.FocusCell.animateView(Gliese_581.CircularProgressView) -&gt; ()"
+                  moduleName = "Gliese_581"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavelkuzin/Documents/Gliese_581/Gliese_581/home/TableViewCell/FocusCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1988">
+               </Location>
+               <Location
+                  uuid = "53D99B56-7DBE-4D6A-8269-144B5C102A72 - 98177281d222df9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gliese_581.FocusCell.animateView(Gliese_581.CircularProgressView) -&gt; ()"
+                  moduleName = "Gliese_581"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavelkuzin/Documents/Gliese_581/Gliese_581/home/TableViewCell/FocusCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "2689">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4F3F41D0-B2AA-4625-993B-653C83B265F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/home/TableViewCell/FocusCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "animateView(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF15A631-EB24-41A4-86BC-CBEA556726E2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/home/TableViewCell/FocusCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14CECEDC-4963-4DF4-A709-DC4625030740"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/home/MenuController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
+            landmarkName = "makeMonthState()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD457682-C979-431C-8BEF-2C16B450F552"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/home/TableViewCell/FocusCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "animateView(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BD457682-C979-431C-8BEF-2C16B450F552 - 98177281d22207a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gliese_581.FocusCell.animateView(Gliese_581.CircularProgressView) -&gt; ()"
+                  moduleName = "Gliese_581"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavelkuzin/Documents/Gliese_581/Gliese_581/home/TableViewCell/FocusCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "10065">
+               </Location>
+               <Location
+                  uuid = "BD457682-C979-431C-8BEF-2C16B450F552 - 98177281d22207a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gliese_581.FocusCell.animateView(Gliese_581.CircularProgressView) -&gt; ()"
+                  moduleName = "Gliese_581"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavelkuzin/Documents/Gliese_581/Gliese_581/home/TableViewCell/FocusCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "10250">
+               </Location>
+               <Location
+                  uuid = "BD457682-C979-431C-8BEF-2C16B450F552 - 98177281d22207a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gliese_581.FocusCell.animateView(Gliese_581.CircularProgressView) -&gt; ()"
+                  moduleName = "Gliese_581"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavelkuzin/Documents/Gliese_581/Gliese_581/home/TableViewCell/FocusCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "10931">
+               </Location>
+               <Location
+                  uuid = "BD457682-C979-431C-8BEF-2C16B450F552 - 98177281d22207a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gliese_581.FocusCell.animateView(Gliese_581.CircularProgressView) -&gt; ()"
+                  moduleName = "Gliese_581"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavelkuzin/Documents/Gliese_581/Gliese_581/home/TableViewCell/FocusCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "11624">
+               </Location>
+               <Location
+                  uuid = "BD457682-C979-431C-8BEF-2C16B450F552 - 98177281d22207a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gliese_581.FocusCell.animateView(Gliese_581.CircularProgressView) -&gt; ()"
+                  moduleName = "Gliese_581"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavelkuzin/Documents/Gliese_581/Gliese_581/home/TableViewCell/FocusCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "12317">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B40FCA19-656A-4178-8832-8C6080457E03"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/home/MenuController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "viewState"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D08B1D9C-1146-4BA2-A0AA-4452F8CA04AA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/home/MenuController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "583"
+            endingLineNumber = "583"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "448D4348-EF0E-4440-9ED6-315AA54F0CA4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E219726-4430-48D9-9CE1-FC95D2FD8B91"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF9D3B86-F8C8-4C63-9C37-448A2FA7DD9C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "400E61A3-0443-4406-936B-A8425DD40DBA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gliese_581/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

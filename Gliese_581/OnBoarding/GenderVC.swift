@@ -65,7 +65,7 @@ class GenderVC: BaseVC {
             clearButton.widthAnchor.constraint(equalToConstant: 200),
             clearButton.heightAnchor.constraint(equalToConstant: 50)
         ])
-        clearButton.setTitle("LGBQ+", for: .normal)
+        clearButton.setTitle("LGBTQ+", for: .normal)
         backButton.setBackButton(on: self.view)
         backButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         if !isEditMode {

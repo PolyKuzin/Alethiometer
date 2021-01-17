@@ -30,11 +30,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MEK-cA-vL2">
-                    <rect key="frame" x="77.5" y="51" width="45" height="45"/>
+                    <rect key="frame" x="79.5" y="55" width="41" height="41"/>
                     <color key="tintColor" name="text"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="45" id="XdM-uy-Sww"/>
-                        <constraint firstAttribute="height" constant="45" id="t4g-YA-YjR"/>
+                        <constraint firstAttribute="width" constant="41" id="XdM-uy-Sww"/>
+                        <constraint firstAttribute="height" constant="41" id="t4g-YA-YjR"/>
                     </constraints>
                 </imageView>
             </subviews>
