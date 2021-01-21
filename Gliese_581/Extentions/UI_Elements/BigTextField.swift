@@ -29,7 +29,7 @@ extension UITextField {
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 40),
-            self.heightAnchor.constraint(equalToConstant: 66)
+            self.heightAnchor.constraint(equalToConstant: 58)
         ])
     }
 }

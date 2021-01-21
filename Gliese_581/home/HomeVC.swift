@@ -294,7 +294,7 @@ class HomeVC: BaseVC {
         self.menuController    = MenuController()
         self.menuControllerFPC = FloatingPanelController()
         menuControllerFPC.delegate = self
-        menuControllerFPC.surfaceView.backgroundColor = .clear
+        menuControllerFPC.surfaceView.backgroundColor = .background
         menuControllerFPC.layout = MenuFloatingLayout()
         menuControllerFPC.surfaceView.appearance = FloatingPanelController.appereance()
         

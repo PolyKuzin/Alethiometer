@@ -24,12 +24,12 @@ class ScrollableSegmentControl: UIView {
     
     private let collectionView: UICollectionView = {
         let flowLayout                           = UICollectionViewFlowLayout()
-        flowLayout.estimatedItemSize             = CGSize(width: 130, height: 30)
+        flowLayout.estimatedItemSize             = CGSize(width: 130, height: 48)
         flowLayout.minimumInteritemSpacing       = 10
         flowLayout.scrollDirection               = .horizontal
         flowLayout.sectionInset                  = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
         
-        let cv = UICollectionView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 30), collectionViewLayout: flowLayout)
+        let cv = UICollectionView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 48), collectionViewLayout: flowLayout)
         cv.showsHorizontalScrollIndicator        = false
         cv.showsVerticalScrollIndicator          = false
         cv.backgroundColor                       = .clear

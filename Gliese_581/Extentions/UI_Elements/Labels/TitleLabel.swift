@@ -19,7 +19,7 @@ extension UILabel {
         NSLayoutConstraint.activate([
             leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
         ])
     }
 }

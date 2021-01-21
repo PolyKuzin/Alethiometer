@@ -24,9 +24,11 @@ extension UIView {
         let imageView = UIImageView(image: image)
         let tit = UILabel()
         tit.text = title
+        tit.numberOfLines = 0
         let sub = UILabel()
         sub.text = subtitle
-        
+        sub.numberOfLines = 0
+
         tit.font = UIFont(name: "SFProDisplay-Semibold", size: 20)
         tit.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         
@@ -40,9 +42,8 @@ extension UIView {
         tit.translatesAutoresizingMaskIntoConstraints = false
         sub.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 23),
-            imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -24),
-            imageView.widthAnchor.constraint(equalToConstant: self.frame.height - 47),
+            imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            imageView.widthAnchor.constraint(equalToConstant: self.frame.height - 38),
             imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
             imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 18),
             

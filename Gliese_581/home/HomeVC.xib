@@ -221,10 +221,10 @@ Typography
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MsR-oL-t7w">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <rect key="frame" x="5" y="5" width="90" height="90"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="100" id="Xer-TX-T7C"/>
-                                        <constraint firstAttribute="height" constant="100" id="wbG-nS-1hl"/>
+                                        <constraint firstAttribute="width" constant="90" id="Xer-TX-T7C"/>
+                                        <constraint firstAttribute="height" constant="90" id="wbG-nS-1hl"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouA-PH-ZDN">

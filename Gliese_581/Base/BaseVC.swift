@@ -6,7 +6,9 @@
 //
 
 import UIKit
+import StoreKit
 import MessageUI
+import SafariServices
 import FloatingPanel
 
 struct MailMessage {
@@ -61,6 +63,18 @@ class BaseVC : UIViewController, MFMailComposeViewControllerDelegate {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         view.backgroundColor = UIColor.background
         self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    public func openWeb(link: String) {
+        if let sc = BaseVC.safariController(link) { present(sc, animated: true, completion: nil) }
+    }
+    
+    class func safariController(_ link: String) -> SFSafariViewController? {
+        guard let url = URL(string: link) else { return nil }
+        let safariVC = SFSafariViewController(url: url)
+        safariVC.preferredBarTintColor = .background
+        safariVC.preferredControlTintColor = .main
+        return safariVC
     }
 }
 

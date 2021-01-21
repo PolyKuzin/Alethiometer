@@ -39,9 +39,9 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
 //        content.categoryIdentifier = "User Action"
         
         var dateComponents = DateComponents()
-//        dateComponents.hour = 19
-//        dateComponents.minute = 30
-//        dateComponents.weekday = 6
+        dateComponents.hour = 19
+        dateComponents.minute = 30
+        dateComponents.weekday = 6
         dateComponents.second = 2
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents,repeats: true)
         let identifire = "RowsAddedNotification"

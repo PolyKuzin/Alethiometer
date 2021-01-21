@@ -287,26 +287,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 AnalyticsService.reportEvent(with: "Purchase", parameters: ["data" : purchase.purchaseDate ?? "0000000"])
                 UserDefaults.standard.setValue(true, forKey: "setProVersion")
             } else {
-                UserDefaults.standard.setValue(true, forKey: "setProVersion")
+                UserDefaults.standard.setValue(false, forKey: "setProVersion")
             }
         case let .error(error):
             print(error.localizedDescription)
         }
         UserDefaults.standard.setValue(0, forKey: "currentState")
-        UserDefaults.standard.setValue(true, forKey: "setProVersion")
-        print(UserDefaults.standard.bool(forKey: "setProVersion"))
-        print(UserDefaults.standard.bool(forKey: "setProVersion"))
-        print(UserDefaults.standard.bool(forKey: "setProVersion"))
-        print(UserDefaults.standard.bool(forKey: "setProVersion"))
-        print(UserDefaults.standard.bool(forKey: "setProVersion"))
-        print(UserDefaults.standard.bool(forKey: "setProVersion"))
-        print(UserDefaults.standard.bool(forKey: "setProVersion"))
-        print(UserDefaults.standard.bool(forKey: "setProVersion"))
-        print(UserDefaults.standard.bool(forKey: "setProVersion"))
-        print(UserDefaults.standard.bool(forKey: "setProVersion"))
-        print(UserDefaults.standard.bool(forKey: "setProVersion"))
-        print(UserDefaults.standard.bool(forKey: "setProVersion"))
-
         return true
     }
     

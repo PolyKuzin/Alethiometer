@@ -18,6 +18,6 @@ extension UIButton {
         self.widthAnchor.constraint(equalToConstant: 44).isActive = true
         self.heightAnchor.constraint(equalToConstant: 44).isActive = true
         self.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
-        self.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
+        self.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15).isActive = true
     }
 }

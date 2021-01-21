@@ -14,7 +14,7 @@ class ScrollableCollectionViewCELL : UICollectionViewCell {
     var mainLabel            : UILabel = {
         let label            = UILabel()
         label.textAlignment  = .left
-        label.font           = UIFont(name: "MoscowSans-Bold", size: 13)
+        label.font           = UIFont(name: "SFProDisplay-Semibold", size: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -28,8 +28,6 @@ class ScrollableCollectionViewCELL : UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         layer.cornerRadius   = frame.height / 2
-        
-//        setupLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {

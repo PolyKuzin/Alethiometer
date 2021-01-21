@@ -92,7 +92,7 @@ extension IAPManager : SKPaymentTransactionObserver {
             } else {
                 AnalyticsService.reportEvent(with: "Purchase", parameters: ["data" : purchase.purchaseDate ?? "0000000"])
                 NotificationCenter.default.post(name: NSNotification.Name(transaction.payment.productIdentifier), object: nil)
-                UserDefaults.standard.setValue(true, forKey: "setProVersion")
+                UserDefaults.standard.setValue(false, forKey: "setProVersion")
             }
             return
         case let .error(error):
